@@ -1,0 +1,4 @@
+TODO: Replace assets/headshot-placeholder.svg reference in index.html with a
+real headshot. Recommended: save your photo as assets/headshot.jpg (square,
+~400x400px) and change the <img class="hero-photo" ...> src in index.html
+from "assets/headshot-placeholder.svg" to "assets/headshot.jpg".
