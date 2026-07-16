@@ -347,6 +347,65 @@ ol.pub-list li::marker {
   vertical-align: middle;
 }
 
+/* Abstract disclosure (publications page) */
+.abs {
+  display: inline;            /* keeps the pill on the citation's last line */
+}
+
+.abs > summary {
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 1px 8px;
+  margin-left: 6px;
+  border: 1px solid var(--navy);
+  border-radius: 10px;
+  color: var(--navy);
+  background: transparent;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.abs > summary::-webkit-details-marker { display: none; }
+.abs > summary::marker { content: ""; }
+
+.abs > summary::after { content: " +"; opacity: 0.7; }
+.abs[open] > summary::after { content: " \2212"; }
+
+.abs > summary:hover,
+.abs[open] > summary {
+  background: var(--navy);
+  color: #fff;
+}
+
+.abs > summary:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+/* block child inside the inline <details> breaks onto its own line */
+.abs-body {
+  display: block;
+  margin-top: 8px;
+  padding: 11px 14px;
+  background: var(--bg-alt);
+  border-left: 3px solid var(--orange);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.abs-body p { margin: 0 0 0.7em; }
+.abs-body p:last-child { margin-bottom: 0; }
+
 /* Card grid (open data & software) */
 .card-grid {
   display: grid;
