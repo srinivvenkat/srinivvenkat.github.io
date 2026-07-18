@@ -705,12 +705,6 @@ svg.wc {
   border-color: var(--orange);
 }
 
-.pub-list li.pub-match {
-  background: #fff7ec;
-  box-shadow: inset 3px 0 0 var(--orange);
-  border-radius: 0 var(--radius) var(--radius) 0;
-}
-
 /* Screen-reader-only utility. */
 .sr-only {
   position: absolute;
