@@ -1,18 +1,24 @@
 /*
- * Highlights publications that match a term arriving from the home-page word
- * cloud, e.g. publications.html?term=genomic-surveillance.
+ * Filters the publication list to only the papers that match a term arriving
+ * from the home-page word cloud, e.g. publications.html?term=genomic-surveillance.
  *
  * The word cloud links to this page with a ?term= slug. wordcloud-data.json maps
  * every cloud term to the publication keys ("<section-id>|<number>") whose
- * abstract contains it — the same keys abstracts.js uses — so we can highlight
- * the exact <li> entries without re-tokenizing anything here.
+ * abstract contains it — the same keys abstracts.js uses — so we can locate the
+ * exact <li> entries without re-tokenizing anything here.
+ *
+ * When a term is present, non-matching papers are hidden, along with any year
+ * heading, section, or the category table-of-contents that ends up empty. Papers
+ * keep their original catalog numbers and stay grouped by year/section. A
+ * dismissible banner offers "Show all", which restores the full list exactly.
+ * Abstract toggles (from abstracts.js) are left collapsed and still expandable.
  *
  * This file is intentionally separate from abstracts.js: that script keeps its
  * single responsibility (rendering abstract toggles) and this one has no
  * dependency on its internals. When there is no ?term= param it does nothing.
  *
  * Progressive enhancement: if the fetch fails or JS is off, the publication list
- * renders normally, just without highlighting.
+ * renders normally, just unfiltered.
  */
 (function () {
   "use strict";
@@ -86,36 +92,57 @@
       return;
     }
 
-    lis.forEach(function (li) { li.classList.add("pub-match"); });
+    var matched = new Set(lis);
+    var hidden = []; // every element we hide, so restore is exact
 
+    function hide(el) {
+      if (el && !el.hidden) { el.hidden = true; hidden.push(el); }
+    }
+
+    // 1. Hide every publication that isn't a match.
+    var allLis = document.querySelectorAll(".pub-list li");
+    allLis.forEach(function (li) { if (!matched.has(li)) hide(li); });
+
+    // 2. Hide each year list left with no visible papers, plus its year heading
+    //    (the immediately preceding <h3 class="pub-year">).
+    document.querySelectorAll("ol.pub-list").forEach(function (ol) {
+      var hasVisible = false;
+      ol.querySelectorAll("li").forEach(function (li) { if (!li.hidden) hasVisible = true; });
+      if (!hasVisible) {
+        hide(ol);
+        var prev = ol.previousElementSibling;
+        if (prev && prev.classList.contains("pub-year")) hide(prev);
+      }
+    });
+
+    // 3. Hide each category section left with no visible papers (its <h2> too).
+    document.querySelectorAll("main section").forEach(function (section) {
+      if (!section.querySelector(".pub-list")) return; // not a publication section
+      var hasVisible = false;
+      section.querySelectorAll(".pub-list li").forEach(function (li) { if (!li.hidden) hasVisible = true; });
+      if (!hasVisible) hide(section);
+    });
+
+    // 4. Hide the category table-of-contents (its counts no longer match).
+    hide(document.querySelector("nav.pub-toc"));
+
+    // 5. Banner with a restore action.
     var main = document.querySelector("main .container") || document.querySelector("main");
     var banner;
     function onClear() {
-      lis.forEach(function (li) { li.classList.remove("pub-match"); });
+      hidden.forEach(function (el) { el.hidden = false; });
+      hidden = [];
       if (banner && banner.parentNode) banner.parentNode.removeChild(banner);
       clearParam();
     }
     banner = buildBanner(term, lis.length, onClear);
     if (main) main.insertBefore(banner, main.firstChild);
 
-    // Scroll the first match into view.
-    lis[0].scrollIntoView({
+    // Bring the filtered list into view (the banner sits just above it).
+    (banner || lis[0]).scrollIntoView({
       behavior: prefersReducedMotion() ? "auto" : "smooth",
-      block: "center"
+      block: "start"
     });
-
-    // abstracts.js injects <details class="abs"> on its own async fetch, so the
-    // toggles may not exist yet. Poll briefly to auto-open matches, then stop.
-    var tries = 0;
-    var poll = setInterval(function () {
-      tries++;
-      var opened = 0;
-      lis.forEach(function (li) {
-        var abs = li.querySelector(".abs");
-        if (abs && !abs.hasAttribute("open")) { abs.setAttribute("open", ""); opened++; }
-      });
-      if (opened > 0 || tries >= 6) clearInterval(poll);
-    }, 250);
   }
 
   function init() {
