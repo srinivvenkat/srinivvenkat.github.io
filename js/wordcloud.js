@@ -164,6 +164,10 @@
       text.setAttribute("y", n.baseline);
       text.setAttribute("font-size", n.packSize);
       text.textContent = t.term;
+      // Set the theme color inline from the data so word colors never depend on
+      // the external stylesheet loading (or a stale cached copy of it).
+      var themeColor = themes[t.theme] && themes[t.theme].color;
+      if (themeColor) text.style.fill = themeColor;
 
       a.appendChild(text);
       svg.appendChild(a);
