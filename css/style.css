@@ -16,6 +16,12 @@
   --shadow: 0 1px 3px rgba(35, 45, 75, 0.08), 0 1px 2px rgba(35, 45, 75, 0.06);
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-heading: Georgia, "Times New Roman", serif;
+  /* Word-cloud theme hues (dark-on-white, WCAG-validated). See tools/README.md. */
+  --theme-epi: #9a2f26;
+  --theme-networks: #265c41;
+  --theme-ml: var(--orange-dark);
+  --theme-methods: var(--navy-light);
+  --theme-neutral: var(--text-muted);
 }
 
 * {
@@ -512,6 +518,213 @@ ol.pub-list li::marker {
 }
 
 /* ------------------------------------------------------------------ */
+/* Word cloud (home page "Research Themes")                            */
+/* ------------------------------------------------------------------ */
+/* The word-cloud controls/legend/play button set their own display, which
+   would override the UA [hidden] rule. Keep [hidden] authoritative so they stay
+   hidden until JS reveals them (and with JS off / reduced motion). */
+[hidden] { display: none !important; }
+
+.wc-intro {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: -0.5em;
+}
+
+.wc-cloud {
+  width: 100%;
+  min-height: 120px;
+}
+
+svg.wc {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  overflow: visible;
+}
+
+/* Each word is an <a> wrapping an SVG <text>. */
+.wc-word text {
+  font-family: var(--font-heading);
+  fill: var(--theme-neutral);
+  cursor: pointer;
+  transition: fill 0.15s ease;
+}
+
+.wc-word[data-theme="epi"] text { fill: var(--theme-epi); }
+.wc-word[data-theme="networks"] text { fill: var(--theme-networks); }
+.wc-word[data-theme="ml"] text { fill: var(--theme-ml); }
+.wc-word[data-theme="methods"] text { fill: var(--theme-methods); }
+.wc-word[data-theme="neutral"] text { fill: var(--theme-neutral); }
+
+/* Size + fade transitions are motion; suppress under reduced-motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .wc-word text {
+    transition: font-size 0.5s ease, opacity 0.5s ease, fill 0.15s ease;
+  }
+}
+
+.wc-word { text-decoration: none; }
+
+.wc-word:hover text,
+.wc-word:focus-visible text {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.wc-word:focus-visible text {
+  outline: none;
+}
+.wc-word:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 1px;
+  border-radius: 3px;
+}
+
+/* When one word is emphasized, its siblings recede. */
+.wc-cloud.is-hovering .wc-word:not(:hover):not(:focus-visible) text {
+  opacity: 0.28;
+}
+
+/* Legend — reuses the tag-list vocabulary. */
+.wc-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  list-style: none;
+  padding: 0;
+  margin: 1.25em 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.wc-legend li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wc-legend .wc-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* Time-lapse controls. */
+.wc-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 1.25em;
+  padding-top: 1em;
+  border-top: 1px solid var(--border);
+}
+
+.wc-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1px solid var(--navy);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--navy);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.wc-play:hover { background: var(--navy); color: #fff; }
+.wc-play:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+
+.wc-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 220px;
+}
+
+.wc-slider { flex: 1; accent-color: var(--orange); cursor: pointer; }
+
+.wc-era-label {
+  font-size: 0.9rem;
+  color: var(--navy);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.wc-era-label .wc-era-sub {
+  display: block;
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ------------------------------------------------------------------ */
+/* Publications: cross-page term filter (from the word cloud)          */
+/* ------------------------------------------------------------------ */
+.pub-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: var(--navy);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin: 0 0 1.5em;
+  font-size: 0.92rem;
+}
+
+.pub-banner strong { color: #fff; }
+
+.pub-banner .pub-banner-term {
+  color: #ffd9b0;
+}
+
+.pub-banner .pub-banner-close {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  border-radius: 16px;
+  padding: 3px 12px;
+  font-size: 0.82rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.pub-banner .pub-banner-close:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.pub-list li.pub-match {
+  background: #fff7ec;
+  box-shadow: inset 3px 0 0 var(--orange);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* Screen-reader-only utility. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ------------------------------------------------------------------ */
 /* Responsive                                                          */
 /* ------------------------------------------------------------------ */
 @media (max-width: 640px) {
@@ -519,4 +732,7 @@ ol.pub-list li::marker {
   .hero-links { justify-content: center; }
   .site-header .container { flex-direction: column; align-items: flex-start; }
   h1 { font-size: 1.6rem; }
+  svg.wc { max-height: 300px; }
+  .wc-controls { gap: 10px; }
+  .wc-slider-wrap { min-width: 100%; order: 3; }
 }
