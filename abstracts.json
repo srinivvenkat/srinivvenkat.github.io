@@ -1,8 +1,8 @@
 {
   "_readme": "Single source of truth for the publication abstracts shown on publications.html. The page fetches this file at load time (js/abstracts.js) and renders an 'Abstract' toggle for every entry whose 'abstract' field is non-null. Keys are '<section-id>|<entry-number>' and match the <section id> and <li value> in publications.html — edit an abstract here and the page picks it up, no HTML changes. Abstract text is the authors' own, retrieved verbatim from the publisher record for each DOI/arXiv/medRxiv ID; none is paraphrased or generated. Blank lines (\\n\\n) separate paragraphs and **bold** marks structured-abstract section labels.",
   "counts": {
-    "entries": 104,
-    "with_abstract": 91,
+    "entries": 103,
+    "with_abstract": 90,
     "without_abstract": 13
   },
   "abstract_sources": {
@@ -10,7 +10,7 @@
     "Crossref": 29,
     "medRxiv": 12,
     "Semantic Scholar": 8,
-    "arXiv": 5
+    "arXiv": 4
   },
   "entries": {
     "book-chapters|3": {
@@ -1004,10 +1004,10 @@
       "abstract": "We provide new analytical results concerning the spread of information or influence under the linear threshold social network model introduced by Kempe et al. in [1], in the information dissemination context. The seeder starts by providing the message to a set of initial nodes and is interested in maximizing the number of nodes that will receive the message ultimately. A node's decision to forward the message depends on the set of nodes from which it has received the message. Under the linear threshold model, the decision to forward the information depends on the comparison of the total influence of the nodes from which a node has received the packet with its own threshold of influence. We derive analytical expressions for the expected number of nodes that receive the message ultimately, as a function of the initial set of nodes, for a generic network. We show that the problem can be recast in the framework of Markov chains. We then use the analytical expression to gain insights into information dissemination in some simple network topologies such as the star, ring, mesh and on acyclic graphs. We also derive the optimal initial set in the above networks, and also hint at general heuristics for picking a good initial set.",
       "abstract_source": "OpenAlex"
     },
-    "tech-reports|15": {
+    "tech-reports|14": {
       "section": "tech-reports",
       "section_label": "Technical Reports and Preprints",
-      "number": 15,
+      "number": 14,
       "year": "2026",
       "title": "IDOBE: Infectious Disease Outbreak forecasting Benchmark Ecosystem",
       "citation": "A. Adiga, J. Chou, A. Chiranth, et al., M. Marathe, H. Hochheiser, and SV, \"IDOBE: Infectious Disease Outbreak forecasting Benchmark Ecosystem\", arXiv:2604.18521",
@@ -1015,27 +1015,16 @@
       "abstract": "Epidemic forecasting has become an integral part of real-time infectious disease outbreak response. While collaborative ensembles composed of statistical and machine learning models have become the norm for real-time forecasting, standardized benchmark datasets for evaluating such methods are lacking. Further, there is limited understanding on performance of these methods for novel outbreaks with limited historical data. In this paper, we propose IDOBE, a curated collection of epidemiological time series focused on outbreak forecasting. IDOBE compiles from multiple data repositories spanning over a century of surveillance and across U.S. states and global locations. We perform derivative-based segmentation to generate over 10,000 outbreaks covering multiple outcomes such as cases and hospitalizations for 13 diseases. We consider a variety of information-theoretic and distributional measures to quantify the epidemiological diversity of the dataset. Finally, we perform multi-horizon short-term forecasting (1- to 4-week-ahead) through the progression of the outbreak using 11 baseline models and report on their performance. In addition to standard metrics such as NMSE and MAPE for point forecasts, we include probabilistic scoring rules such as Normalized Weighted Interval Score (NWIS) to quantify the performance. We find that MLP-based methods have the most robust performance, with statistical methods having a slight edge during the pre-peak phase. IDOBE dataset along with baselines are released publicly on https://github.com/NSSAC/IDOBE to enable standardized, reproducible benchmarking of outbreak forecasting methods.",
       "abstract_source": "arXiv"
     },
-    "tech-reports|14": {
+    "tech-reports|13": {
       "section": "tech-reports",
       "section_label": "Technical Reports and Preprints",
-      "number": 14,
+      "number": 13,
       "year": "2026",
       "title": "Assessing the Impact of Timing and Coverage of United States COVID-19 Vaccination Campaigns: A Multi-Model Approach",
       "citation": "A. Nande, S.L. Larsen, et al., SV, et al., C. Viboud, J. Lessler, and S. Truelove, \"Assessing the Impact of Timing and Coverage of United States COVID-19 Vaccination Campaigns: A Multi-Model Approach\", medRxiv 2026.04.07.26349269",
       "url": "https://www.medrxiv.org/content/10.1101/2026.04.07.26349269v1",
       "abstract": "Six years after its emergence, SARS-CoV-2 continues to have a substantial burden, however, the impact of vaccination and the optimal timing of its rollout remain uncertain. To explore these uncertainties, the US Scenario Modeling Hub convened its 19th round of ensemble projections for COVID-19 hospitalizations and deaths in the United States. Eight teams provided outcomes for each US state and nationally from April 2025 to April 2026 under five scenarios regarding vaccine recommendations and timing. We assessed recommendations with two eligibility scenarios (high-risk individuals only and all-eligible) and two timing scenarios (classic start: mid-August, earlier start: late June). These were crossed to create four scenarios and were compared against a counterfactual scenario with no vaccination. We found that compared to no vaccination, our ensemble projections estimated 90,000 (95% PI 53,000-126,000) hospitalizations averted in the high-risk and classic timing scenario across the US. Expanding coverage averted an additional 26,000 (95% PI 14,000-39,000) hospitalizations, which when coupled with earlier vaccination timing further reduced national hospitalizations by 15,000 (95% PI -3,000-33,000). These findings estimate significant benefits from a broad all-eligible vaccination recommendation, and suggest an additional benefit is likely to be gained from an earlier vaccination campaign.",
       "abstract_source": "OpenAlex (title match)"
-    },
-    "tech-reports|13": {
-      "section": "tech-reports",
-      "section_label": "Technical Reports and Preprints",
-      "number": 13,
-      "year": "2024",
-      "title": "Assessing Human Judgment Forecasts in the Rapid Spread of the Mpox Outbreak: Insights and Challenges for Pandemic Preparedness",
-      "citation": "T. McAndrew, M. S. Majumder, A. A. Lover, SV, et al., N. I. Bosse, J. Cambeiro, and D. Braun, \"Assessing Human Judgment Forecasts in the Rapid Spread of the Mpox Outbreak: Insights and Challenges for Pandemic Preparedness\", arXiv:2404.14686, 2024",
-      "url": "https://arxiv.org/abs/2404.14686",
-      "abstract": "In May 2022, mpox (formerly monkeypox) spread to non-endemic countries rapidly. Human judgment is a forecasting approach that has been sparsely evaluated during the beginning of an outbreak. We collected -- between May 19, 2022 and July 31, 2022 -- 1275 forecasts from 442 individuals of six questions about the mpox outbreak where ground truth data are now available. Individual human judgment forecasts and an equally weighted ensemble were evaluated, as well as compared to a random walk, autoregressive, and doubling time model. We found (1) individual human judgment forecasts underestimated outbreak size, (2) the ensemble forecast median moved closer to the ground truth over time but uncertainty around the median did not appreciably decrease, and (3) compared to computational models, for 2-8 week ahead forecasts, the human judgment ensemble outperformed all three models when using median absolute error and weighted interval score; for one week ahead forecasts a random walk outperformed human judgment. We propose two possible explanations: at the time a forecast was submitted, the mode was correlated with the most recent (and smaller) observation that would eventually determine ground truth. Several forecasts were solicited on a logarithmic scale which may have caused humans to generate forecasts with unintended, large uncertainty intervals. To aide in outbreak preparedness, platforms that solicit human judgment forecasts may wish to assess whether specifying a forecast on logarithmic scale matches an individual's intended forecast, support human judgment by finding cues that are typically used to build forecasts, and, to improve performance, tailor their platform to allow forecasters to assign zero probability to events.",
-      "abstract_source": "arXiv"
     },
     "tech-reports|12": {
       "section": "tech-reports",
