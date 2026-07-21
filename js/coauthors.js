@@ -3,7 +3,8 @@
  *
  * Data comes from coauthors-data.json, precomputed by tools/build_coauthors.py:
  * an ego network with the site owner removed. Nodes are his most frequent
- * co-authors (sized by shared-paper count, colored by institution); edges weight
+ * co-authors (sized by shared-paper count, shaded light->dark by length of
+ * collaboration); edges weight
  * how many papers two co-authors share with each other. Layout coordinates
  * (x, y, r) are precomputed there — this script does no simulation, it only draws
  * what the precompute produced and wires up interaction, mirroring wordcloud.js.
@@ -129,6 +130,9 @@
         text.setAttribute("x", n.x);
         text.setAttribute("y", n.y + font * 0.35); // optical vertical centering
         text.setAttribute("font-size", font.toFixed(1));
+        // Pale (short-tenure) fills can't carry white text; flip the label to dark
+        // ink with a light halo instead (precomputed as n.pale in build_coauthors).
+        if (n.pale) text.setAttribute("class", "cn-label cn-label-dark");
       } else {
         text.setAttribute("x", n.x);
         text.setAttribute("y", n.y + n.r + LABEL_BELOW_FONT);

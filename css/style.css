@@ -787,6 +787,15 @@ svg.cn {
   stroke-width: 2.5px;
 }
 
+/* Pale (short-tenure) bubbles are too light for white text, so their in-bubble
+   label flips to dark ink with a white halo -- same treatment as a dropped label,
+   but kept centered inside the bubble. */
+.cn-label-dark {
+  fill: var(--navy);
+  stroke: #fff;
+  stroke-width: 2.5px;
+}
+
 .cn-node:focus-visible {
   outline: 2px solid var(--orange);
   outline-offset: 2px;

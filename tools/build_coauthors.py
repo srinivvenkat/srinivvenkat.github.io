@@ -18,9 +18,13 @@ his collaboration circle:
 
   * nodes   = the owner's most frequent co-authors (>= MIN_PAPERS shared papers,
               capped at TOP_N), SIZED by how many papers they share with him.
-  * color   = each author's primary institution (top institutions get a distinct
-              hue; the rest share a neutral gray). There is no legend by design --
-              color reads as ambient cluster membership, not a lookup key.
+  * color   = LENGTH OF COLLABORATION: a single-hue sequential ramp shading each
+              node from light (a short-lived collaboration) to dark (a years-long
+              one), by the span from our first shared paper to our latest. Tenure
+              is a magnitude, so it takes a ramp, not categorical hues -- and
+              unlike institution (which splits the graph into one big UVA cluster
+              plus a scattered rim) it varies *within* both, so the gradient reads
+              across the whole graph instead of lopsiding it.
   * edges   = papers two co-authors share WITH EACH OTHER (i.e. both appear on the
               same paper). This is what pulls real sub-communities together: the
               UVA epi group, the Northeastern crowd, the scenario-hub collaborators.
@@ -45,12 +49,12 @@ SRC = os.path.join(ROOT, "authors.json")
 OUT = os.path.join(ROOT, "coauthors-data.json")
 
 # --- node selection --------------------------------------------------------
-MIN_PAPERS = 4     # a co-author needs at least this many shared papers to appear
-TOP_N = 40         # ...and we keep at most this many (largest first)
+MIN_PAPERS = 2     # a co-author needs at least this many shared papers to appear
+TOP_N = 50         # ...and we keep at most this many (largest first)
 
 # --- edge selection --------------------------------------------------------
-EDGE_MIN = 3           # draw an edge only when two co-authors share >= this many papers
-MAX_EDGES_PER_NODE = 3 # keep only each node's few strongest ties, so the graph reads
+EDGE_MIN = 2           # draw an edge only when two co-authors share >= this many papers
+MAX_EDGES_PER_NODE = 5 # keep only each node's few strongest ties, so the graph reads
                        # as clusters rather than a hairball. Genuine hubs (co-authors
                        # on nearly everything) still accrue high degree -- that is the
                        # true story -- but nobody contributes more than a few weak ties.
@@ -74,24 +78,27 @@ GRAVITY_X = 0.020
 GRAVITY_Y = 0.048
 ISOLATE_GRAVITY = 7.0   # extra centre-pull for edge-less nodes (tuck them in)
 
-# --- institution palette ---------------------------------------------------
-# UVA is pinned to the site navy (it is home, and the dominant cluster). The rest
-# of the palette is handed out to the next-most-common institutions in frequency
-# order; everyone else shares NEUTRAL. All are readable on white and distinct from
-# one another; labels get a white halo (see CSS) so they stay legible on any fill.
-HOME_INST = "University of Virginia"
-HOME_COLOR = "#232d4b"
-NEUTRAL = "#9aa0ab"
-PALETTE = [
-    "#1a5fb4",  # blue
-    "#e57200",  # orange (site accent)
-    "#2e7d32",  # green
-    "#7b2cbf",  # purple
-    "#c1121f",  # red
-    "#0f8b8d",  # teal
-    "#b5179e",  # magenta
-    "#8a5a44",  # brown
+# --- tenure ramp (sequential) ----------------------------------------------
+# Nodes are shaded by LENGTH OF COLLABORATION -- the span in years from our first
+# shared paper to our latest. That is a magnitude, so it takes a single-hue
+# sequential ramp (light = short, dark = long), never categorical hues. Institution
+# coloring is inherently lopsided here (half the graph is one UVA cluster), whereas
+# tenure varies within both the core and the rim, so the gradient reads across the
+# whole graph. There is no legend by design -- shade reads as ambient depth-of-tie.
+#
+# The ramp is the site blue, floored at a mid-light step: anything paler vanishes
+# against the white page and can't back a label. It deepens toward navy for the
+# longest ties. Labels sit INSIDE the bubbles, so the lighter half of the ramp
+# can't carry white text -- each node emits `pale` when its fill is too light, and
+# the renderer flips that label to dark ink (see coauthors.js / .cn-label-dark).
+RAMP = [  # site blue, light -> dark (validated sequential steps, monotone lightness)
+    "#86b6ef", "#6da7ec", "#5598e7", "#3987e5", "#2a78d6",
+    "#256abf", "#1c5cab", "#184f95", "#104281", "#0d366b",
 ]
+SPAN_MIN = 2       # spans clamp to [SPAN_MIN, SPAN_MAX] before mapping onto the ramp
+SPAN_MAX = 10      # (the observed range; keeps the common 3-5 band spread over steps)
+MISSING_SPAN = 4   # fallback shade for a node with no usable year data (~ the median)
+PALE_CONTRAST = 3.0  # white-on-fill WCAG contrast below this => dark label instead
 
 
 def slugify(s):
@@ -113,13 +120,32 @@ def select_nodes(authors):
     return cand[:TOP_N]
 
 
-def assign_colors(nodes):
-    insts = Counter(n.get("primary_affiliation") or "Unknown" for n in nodes)
-    ranked = [inst for inst, _ in insts.most_common() if inst != HOME_INST]
-    color_of = {HOME_INST: HOME_COLOR}
-    for i, inst in enumerate(ranked):
-        color_of[inst] = PALETTE[i] if i < len(PALETTE) else NEUTRAL
-    return color_of
+def collab_span(a):
+    """Length of the collaboration in years: last shared paper minus first. None
+    when the year data is missing or inconsistent."""
+    fy, ly = a.get("first_year"), a.get("last_year")
+    if not fy or not ly or ly < fy:
+        return None
+    return ly - fy
+
+
+def tenure_color(span):
+    """Map a collaboration span onto the sequential ramp (clamped to [MIN,MAX])."""
+    s = MISSING_SPAN if span is None else max(SPAN_MIN, min(SPAN_MAX, span))
+    frac = (s - SPAN_MIN) / (SPAN_MAX - SPAN_MIN)
+    return RAMP[int(round(frac * (len(RAMP) - 1)))]
+
+
+def _rel_lum(hexcolor):
+    ch = [int(hexcolor[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+    lin = [c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4 for c in ch]
+    return 0.2126 * lin[0] + 0.7152 * lin[1] + 0.0722 * lin[2]
+
+
+def is_pale(hexcolor):
+    """True when white text on this fill falls below PALE_CONTRAST -- i.e. the
+    bubble is light enough that its label must flip to dark ink."""
+    return (1.05 / (_rel_lum(hexcolor) + 0.05)) < PALE_CONTRAST
 
 
 def build_edges(nodes):
@@ -250,15 +276,14 @@ def main():
     if not nodes:
         raise SystemExit("No co-authors selected -- check authors.json / MIN_PAPERS")
 
-    color_of = assign_colors(nodes)
     edges = build_edges(nodes)
 
     counts = [a["paper_count"] for a in nodes]
     cmin, cmax = min(counts), max(counts)
-    span = (cmax - cmin) or 1
+    pspan = (cmax - cmin) or 1
 
     def radius(c):
-        norm = (c - cmin) / span
+        norm = (c - cmin) / pspan
         return R_MIN + (R_MAX - R_MIN) * (norm ** SIZE_EXP)
 
     radii = [radius(a["paper_count"]) for a in nodes]
@@ -273,20 +298,26 @@ def main():
     nodes_out = []
     for i, a in enumerate(nodes):
         inst = a.get("primary_affiliation") or "Unknown"
-        nodes_out.append({
+        cspan = collab_span(a)
+        color = tenure_color(cspan)
+        node = {
             "id": slugify(a["name"]),
             "name": a["name"],
             "short": short_name(a["name"]),
             "papers": a["paper_count"],
             "inst": inst,
-            "color": color_of.get(inst, NEUTRAL),
+            "color": color,
+            "span": cspan,             # years first->last shared paper (drives shade)
             "firstYear": a.get("first_year"),
             "lastYear": a.get("last_year"),
             "x": round(px[i] - cx, 2),
             "y": round(py[i] - cy, 2),
             "r": round(radii[i], 2),
             "keys": sorted(p["key"] for p in a["papers"]),
-        })
+        }
+        if is_pale(color):
+            node["pale"] = True        # fill too light for white text -> dark label
+        nodes_out.append(node)
 
     edges_out = [{"a": nodes_out[i]["id"], "b": nodes_out[j]["id"], "w": w}
                  for (i, j, w) in edges]
@@ -296,7 +327,9 @@ def main():
             "Generated by tools/build_coauthors.py from authors.json. Do not edit by "
             "hand -- rerun the script after authors.json changes. An ego network with "
             "the site owner removed: nodes are his most frequent co-authors, sized by "
-            "shared-paper count ('papers'), colored by primary institution ('color'); "
+            "shared-paper count ('papers'), shaded by length of collaboration -- the "
+            "'span' in years from first to latest shared paper -- on a light->dark ramp "
+            "('color'); 'pale' marks a fill light enough that its label flips to dark ink. "
             "edges weight how many papers two co-authors share with each other. 'x','y','r' "
             "are precomputed layout coordinates (arbitrary units; the page derives its "
             "viewBox from them). 'keys' are '<section-id>|<number>' matching "
@@ -317,11 +350,16 @@ def main():
     for i, j, _w in edges:
         deg[i] += 1; deg[j] += 1
     isolated = [nodes_out[i]["name"] for i in range(len(nodes)) if deg[i] == 0]
-    print("Top nodes (papers | institution):")
+    print("Top nodes (papers | span yrs | institution):")
     for a in nodes_out[:12]:
-        print("  %-26s %3d  %s" % (a["name"], a["papers"], a["inst"]))
-    ninst = len(set(a["color"] for a in nodes_out))
-    print("Distinct node colors (institutions highlighted): %d" % ninst)
+        print("  %-26s %3d  %4s  %s"
+              % (a["name"], a["papers"], a.get("span"), a["inst"]))
+    spans = [a["span"] for a in nodes_out if a.get("span") is not None]
+    if spans:
+        print("Collaboration span: %d-%d yrs (median %d)"
+              % (min(spans), max(spans), sorted(spans)[len(spans) // 2]))
+    npale = sum(1 for a in nodes_out if a.get("pale"))
+    print("Shade ramp: %d steps; %d pale nodes (dark label)" % (len(RAMP), npale))
     if isolated:
         print("Isolated (no kept edge): %s" % ", ".join(isolated))
 
