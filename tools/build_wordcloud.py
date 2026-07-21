@@ -58,23 +58,23 @@ ERAS = [
 # term matches wins, otherwise the term is "neutral". Colors are dark-on-white
 # and WCAG-validated (see plan / tools/README.md).
 # ---------------------------------------------------------------------------
-# Legend / output display order. Only the five research DOMAINS plus the merged
+# Legend / output display order. Only the four research DOMAINS plus the merged
 # methods bucket appear; the domains carry distinct colors (they show the breadth
 # of the work) and "methods" is a single recessive gray. "neutral" is defined for
 # fallback only — it is not shown (PER_THEME_CAP is 0) and not in the legend.
-THEME_ORDER = ["epi", "genomics", "migration", "social", "agri", "methods"]
+THEME_ORDER = ["epi", "evoeco", "migration", "social", "methods"]
 
 # Assignment priority (see theme_for). Distinct, smaller areas are matched BEFORE
 # the broad "epi"/"methods" buckets so their defining terms keep their own color
-# instead of being absorbed — e.g. "genomic surveillance" -> genomics, not epi.
-THEME_PRIORITY = ["genomics", "migration", "agri", "social", "methods", "epi"]
+# instead of being absorbed — e.g. "genomic surveillance" -> evoeco, not epi.
+THEME_PRIORITY = ["evoeco", "migration", "social", "methods", "epi"]
 
 THEMES = {
     "epi": {"label": "Epidemiology", "color": "#c1121f"},
-    "genomics": {"label": "Genomics & evolution", "color": "#7b2cbf"},
-    "migration": {"label": "Migration & mobility", "color": "#0e7c86"},
+    # Genomics/evolution and agriculture/ecology merged into one area.
+    "evoeco": {"label": "Evolution & Ecology", "color": "#2e7d32"},
+    "migration": {"label": "Migration & mobility", "color": "#7b2cbf"},
     "social": {"label": "Social & information networks", "color": "#1a5fb4"},
-    "agri": {"label": "Agriculture & ecology", "color": "#2e7d32"},
     # ML and computing methods are merged into one recessive gray: they describe
     # HOW the work is done, so they should not compete with the domain colors.
     "methods": {"label": "Methods & ML", "color": "#5b6473"},
@@ -96,11 +96,17 @@ THEME_SEEDS = {
         "projection", "projections", "spread", "resurgence", "burden",
         "health", "healthcare",
     },
-    "genomics": {
+    # Evolution & Ecology: genomics/evolution terms plus agriculture/ecology
+    # (pests, invasive species) combined into one area.
+    "evoeco": {
         "genomic", "genomics", "genome", "genomes", "variant", "variants",
         "multivariant", "multivariants", "sequencing", "sequence", "sequences",
         "phylogenetic", "phylogenetics", "phylogeny", "lineage", "lineages",
         "mutation", "mutations", "sweep", "strain", "strains", "evolutionary",
+        "pest", "pests", "invasive", "invasion", "invasions", "species", "crop",
+        "crops", "agriculture", "agricultural", "armyworm", "frugiperda", "weed",
+        "weeds", "ecological", "ecology", "locust", "food", "commodity",
+        "absoluta", "tuta", "ageratina", "adenophora", "phytosanitary",
     },
     "migration": {
         "migration", "migrant", "migrants", "displacement", "displaced",
@@ -112,12 +118,6 @@ THEME_SEEDS = {
         "dissemination", "osn", "osns", "citation", "citations", "opinion",
         "posting", "twitter", "content", "collaboration", "threshold",
         "popularity",
-    },
-    "agri": {
-        "pest", "pests", "invasive", "invasion", "invasions", "species", "crop",
-        "crops", "agriculture", "agricultural", "armyworm", "frugiperda", "weed",
-        "weeds", "ecological", "ecology", "locust", "food", "commodity",
-        "absoluta", "tuta", "ageratina", "adenophora", "phytosanitary",
     },
     # Methods & ML combined: computational methods and machine-learning terms
     # share a single (recessive) theme.
@@ -140,8 +140,8 @@ THEME_SEEDS = {
 # a map of the whole portfolio. Sum is ~TOP_N; small areas simply contribute
 # fewer if they have fewer distinctive terms.
 PER_THEME_CAP = {
-    "epi": 9, "genomics": 8, "migration": 8, "social": 9,
-    "agri": 8, "methods": 10, "neutral": 0,
+    "epi": 9, "evoeco": 12, "migration": 8, "social": 9,
+    "methods": 10, "neutral": 0,
 }
 
 # Bigrams to always keep as a single term when they occur (subject to df guard),

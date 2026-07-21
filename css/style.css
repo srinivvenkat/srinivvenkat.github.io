@@ -18,10 +18,9 @@
   --font-heading: Georgia, "Times New Roman", serif;
   /* Word-cloud theme hues (dark-on-white, WCAG-validated). See tools/README.md. */
   --theme-epi: #c1121f;
-  --theme-genomics: #7b2cbf;
-  --theme-migration: #0e7c86;
+  --theme-evoeco: #2e7d32;
+  --theme-migration: #7b2cbf;
   --theme-social: #1a5fb4;
-  --theme-agri: #2e7d32;
   --theme-methods: #5b6473;
   --theme-neutral: #9aa0ab;
 }
@@ -551,22 +550,24 @@ svg.wc {
   font-family: var(--font-heading);
   fill: var(--theme-neutral);
   cursor: pointer;
-  transition: fill 0.15s ease;
+  transition: fill 0.15s ease, opacity 0.15s ease;
 }
 
 .wc-word[data-theme="epi"] text { fill: var(--theme-epi); }
-.wc-word[data-theme="genomics"] text { fill: var(--theme-genomics); }
+.wc-word[data-theme="evoeco"] text { fill: var(--theme-evoeco); }
 .wc-word[data-theme="migration"] text { fill: var(--theme-migration); }
 .wc-word[data-theme="social"] text { fill: var(--theme-social); }
-.wc-word[data-theme="agri"] text { fill: var(--theme-agri); }
 .wc-word[data-theme="methods"] text { fill: var(--theme-methods); }
 .wc-word[data-theme="neutral"] text { fill: var(--theme-neutral); }
 
-.wc-word { text-decoration: none; }
+/* Override the global a:hover underline — each word is an <a>, but the cloud
+   uses bold (not underline) as its hover cue. */
+.wc-word,
+.wc-word:hover,
+.wc-word:focus-visible { text-decoration: none; }
 
 .wc-word:hover text,
 .wc-word:focus-visible text {
-  text-decoration: underline;
   font-weight: bold;
 }
 
@@ -584,6 +585,11 @@ svg.wc {
   opacity: 0.28;
 }
 
+/* When a legend theme is previewed or pinned, words of other themes recede. */
+.wc-word.wc-off text {
+  opacity: 0.1;
+}
+
 /* Legend — reuses the tag-list vocabulary. */
 .wc-legend {
   display: flex;
@@ -599,7 +605,39 @@ svg.wc {
 .wc-legend li {
   display: flex;
   align-items: center;
+}
+
+/* Each legend entry is a toggle button: hover/focus previews a theme, click pins it. */
+.wc-legend-btn {
+  display: inline-flex;
+  align-items: center;
   gap: 6px;
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font: inherit;
+  color: inherit;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.wc-legend-btn:hover {
+  color: var(--navy);
+  background: rgba(35, 45, 75, 0.06);
+}
+
+.wc-legend-btn:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 1px;
+}
+
+.wc-legend-btn[aria-pressed="true"] {
+  color: var(--navy);
+  font-weight: 600;
+  background: rgba(35, 45, 75, 0.08);
 }
 
 .wc-legend .wc-swatch {
@@ -607,6 +645,10 @@ svg.wc {
   height: 12px;
   border-radius: 3px;
   flex-shrink: 0;
+}
+
+.wc-legend-btn[aria-pressed="true"] .wc-swatch {
+  box-shadow: 0 0 0 2px rgba(35, 45, 75, 0.25);
 }
 
 /* ------------------------------------------------------------------ */

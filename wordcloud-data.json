@@ -34,21 +34,17 @@
    "label": "Epidemiology",
    "color": "#c1121f"
   },
-  "genomics": {
-   "label": "Genomics & evolution",
-   "color": "#7b2cbf"
+  "evoeco": {
+   "label": "Evolution & Ecology",
+   "color": "#2e7d32"
   },
   "migration": {
    "label": "Migration & mobility",
-   "color": "#0e7c86"
+   "color": "#7b2cbf"
   },
   "social": {
    "label": "Social & information networks",
    "color": "#1a5fb4"
-  },
-  "agri": {
-   "label": "Agriculture & ecology",
-   "color": "#2e7d32"
   },
   "methods": {
    "label": "Methods & ML",
@@ -61,10 +57,9 @@
  },
  "themeOrder": [
   "epi",
-  "genomics",
+  "evoeco",
   "migration",
   "social",
-  "agri",
   "methods"
  ],
  "terms": [
@@ -130,7 +125,7 @@
   {
    "term": "variant",
    "weight": 1.0,
-   "theme": "genomics",
+   "theme": "evoeco",
    "eraWeights": [
     0.0,
     0.0,
@@ -223,24 +218,6 @@
    "mobile": true
   },
   {
-   "term": "invasive species",
-   "weight": 1.0,
-   "theme": "agri",
-   "eraWeights": [
-    0.0,
-    0.4084,
-    0.2279,
-    0.0,
-    0.0
-   ],
-   "keys": [
-    "conference-papers|12",
-    "journal-articles|16",
-    "journal-articles|9"
-   ],
-   "mobile": true
-  },
-  {
    "term": "scenario",
    "weight": 1.0,
    "theme": "methods",
@@ -320,23 +297,6 @@
    "mobile": true
   },
   {
-   "term": "pest",
-   "weight": 0.8988,
-   "theme": "agri",
-   "eraWeights": [
-    0.0,
-    0.5506,
-    0.1536,
-    0.0,
-    0.0
-   ],
-   "keys": [
-    "conference-papers|12",
-    "journal-articles|9"
-   ],
-   "mobile": true
-  },
-  {
    "term": "framework",
    "weight": 0.89,
    "theme": "methods",
@@ -375,25 +335,6 @@
     "journal-articles|5",
     "journal-articles|6",
     "journal-articles|7"
-   ],
-   "mobile": true
-  },
-  {
-   "term": "invasion",
-   "weight": 0.7345,
-   "theme": "agri",
-   "eraWeights": [
-    0.0,
-    0.0,
-    0.1255,
-    0.0,
-    0.1817
-   ],
-   "keys": [
-    "conference-papers|32",
-    "conference-papers|38",
-    "journal-articles|16",
-    "journal-articles|9"
    ],
    "mobile": true
   },
@@ -510,23 +451,6 @@
     "journal-articles|4",
     "journal-articles|7",
     "tech-reports|8"
-   ],
-   "mobile": true
-  },
-  {
-   "term": "absoluta",
-   "weight": 0.6636,
-   "theme": "agri",
-   "eraWeights": [
-    0.0,
-    0.2623,
-    0.1536,
-    0.0,
-    0.0
-   ],
-   "keys": [
-    "conference-papers|12",
-    "journal-articles|9"
    ],
    "mobile": true
   },
@@ -682,23 +606,6 @@
     "journal-articles|35",
     "journal-articles|41",
     "tech-reports|1"
-   ],
-   "mobile": true
-  },
-  {
-   "term": "tuta",
-   "weight": 0.5767,
-   "theme": "agri",
-   "eraWeights": [
-    0.0,
-    0.2623,
-    0.1239,
-    0.0,
-    0.0
-   ],
-   "keys": [
-    "conference-papers|12",
-    "journal-articles|9"
    ],
    "mobile": true
   },
@@ -906,23 +813,6 @@
    "mobile": true
   },
   {
-   "term": "agricultural",
-   "weight": 0.4283,
-   "theme": "agri",
-   "eraWeights": [
-    0.0,
-    0.2623,
-    0.0732,
-    0.0,
-    0.0
-   ],
-   "keys": [
-    "conference-papers|12",
-    "journal-articles|9"
-   ],
-   "mobile": true
-  },
-  {
    "term": "scenario hub",
    "weight": 0.4245,
    "theme": "methods",
@@ -968,9 +858,27 @@
    "mobile": true
   },
   {
+   "term": "invasive species",
+   "weight": 0.3855,
+   "theme": "evoeco",
+   "eraWeights": [
+    0.0,
+    0.4084,
+    0.2279,
+    0.0,
+    0.0
+   ],
+   "keys": [
+    "conference-papers|12",
+    "journal-articles|16",
+    "journal-articles|9"
+   ],
+   "mobile": true
+  },
+  {
    "term": "strain",
    "weight": 0.3795,
-   "theme": "genomics",
+   "theme": "evoeco",
    "eraWeights": [
     0.0,
     0.0,
@@ -1028,6 +936,23 @@
     "conference-papers|2",
     "tech-reports|1",
     "tech-reports|2"
+   ],
+   "mobile": true
+  },
+  {
+   "term": "pest",
+   "weight": 0.3465,
+   "theme": "evoeco",
+   "eraWeights": [
+    0.0,
+    0.5506,
+    0.1536,
+    0.0,
+    0.0
+   ],
+   "keys": [
+    "conference-papers|12",
+    "journal-articles|9"
    ],
    "mobile": true
   },
@@ -1119,7 +1044,7 @@
   {
    "term": "delta variant",
    "weight": 0.3111,
-   "theme": "genomics",
+   "theme": "evoeco",
    "eraWeights": [
     0.0,
     0.0,
@@ -1137,7 +1062,7 @@
   {
    "term": "genomic",
    "weight": 0.298,
-   "theme": "genomics",
+   "theme": "evoeco",
    "eraWeights": [
     0.0,
     0.0,
@@ -1148,6 +1073,25 @@
    "keys": [
     "journal-articles|29",
     "journal-articles|43"
+   ],
+   "mobile": true
+  },
+  {
+   "term": "invasion",
+   "weight": 0.2832,
+   "theme": "evoeco",
+   "eraWeights": [
+    0.0,
+    0.0,
+    0.1255,
+    0.0,
+    0.1817
+   ],
+   "keys": [
+    "conference-papers|32",
+    "conference-papers|38",
+    "journal-articles|16",
+    "journal-articles|9"
    ],
    "mobile": true
   },
@@ -1171,6 +1115,40 @@
    "mobile": true
   },
   {
+   "term": "absoluta",
+   "weight": 0.2558,
+   "theme": "evoeco",
+   "eraWeights": [
+    0.0,
+    0.2623,
+    0.1536,
+    0.0,
+    0.0
+   ],
+   "keys": [
+    "conference-papers|12",
+    "journal-articles|9"
+   ],
+   "mobile": true
+  },
+  {
+   "term": "tuta",
+   "weight": 0.2223,
+   "theme": "evoeco",
+   "eraWeights": [
+    0.0,
+    0.2623,
+    0.1239,
+    0.0,
+    0.0
+   ],
+   "keys": [
+    "conference-papers|12",
+    "journal-articles|9"
+   ],
+   "mobile": true
+  },
+  {
    "term": "threshold",
    "weight": 0.2151,
    "theme": "social",
@@ -1185,7 +1163,7 @@
     "conference-papers|1",
     "tech-reports|2"
    ],
-   "mobile": false
+   "mobile": true
   },
   {
    "term": "dissemination",
@@ -1219,6 +1197,23 @@
    "keys": [
     "conference-papers|34",
     "journal-articles|31"
+   ],
+   "mobile": false
+  },
+  {
+   "term": "agricultural",
+   "weight": 0.1651,
+   "theme": "evoeco",
+   "eraWeights": [
+    0.0,
+    0.2623,
+    0.0732,
+    0.0,
+    0.0
+   ],
+   "keys": [
+    "conference-papers|12",
+    "journal-articles|9"
    ],
    "mobile": false
   },

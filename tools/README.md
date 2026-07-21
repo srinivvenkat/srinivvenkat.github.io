@@ -29,7 +29,7 @@ themes above single-paper jargon. Each surviving term is assigned a research the
 from curated seed keywords, and selection is **balanced across themes** (`PER_THEME_CAP`):
 rather than a global top-N — which the large COVID/forecasting corpus would dominate —
 the script takes the strongest few terms from each area so smaller areas (migration,
-genomics, agriculture) stay visible. Word size is then normalized **within** each theme
+evolution & ecology) stay visible. Word size is then normalized **within** each theme
 so every area gets a comparably sized flagship word (General is damped so filler stays
 background). It also records the publication keys each term appears in (for the
 click-through filter on `publications.html`) and per-era weights (unused by the page
@@ -54,7 +54,7 @@ single topic should crowd out the rest.
 
 ### Theme colors
 
-Only the five research **domains** carry distinct colors (they show the breadth of the
+Only the four research **domains** carry distinct colors (they show the breadth of the
 work); the merged **Methods & ML** bucket is a single recessive gray so methodology
 doesn't compete with the domains, and General is dropped from the cloud entirely
 (`PER_THEME_CAP["neutral"] = 0`). The hues are dark-on-white and chosen for WCAG text

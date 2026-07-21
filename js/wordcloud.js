@@ -196,12 +196,62 @@
       var th = data.themes[id];
       if (!th) return;
       var li = document.createElement("li");
+
+      // A button so it's keyboard-focusable and toggles with Enter/Space.
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "wc-legend-btn";
+      btn.setAttribute("data-theme", id);
+      btn.setAttribute("aria-pressed", "false");
+
       var sw = document.createElement("span");
       sw.className = "wc-swatch";
       sw.style.background = th.color;
-      li.appendChild(sw);
-      li.appendChild(document.createTextNode(th.label));
+
+      var label = document.createElement("span");
+      label.textContent = th.label;
+
+      btn.appendChild(sw);
+      btn.appendChild(label);
+      li.appendChild(btn);
       legend.appendChild(li);
+    });
+  }
+
+  // Hovering/focusing a legend entry previews its theme (others recede); clicking
+  // pins that theme until it (or another) is clicked again.
+  function setupLegendFilter(cloud, wordEls, legend) {
+    if (!cloud || !legend) return;
+    var buttons = legend.querySelectorAll(".wc-legend-btn");
+    if (!buttons.length) return;
+
+    var pinned = null;
+
+    function applyFilter(themeId) {
+      if (themeId) {
+        cloud.classList.add("wc-theme-active");
+        wordEls.forEach(function (w) {
+          w.wrap.classList.toggle("wc-off", w.term.theme !== themeId);
+        });
+      } else {
+        cloud.classList.remove("wc-theme-active");
+        wordEls.forEach(function (w) { w.wrap.classList.remove("wc-off"); });
+      }
+    }
+
+    Array.prototype.forEach.call(buttons, function (btn) {
+      var themeId = btn.getAttribute("data-theme");
+      btn.addEventListener("mouseenter", function () { applyFilter(themeId); });
+      btn.addEventListener("focus", function () { applyFilter(themeId); });
+      btn.addEventListener("mouseleave", function () { applyFilter(pinned); });
+      btn.addEventListener("blur", function () { applyFilter(pinned); });
+      btn.addEventListener("click", function () {
+        pinned = (pinned === themeId) ? null : themeId;
+        Array.prototype.forEach.call(buttons, function (b) {
+          b.setAttribute("aria-pressed", b === btn && pinned ? "true" : "false");
+        });
+        applyFilter(pinned);
+      });
     });
   }
 
@@ -231,9 +281,10 @@
           });
         }
 
-        fillLegend(root.querySelector(".wc-legend"), data);
         var legend = root.querySelector(".wc-legend");
+        fillLegend(legend, data);
         if (legend) legend.hidden = false;
+        setupLegendFilter(cloud, built.wordEls, legend);
       })
       .catch(function (err) {
         console.warn("Word cloud unavailable (" + SOURCE + "):", err.message);
