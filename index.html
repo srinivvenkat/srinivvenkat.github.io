@@ -6,7 +6,7 @@
 <title>Srinivasan (Srini) Venkatramanan</title>
 <meta name="description" content="Srinivasan (Srini) Venkatramanan — Research Assistant Professor, Biocomplexity Institute, University of Virginia. Computational modeling, agentic AI, network science, epidemic forecasting.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/style.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
 
@@ -87,20 +87,40 @@
       </ul>
     </section>
 
-    <section id="wordcloud">
-      <div class="section-heading">
-        <h2>Research Themes</h2>
+    <section id="research-viz" class="viz-carousel">
+      <div class="section-heading viz-header">
+        <!-- Tabs are built by js/viz-carousel.js from each panel's <h2>. Without
+             JS this stays empty and the panels below simply stack, each with its
+             own heading. -->
+        <div class="viz-tabs" role="tablist" aria-label="Choose a view of my research"></div>
         <span class="view-all"><a href="publications.html">Browse all publications &rarr;</a></span>
       </div>
-      <p class="wc-intro" id="wc-desc">A word cloud built from the abstracts of my publications, sized by how
-      distinctive each term is to my work and colored by research theme. Click any word to see the papers
-      behind it.</p>
-      <div class="wc-cloud">
-        <svg class="wc" role="img" aria-labelledby="wc-title" aria-describedby="wc-desc">
-          <title id="wc-title">Word cloud of recurring terms across my research abstracts</title>
-        </svg>
+      <div class="viz-stack">
+        <div class="viz-panel" id="wordcloud">
+          <h2 class="viz-panel-title">Research Themes</h2>
+          <p class="wc-intro" id="wc-desc">A word cloud built from the abstracts of my publications, sized by how
+          distinctive each term is to my work and colored by research theme. Click any word to see the papers
+          behind it.</p>
+          <div class="wc-cloud">
+            <svg class="wc" role="img" aria-labelledby="wc-title" aria-describedby="wc-desc">
+              <title id="wc-title">Word cloud of recurring terms across my research abstracts</title>
+            </svg>
+          </div>
+          <ul class="wc-legend" hidden aria-label="Theme colors"></ul>
+        </div>
+        <div class="viz-panel" id="coauthors">
+          <h2 class="viz-panel-title">Collaboration Network</h2>
+          <p class="cn-intro" id="cn-desc">My most frequent co-authors, sized by how many papers we&rsquo;ve written
+          together and colored by their primary institution. A line links two collaborators who share papers with each
+          other, so research groups cluster together. Hover a name to see its collaborators; click to see the papers
+          we&rsquo;ve co-authored.</p>
+          <div class="cn-graph">
+            <svg class="cn" role="img" aria-labelledby="cn-title" aria-describedby="cn-desc">
+              <title id="cn-title">Network of my most frequent co-authors, clustered by shared publications</title>
+            </svg>
+          </div>
+        </div>
       </div>
-      <ul class="wc-legend" hidden aria-label="Theme colors"></ul>
     </section>
 
     <section id="experience">
@@ -197,5 +217,7 @@
 </footer>
 
 <script src="js/wordcloud.js?v=2" defer></script>
+<script src="js/coauthors.js?v=1" defer></script>
+<script src="js/viz-carousel.js?v=1" defer></script>
 </body>
 </html>

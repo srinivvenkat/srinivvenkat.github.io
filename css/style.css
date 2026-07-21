@@ -526,6 +526,80 @@ ol.pub-list li::marker {
    hidden until JS reveals them (and with JS off / reduced motion). */
 [hidden] { display: none !important; }
 
+/* ------------------------------------------------------------------ */
+/* Home: research visualization carousel (themes <-> network)          */
+/* ------------------------------------------------------------------ */
+/* Tabs toggle between the two home-page visualizations. Built by
+   js/viz-carousel.js; with JS off the panels stack (both visible), each keeping
+   its own <h2>, so the section still works. */
+.viz-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 22px;
+}
+
+/* Each tab reads as a switchable section title (heading font, not a chip). */
+.viz-tab {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: var(--text-muted);
+  background: none;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  margin: 0;
+  padding: 2px 2px 6px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.viz-tab:hover { color: var(--navy); }
+
+.viz-tab[aria-selected="true"] {
+  color: var(--navy);
+  border-bottom-color: var(--orange);
+}
+
+.viz-tab:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Enhanced (JS on): the two panels overlap in one grid cell and only the active
+   one shows. The inactive panel uses visibility:hidden (NOT display:none) so the
+   word cloud / network can still measure text via getBBox while off-screen, and
+   so assistive tech skips it. Overlapping keeps the section height stable (no
+   jump when toggling). */
+.viz-enhanced .viz-stack {
+  display: grid;
+}
+
+.viz-enhanced .viz-panel {
+  grid-area: 1 / 1;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.viz-enhanced .viz-panel.is-active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* With the <h2> hidden, the intro no longer needs to tuck under it. */
+.viz-enhanced .viz-panel .wc-intro,
+.viz-enhanced .viz-panel .cn-intro {
+  margin-top: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viz-enhanced .viz-panel { transition: none; }
+}
+
 .wc-intro {
   color: var(--text-muted);
   font-size: 0.95rem;
@@ -652,6 +726,86 @@ svg.wc {
 }
 
 /* ------------------------------------------------------------------ */
+/* Home: co-author collaboration network                               */
+/* ------------------------------------------------------------------ */
+.cn-intro {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: -0.5em;
+}
+
+.cn-graph {
+  width: 100%;
+  min-height: 120px;
+}
+
+svg.cn {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 460px;
+  overflow: visible;
+}
+
+/* Edges: faint at rest so the bubbles lead; a hovered node's ties light up. */
+.cn-edge {
+  stroke: var(--navy);
+  stroke-opacity: 0.16;
+  stroke-linecap: round;
+  transition: stroke-opacity 0.15s ease;
+}
+
+.cn-circle {
+  stroke: rgba(35, 45, 75, 0.35);
+  stroke-width: 1;
+  transition: opacity 0.15s ease;
+}
+
+/* Each node is an <a> wrapping a <circle> + <text> label. */
+.cn-node { text-decoration: none; }
+.cn-node,
+.cn-node:hover,
+.cn-node:focus-visible { text-decoration: none; }
+
+.cn-label {
+  font-family: var(--font-heading);
+  fill: #fff;
+  /* White halo so the label stays legible over any bubble color. */
+  paint-order: stroke;
+  stroke: rgba(35, 45, 75, 0.55);
+  stroke-width: 2.5px;
+  stroke-linejoin: round;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+/* Labels dropped beneath a too-small bubble sit on the page background, so they
+   flip to dark ink with a white halo instead. */
+.cn-label-below {
+  fill: var(--navy);
+  stroke: #fff;
+  stroke-width: 2.5px;
+}
+
+.cn-node:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.cn-node:hover .cn-circle,
+.cn-node:focus-visible .cn-circle {
+  stroke: var(--navy);
+  stroke-width: 2;
+}
+
+/* Emphasis: when a node is active, its neighborhood stays lit and the rest fade
+   (mirrors the word cloud's "siblings recede" behavior). */
+.cn.cn-active .cn-node.cn-off { opacity: 0.22; }
+.cn.cn-active .cn-edge.cn-off { stroke-opacity: 0.05; }
+.cn.cn-active .cn-edge.cn-on { stroke-opacity: 0.5; }
+
+/* ------------------------------------------------------------------ */
 /* Publications: cross-page term filter (from the word cloud)          */
 /* ------------------------------------------------------------------ */
 .pub-banner {
@@ -713,4 +867,8 @@ svg.wc {
   .site-header .container { flex-direction: column; align-items: flex-start; }
   h1 { font-size: 1.6rem; }
   svg.wc { max-height: 300px; }
+  /* Smaller, tighter tabs on phones so the two fit as a toggle rather than
+     reading as two stacked headings. */
+  .viz-tab { font-size: 1.2rem; padding-bottom: 4px; }
+  .viz-tabs { gap: 2px 16px; }
 }

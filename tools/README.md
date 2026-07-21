@@ -14,10 +14,14 @@ the pages, in this order:
 2. **`authors.json`** — regenerate: `python3 tools/build_authors.py --refresh`
    (pulls full author names + affiliations for the new DOIs from OpenAlex).
 3. **`wordcloud-data.json`** — regenerate: `python3 tools/build_wordcloud.py`.
-4. Commit all three regenerated files together, then re-render / redeploy the pages.
+4. **`coauthors-data.json`** — regenerate: `python3 tools/build_coauthors.py`
+   (reads `authors.json`, so it must run **after** step 2).
+5. Commit all four regenerated files together, then re-render / redeploy the pages.
 
-Both generators read `abstracts.json`, so step 1 must come first. Skipping steps 2–3
-leaves the co-author roster and the home-page word cloud stale relative to the CV.
+Order matters: `build_authors.py` and `build_wordcloud.py` both read `abstracts.json`
+(step 1 first); `build_coauthors.py` reads the `authors.json` that step 2 produces.
+Skipping steps 2–4 leaves the co-author roster, the home-page word cloud, and the
+collaboration network stale relative to the CV.
 
 ## build_authors.py
 
@@ -56,6 +60,53 @@ unless their ORCIDs conflict. Eight venue/workshop papers (Google Scholar / Open
 
 **Rerun this whenever you add or change a paper in `abstracts.json`**, then commit the
 regenerated `authors.json`.
+
+## build_coauthors.py
+
+Precomputes the home-page **Collaboration Network** from `authors.json`.
+
+```bash
+python3 tools/build_coauthors.py
+```
+
+- **Input:** `../authors.json` (produced by `build_authors.py` — run that first).
+- **Output:** `../coauthors-data.json` (~35 KB) — the small file the home page fetches.
+- **Requirements:** Python 3 standard library only. No packages, no build step.
+
+**Rerun this whenever `authors.json` changes**, then commit the regenerated
+`coauthors-data.json`. The file is committed, not generated at deploy time.
+
+### What it does
+
+It builds an **ego network with the site owner removed**. He co-authors with everyone,
+so drawing him would be a hairball hub; instead the whole graph *is* his collaboration
+circle. Nodes are his most frequent co-authors (`>= MIN_PAPERS` shared papers, capped at
+`TOP_N`), **sized** by shared-paper count and **colored** by primary institution (the
+most common institutions get distinct hues, pinned to UVA = navy; the rest share a
+neutral gray — there is **no legend by design**, color reads as ambient cluster
+membership). An **edge** between two co-authors weights how many papers they share *with
+each other*, which pulls real sub-communities together (the UVA epi group, the
+Northeastern crowd, the scenario-hub collaborators). Only each node's few strongest ties
+are kept (`MAX_EDGES_PER_NODE`) so the graph reads as clusters, not a hairball — genuine
+hubs still accrue high degree, which is the true story.
+
+Layout is **precomputed here** (Fruchterman-Reingold with weighted edge attraction,
+anisotropic gravity for a landscape blob, extra centre-pull for edge-less outliers, and
+hard collision so bubbles pack without overlapping), so `js/coauthors.js` only renders
+and handles interaction — the same division of labor as the word cloud. Each node also
+carries its papers' keys (`<section-id>|<number>`), so clicking a node filters
+`publications.html` to the papers co-authored with that person (handled by
+`js/pub-filter.js`, the same script the word cloud's term filter uses).
+
+### Tuning
+
+Knobs at the top of the script, all commented: `MIN_PAPERS` / `TOP_N` (which co-authors
+appear), `EDGE_MIN` / `MAX_EDGES_PER_NODE` (edge density — raise the latter for more
+ties), `R_MIN` / `R_MAX` / `SIZE_EXP` (bubble sizing), the layout forces
+(`GRAVITY_X`/`GRAVITY_Y` set the landscape aspect, `ISOLATE_GRAVITY` tucks edge-less
+nodes in, `COLLIDE_PAD` sets bubble spacing), and the institution `PALETTE`. `SEED` is
+fixed so the committed layout is reproducible. After changing anything, rerun and eyeball
+the printed node/edge counts; the aspect and overlap check can be re-run from a one-liner.
 
 ## build_wordcloud.py
 
