@@ -2,6 +2,23 @@
 
 Developer utilities for this site. Nothing here is served to visitors.
 
+## ⚠️ After updating the CV (`SV_CV.pdf`)
+
+The site's data files are **derived from your publications, not from the PDF automatically**.
+Whenever the CV changes (e.g. a new paper), refresh the derived data **before** re-rendering
+the pages, in this order:
+
+1. **`abstracts.json`** — the single source of truth. Manually add/edit the publication
+   entry (and its abstract), keyed `"<section-id>|<entry-number>"` to match
+   `publications.html`.
+2. **`authors.json`** — regenerate: `python3 tools/build_authors.py --refresh`
+   (pulls full author names + affiliations for the new DOIs from OpenAlex).
+3. **`wordcloud-data.json`** — regenerate: `python3 tools/build_wordcloud.py`.
+4. Commit all three regenerated files together, then re-render / redeploy the pages.
+
+Both generators read `abstracts.json`, so step 1 must come first. Skipping steps 2–3
+leaves the co-author roster and the home-page word cloud stale relative to the CV.
+
 ## build_authors.py
 
 Builds `../authors.json` — the co-author roster — from `abstracts.json`.
