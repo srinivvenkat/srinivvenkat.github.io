@@ -77,6 +77,16 @@ COLLIDE_PAD = 9.0  # min gap between bubble edges (breathing room for labels)
 GRAVITY_X = 0.020
 GRAVITY_Y = 0.048
 ISOLATE_GRAVITY = 7.0   # extra centre-pull for edge-less nodes (tuck them in)
+# The collision step pushes overlapping bubbles apart isotropically, which rounds
+# the settled pack toward a near-square blob -- and a square graph, dropped into the
+# wide homepage panel, gets shrunk by the CSS max-height and stranded between big
+# side margins. So after the sim we FIT the layout to a landscape aspect by spreading
+# it horizontally about its centre (see fit_aspect). Scaling x *apart* only ever
+# increases gaps, so it can't reintroduce overlaps, and being the last step nothing
+# re-rounds it. The word cloud fills its panel the same way (a landscape canvas).
+TARGET_ASPECT = 2.15  # width:height for the node centres; lands the final viewBox
+                      # (which adds equal margins, and whose radii aren't scaled)
+                      # near ~2.0, so the graph fills the ~900px panel under max-height
 
 # --- tenure ramp (sequential) ----------------------------------------------
 # Nodes are shaded by LENGTH OF COLLABORATION -- the span in years from our first
@@ -268,6 +278,24 @@ def layout(nodes, edges, radii):
     return px, py
 
 
+def fit_aspect(px, py, radii, target=TARGET_ASPECT):
+    """Spread the settled layout horizontally so its bounding box reaches `target`
+    width:height, letting it fill the wide panel. Only ever stretches x outward
+    (never compresses), so bubbles keep their size and no overlaps are introduced.
+    A near-square blob (aspect ~1) becomes landscape; an already-wide one is left be."""
+    n = len(px)
+    minx = min(px[i] - radii[i] for i in range(n))
+    maxx = max(px[i] + radii[i] for i in range(n))
+    miny = min(py[i] - radii[i] for i in range(n))
+    maxy = max(py[i] + radii[i] for i in range(n))
+    w, h = maxx - minx, maxy - miny
+    if h <= 0 or w / h >= target:
+        return px
+    f = target * h / w
+    cx = (minx + maxx) / 2.0
+    return [cx + (x - cx) * f for x in px]
+
+
 def main():
     doc = json.load(open(SRC, encoding="utf-8"))
     authors = doc["authors"]
@@ -289,6 +317,7 @@ def main():
     radii = [radius(a["paper_count"]) for a in nodes]
 
     px, py = layout(nodes, edges, radii)
+    px = fit_aspect(px, py, radii)   # stretch to landscape so it fills the panel
 
     # Recentre to the origin, then emit rounded coordinates. The renderer derives
     # its own viewBox from node extents, so absolute placement doesn't matter.
