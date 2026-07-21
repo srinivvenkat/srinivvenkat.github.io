@@ -18,10 +18,12 @@
   --font-heading: Georgia, "Times New Roman", serif;
   /* Word-cloud theme hues (dark-on-white, WCAG-validated). See tools/README.md. */
   --theme-epi: #c1121f;
-  --theme-networks: #157347;
-  --theme-ml: #e8590c;
-  --theme-methods: #1a5fb4;
-  --theme-neutral: #55606e;
+  --theme-genomics: #7b2cbf;
+  --theme-migration: #0e7c86;
+  --theme-social: #1a5fb4;
+  --theme-agri: #2e7d32;
+  --theme-methods: #5b6473;
+  --theme-neutral: #9aa0ab;
 }
 
 * {
@@ -553,8 +555,10 @@ svg.wc {
 }
 
 .wc-word[data-theme="epi"] text { fill: var(--theme-epi); }
-.wc-word[data-theme="networks"] text { fill: var(--theme-networks); }
-.wc-word[data-theme="ml"] text { fill: var(--theme-ml); }
+.wc-word[data-theme="genomics"] text { fill: var(--theme-genomics); }
+.wc-word[data-theme="migration"] text { fill: var(--theme-migration); }
+.wc-word[data-theme="social"] text { fill: var(--theme-social); }
+.wc-word[data-theme="agri"] text { fill: var(--theme-agri); }
 .wc-word[data-theme="methods"] text { fill: var(--theme-methods); }
 .wc-word[data-theme="neutral"] text { fill: var(--theme-neutral); }
 

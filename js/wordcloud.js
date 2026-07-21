@@ -23,11 +23,13 @@
   var SVGNS = "http://www.w3.org/2000/svg";
 
   // Font-size mapping. Weights are normalized to [0,1] across the displayed
-  // terms, then curved so the smallest and largest words are well separated.
-  var FONT_MIN = 15;
-  var FONT_MAX_DESKTOP = 62;
-  var FONT_MAX_MOBILE = 44;
-  var SIZE_EXP = 0.72; // <1 lifts the middle; the spread stays wide at the ends
+  // terms, then curved. Because selection is now balanced per theme, prominence
+  // no longer needs a dramatic size range — a compact range keeps every keyword
+  // legible while still giving each theme's flagship some emphasis.
+  var FONT_MIN = 20;
+  var FONT_MAX_DESKTOP = 50;
+  var FONT_MAX_MOBILE = 36;
+  var SIZE_EXP = 0.85; // <1 lifts the middle so mid-weight words stay readable
   var MOBILE_BP = 640;
 
   var PAD = 3; // px padding around each word's box when packing
@@ -49,6 +51,12 @@
     return !(a.x + a.w < b.x || b.x + b.w < a.x || a.y + a.h < b.y || b.y + b.h < a.y);
   }
 
+  // Horizontal stretch: the container is much wider than tall, so bias the
+  // spiral into a landscape ellipse (x expands faster than y). This fills the
+  // available width instead of packing into a narrow central column. Set per
+  // render (see build) — gentler on narrow phone screens.
+  var ASPECT = 2.1;
+
   // Archimedean-spiral placement: try the centre first, then walk outward until
   // the candidate box clears everything already placed.
   function placeWord(box, placed, cx, cy) {
@@ -56,7 +64,7 @@
     var a = 4; // spiral tightness (px per radian)
     for (var theta = 0; theta < 60 * Math.PI; theta += step) {
       var r = a * theta;
-      var x = cx + r * Math.cos(theta) - box.w / 2;
+      var x = cx + ASPECT * r * Math.cos(theta) - box.w / 2;
       var y = cy + r * Math.sin(theta) - box.h / 2;
       var cand = { x: x, y: y, w: box.w, h: box.h };
       var hit = false;
@@ -83,6 +91,9 @@
 
     var max = fontMax();
     var themes = data.themes || {};
+    // Wide ellipse on desktop to fill the column; near-round on phones so the
+    // cloud doesn't flatten into an unreadable strip.
+    ASPECT = isMobile() ? 1.35 : 2.1;
 
     // Normalize weights across the displayed terms so the full font-size range
     // is used regardless of the raw weight distribution.

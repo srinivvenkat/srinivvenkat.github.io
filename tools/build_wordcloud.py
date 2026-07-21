@@ -58,47 +58,90 @@ ERAS = [
 # term matches wins, otherwise the term is "neutral". Colors are dark-on-white
 # and WCAG-validated (see plan / tools/README.md).
 # ---------------------------------------------------------------------------
-THEME_ORDER = ["epi", "networks", "ml", "methods", "neutral"]
+# Legend / output display order. Only the five research DOMAINS plus the merged
+# methods bucket appear; the domains carry distinct colors (they show the breadth
+# of the work) and "methods" is a single recessive gray. "neutral" is defined for
+# fallback only — it is not shown (PER_THEME_CAP is 0) and not in the legend.
+THEME_ORDER = ["epi", "genomics", "migration", "social", "agri", "methods"]
+
+# Assignment priority (see theme_for). Distinct, smaller areas are matched BEFORE
+# the broad "epi"/"methods" buckets so their defining terms keep their own color
+# instead of being absorbed — e.g. "genomic surveillance" -> genomics, not epi.
+THEME_PRIORITY = ["genomics", "migration", "agri", "social", "methods", "epi"]
+
 THEMES = {
     "epi": {"label": "Epidemiology", "color": "#c1121f"},
-    "networks": {"label": "Networks & mobility", "color": "#157347"},
-    "ml": {"label": "Machine learning", "color": "#e8590c"},
-    "methods": {"label": "Methods & computing", "color": "#1a5fb4"},
-    "neutral": {"label": "General", "color": "#55606e"},
+    "genomics": {"label": "Genomics & evolution", "color": "#7b2cbf"},
+    "migration": {"label": "Migration & mobility", "color": "#0e7c86"},
+    "social": {"label": "Social & information networks", "color": "#1a5fb4"},
+    "agri": {"label": "Agriculture & ecology", "color": "#2e7d32"},
+    # ML and computing methods are merged into one recessive gray: they describe
+    # HOW the work is done, so they should not compete with the domain colors.
+    "methods": {"label": "Methods & ML", "color": "#5b6473"},
+    "neutral": {"label": "General", "color": "#9aa0ab"},
 }
+# Seeds are single tokens only — theme_for splits multi-word terms into words and
+# matches each word, so a term like "genomic surveillance" is caught by "genomic".
+# Keep the sets disjoint; priority order (above) resolves any genuine overlap.
 THEME_SEEDS = {
     "epi": {
         "epidemic", "epidemics", "epidemiological", "epidemiology", "outbreak",
         "outbreaks", "influenza", "flu", "covid", "sars", "pandemic", "pandemics",
         "forecast", "forecasting", "forecasts", "surveillance", "disease",
-        "diseases", "transmission", "infection", "infectious", "vaccine",
-        "vaccination", "seir", "sir", "hospitalization", "hospitalizations",
-        "wastewater", "genomic", "genomics", "variant", "variants", "incidence",
+        "diseases", "transmission", "transmissibility", "infection", "infections",
+        "infectious", "vaccine", "vaccines", "vaccination", "seir", "sir",
+        "hospitalization", "hospitalizations", "wastewater", "incidence",
         "prevalence", "immunity", "antibody", "seroprevalence", "mpox",
         "intervention", "interventions", "nonpharmaceutical", "quarantine",
-        "epidemiology", "projection", "health", "healthcare", "policy", "policies",
+        "projection", "projections", "spread", "resurgence", "burden",
+        "health", "healthcare",
     },
-    "networks": {
-        "network", "networks", "contact", "contacts", "mobility", "spatial",
-        "metapopulation", "graph", "graphs", "population", "populations",
-        "movement", "movements", "commuting", "travel", "flow", "flows",
-        "connectivity", "spread", "diffusion", "geographic", "spatiotemporal",
-        "social", "county", "counties", "urban", "node", "nodes", "country",
-        "countries", "community", "temporal",
+    "genomics": {
+        "genomic", "genomics", "genome", "genomes", "variant", "variants",
+        "multivariant", "multivariants", "sequencing", "sequence", "sequences",
+        "phylogenetic", "phylogenetics", "phylogeny", "lineage", "lineages",
+        "mutation", "mutations", "sweep", "strain", "strains", "evolutionary",
     },
-    "ml": {
+    "migration": {
+        "migration", "migrant", "migrants", "displacement", "displaced",
+        "refugee", "refugees", "mobility", "commute", "commuting", "commuter",
+        "commuters", "travel", "movement", "movements", "ukraine",
+    },
+    "social": {
+        "network", "networks", "node", "nodes", "influence", "diffusion",
+        "dissemination", "osn", "osns", "citation", "citations", "opinion",
+        "posting", "twitter", "content", "collaboration", "threshold",
+        "popularity",
+    },
+    "agri": {
+        "pest", "pests", "invasive", "invasion", "invasions", "species", "crop",
+        "crops", "agriculture", "agricultural", "armyworm", "frugiperda", "weed",
+        "weeds", "ecological", "ecology", "locust", "food", "commodity",
+        "absoluta", "tuta", "ageratina", "adenophora", "phytosanitary",
+    },
+    # Methods & ML combined: computational methods and machine-learning terms
+    # share a single (recessive) theme.
+    "methods": {
+        "simulation", "simulations", "stochastic", "computational", "hpc",
+        "scalable", "pipeline", "optimization", "parallel", "performance",
+        "framework", "algorithmic", "compartmental", "mechanistic", "numerical",
+        "supercomputing", "benchmark", "scenario", "scenarios", "digital",
+        "sensitivity", "uncertainty", "metapopulation",
         "machine", "learning", "neural", "agentic", "agent", "agents",
         "ensemble", "ensembles", "bayesian", "calibration", "deep", "algorithm",
         "algorithms", "ai", "llm", "llms", "regression", "gaussian", "inference",
-        "generative", "predictive", "classifier", "reinforcement",
+        "generative", "predictive", "classifier", "reinforcement", "gnn",
     },
-    "methods": {
-        "simulation", "simulations", "stochastic", "computational", "hpc",
-        "scalable", "pipeline", "optimization", "high-performance", "parallel",
-        "framework", "algorithmic", "compartmental", "mechanistic", "numerical",
-        "supercomputing", "benchmark", "scenario", "scenarios", "digital",
-        "sensitivity", "uncertainty",
-    },
+}
+
+# Per-theme cap on how many terms enter the cloud. This is the core of the
+# "balanced" selection: instead of the global top-N (which the largest topic
+# dominates), take the strongest few terms from EACH area so the cloud reads as
+# a map of the whole portfolio. Sum is ~TOP_N; small areas simply contribute
+# fewer if they have fewer distinctive terms.
+PER_THEME_CAP = {
+    "epi": 9, "genomics": 8, "migration": 8, "social": 9,
+    "agri": 8, "methods": 10, "neutral": 0,
 }
 
 # Bigrams to always keep as a single term when they occur (subject to df guard),
@@ -109,6 +152,10 @@ BIGRAM_ALLOWLIST = {
     "public health", "infectious disease", "data driven", "nonpharmaceutical intervention",
     "high performance", "deep learning", "situational awareness", "seasonal influenza",
     "social distancing", "digital surveillance", "vaccine allocation",
+    "forced migration", "human movement", "invasive species", "food flow",
+    "commodity flow", "food trade", "social network", "social media",
+    "information dissemination", "content spread", "selective sweep",
+    "linear threshold", "neural network",
 }
 
 # General + academic stopwords. Intentionally broad: filler that would otherwise
@@ -204,9 +251,10 @@ def fold(word, vocab):
 
 def theme_for(term):
     # Split on spaces and hyphens so "agent-based" matches the "agent" seed and
-    # "public health" matches "health".
+    # "genomic surveillance" matches "genomic". Themes are tried in priority order
+    # (distinct areas before the broad epi/methods buckets).
     parts = re.split(r"[\s\-]+", term)
-    for theme in THEME_ORDER[:-1]:
+    for theme in THEME_PRIORITY:
         seeds = THEME_SEEDS[theme]
         for p in parts:
             if p in seeds:
@@ -336,10 +384,10 @@ def main():
     for t, cf in corpus_freq.items():
         df = df_count[t]
         if is_phrase(t):
-            if df < 3:
+            if df < 3:  # multi-word phrases need firmer support
                 continue
         else:
-            if df < 3:  # a theme must recur across >= 3 papers, not one outlier
+            if df < 2:  # a term must recur across >= 2 papers, not a one-off
                 continue
             if len(t) < 4:
                 continue
@@ -347,15 +395,48 @@ def main():
         scored.append((t, weight))
 
     scored.sort(key=lambda x: x[1], reverse=True)
-    top = scored[:TOP_N]
-    if not top:
+    if not scored:
         raise SystemExit("No terms survived filtering -- check abstracts.json")
-    max_w = max(w for _, w in top)
+
+    # ------------------------------------------------------------------
+    # Balanced selection: bucket every surviving term by theme, then take the
+    # strongest few per theme (PER_THEME_CAP). This is what surfaces smaller
+    # areas — migration, genomics, agriculture — that a global top-N would bury
+    # under the much larger COVID/forecasting corpus.
+    # ------------------------------------------------------------------
+    themed = defaultdict(list)
+    for t, w in scored:  # scored is already sorted, so each bucket stays ranked
+        th = theme_for(t)
+        themed[th].append((t, w, th))
+    selected = []
+    for theme, cap in PER_THEME_CAP.items():
+        selected.extend(themed.get(theme, [])[:cap])
+    if not selected:
+        raise SystemExit("No terms selected -- check theme seeds / caps")
+
+    # Per-theme size normalization: divide each term's weight by the top weight
+    # in its own theme, so every area gets a comparably-sized flagship word and
+    # no single topic visually dominates. Within-theme proportions are preserved.
+    # "neutral" (General) is damped so generic filler stays background, never a
+    # headline-sized word competing with a real research theme.
+    NEUTRAL_SCALE = 0.7
+    theme_max = defaultdict(float)
+    for t, w, th in selected:
+        if w > theme_max[th]:
+            theme_max[th] = w
+    disp = [
+        (t, (w / (theme_max[th] or 1.0)) * (NEUTRAL_SCALE if th == "neutral" else 1.0), th)
+        for t, w, th in selected
+    ]
+    # Order by display weight so the biggest words place first and the mobile
+    # subset keeps each theme's flagship.
+    disp.sort(key=lambda x: x[1], reverse=True)
+    disp = disp[:TOP_N]
 
     # ------------------------------------------------------------------
     # Per-era term frequency, with the GLOBAL idf held fixed so a term's
-    # distinctiveness is stable and only its prominence changes across eras.
-    # Each era column is normalized to its own max so every era reads well.
+    # distinctiveness is stable. Retained in the data for possible future use;
+    # the page currently renders only the combined all-time cloud.
     # ------------------------------------------------------------------
     era_cf = [defaultdict(float) for _ in ERAS]
     for key, toks in docs.items():
@@ -369,22 +450,22 @@ def main():
     era_weight_raw = []  # per era: {term: weight}
     for i, _ in enumerate(ERAS):
         col = {}
-        for t, _w in top:
+        for t, _dw, _th in disp:
             cf = era_cf[i].get(t, 0.0)
             col[t] = cf * idf(t) if cf > 0 else 0.0
         era_weight_raw.append(col)
     era_max = [max(col.values()) if any(col.values()) else 1.0 for col in era_weight_raw]
 
     terms_out = []
-    for rank, (t, w) in enumerate(top):
+    for rank, (t, dw, th) in enumerate(disp):
         era_weights = []
         for i, _ in enumerate(ERAS):
             raw = era_weight_raw[i].get(t, 0.0)
             era_weights.append(round(raw / era_max[i], 4) if era_max[i] else 0.0)
         terms_out.append({
             "term": t,
-            "weight": round(w / max_w, 4),
-            "theme": theme_for(t),
+            "weight": round(dw, 4),
+            "theme": th,
             "eraWeights": era_weights,
             "keys": sorted(term_keys[t]),
             "mobile": rank < MOBILE_N,
@@ -393,8 +474,11 @@ def main():
     out = {
         "_readme": (
             "Generated by tools/build_wordcloud.py from abstracts.json. Do not edit "
-            "by hand -- rerun the script after changing abstracts.json. Weights are "
-            "normalized 0..1. 'keys' are '<section-id>|<number>' matching publications.html."
+            "by hand -- rerun the script after changing abstracts.json. Terms are "
+            "selected per-theme (balanced across research areas) and 'weight' is "
+            "normalized within each theme (0..1) so every area has a comparably "
+            "sized flagship word. 'keys' are '<section-id>|<number>' matching "
+            "publications.html."
         ),
         "generatedFrom": "abstracts.json",
         "docCount": n_docs,
@@ -413,9 +497,13 @@ def main():
     print("Top 25 terms (term | theme | weight):")
     for row in terms_out[:25]:
         print("  %-26s %-9s %.3f" % (row["term"], row["theme"], row["weight"]))
-    # Theme distribution for a quick sanity check.
+    # Theme distribution for a quick sanity check, with how many candidate terms
+    # each theme had available before the per-theme cap was applied.
     dist = Counter(r["theme"] for r in terms_out)
-    print("Theme distribution:", dict(dist))
+    print("Theme distribution (shown / available):")
+    for th in THEME_ORDER:
+        avail = len(themed.get(th, []))
+        print("  %-10s %2d / %2d" % (th, dist.get(th, 0), avail))
 
 
 if __name__ == "__main__":
