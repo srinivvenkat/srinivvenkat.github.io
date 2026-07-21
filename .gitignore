@@ -19,3 +19,6 @@ Desktop.ini
 # Python
 __pycache__/
 *.py[cod]
+
+# Local build caches
+tools/.openalex_cache.json

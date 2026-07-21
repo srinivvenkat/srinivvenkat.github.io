@@ -2,6 +2,35 @@
 
 Developer utilities for this site. Nothing here is served to visitors.
 
+## build_authors.py
+
+Builds `../authors.json` — the co-author roster — from `abstracts.json`.
+
+```bash
+python3 tools/build_authors.py            # use cache where present
+python3 tools/build_authors.py --refresh  # ignore cache, refetch everything
+```
+
+- **Input:** `../abstracts.json`.
+- **Output:** `../authors.json` (~800 KB) — one record per co-author with full name,
+  ranked affiliations (`primary_affiliation` = most frequent), `paper_count`,
+  `first_year`/`last_year`, ORCID, OpenAlex id(s), and the list of papers.
+- **Requirements:** Python 3 stdlib + `curl`. Reaches the network (OpenAlex API).
+
+For every publication with a resolvable DOI / arXiv / medRxiv id, the **full** author
+list, full names, and institutional affiliations are fetched from
+[OpenAlex](https://openalex.org) (keyed by DOI) — the `citation` strings in
+`abstracts.json` only carry abbreviated, sometimes `et al.`-truncated names and no
+affiliations, so they are **not** used for authorship. Raw API responses are cached in
+`tools/.openalex_cache.json` (gitignored) so reruns are fast; use `--refresh` after
+adding papers. Duplicate OpenAlex author profiles for one person are merged by name
+unless their ORCIDs conflict. Eight venue/workshop papers (Google Scholar / OpenReview
+/ ACM ANNSIM links) are not indexed by OpenAlex and are listed under
+`unresolved_papers`; their authors are omitted rather than guessed.
+
+**Rerun this whenever you add or change a paper in `abstracts.json`**, then commit the
+regenerated `authors.json`.
+
 ## build_wordcloud.py
 
 Precomputes the home-page "Research Themes" word cloud from `abstracts.json`.
