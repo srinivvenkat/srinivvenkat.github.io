@@ -26,6 +26,11 @@ CACHE = os.path.join(HERE, ".openalex_cache.json")   # gitignored
 MAILTO = "srini@virginia.edu"
 REFRESH = "--refresh" in sys.argv
 
+# A paper with strictly more than this many authors is a "consortium paper" (large
+# forecasting/scenario-modeling hub efforts). Used to flag such papers in abstracts.json
+# and to flag authors who appear ONLY on consortium papers in authors.json.
+CONSORTIUM_AUTHOR_THRESHOLD = 30
+
 
 # --------------------------------------------------------------------------- fetch
 def get(url):
@@ -236,11 +241,15 @@ def merge_nodes(nodes):
 def build(entries, cache):
     authors = OrderedDict()
     unresolved = []
+    author_count = {}   # entry_key -> full author count from OpenAlex (None if unresolved)
     for entry_key, meta in entries.items():
         rec = cache.get(entry_key, {}).get("record")
         if not rec:
             unresolved.append(entry_key)
+            author_count[entry_key] = None
             continue
+        valid = [a for a in rec.get("authorships", []) if (a.get("author") or {}).get("display_name")]
+        author_count[entry_key] = len(valid)
         year = rec.get("publication_year") or \
             (int(meta["year"]) if str(meta.get("year", "")).isdigit() else None)
         for a in rec.get("authorships", []):
@@ -286,6 +295,9 @@ def build(entries, cache):
             for b in buckets.values():
                 merged.append(merge_nodes(b))
 
+    consortium_keys = {k for k, c in author_count.items()
+                       if c is not None and c > CONSORTIUM_AUTHOR_THRESHOLD}
+
     for a in merged:
         ranked = [ins for ins, _ in a["_affil_counter"].most_common()]
         a["affiliations"] = ranked
@@ -297,6 +309,8 @@ def build(entries, cache):
                 seen.add(p["key"]); uniq.append(p)
         a["papers"] = uniq
         a["paper_count"] = len(uniq)
+        # authors whose every paper is a consortium paper (filterable in the viz)
+        a["consortium_only"] = bool(uniq) and all(p["key"] in consortium_keys for p in uniq)
         a["is_self"] = is_owner(a["name"])
         if a["is_self"]:
             a["name"] = "Srinivasan Venkatramanan"  # canonical display name
@@ -306,14 +320,33 @@ def build(entries, cache):
                 a["name"] = canon
 
     ordered = sorted(merged, key=lambda a: (-a["paper_count"], a["name"].lower()))
-    return ordered, unresolved
+    return ordered, unresolved, author_count, consortium_keys
 
 
 # ---------------------------------------------------------------------------- main
+def update_abstracts(abstracts_doc, author_count, consortium_keys):
+    """Write auto-maintained author_count / consortium_paper fields back into
+    abstracts.json (consortium_paper = author_count > CONSORTIUM_AUTHOR_THRESHOLD).
+    Fields are appended per entry; the file's manually curated content is untouched."""
+    note = (" author_count and consortium_paper are auto-maintained by "
+            "tools/build_authors.py: author_count is the full OpenAlex author count "
+            "(null when the paper isn't in OpenAlex), and consortium_paper is true when "
+            "author_count > %d (large forecasting/scenario-hub efforts)." % CONSORTIUM_AUTHOR_THRESHOLD)
+    if note.strip() not in abstracts_doc["_readme"]:
+        abstracts_doc["_readme"] = abstracts_doc["_readme"].rstrip() + note
+    for key, entry in abstracts_doc["entries"].items():
+        entry["author_count"] = author_count.get(key)
+        entry["consortium_paper"] = key in consortium_keys
+    abstracts_doc["counts"]["consortium_papers"] = len(consortium_keys)
+    json.dump(abstracts_doc, open(ABSTRACTS, "w"), indent=2, ensure_ascii=False)
+
+
 def main():
-    entries = json.load(open(ABSTRACTS))["entries"]
+    abstracts_doc = json.load(open(ABSTRACTS))
+    entries = abstracts_doc["entries"]
     cache = fetch_records(entries)
-    authors, unresolved = build(entries, cache)
+    authors, unresolved, author_count, consortium_keys = build(entries, cache)
+    update_abstracts(abstracts_doc, author_count, consortium_keys)
 
     out = OrderedDict()
     out["_readme"] = (
@@ -328,10 +361,14 @@ def main():
         "addresses/departments/HTML-entities stripped; 'Unaffiliated' -> 'Independent'). "
         "affiliations are ranked by how often they appear (primary_affiliation = most frequent); "
         "strings occasionally reflect OpenAlex mis-linkage (e.g. 'Biocom' for the Biocomplexity "
-        "Institute). Regenerate with tools/build_authors.py.")
+        "Institute). consortium_only flags authors whose every paper has >%d authors (large "
+        "hub efforts) so they can be filtered out of a co-author view. Regenerate with "
+        "tools/build_authors.py." % CONSORTIUM_AUTHOR_THRESHOLD)
     out["counts"] = {"authors": len(authors),
+                     "consortium_only_authors": sum(1 for a in authors if a["consortium_only"]),
                      "papers_resolved": len(entries) - len(unresolved),
-                     "papers_total": len(entries)}
+                     "papers_total": len(entries),
+                     "consortium_papers": len(consortium_keys)}
     out["source"] = "OpenAlex (https://openalex.org)"
     out["unresolved_papers"] = [
         {"key": k, "title": entries[k]["title"], "url": entries[k]["url"],
@@ -340,11 +377,13 @@ def main():
     out["authors"] = authors
 
     json.dump(out, open(OUT, "w"), indent=2, ensure_ascii=False)
-    print("Wrote %s" % os.path.relpath(OUT, REPO))
-    print("  authors:          %d" % len(authors))
-    print("  papers resolved:  %d / %d" % (len(entries) - len(unresolved), len(entries)))
+    print("Wrote %s and updated %s" % (os.path.relpath(OUT, REPO), os.path.relpath(ABSTRACTS, REPO)))
+    print("  authors:            %d (%d consortium-only)" %
+          (len(authors), sum(1 for a in authors if a["consortium_only"])))
+    print("  papers resolved:    %d / %d" % (len(entries) - len(unresolved), len(entries)))
+    print("  consortium papers:  %d (>%d authors)" % (len(consortium_keys), CONSORTIUM_AUTHOR_THRESHOLD))
     if unresolved:
-        print("  unresolved:       %s" % ", ".join(unresolved))
+        print("  unresolved:         %s" % ", ".join(unresolved))
 
 
 if __name__ == "__main__":

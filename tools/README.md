@@ -31,8 +31,17 @@ python3 tools/build_authors.py --refresh  # ignore cache, refetch everything
 - **Input:** `../abstracts.json`.
 - **Output:** `../authors.json` (~800 KB) — one record per co-author with full name,
   ranked affiliations (`primary_affiliation` = most frequent), `paper_count`,
-  `first_year`/`last_year`, ORCID, OpenAlex id(s), and the list of papers.
+  `first_year`/`last_year`, ORCID, OpenAlex id(s), `consortium_only`, and the list of papers.
+- **Also updates `../abstracts.json`** — appends `author_count` (full OpenAlex author
+  count, null if unresolved) and `consortium_paper` (true when `author_count` > 30) to
+  each entry. Curated content is untouched; only these two fields are (re)written.
 - **Requirements:** Python 3 stdlib + `curl`. Reaches the network (OpenAlex API).
+
+**Consortium papers** (> 30 authors — large forecasting/scenario-hub efforts, currently
+11 of 95 resolved) inflate the roster with one-off co-authors. `consortium_paper` flags
+them in `abstracts.json`; `consortium_only` in `authors.json` flags authors whose *every*
+paper is a consortium paper, so a co-author visualization can filter them out. The
+threshold is `CONSORTIUM_AUTHOR_THRESHOLD` at the top of the script.
 
 For every publication with a resolvable DOI / arXiv / medRxiv id, the **full** author
 list, full names, and institutional affiliations are fetched from

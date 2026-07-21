@@ -1,9 +1,11 @@
 {
-  "_readme": "Co-author roster derived from abstracts.json. For every paper with a resolvable DOI/arXiv/medRxiv id, the full author list, full names, and institutional affiliations were retrieved from OpenAlex (api.openalex.org, keyed by DOI). paper_count and first_year/last_year are computed over the resolved papers only. Duplicate OpenAlex author profiles for the same person are merged by name unless their ORCIDs conflict; the site owner's spelling variants (incl. 'Srini Venkat' and OpenAlex typos) are unified, and a curated list of human-confirmed same-person aliases is merged even across conflicting ORCIDs. Affiliation strings are normalized (known mislinks remapped, addresses/departments/HTML-entities stripped; 'Unaffiliated' -> 'Independent'). affiliations are ranked by how often they appear (primary_affiliation = most frequent); strings occasionally reflect OpenAlex mis-linkage (e.g. 'Biocom' for the Biocomplexity Institute). Regenerate with tools/build_authors.py.",
+  "_readme": "Co-author roster derived from abstracts.json. For every paper with a resolvable DOI/arXiv/medRxiv id, the full author list, full names, and institutional affiliations were retrieved from OpenAlex (api.openalex.org, keyed by DOI). paper_count and first_year/last_year are computed over the resolved papers only. Duplicate OpenAlex author profiles for the same person are merged by name unless their ORCIDs conflict; the site owner's spelling variants (incl. 'Srini Venkat' and OpenAlex typos) are unified, and a curated list of human-confirmed same-person aliases is merged even across conflicting ORCIDs. Affiliation strings are normalized (known mislinks remapped, addresses/departments/HTML-entities stripped; 'Unaffiliated' -> 'Independent'). affiliations are ranked by how often they appear (primary_affiliation = most frequent); strings occasionally reflect OpenAlex mis-linkage (e.g. 'Biocom' for the Biocomplexity Institute). consortium_only flags authors whose every paper has >30 authors (large hub efforts) so they can be filtered out of a co-author view. Regenerate with tools/build_authors.py.",
   "counts": {
     "authors": 814,
+    "consortium_only_authors": 577,
     "papers_resolved": 95,
-    "papers_total": 103
+    "papers_total": 103,
+    "consortium_papers": 11
   },
   "source": "OpenAlex (https://openalex.org)",
   "unresolved_papers": [
@@ -658,6 +660,7 @@
         "https://openalex.org/A5112101273",
         "https://openalex.org/A5069181105"
       ],
+      "consortium_only": false,
       "is_self": true
     },
     {
@@ -1103,6 +1106,7 @@
         "https://openalex.org/A5020293284",
         "https://openalex.org/A5134200133"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -1485,6 +1489,7 @@
         "https://openalex.org/A5011087624",
         "https://openalex.org/A5134117543"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -1747,6 +1752,7 @@
         "https://openalex.org/A5065844089",
         "https://openalex.org/A5026449362"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -1971,6 +1977,7 @@
       "openalex_ids": [
         "https://openalex.org/A5031381738"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -2148,6 +2155,7 @@
         "https://openalex.org/A5044848288",
         "https://openalex.org/A5124872783"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -2312,6 +2320,7 @@
       "openalex_ids": [
         "https://openalex.org/A5079309664"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -2461,6 +2470,7 @@
       "openalex_ids": [
         "https://openalex.org/A5017416729"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -2581,6 +2591,7 @@
         "https://openalex.org/A5103176355",
         "https://openalex.org/A5101791984"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -2703,6 +2714,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100330304"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -2817,6 +2829,7 @@
       "openalex_ids": [
         "https://openalex.org/A5081050112"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -2930,6 +2943,7 @@
       "openalex_ids": [
         "https://openalex.org/A5008261688"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -3032,6 +3046,7 @@
       "openalex_ids": [
         "https://openalex.org/A5064307334"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -3128,6 +3143,7 @@
         "https://openalex.org/A5087402200",
         "https://openalex.org/A5046760341"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -3229,6 +3245,7 @@
       "openalex_ids": [
         "https://openalex.org/A5088439810"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -3319,6 +3336,7 @@
       "openalex_ids": [
         "https://openalex.org/A5019703184"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -3418,6 +3436,7 @@
         "https://openalex.org/A5046546654",
         "https://openalex.org/A5050182605"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -3508,6 +3527,7 @@
       "openalex_ids": [
         "https://openalex.org/A5003775830"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -3597,6 +3617,7 @@
       "openalex_ids": [
         "https://openalex.org/A5073411729"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -3691,6 +3712,7 @@
       "openalex_ids": [
         "https://openalex.org/A5061488382"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -3776,6 +3798,7 @@
       "openalex_ids": [
         "https://openalex.org/A5040926780"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -3863,6 +3886,7 @@
       "openalex_ids": [
         "https://openalex.org/A5002594174"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -3949,6 +3973,7 @@
       "openalex_ids": [
         "https://openalex.org/A5025284936"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -4036,6 +4061,7 @@
       "openalex_ids": [
         "https://openalex.org/A5073384203"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -4127,6 +4153,7 @@
       "openalex_ids": [
         "https://openalex.org/A5046018227"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -4217,6 +4244,7 @@
         "https://openalex.org/A5039648333",
         "https://openalex.org/A5133171133"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -4301,6 +4329,7 @@
       "openalex_ids": [
         "https://openalex.org/A5030954130"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -4385,6 +4414,7 @@
       "openalex_ids": [
         "https://openalex.org/A5059202940"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -4467,6 +4497,7 @@
         "https://openalex.org/A5060914086",
         "https://openalex.org/A5063722622"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -4551,6 +4582,7 @@
       "openalex_ids": [
         "https://openalex.org/A5061518977"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -4625,6 +4657,7 @@
       "openalex_ids": [
         "https://openalex.org/A5026015531"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -4690,6 +4723,7 @@
       "openalex_ids": [
         "https://openalex.org/A5081884086"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -4762,6 +4796,7 @@
       "openalex_ids": [
         "https://openalex.org/A5020306286"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -4832,6 +4867,7 @@
       "openalex_ids": [
         "https://openalex.org/A5053894480"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -4897,6 +4933,7 @@
       "openalex_ids": [
         "https://openalex.org/A5082929960"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -4966,6 +5003,7 @@
       "openalex_ids": [
         "https://openalex.org/A5035082420"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -5039,6 +5077,7 @@
       "openalex_ids": [
         "https://openalex.org/A5074470720"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -5109,6 +5148,7 @@
       "openalex_ids": [
         "https://openalex.org/A5071543888"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -5168,6 +5208,7 @@
       "openalex_ids": [
         "https://openalex.org/A5081476701"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -5228,6 +5269,7 @@
       "openalex_ids": [
         "https://openalex.org/A5066528816"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -5287,6 +5329,7 @@
       "openalex_ids": [
         "https://openalex.org/A5103096040"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -5347,6 +5390,7 @@
       "openalex_ids": [
         "https://openalex.org/A5006605951"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -5406,6 +5450,7 @@
       "openalex_ids": [
         "https://openalex.org/A5088820305"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -5468,6 +5513,7 @@
       "openalex_ids": [
         "https://openalex.org/A5082249376"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -5534,6 +5580,7 @@
       "openalex_ids": [
         "https://openalex.org/A5073651652"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -5598,6 +5645,7 @@
       "openalex_ids": [
         "https://openalex.org/A5074892841"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -5658,6 +5706,7 @@
       "openalex_ids": [
         "https://openalex.org/A5089869489"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -5724,6 +5773,7 @@
       "openalex_ids": [
         "https://openalex.org/A5032098139"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -5783,6 +5833,7 @@
       "openalex_ids": [
         "https://openalex.org/A5036609880"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -5840,6 +5891,7 @@
       "openalex_ids": [
         "https://openalex.org/A5082631549"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -5894,6 +5946,7 @@
         "https://openalex.org/A5075434620",
         "https://openalex.org/A5016058860"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -5947,6 +6000,7 @@
       "openalex_ids": [
         "https://openalex.org/A5005645577"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -6006,6 +6060,7 @@
       "openalex_ids": [
         "https://openalex.org/A5042168299"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -6061,6 +6116,7 @@
       "openalex_ids": [
         "https://openalex.org/A5063467309"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -6118,6 +6174,7 @@
       "openalex_ids": [
         "https://openalex.org/A5012864477"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -6180,6 +6237,7 @@
         "https://openalex.org/A5031951850",
         "https://openalex.org/A5108782634"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -6241,6 +6299,7 @@
       "openalex_ids": [
         "https://openalex.org/A5069265432"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -6301,6 +6360,7 @@
       "openalex_ids": [
         "https://openalex.org/A5018827191"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -6361,6 +6421,7 @@
         "https://openalex.org/A5067363446",
         "https://openalex.org/A5005056869"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -6421,6 +6482,7 @@
       "openalex_ids": [
         "https://openalex.org/A5035817952"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -6478,6 +6540,7 @@
       "openalex_ids": [
         "https://openalex.org/A5081712885"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -6531,6 +6594,7 @@
       "openalex_ids": [
         "https://openalex.org/A5049390002"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -6592,6 +6656,7 @@
       "openalex_ids": [
         "https://openalex.org/A5008748169"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -6645,6 +6710,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100362195"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -6700,6 +6766,7 @@
       "openalex_ids": [
         "https://openalex.org/A5057464567"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -6754,6 +6821,7 @@
       "openalex_ids": [
         "https://openalex.org/A5028627359"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -6801,6 +6869,7 @@
       "openalex_ids": [
         "https://openalex.org/A5005409744"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -6852,6 +6921,7 @@
       "openalex_ids": [
         "https://openalex.org/A5014516351"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -6900,6 +6970,7 @@
       "openalex_ids": [
         "https://openalex.org/A5022518932"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -6948,6 +7019,7 @@
       "openalex_ids": [
         "https://openalex.org/A5020809586"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -6996,6 +7068,7 @@
       "openalex_ids": [
         "https://openalex.org/A5083489880"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -7044,6 +7117,7 @@
       "openalex_ids": [
         "https://openalex.org/A5000206320"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7094,6 +7168,7 @@
       "openalex_ids": [
         "https://openalex.org/A5017781669"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7145,6 +7220,7 @@
       "openalex_ids": [
         "https://openalex.org/A5089006159"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7194,6 +7270,7 @@
       "openalex_ids": [
         "https://openalex.org/A5052203594"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -7245,6 +7322,7 @@
       "openalex_ids": [
         "https://openalex.org/A5065705720"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -7293,6 +7371,7 @@
       "openalex_ids": [
         "https://openalex.org/A5022836657"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7341,6 +7420,7 @@
       "openalex_ids": [
         "https://openalex.org/A5044963538"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7389,6 +7469,7 @@
       "openalex_ids": [
         "https://openalex.org/A5015339992"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7437,6 +7518,7 @@
       "openalex_ids": [
         "https://openalex.org/A5071374164"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7481,6 +7563,7 @@
         "https://openalex.org/A5054532783",
         "https://openalex.org/A5114101166"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -7522,6 +7605,7 @@
       "openalex_ids": [
         "https://openalex.org/A5009527445"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7564,6 +7648,7 @@
       "openalex_ids": [
         "https://openalex.org/A5057409468"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -7609,6 +7694,7 @@
         "https://openalex.org/A5008788122",
         "https://openalex.org/A5108782782"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7651,6 +7737,7 @@
         "https://openalex.org/A5005374823",
         "https://openalex.org/A5108848376"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7692,6 +7779,7 @@
       "openalex_ids": [
         "https://openalex.org/A5087909211"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -7733,6 +7821,7 @@
       "openalex_ids": [
         "https://openalex.org/A5065779040"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7778,6 +7867,7 @@
         "https://openalex.org/A5103009735",
         "https://openalex.org/A5048245082"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7819,6 +7909,7 @@
       "openalex_ids": [
         "https://openalex.org/A5086346235"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7861,6 +7952,7 @@
       "openalex_ids": [
         "https://openalex.org/A5016996369"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7902,6 +7994,7 @@
       "openalex_ids": [
         "https://openalex.org/A5054982730"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7947,6 +8040,7 @@
       "openalex_ids": [
         "https://openalex.org/A5075860001"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -7989,6 +8083,7 @@
         "https://openalex.org/A5033775512",
         "https://openalex.org/A5007622499"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8031,6 +8126,7 @@
       "openalex_ids": [
         "https://openalex.org/A5030305542"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -8077,6 +8173,7 @@
       "openalex_ids": [
         "https://openalex.org/A5039615160"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -8118,6 +8215,7 @@
       "openalex_ids": [
         "https://openalex.org/A5076410479"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8159,6 +8257,7 @@
       "openalex_ids": [
         "https://openalex.org/A5094191298"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8200,6 +8299,7 @@
       "openalex_ids": [
         "https://openalex.org/A5065810041"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -8241,6 +8341,7 @@
       "openalex_ids": [
         "https://openalex.org/A5060129129"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8283,6 +8384,7 @@
         "https://openalex.org/A5000272377",
         "https://openalex.org/A5044461341"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -8325,6 +8427,7 @@
       "openalex_ids": [
         "https://openalex.org/A5083613572"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8367,6 +8470,7 @@
       "openalex_ids": [
         "https://openalex.org/A5039922663"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -8409,6 +8513,7 @@
       "openalex_ids": [
         "https://openalex.org/A5051334590"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8454,6 +8559,7 @@
         "https://openalex.org/A5007216970",
         "https://openalex.org/A5054713938"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -8495,6 +8601,7 @@
       "openalex_ids": [
         "https://openalex.org/A5075017836"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8536,6 +8643,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101550696"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8578,6 +8686,7 @@
       "openalex_ids": [
         "https://openalex.org/A5039924624"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -8613,6 +8722,7 @@
       "openalex_ids": [
         "https://openalex.org/A5019839279"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -8649,6 +8759,7 @@
         "https://openalex.org/A5055736275",
         "https://openalex.org/A5123055009"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8684,6 +8795,7 @@
       "openalex_ids": [
         "https://openalex.org/A5068889155"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8719,6 +8831,7 @@
       "openalex_ids": [
         "https://openalex.org/A5025961099"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8754,6 +8867,7 @@
       "openalex_ids": [
         "https://openalex.org/A5016085908"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -8789,6 +8903,7 @@
       "openalex_ids": [
         "https://openalex.org/A5048099130"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8824,6 +8939,7 @@
       "openalex_ids": [
         "https://openalex.org/A5061110232"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8859,6 +8975,7 @@
       "openalex_ids": [
         "https://openalex.org/A5015945699"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8894,6 +9011,7 @@
       "openalex_ids": [
         "https://openalex.org/A5040552362"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8932,6 +9050,7 @@
       "openalex_ids": [
         "https://openalex.org/A5061155671"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -8969,6 +9088,7 @@
       "openalex_ids": [
         "https://openalex.org/A5078718261"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9005,6 +9125,7 @@
         "https://openalex.org/A5093127848",
         "https://openalex.org/A5004984668"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9040,6 +9161,7 @@
       "openalex_ids": [
         "https://openalex.org/A5028053552"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9077,6 +9199,7 @@
         "https://openalex.org/A5090672340",
         "https://openalex.org/A5040226486"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -9112,6 +9235,7 @@
       "openalex_ids": [
         "https://openalex.org/A5036442823"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -9149,6 +9273,7 @@
       "openalex_ids": [
         "https://openalex.org/A5040346890"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9185,6 +9310,7 @@
         "https://openalex.org/A5042307561",
         "https://openalex.org/A5128858611"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -9222,6 +9348,7 @@
       "openalex_ids": [
         "https://openalex.org/A5039041524"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9259,6 +9386,7 @@
       "openalex_ids": [
         "https://openalex.org/A5078507736"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -9294,6 +9422,7 @@
       "openalex_ids": [
         "https://openalex.org/A5019728627"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9332,6 +9461,7 @@
       "openalex_ids": [
         "https://openalex.org/A5081148623"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9367,6 +9497,7 @@
       "openalex_ids": [
         "https://openalex.org/A5029772932"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9403,6 +9534,7 @@
         "https://openalex.org/A5065148415",
         "https://openalex.org/A5090288134"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9440,6 +9572,7 @@
       "openalex_ids": [
         "https://openalex.org/A5081121618"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9475,6 +9608,7 @@
       "openalex_ids": [
         "https://openalex.org/A5071740877"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9511,6 +9645,7 @@
       "openalex_ids": [
         "https://openalex.org/A5017473714"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -9546,6 +9681,7 @@
       "openalex_ids": [
         "https://openalex.org/A5057833118"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9581,6 +9717,7 @@
       "openalex_ids": [
         "https://openalex.org/A5077680336"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9616,6 +9753,7 @@
       "openalex_ids": [
         "https://openalex.org/A5034975837"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9652,6 +9790,7 @@
       "openalex_ids": [
         "https://openalex.org/A5064948856"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9687,6 +9826,7 @@
       "openalex_ids": [
         "https://openalex.org/A5068838373"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9722,6 +9862,7 @@
       "openalex_ids": [
         "https://openalex.org/A5058753640"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -9757,6 +9898,7 @@
       "openalex_ids": [
         "https://openalex.org/A5075387581"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9792,6 +9934,7 @@
       "openalex_ids": [
         "https://openalex.org/A5048011759"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9827,6 +9970,7 @@
       "openalex_ids": [
         "https://openalex.org/A5039595208"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9863,6 +10007,7 @@
       "openalex_ids": [
         "https://openalex.org/A5000327528"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -9900,6 +10045,7 @@
         "https://openalex.org/A5035052603",
         "https://openalex.org/A5124956422"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -9936,6 +10082,7 @@
       "openalex_ids": [
         "https://openalex.org/A5043572949"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -9971,6 +10118,7 @@
       "openalex_ids": [
         "https://openalex.org/A5010179711"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -10006,6 +10154,7 @@
       "openalex_ids": [
         "https://openalex.org/A5079567499"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -10046,6 +10195,7 @@
       "openalex_ids": [
         "https://openalex.org/A5073130061"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10081,6 +10231,7 @@
       "openalex_ids": [
         "https://openalex.org/A5024805286"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10117,6 +10268,7 @@
       "openalex_ids": [
         "https://openalex.org/A5058097758"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10153,6 +10305,7 @@
         "https://openalex.org/A5003823609",
         "https://openalex.org/A5123060894"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10192,6 +10345,7 @@
         "https://openalex.org/A5054307994",
         "https://openalex.org/A5009741817"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -10229,6 +10383,7 @@
         "https://openalex.org/A5086740853",
         "https://openalex.org/A5123739135"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10265,6 +10420,7 @@
       "openalex_ids": [
         "https://openalex.org/A5031434887"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -10301,6 +10457,7 @@
       "openalex_ids": [
         "https://openalex.org/A5060263169"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10337,6 +10494,7 @@
       "openalex_ids": [
         "https://openalex.org/A5071924787"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10372,6 +10530,7 @@
       "openalex_ids": [
         "https://openalex.org/A5054827237"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -10408,6 +10567,7 @@
         "https://openalex.org/A5077712228",
         "https://openalex.org/A5128822014"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10443,6 +10603,7 @@
       "openalex_ids": [
         "https://openalex.org/A5070609477"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10478,6 +10639,7 @@
       "openalex_ids": [
         "https://openalex.org/A5090338646"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10514,6 +10676,7 @@
         "https://openalex.org/A5040494469",
         "https://openalex.org/A5086598938"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10543,6 +10706,7 @@
       "openalex_ids": [
         "https://openalex.org/A5025156844"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -10572,6 +10736,7 @@
       "openalex_ids": [
         "https://openalex.org/A5010915181"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -10601,6 +10766,7 @@
       "openalex_ids": [
         "https://openalex.org/A5008295421"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -10630,6 +10796,7 @@
       "openalex_ids": [
         "https://openalex.org/A5008840317"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -10661,6 +10828,7 @@
       "openalex_ids": [
         "https://openalex.org/A5059299354"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -10691,6 +10859,7 @@
       "openalex_ids": [
         "https://openalex.org/A5067521241"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -10721,6 +10890,7 @@
       "openalex_ids": [
         "https://openalex.org/A5016576678"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10750,6 +10920,7 @@
       "openalex_ids": [
         "https://openalex.org/A5083133768"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -10780,6 +10951,7 @@
       "openalex_ids": [
         "https://openalex.org/A5073157681"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -10809,6 +10981,7 @@
       "openalex_ids": [
         "https://openalex.org/A5050623203"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10838,6 +11011,7 @@
       "openalex_ids": [
         "https://openalex.org/A5004607431"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -10869,6 +11043,7 @@
       "openalex_ids": [
         "https://openalex.org/A5076755385"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10898,6 +11073,7 @@
       "openalex_ids": [
         "https://openalex.org/A5005118312"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10929,6 +11105,7 @@
       "openalex_ids": [
         "https://openalex.org/A5041204334"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -10958,6 +11135,7 @@
       "openalex_ids": [
         "https://openalex.org/A5054840982"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -10989,6 +11167,7 @@
       "openalex_ids": [
         "https://openalex.org/A5058720464"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11019,6 +11198,7 @@
       "openalex_ids": [
         "https://openalex.org/A5052463345"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -11049,6 +11229,7 @@
       "openalex_ids": [
         "https://openalex.org/A5085193896"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -11078,6 +11259,7 @@
       "openalex_ids": [
         "https://openalex.org/A5048224712"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -11110,6 +11292,7 @@
       "openalex_ids": [
         "https://openalex.org/A5037831162"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11139,6 +11322,7 @@
       "openalex_ids": [
         "https://openalex.org/A5082719385"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11168,6 +11352,7 @@
       "openalex_ids": [
         "https://openalex.org/A5021966353"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11197,6 +11382,7 @@
       "openalex_ids": [
         "https://openalex.org/A5021345648"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11227,6 +11413,7 @@
       "openalex_ids": [
         "https://openalex.org/A5025955938"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11254,6 +11441,7 @@
         }
       ],
       "openalex_ids": [],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11284,6 +11472,7 @@
       "openalex_ids": [
         "https://openalex.org/A5046835864"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11315,6 +11504,7 @@
       "openalex_ids": [
         "https://openalex.org/A5085848346"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11344,6 +11534,7 @@
       "openalex_ids": [
         "https://openalex.org/A5072466998"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11373,6 +11564,7 @@
       "openalex_ids": [
         "https://openalex.org/A5041483843"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11405,6 +11597,7 @@
       "openalex_ids": [
         "https://openalex.org/A5029889274"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11434,6 +11627,7 @@
       "openalex_ids": [
         "https://openalex.org/A5119662750"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11463,6 +11657,7 @@
       "openalex_ids": [
         "https://openalex.org/A5056501709"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -11493,6 +11688,7 @@
       "openalex_ids": [
         "https://openalex.org/A5103109022"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -11523,6 +11719,7 @@
       "openalex_ids": [
         "https://openalex.org/A5056867696"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -11553,6 +11750,7 @@
       "openalex_ids": [
         "https://openalex.org/A5040589982"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -11584,6 +11782,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100650512"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11614,6 +11813,7 @@
       "openalex_ids": [
         "https://openalex.org/A5076621342"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11646,6 +11846,7 @@
       "openalex_ids": [
         "https://openalex.org/A5083654258"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11675,6 +11876,7 @@
       "openalex_ids": [
         "https://openalex.org/A5069878224"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -11704,6 +11906,7 @@
       "openalex_ids": [
         "https://openalex.org/A5013223473"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11734,6 +11937,7 @@
       "openalex_ids": [
         "https://openalex.org/A5038177258"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11763,6 +11967,7 @@
       "openalex_ids": [
         "https://openalex.org/A5006335513"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11794,6 +11999,7 @@
       "openalex_ids": [
         "https://openalex.org/A5070308436"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11824,6 +12030,7 @@
       "openalex_ids": [
         "https://openalex.org/A5032896500"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11855,6 +12062,7 @@
       "openalex_ids": [
         "https://openalex.org/A5025368433"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11884,6 +12092,7 @@
       "openalex_ids": [
         "https://openalex.org/A5049392718"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -11913,6 +12122,7 @@
       "openalex_ids": [
         "https://openalex.org/A5048096509"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11946,6 +12156,7 @@
       "openalex_ids": [
         "https://openalex.org/A5036889714"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -11975,6 +12186,7 @@
       "openalex_ids": [
         "https://openalex.org/A5045302320"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12004,6 +12216,7 @@
       "openalex_ids": [
         "https://openalex.org/A5042954476"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12036,6 +12249,7 @@
       "openalex_ids": [
         "https://openalex.org/A5014501206"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12067,6 +12281,7 @@
       "openalex_ids": [
         "https://openalex.org/A5058091154"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -12096,6 +12311,7 @@
       "openalex_ids": [
         "https://openalex.org/A5078911384"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12131,6 +12347,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100335873"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12163,6 +12380,7 @@
       "openalex_ids": [
         "https://openalex.org/A5077214728"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12200,6 +12418,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100779977"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12230,6 +12449,7 @@
       "openalex_ids": [
         "https://openalex.org/A5002493473"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12261,6 +12481,7 @@
       "openalex_ids": [
         "https://openalex.org/A5042060070"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -12290,6 +12511,7 @@
       "openalex_ids": [
         "https://openalex.org/A5050192015"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12320,6 +12542,7 @@
       "openalex_ids": [
         "https://openalex.org/A5073098759"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -12350,6 +12573,7 @@
       "openalex_ids": [
         "https://openalex.org/A5060277811"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -12379,6 +12603,7 @@
       "openalex_ids": [
         "https://openalex.org/A5031920137"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12408,6 +12633,7 @@
       "openalex_ids": [
         "https://openalex.org/A5065674800"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12437,6 +12663,7 @@
       "openalex_ids": [
         "https://openalex.org/A5019027915"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12467,6 +12694,7 @@
       "openalex_ids": [
         "https://openalex.org/A5018113568"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12497,6 +12725,7 @@
       "openalex_ids": [
         "https://openalex.org/A5031474128"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12526,6 +12755,7 @@
       "openalex_ids": [
         "https://openalex.org/A5021351860"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -12555,6 +12785,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100396257"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12584,6 +12815,7 @@
       "openalex_ids": [
         "https://openalex.org/A5021347662"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -12618,6 +12850,7 @@
       "openalex_ids": [
         "https://openalex.org/A5055125414"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -12648,6 +12881,7 @@
       "openalex_ids": [
         "https://openalex.org/A5049237180"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12679,6 +12913,7 @@
       "openalex_ids": [
         "https://openalex.org/A5016395100"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -12708,6 +12943,7 @@
       "openalex_ids": [
         "https://openalex.org/A5023552350"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -12739,6 +12975,7 @@
       "openalex_ids": [
         "https://openalex.org/A5051448391"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12768,6 +13005,7 @@
       "openalex_ids": [
         "https://openalex.org/A5026481223"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -12798,6 +13036,7 @@
         "https://openalex.org/A5064022214",
         "https://openalex.org/A5045732747"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12828,6 +13067,7 @@
       "openalex_ids": [
         "https://openalex.org/A5068226863"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12859,6 +13099,7 @@
       "openalex_ids": [
         "https://openalex.org/A5076708141"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12889,6 +13130,7 @@
       "openalex_ids": [
         "https://openalex.org/A5016891523"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -12919,6 +13161,7 @@
       "openalex_ids": [
         "https://openalex.org/A5058699536"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12948,6 +13191,7 @@
       "openalex_ids": [
         "https://openalex.org/A5085584084"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -12978,6 +13222,7 @@
       "openalex_ids": [
         "https://openalex.org/A5068134371"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -13009,6 +13254,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101807424"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13039,6 +13285,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101891511"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -13068,6 +13315,7 @@
       "openalex_ids": [
         "https://openalex.org/A5017986637"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -13098,6 +13346,7 @@
       "openalex_ids": [
         "https://openalex.org/A5011544775"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13127,6 +13376,7 @@
       "openalex_ids": [
         "https://openalex.org/A5026648556"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13156,6 +13406,7 @@
       "openalex_ids": [
         "https://openalex.org/A5037622653"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -13188,6 +13439,7 @@
       "openalex_ids": [
         "https://openalex.org/A5085997642"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13217,6 +13469,7 @@
       "openalex_ids": [
         "https://openalex.org/A5068228499"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13246,6 +13499,7 @@
       "openalex_ids": [
         "https://openalex.org/A5091885439"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -13275,6 +13529,7 @@
       "openalex_ids": [
         "https://openalex.org/A5052260967"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -13305,6 +13560,7 @@
       "openalex_ids": [
         "https://openalex.org/A5009016780"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -13336,6 +13592,7 @@
       "openalex_ids": [
         "https://openalex.org/A5115592065"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13366,6 +13623,7 @@
       "openalex_ids": [
         "https://openalex.org/A5046150465"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13396,6 +13654,7 @@
       "openalex_ids": [
         "https://openalex.org/A5040123651"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13425,6 +13684,7 @@
       "openalex_ids": [
         "https://openalex.org/A5052380107"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -13454,6 +13714,7 @@
       "openalex_ids": [
         "https://openalex.org/A5018692312"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13483,6 +13744,7 @@
       "openalex_ids": [
         "https://openalex.org/A5007254685"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13514,6 +13776,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100625019"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13545,6 +13808,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101735892"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13575,6 +13839,7 @@
       "openalex_ids": [
         "https://openalex.org/A5063821021"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -13604,6 +13869,7 @@
       "openalex_ids": [
         "https://openalex.org/A5016126519"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13633,6 +13899,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100614076"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -13664,6 +13931,7 @@
       "openalex_ids": [
         "https://openalex.org/A5044651577"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13693,6 +13961,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100370285"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13722,6 +13991,7 @@
       "openalex_ids": [
         "https://openalex.org/A5070331303"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13755,6 +14025,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100661709"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13784,6 +14055,7 @@
       "openalex_ids": [
         "https://openalex.org/A5056828650"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13815,6 +14087,7 @@
       "openalex_ids": [
         "https://openalex.org/A5076630961"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13844,6 +14117,7 @@
       "openalex_ids": [
         "https://openalex.org/A5042407702"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13873,6 +14147,7 @@
       "openalex_ids": [
         "https://openalex.org/A5087199771"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13896,6 +14171,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100859243"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13919,6 +14195,7 @@
       "openalex_ids": [
         "https://openalex.org/A5020095130"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13942,6 +14219,7 @@
       "openalex_ids": [
         "https://openalex.org/A5033260832"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13965,6 +14243,7 @@
       "openalex_ids": [
         "https://openalex.org/A5066681933"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -13988,6 +14267,7 @@
       "openalex_ids": [
         "https://openalex.org/A5040707478"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -14011,6 +14291,7 @@
       "openalex_ids": [
         "https://openalex.org/A5097330367"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14035,6 +14316,7 @@
       "openalex_ids": [
         "https://openalex.org/A5004764682"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14058,6 +14340,7 @@
       "openalex_ids": [
         "https://openalex.org/A5003641000"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14081,6 +14364,7 @@
       "openalex_ids": [
         "https://openalex.org/A5090841446"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14104,6 +14388,7 @@
       "openalex_ids": [
         "https://openalex.org/A5089351602"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -14128,6 +14413,7 @@
       "openalex_ids": [
         "https://openalex.org/A5065490844"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14151,6 +14437,7 @@
       "openalex_ids": [
         "https://openalex.org/A5065322849"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14174,6 +14461,7 @@
       "openalex_ids": [
         "https://openalex.org/A5079624888"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14197,6 +14485,7 @@
       "openalex_ids": [
         "https://openalex.org/A5048076117"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14220,6 +14509,7 @@
       "openalex_ids": [
         "https://openalex.org/A5003116157"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14243,6 +14533,7 @@
       "openalex_ids": [
         "https://openalex.org/A5085464191"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -14266,6 +14557,7 @@
       "openalex_ids": [
         "https://openalex.org/A5078288116"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14289,6 +14581,7 @@
       "openalex_ids": [
         "https://openalex.org/A5020737167"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -14312,6 +14605,7 @@
       "openalex_ids": [
         "https://openalex.org/A5112876872"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -14335,6 +14629,7 @@
       "openalex_ids": [
         "https://openalex.org/A5089594642"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14358,6 +14653,7 @@
       "openalex_ids": [
         "https://openalex.org/A5042198739"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -14381,6 +14677,7 @@
       "openalex_ids": [
         "https://openalex.org/A5009586817"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14405,6 +14702,7 @@
       "openalex_ids": [
         "https://openalex.org/A5043662428"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14428,6 +14726,7 @@
       "openalex_ids": [
         "https://openalex.org/A5010292297"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -14451,6 +14750,7 @@
       "openalex_ids": [
         "https://openalex.org/A5055842944"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14474,6 +14774,7 @@
       "openalex_ids": [
         "https://openalex.org/A5046998676"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -14495,6 +14796,7 @@
       "openalex_ids": [
         "https://openalex.org/A5038616158"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -14518,6 +14820,7 @@
       "openalex_ids": [
         "https://openalex.org/A5091125067"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14541,6 +14844,7 @@
       "openalex_ids": [
         "https://openalex.org/A5090049123"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14564,6 +14868,7 @@
       "openalex_ids": [
         "https://openalex.org/A5068809888"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -14587,6 +14892,7 @@
       "openalex_ids": [
         "https://openalex.org/A5082768797"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14610,6 +14916,7 @@
       "openalex_ids": [
         "https://openalex.org/A5038710330"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14634,6 +14941,7 @@
       "openalex_ids": [
         "https://openalex.org/A5080258482"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14658,6 +14966,7 @@
       "openalex_ids": [
         "https://openalex.org/A5031890151"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14681,6 +14990,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101527176"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -14704,6 +15014,7 @@
       "openalex_ids": [
         "https://openalex.org/A5087352105"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14728,6 +15039,7 @@
       "openalex_ids": [
         "https://openalex.org/A5071617273"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14751,6 +15063,7 @@
       "openalex_ids": [
         "https://openalex.org/A5060897192"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14772,6 +15085,7 @@
       "openalex_ids": [
         "https://openalex.org/A5089574596"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -14795,6 +15109,7 @@
       "openalex_ids": [
         "https://openalex.org/A5089252778"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14818,6 +15133,7 @@
       "openalex_ids": [
         "https://openalex.org/A5077750825"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14842,6 +15158,7 @@
       "openalex_ids": [
         "https://openalex.org/A5065606735"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14866,6 +15183,7 @@
       "openalex_ids": [
         "https://openalex.org/A5013551578"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14889,6 +15207,7 @@
       "openalex_ids": [
         "https://openalex.org/A5108279768"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14912,6 +15231,7 @@
       "openalex_ids": [
         "https://openalex.org/A5070583206"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14935,6 +15255,7 @@
       "openalex_ids": [
         "https://openalex.org/A5040720036"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14958,6 +15279,7 @@
       "openalex_ids": [
         "https://openalex.org/A5036153151"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -14981,6 +15303,7 @@
       "openalex_ids": [
         "https://openalex.org/A5060286617"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15004,6 +15327,7 @@
       "openalex_ids": [
         "https://openalex.org/A5035089475"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15027,6 +15351,7 @@
       "openalex_ids": [
         "https://openalex.org/A5006673658"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -15050,6 +15375,7 @@
       "openalex_ids": [
         "https://openalex.org/A5065842715"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15073,6 +15399,7 @@
       "openalex_ids": [
         "https://openalex.org/A5048144299"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15096,6 +15423,7 @@
       "openalex_ids": [
         "https://openalex.org/A5076204418"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15119,6 +15447,7 @@
       "openalex_ids": [
         "https://openalex.org/A5016011020"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15142,6 +15471,7 @@
       "openalex_ids": [
         "https://openalex.org/A5037465010"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15165,6 +15495,7 @@
       "openalex_ids": [
         "https://openalex.org/A5010518912"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15188,6 +15519,7 @@
       "openalex_ids": [
         "https://openalex.org/A5077462395"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15211,6 +15543,7 @@
       "openalex_ids": [
         "https://openalex.org/A5027032657"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15234,6 +15567,7 @@
       "openalex_ids": [
         "https://openalex.org/A5021557449"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15257,6 +15591,7 @@
       "openalex_ids": [
         "https://openalex.org/A5025803819"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15280,6 +15615,7 @@
       "openalex_ids": [
         "https://openalex.org/A5053494389"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15304,6 +15640,7 @@
       "openalex_ids": [
         "https://openalex.org/A5059863311"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15327,6 +15664,7 @@
       "openalex_ids": [
         "https://openalex.org/A5010830567"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15351,6 +15689,7 @@
       "openalex_ids": [
         "https://openalex.org/A5082425063"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15374,6 +15713,7 @@
       "openalex_ids": [
         "https://openalex.org/A5061309772"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15397,6 +15737,7 @@
       "openalex_ids": [
         "https://openalex.org/A5037968142"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15420,6 +15761,7 @@
       "openalex_ids": [
         "https://openalex.org/A5008768979"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15443,6 +15785,7 @@
       "openalex_ids": [
         "https://openalex.org/A5043748924"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -15469,6 +15812,7 @@
       "openalex_ids": [
         "https://openalex.org/A5049359232"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -15492,6 +15836,7 @@
       "openalex_ids": [
         "https://openalex.org/A5057238476"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15515,6 +15860,7 @@
       "openalex_ids": [
         "https://openalex.org/A5005991347"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15538,6 +15884,7 @@
       "openalex_ids": [
         "https://openalex.org/A5114142917"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15561,6 +15908,7 @@
       "openalex_ids": [
         "https://openalex.org/A5000080556"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15584,6 +15932,7 @@
       "openalex_ids": [
         "https://openalex.org/A5061769421"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -15608,6 +15957,7 @@
       "openalex_ids": [
         "https://openalex.org/A5103957777"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15631,6 +15981,7 @@
       "openalex_ids": [
         "https://openalex.org/A5063184302"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15654,6 +16005,7 @@
       "openalex_ids": [
         "https://openalex.org/A5028001282"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -15677,6 +16029,7 @@
       "openalex_ids": [
         "https://openalex.org/A5050267226"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15700,6 +16053,7 @@
       "openalex_ids": [
         "https://openalex.org/A5073456291"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -15723,6 +16077,7 @@
       "openalex_ids": [
         "https://openalex.org/A5052684164"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15746,6 +16101,7 @@
       "openalex_ids": [
         "https://openalex.org/A5086272871"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -15769,6 +16125,7 @@
       "openalex_ids": [
         "https://openalex.org/A5063687088"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -15792,6 +16149,7 @@
       "openalex_ids": [
         "https://openalex.org/A5051003716"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15816,6 +16174,7 @@
       "openalex_ids": [
         "https://openalex.org/A5071699360"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -15839,6 +16198,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100645991"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15863,6 +16223,7 @@
       "openalex_ids": [
         "https://openalex.org/A5034374861"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15886,6 +16247,7 @@
       "openalex_ids": [
         "https://openalex.org/A5089222456"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -15911,6 +16273,7 @@
       "openalex_ids": [
         "https://openalex.org/A5073057301"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15934,6 +16297,7 @@
       "openalex_ids": [
         "https://openalex.org/A5030739187"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15958,6 +16322,7 @@
       "openalex_ids": [
         "https://openalex.org/A5062468173"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -15982,6 +16347,7 @@
       "openalex_ids": [
         "https://openalex.org/A5080482765"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16003,6 +16369,7 @@
         }
       ],
       "openalex_ids": [],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -16026,6 +16393,7 @@
       "openalex_ids": [
         "https://openalex.org/A5113068343"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16049,6 +16417,7 @@
       "openalex_ids": [
         "https://openalex.org/A5065105253"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -16073,6 +16442,7 @@
       "openalex_ids": [
         "https://openalex.org/A5111845392"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16096,6 +16466,7 @@
       "openalex_ids": [
         "https://openalex.org/A5081147728"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16119,6 +16490,7 @@
       "openalex_ids": [
         "https://openalex.org/A5054373935"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16142,6 +16514,7 @@
       "openalex_ids": [
         "https://openalex.org/A5005162743"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16166,6 +16539,7 @@
       "openalex_ids": [
         "https://openalex.org/A5033950624"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16189,6 +16563,7 @@
       "openalex_ids": [
         "https://openalex.org/A5088542979"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -16212,6 +16587,7 @@
       "openalex_ids": [
         "https://openalex.org/A5000011775"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16235,6 +16611,7 @@
       "openalex_ids": [
         "https://openalex.org/A5051885278"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16258,6 +16635,7 @@
       "openalex_ids": [
         "https://openalex.org/A5103454930"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16281,6 +16659,7 @@
       "openalex_ids": [
         "https://openalex.org/A5075678367"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16304,6 +16683,7 @@
       "openalex_ids": [
         "https://openalex.org/A5108387571"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -16328,6 +16708,7 @@
       "openalex_ids": [
         "https://openalex.org/A5102972645"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16351,6 +16732,7 @@
       "openalex_ids": [
         "https://openalex.org/A5021660623"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16375,6 +16757,7 @@
       "openalex_ids": [
         "https://openalex.org/A5033745823"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16398,6 +16781,7 @@
       "openalex_ids": [
         "https://openalex.org/A5068957756"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16421,6 +16805,7 @@
       "openalex_ids": [
         "https://openalex.org/A5036050766"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16445,6 +16830,7 @@
       "openalex_ids": [
         "https://openalex.org/A5009388396"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -16469,6 +16855,7 @@
       "openalex_ids": [
         "https://openalex.org/A5005772227"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16492,6 +16879,7 @@
       "openalex_ids": [
         "https://openalex.org/A5011305019"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16515,6 +16903,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101606125"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -16538,6 +16927,7 @@
       "openalex_ids": [
         "https://openalex.org/A5103045645"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -16561,6 +16951,7 @@
       "openalex_ids": [
         "https://openalex.org/A5049227697"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16584,6 +16975,7 @@
       "openalex_ids": [
         "https://openalex.org/A5067528456"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16608,6 +17000,7 @@
       "openalex_ids": [
         "https://openalex.org/A5049693789"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -16631,6 +17024,7 @@
       "openalex_ids": [
         "https://openalex.org/A5113684671"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -16654,6 +17048,7 @@
       "openalex_ids": [
         "https://openalex.org/A5074049285"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -16678,6 +17073,7 @@
       "openalex_ids": [
         "https://openalex.org/A5059822337"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16701,6 +17097,7 @@
       "openalex_ids": [
         "https://openalex.org/A5076096913"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16724,6 +17121,7 @@
       "openalex_ids": [
         "https://openalex.org/A5027299344"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16747,6 +17145,7 @@
       "openalex_ids": [
         "https://openalex.org/A5064533122"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -16770,6 +17169,7 @@
       "openalex_ids": [
         "https://openalex.org/A5028467952"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16793,6 +17193,7 @@
       "openalex_ids": [
         "https://openalex.org/A5020956472"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -16816,6 +17217,7 @@
       "openalex_ids": [
         "https://openalex.org/A5079688531"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16839,6 +17241,7 @@
       "openalex_ids": [
         "https://openalex.org/A5029499294"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16862,6 +17265,7 @@
       "openalex_ids": [
         "https://openalex.org/A5073376939"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -16885,6 +17289,7 @@
       "openalex_ids": [
         "https://openalex.org/A5025940525"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16908,6 +17313,7 @@
       "openalex_ids": [
         "https://openalex.org/A5073139380"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16931,6 +17337,7 @@
       "openalex_ids": [
         "https://openalex.org/A5041786318"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16954,6 +17361,7 @@
       "openalex_ids": [
         "https://openalex.org/A5017765190"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -16977,6 +17385,7 @@
       "openalex_ids": [
         "https://openalex.org/A5083717395"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17001,6 +17410,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100446863"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17025,6 +17435,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100689761"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17049,6 +17460,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101783556"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17073,6 +17485,7 @@
       "openalex_ids": [
         "https://openalex.org/A5036326217"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17096,6 +17509,7 @@
       "openalex_ids": [
         "https://openalex.org/A5013131158"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17120,6 +17534,7 @@
       "openalex_ids": [
         "https://openalex.org/A5050548152"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17143,6 +17558,7 @@
       "openalex_ids": [
         "https://openalex.org/A5092588665"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17166,6 +17582,7 @@
       "openalex_ids": [
         "https://openalex.org/A5090818425"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -17189,6 +17606,7 @@
       "openalex_ids": [
         "https://openalex.org/A5051448248"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -17212,6 +17630,7 @@
       "openalex_ids": [
         "https://openalex.org/A5008736009"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17235,6 +17654,7 @@
       "openalex_ids": [
         "https://openalex.org/A5044155033"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17258,6 +17678,7 @@
       "openalex_ids": [
         "https://openalex.org/A5075182137"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17281,6 +17702,7 @@
       "openalex_ids": [
         "https://openalex.org/A5078099907"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17304,6 +17726,7 @@
       "openalex_ids": [
         "https://openalex.org/A5068786471"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17327,6 +17750,7 @@
       "openalex_ids": [
         "https://openalex.org/A5058933513"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17350,6 +17774,7 @@
       "openalex_ids": [
         "https://openalex.org/A5010848966"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17374,6 +17799,7 @@
       "openalex_ids": [
         "https://openalex.org/A5091104637"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17398,6 +17824,7 @@
       "openalex_ids": [
         "https://openalex.org/A5084150917"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17421,6 +17848,7 @@
       "openalex_ids": [
         "https://openalex.org/A5034477992"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17444,6 +17872,7 @@
       "openalex_ids": [
         "https://openalex.org/A5048881547"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17468,6 +17897,7 @@
       "openalex_ids": [
         "https://openalex.org/A5036326710"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17491,6 +17921,7 @@
       "openalex_ids": [
         "https://openalex.org/A5029764109"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17514,6 +17945,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100573389"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -17537,6 +17969,7 @@
       "openalex_ids": [
         "https://openalex.org/A5031163364"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17561,6 +17994,7 @@
       "openalex_ids": [
         "https://openalex.org/A5005552795"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17585,6 +18019,7 @@
       "openalex_ids": [
         "https://openalex.org/A5113988770"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -17608,6 +18043,7 @@
       "openalex_ids": [
         "https://openalex.org/A5054448743"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17632,6 +18068,7 @@
       "openalex_ids": [
         "https://openalex.org/A5074407397"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17655,6 +18092,7 @@
       "openalex_ids": [
         "https://openalex.org/A5059857049"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17678,6 +18116,7 @@
       "openalex_ids": [
         "https://openalex.org/A5075661821"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17701,6 +18140,7 @@
       "openalex_ids": [
         "https://openalex.org/A5024385868"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17724,6 +18164,7 @@
       "openalex_ids": [
         "https://openalex.org/A5021943787"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17747,6 +18188,7 @@
       "openalex_ids": [
         "https://openalex.org/A5045178114"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17770,6 +18212,7 @@
       "openalex_ids": [
         "https://openalex.org/A5084401088"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17794,6 +18237,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101597850"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17815,6 +18259,7 @@
       "openalex_ids": [
         "https://openalex.org/A5134104589"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -17838,6 +18283,7 @@
       "openalex_ids": [
         "https://openalex.org/A5080879125"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17861,6 +18307,7 @@
       "openalex_ids": [
         "https://openalex.org/A5003029139"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17884,6 +18331,7 @@
       "openalex_ids": [
         "https://openalex.org/A5063474508"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17907,6 +18355,7 @@
       "openalex_ids": [
         "https://openalex.org/A5037330583"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17930,6 +18379,7 @@
       "openalex_ids": [
         "https://openalex.org/A5035546128"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17954,6 +18404,7 @@
       "openalex_ids": [
         "https://openalex.org/A5041668511"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -17977,6 +18428,7 @@
       "openalex_ids": [
         "https://openalex.org/A5027964651"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18000,6 +18452,7 @@
       "openalex_ids": [
         "https://openalex.org/A5049390563"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18023,6 +18476,7 @@
       "openalex_ids": [
         "https://openalex.org/A5083527079"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -18046,6 +18500,7 @@
       "openalex_ids": [
         "https://openalex.org/A5108591555"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -18069,6 +18524,7 @@
       "openalex_ids": [
         "https://openalex.org/A5031017324"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18092,6 +18548,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100549698"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18115,6 +18572,7 @@
       "openalex_ids": [
         "https://openalex.org/A5055813518"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18138,6 +18596,7 @@
       "openalex_ids": [
         "https://openalex.org/A5005790952"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18161,6 +18620,7 @@
       "openalex_ids": [
         "https://openalex.org/A5063515343"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -18184,6 +18644,7 @@
       "openalex_ids": [
         "https://openalex.org/A5054640798"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18207,6 +18668,7 @@
       "openalex_ids": [
         "https://openalex.org/A5023953489"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18230,6 +18692,7 @@
       "openalex_ids": [
         "https://openalex.org/A5046912670"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18253,6 +18716,7 @@
       "openalex_ids": [
         "https://openalex.org/A5022696227"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18276,6 +18740,7 @@
       "openalex_ids": [
         "https://openalex.org/A5051118765"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -18299,6 +18764,7 @@
       "openalex_ids": [
         "https://openalex.org/A5059060208"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18322,6 +18788,7 @@
       "openalex_ids": [
         "https://openalex.org/A5059068291"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18345,6 +18812,7 @@
       "openalex_ids": [
         "https://openalex.org/A5059439655"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18368,6 +18836,7 @@
       "openalex_ids": [
         "https://openalex.org/A5065501153"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18391,6 +18860,7 @@
       "openalex_ids": [
         "https://openalex.org/A5032660760"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18414,6 +18884,7 @@
       "openalex_ids": [
         "https://openalex.org/A5066135816"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18437,6 +18908,7 @@
       "openalex_ids": [
         "https://openalex.org/A5091295332"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18460,6 +18932,7 @@
       "openalex_ids": [
         "https://openalex.org/A5005067114"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -18483,6 +18956,7 @@
       "openalex_ids": [
         "https://openalex.org/A5029899696"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -18506,6 +18980,7 @@
       "openalex_ids": [
         "https://openalex.org/A5037797829"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18529,6 +19004,7 @@
       "openalex_ids": [
         "https://openalex.org/A5009979816"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18552,6 +19028,7 @@
       "openalex_ids": [
         "https://openalex.org/A5026640194"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18575,6 +19052,7 @@
       "openalex_ids": [
         "https://openalex.org/A5082266321"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18598,6 +19076,7 @@
       "openalex_ids": [
         "https://openalex.org/A5076854744"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18622,6 +19101,7 @@
       "openalex_ids": [
         "https://openalex.org/A5026496424"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -18645,6 +19125,7 @@
       "openalex_ids": [
         "https://openalex.org/A5036049846"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18668,6 +19149,7 @@
       "openalex_ids": [
         "https://openalex.org/A5034825893"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18691,6 +19173,7 @@
       "openalex_ids": [
         "https://openalex.org/A5013910367"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18715,6 +19198,7 @@
       "openalex_ids": [
         "https://openalex.org/A5000511191"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -18738,6 +19222,7 @@
       "openalex_ids": [
         "https://openalex.org/A5058544308"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18762,6 +19247,7 @@
       "openalex_ids": [
         "https://openalex.org/A5058780537"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18785,6 +19271,7 @@
       "openalex_ids": [
         "https://openalex.org/A5024838565"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18808,6 +19295,7 @@
       "openalex_ids": [
         "https://openalex.org/A5089576007"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18831,6 +19319,7 @@
       "openalex_ids": [
         "https://openalex.org/A5062121632"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18854,6 +19343,7 @@
       "openalex_ids": [
         "https://openalex.org/A5082069859"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18878,6 +19368,7 @@
       "openalex_ids": [
         "https://openalex.org/A5082113991"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18902,6 +19393,7 @@
       "openalex_ids": [
         "https://openalex.org/A5033880198"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18925,6 +19417,7 @@
       "openalex_ids": [
         "https://openalex.org/A5069909932"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18948,6 +19441,7 @@
       "openalex_ids": [
         "https://openalex.org/A5043253977"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18971,6 +19465,7 @@
       "openalex_ids": [
         "https://openalex.org/A5038703966"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -18995,6 +19490,7 @@
       "openalex_ids": [
         "https://openalex.org/A5078413202"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19018,6 +19514,7 @@
       "openalex_ids": [
         "https://openalex.org/A5111700273"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19042,6 +19539,7 @@
       "openalex_ids": [
         "https://openalex.org/A5034743880"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19065,6 +19563,7 @@
       "openalex_ids": [
         "https://openalex.org/A5067302822"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19088,6 +19587,7 @@
       "openalex_ids": [
         "https://openalex.org/A5029586670"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -19111,6 +19611,7 @@
       "openalex_ids": [
         "https://openalex.org/A5031248397"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19134,6 +19635,7 @@
       "openalex_ids": [
         "https://openalex.org/A5060549708"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19157,6 +19659,7 @@
       "openalex_ids": [
         "https://openalex.org/A5000047211"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19182,6 +19685,7 @@
       "openalex_ids": [
         "https://openalex.org/A5108130030"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19205,6 +19709,7 @@
       "openalex_ids": [
         "https://openalex.org/A5054161918"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19229,6 +19734,7 @@
       "openalex_ids": [
         "https://openalex.org/A5022173317"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19252,6 +19758,7 @@
       "openalex_ids": [
         "https://openalex.org/A5075776918"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19275,6 +19782,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100919622"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19298,6 +19806,7 @@
       "openalex_ids": [
         "https://openalex.org/A5001813016"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19323,6 +19832,7 @@
       "openalex_ids": [
         "https://openalex.org/A5021438219"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19346,6 +19856,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101544241"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19369,6 +19880,7 @@
       "openalex_ids": [
         "https://openalex.org/A5014317279"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -19392,6 +19904,7 @@
       "openalex_ids": [
         "https://openalex.org/A5084279065"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19413,6 +19926,7 @@
       "openalex_ids": [
         "https://openalex.org/A5112429062"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -19436,6 +19950,7 @@
       "openalex_ids": [
         "https://openalex.org/A5002289527"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19459,6 +19974,7 @@
       "openalex_ids": [
         "https://openalex.org/A5051364715"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19483,6 +19999,7 @@
       "openalex_ids": [
         "https://openalex.org/A5109593721"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19506,6 +20023,7 @@
       "openalex_ids": [
         "https://openalex.org/A5009506727"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19529,6 +20047,7 @@
       "openalex_ids": [
         "https://openalex.org/A5090450247"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19552,6 +20071,7 @@
       "openalex_ids": [
         "https://openalex.org/A5064146409"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -19575,6 +20095,7 @@
       "openalex_ids": [
         "https://openalex.org/A5006682968"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19598,6 +20119,7 @@
       "openalex_ids": [
         "https://openalex.org/A5079542484"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19621,6 +20143,7 @@
       "openalex_ids": [
         "https://openalex.org/A5091336431"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19644,6 +20167,7 @@
       "openalex_ids": [
         "https://openalex.org/A5072621644"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -19667,6 +20191,7 @@
       "openalex_ids": [
         "https://openalex.org/A5055205064"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -19690,6 +20215,7 @@
       "openalex_ids": [
         "https://openalex.org/A5082176231"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19713,6 +20239,7 @@
       "openalex_ids": [
         "https://openalex.org/A5050375975"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19736,6 +20263,7 @@
       "openalex_ids": [
         "https://openalex.org/A5037015662"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19759,6 +20287,7 @@
       "openalex_ids": [
         "https://openalex.org/A5083865603"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -19782,6 +20311,7 @@
       "openalex_ids": [
         "https://openalex.org/A5064732601"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19805,6 +20335,7 @@
       "openalex_ids": [
         "https://openalex.org/A5008436577"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19828,6 +20359,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100770739"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19851,6 +20383,7 @@
       "openalex_ids": [
         "https://openalex.org/A5040753084"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -19874,6 +20407,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101813812"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19897,6 +20431,7 @@
       "openalex_ids": [
         "https://openalex.org/A5041443633"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19920,6 +20455,7 @@
       "openalex_ids": [
         "https://openalex.org/A5005259439"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19943,6 +20479,7 @@
       "openalex_ids": [
         "https://openalex.org/A5080873765"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -19966,6 +20503,7 @@
       "openalex_ids": [
         "https://openalex.org/A5019471798"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -19989,6 +20527,7 @@
       "openalex_ids": [
         "https://openalex.org/A5070735334"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20013,6 +20552,7 @@
       "openalex_ids": [
         "https://openalex.org/A5019011935"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20036,6 +20576,7 @@
       "openalex_ids": [
         "https://openalex.org/A5017359964"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20059,6 +20600,7 @@
       "openalex_ids": [
         "https://openalex.org/A5063700397"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -20082,6 +20624,7 @@
       "openalex_ids": [
         "https://openalex.org/A5016912656"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20105,6 +20648,7 @@
       "openalex_ids": [
         "https://openalex.org/A5007123290"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20128,6 +20672,7 @@
       "openalex_ids": [
         "https://openalex.org/A5053179597"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20151,6 +20696,7 @@
       "openalex_ids": [
         "https://openalex.org/A5069793587"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20174,6 +20720,7 @@
       "openalex_ids": [
         "https://openalex.org/A5071713341"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20197,6 +20744,7 @@
       "openalex_ids": [
         "https://openalex.org/A5024021504"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20221,6 +20769,7 @@
       "openalex_ids": [
         "https://openalex.org/A5079773178"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20244,6 +20793,7 @@
       "openalex_ids": [
         "https://openalex.org/A5086885471"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20267,6 +20817,7 @@
       "openalex_ids": [
         "https://openalex.org/A5025885529"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20290,6 +20841,7 @@
       "openalex_ids": [
         "https://openalex.org/A5103096586"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20315,6 +20867,7 @@
       "openalex_ids": [
         "https://openalex.org/A5004920382"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20338,6 +20891,7 @@
       "openalex_ids": [
         "https://openalex.org/A5027353099"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20361,6 +20915,7 @@
       "openalex_ids": [
         "https://openalex.org/A5036096274"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20384,6 +20939,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101567656"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20408,6 +20964,7 @@
       "openalex_ids": [
         "https://openalex.org/A5024863872"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20432,6 +20989,7 @@
       "openalex_ids": [
         "https://openalex.org/A5054628351"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20455,6 +21013,7 @@
       "openalex_ids": [
         "https://openalex.org/A5042958782"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20478,6 +21037,7 @@
       "openalex_ids": [
         "https://openalex.org/A5112748965"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20501,6 +21061,7 @@
       "openalex_ids": [
         "https://openalex.org/A5071931582"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20524,6 +21085,7 @@
       "openalex_ids": [
         "https://openalex.org/A5004849545"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20547,6 +21109,7 @@
       "openalex_ids": [
         "https://openalex.org/A5093465256"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20570,6 +21133,7 @@
       "openalex_ids": [
         "https://openalex.org/A5061836918"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20595,6 +21159,7 @@
       "openalex_ids": [
         "https://openalex.org/A5091423286"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -20622,6 +21187,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100427864"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20646,6 +21212,7 @@
       "openalex_ids": [
         "https://openalex.org/A5011441236"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20669,6 +21236,7 @@
       "openalex_ids": [
         "https://openalex.org/A5103325289"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20692,6 +21260,7 @@
       "openalex_ids": [
         "https://openalex.org/A5081878727"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20715,6 +21284,7 @@
       "openalex_ids": [
         "https://openalex.org/A5030103228"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20738,6 +21308,7 @@
       "openalex_ids": [
         "https://openalex.org/A5074348796"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20762,6 +21333,7 @@
       "openalex_ids": [
         "https://openalex.org/A5009012039"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -20786,6 +21358,7 @@
       "openalex_ids": [
         "https://openalex.org/A5071846631"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20810,6 +21383,7 @@
       "openalex_ids": [
         "https://openalex.org/A5020656716"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20833,6 +21407,7 @@
       "openalex_ids": [
         "https://openalex.org/A5054862546"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -20857,6 +21432,7 @@
       "openalex_ids": [
         "https://openalex.org/A5047981598"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20880,6 +21456,7 @@
       "openalex_ids": [
         "https://openalex.org/A5052481553"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20904,6 +21481,7 @@
       "openalex_ids": [
         "https://openalex.org/A5006128440"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20928,6 +21506,7 @@
       "openalex_ids": [
         "https://openalex.org/A5075752179"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20951,6 +21530,7 @@
       "openalex_ids": [
         "https://openalex.org/A5072749955"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20975,6 +21555,7 @@
       "openalex_ids": [
         "https://openalex.org/A5058126077"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -20998,6 +21579,7 @@
       "openalex_ids": [
         "https://openalex.org/A5005770678"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21021,6 +21603,7 @@
       "openalex_ids": [
         "https://openalex.org/A5005190063"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21044,6 +21627,7 @@
       "openalex_ids": [
         "https://openalex.org/A5018785431"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21067,6 +21651,7 @@
       "openalex_ids": [
         "https://openalex.org/A5051924511"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21090,6 +21675,7 @@
       "openalex_ids": [
         "https://openalex.org/A5030917007"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21114,6 +21700,7 @@
       "openalex_ids": [
         "https://openalex.org/A5073628260"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21137,6 +21724,7 @@
       "openalex_ids": [
         "https://openalex.org/A5064743187"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21160,6 +21748,7 @@
       "openalex_ids": [
         "https://openalex.org/A5073349248"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21183,6 +21772,7 @@
       "openalex_ids": [
         "https://openalex.org/A5009808960"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21206,6 +21796,7 @@
       "openalex_ids": [
         "https://openalex.org/A5032436254"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21229,6 +21820,7 @@
       "openalex_ids": [
         "https://openalex.org/A5108737078"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21252,6 +21844,7 @@
       "openalex_ids": [
         "https://openalex.org/A5000929607"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21275,6 +21868,7 @@
       "openalex_ids": [
         "https://openalex.org/A5063364645"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21298,6 +21892,7 @@
       "openalex_ids": [
         "https://openalex.org/A5033442455"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21321,6 +21916,7 @@
       "openalex_ids": [
         "https://openalex.org/A5089546072"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21344,6 +21940,7 @@
       "openalex_ids": [
         "https://openalex.org/A5025591123"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21367,6 +21964,7 @@
       "openalex_ids": [
         "https://openalex.org/A5069001141"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21390,6 +21988,7 @@
       "openalex_ids": [
         "https://openalex.org/A5081042936"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21413,6 +22012,7 @@
       "openalex_ids": [
         "https://openalex.org/A5037914275"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21436,6 +22036,7 @@
       "openalex_ids": [
         "https://openalex.org/A5000667901"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21459,6 +22060,7 @@
       "openalex_ids": [
         "https://openalex.org/A5025068350"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21482,6 +22084,7 @@
       "openalex_ids": [
         "https://openalex.org/A5014170799"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21507,6 +22110,7 @@
       "openalex_ids": [
         "https://openalex.org/A5058685178"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21530,6 +22134,7 @@
       "openalex_ids": [
         "https://openalex.org/A5045705423"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21553,6 +22158,7 @@
       "openalex_ids": [
         "https://openalex.org/A5108556096"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21577,6 +22183,7 @@
       "openalex_ids": [
         "https://openalex.org/A5001027226"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21600,6 +22207,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100612836"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21624,6 +22232,7 @@
       "openalex_ids": [
         "https://openalex.org/A5089682784"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21647,6 +22256,7 @@
       "openalex_ids": [
         "https://openalex.org/A5103071464"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21670,6 +22280,7 @@
       "openalex_ids": [
         "https://openalex.org/A5074231760"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21693,6 +22304,7 @@
       "openalex_ids": [
         "https://openalex.org/A5015589752"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -21716,6 +22328,7 @@
       "openalex_ids": [
         "https://openalex.org/A5071697370"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21739,6 +22352,7 @@
       "openalex_ids": [
         "https://openalex.org/A5010394308"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21762,6 +22376,7 @@
       "openalex_ids": [
         "https://openalex.org/A5084860244"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -21787,6 +22402,7 @@
       "openalex_ids": [
         "https://openalex.org/A5001172599"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21810,6 +22426,7 @@
       "openalex_ids": [
         "https://openalex.org/A5065374782"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -21833,6 +22450,7 @@
       "openalex_ids": [
         "https://openalex.org/A5028651641"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21856,6 +22474,7 @@
       "openalex_ids": [
         "https://openalex.org/A5011017757"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21879,6 +22498,7 @@
       "openalex_ids": [
         "https://openalex.org/A5053988551"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -21902,6 +22522,7 @@
       "openalex_ids": [
         "https://openalex.org/A5050595151"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21923,6 +22544,7 @@
         }
       ],
       "openalex_ids": [],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21946,6 +22568,7 @@
       "openalex_ids": [
         "https://openalex.org/A5061364838"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21970,6 +22593,7 @@
       "openalex_ids": [
         "https://openalex.org/A5027162836"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -21993,6 +22617,7 @@
       "openalex_ids": [
         "https://openalex.org/A5050353461"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -22016,6 +22641,7 @@
       "openalex_ids": [
         "https://openalex.org/A5090110244"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22039,6 +22665,7 @@
       "openalex_ids": [
         "https://openalex.org/A5027310862"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22063,6 +22690,7 @@
       "openalex_ids": [
         "https://openalex.org/A5079045488"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22086,6 +22714,7 @@
       "openalex_ids": [
         "https://openalex.org/A5008942398"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22109,6 +22738,7 @@
       "openalex_ids": [
         "https://openalex.org/A5067958090"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22132,6 +22762,7 @@
       "openalex_ids": [
         "https://openalex.org/A5014056507"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -22155,6 +22786,7 @@
       "openalex_ids": [
         "https://openalex.org/A5074615163"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22179,6 +22811,7 @@
       "openalex_ids": [
         "https://openalex.org/A5051122737"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -22202,6 +22835,7 @@
       "openalex_ids": [
         "https://openalex.org/A5014420740"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22225,6 +22859,7 @@
       "openalex_ids": [
         "https://openalex.org/A5037184175"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22248,6 +22883,7 @@
       "openalex_ids": [
         "https://openalex.org/A5087655518"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22269,6 +22905,7 @@
         }
       ],
       "openalex_ids": [],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -22292,6 +22929,7 @@
       "openalex_ids": [
         "https://openalex.org/A5029644779"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -22315,6 +22953,7 @@
       "openalex_ids": [
         "https://openalex.org/A5091644218"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22338,6 +22977,7 @@
       "openalex_ids": [
         "https://openalex.org/A5087292303"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -22361,6 +23001,7 @@
       "openalex_ids": [
         "https://openalex.org/A5054961716"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22384,6 +23025,7 @@
       "openalex_ids": [
         "https://openalex.org/A5061966723"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22407,6 +23049,7 @@
       "openalex_ids": [
         "https://openalex.org/A5000087814"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22430,6 +23073,7 @@
       "openalex_ids": [
         "https://openalex.org/A5051364218"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22453,6 +23097,7 @@
       "openalex_ids": [
         "https://openalex.org/A5108200909"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -22476,6 +23121,7 @@
       "openalex_ids": [
         "https://openalex.org/A5084447229"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22499,6 +23145,7 @@
       "openalex_ids": [
         "https://openalex.org/A5009233717"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22522,6 +23169,7 @@
       "openalex_ids": [
         "https://openalex.org/A5079245065"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22545,6 +23193,7 @@
       "openalex_ids": [
         "https://openalex.org/A5014643069"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22568,6 +23217,7 @@
       "openalex_ids": [
         "https://openalex.org/A5022834497"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22592,6 +23242,7 @@
       "openalex_ids": [
         "https://openalex.org/A5049514074"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22616,6 +23267,7 @@
       "openalex_ids": [
         "https://openalex.org/A5026590903"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22639,6 +23291,7 @@
       "openalex_ids": [
         "https://openalex.org/A5017708008"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22662,6 +23315,7 @@
       "openalex_ids": [
         "https://openalex.org/A5014943290"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -22685,6 +23339,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101549547"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -22708,6 +23363,7 @@
       "openalex_ids": [
         "https://openalex.org/A5008593115"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22731,6 +23387,7 @@
       "openalex_ids": [
         "https://openalex.org/A5103154375"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -22752,6 +23409,7 @@
       "openalex_ids": [
         "https://openalex.org/A5124892752"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -22775,6 +23433,7 @@
       "openalex_ids": [
         "https://openalex.org/A5113392499"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22798,6 +23457,7 @@
       "openalex_ids": [
         "https://openalex.org/A5089066562"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22821,6 +23481,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100651518"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22844,6 +23505,7 @@
       "openalex_ids": [
         "https://openalex.org/A5050183725"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22867,6 +23529,7 @@
       "openalex_ids": [
         "https://openalex.org/A5081194577"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22891,6 +23554,7 @@
       "openalex_ids": [
         "https://openalex.org/A5091880910"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22914,6 +23578,7 @@
       "openalex_ids": [
         "https://openalex.org/A5002683809"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -22938,6 +23603,7 @@
       "openalex_ids": [
         "https://openalex.org/A5020097125"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -22961,6 +23627,7 @@
       "openalex_ids": [
         "https://openalex.org/A5051867403"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -22985,6 +23652,7 @@
       "openalex_ids": [
         "https://openalex.org/A5075243180"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23008,6 +23676,7 @@
       "openalex_ids": [
         "https://openalex.org/A5036197623"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23031,6 +23700,7 @@
       "openalex_ids": [
         "https://openalex.org/A5071614812"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23054,6 +23724,7 @@
       "openalex_ids": [
         "https://openalex.org/A5025377369"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23077,6 +23748,7 @@
       "openalex_ids": [
         "https://openalex.org/A5087918973"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23100,6 +23772,7 @@
       "openalex_ids": [
         "https://openalex.org/A5112855694"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23125,6 +23798,7 @@
       "openalex_ids": [
         "https://openalex.org/A5088575114"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -23148,6 +23822,7 @@
       "openalex_ids": [
         "https://openalex.org/A5068048608"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23171,6 +23846,7 @@
       "openalex_ids": [
         "https://openalex.org/A5010173782"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -23194,6 +23870,7 @@
       "openalex_ids": [
         "https://openalex.org/A5057477466"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -23217,6 +23894,7 @@
       "openalex_ids": [
         "https://openalex.org/A5060720742"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -23240,6 +23918,7 @@
       "openalex_ids": [
         "https://openalex.org/A5034384871"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23263,6 +23942,7 @@
       "openalex_ids": [
         "https://openalex.org/A5032712683"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23286,6 +23966,7 @@
       "openalex_ids": [
         "https://openalex.org/A5089952275"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23310,6 +23991,7 @@
       "openalex_ids": [
         "https://openalex.org/A5052202085"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -23333,6 +24015,7 @@
       "openalex_ids": [
         "https://openalex.org/A5105472457"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -23358,6 +24041,7 @@
       "openalex_ids": [
         "https://openalex.org/A5015512348"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23381,6 +24065,7 @@
       "openalex_ids": [
         "https://openalex.org/A5108960772"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23402,6 +24087,7 @@
       "openalex_ids": [
         "https://openalex.org/A5084806883"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -23426,6 +24112,7 @@
       "openalex_ids": [
         "https://openalex.org/A5112611285"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23450,6 +24137,7 @@
       "openalex_ids": [
         "https://openalex.org/A5076154181"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23473,6 +24161,7 @@
       "openalex_ids": [
         "https://openalex.org/A5061097607"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23496,6 +24185,7 @@
       "openalex_ids": [
         "https://openalex.org/A5087050516"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23519,6 +24209,7 @@
       "openalex_ids": [
         "https://openalex.org/A5076730305"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23542,6 +24233,7 @@
       "openalex_ids": [
         "https://openalex.org/A5040906638"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23567,6 +24259,7 @@
       "openalex_ids": [
         "https://openalex.org/A5057778679"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23590,6 +24283,7 @@
       "openalex_ids": [
         "https://openalex.org/A5004979421"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23613,6 +24307,7 @@
       "openalex_ids": [
         "https://openalex.org/A5037297600"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23637,6 +24332,7 @@
       "openalex_ids": [
         "https://openalex.org/A5107866356"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23660,6 +24356,7 @@
       "openalex_ids": [
         "https://openalex.org/A5024200829"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23683,6 +24380,7 @@
       "openalex_ids": [
         "https://openalex.org/A5062505762"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23706,6 +24404,7 @@
       "openalex_ids": [
         "https://openalex.org/A5089024797"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23729,6 +24428,7 @@
       "openalex_ids": [
         "https://openalex.org/A5032536921"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23752,6 +24452,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101907097"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23775,6 +24476,7 @@
       "openalex_ids": [
         "https://openalex.org/A5047150201"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23798,6 +24500,7 @@
       "openalex_ids": [
         "https://openalex.org/A5046473410"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23821,6 +24524,7 @@
       "openalex_ids": [
         "https://openalex.org/A5017112703"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23844,6 +24548,7 @@
       "openalex_ids": [
         "https://openalex.org/A5009786456"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23867,6 +24572,7 @@
       "openalex_ids": [
         "https://openalex.org/A5002832385"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23890,6 +24596,7 @@
       "openalex_ids": [
         "https://openalex.org/A5056332911"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -23913,6 +24620,7 @@
       "openalex_ids": [
         "https://openalex.org/A5022856083"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23936,6 +24644,7 @@
       "openalex_ids": [
         "https://openalex.org/A5060812125"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23960,6 +24669,7 @@
       "openalex_ids": [
         "https://openalex.org/A5084553326"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -23983,6 +24693,7 @@
       "openalex_ids": [
         "https://openalex.org/A5037420650"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24006,6 +24717,7 @@
       "openalex_ids": [
         "https://openalex.org/A5068363272"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24029,6 +24741,7 @@
       "openalex_ids": [
         "https://openalex.org/A5008995995"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -24052,6 +24765,7 @@
       "openalex_ids": [
         "https://openalex.org/A5061218864"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -24075,6 +24789,7 @@
       "openalex_ids": [
         "https://openalex.org/A5048393218"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24098,6 +24813,7 @@
       "openalex_ids": [
         "https://openalex.org/A5111090890"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24121,6 +24837,7 @@
       "openalex_ids": [
         "https://openalex.org/A5038978797"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24144,6 +24861,7 @@
       "openalex_ids": [
         "https://openalex.org/A5063135878"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24167,6 +24885,7 @@
       "openalex_ids": [
         "https://openalex.org/A5038240471"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -24190,6 +24909,7 @@
       "openalex_ids": [
         "https://openalex.org/A5038978854"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -24214,6 +24934,7 @@
       "openalex_ids": [
         "https://openalex.org/A5031015772"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -24237,6 +24958,7 @@
       "openalex_ids": [
         "https://openalex.org/A5093465255"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24260,6 +24982,7 @@
       "openalex_ids": [
         "https://openalex.org/A5065174846"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -24283,6 +25006,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100661055"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -24308,6 +25032,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100415433"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24332,6 +25057,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100415429"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24356,6 +25082,7 @@
       "openalex_ids": [
         "https://openalex.org/A5029189091"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24379,6 +25106,7 @@
       "openalex_ids": [
         "https://openalex.org/A5092085379"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24402,6 +25130,7 @@
       "openalex_ids": [
         "https://openalex.org/A5000243474"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24426,6 +25155,7 @@
       "openalex_ids": [
         "https://openalex.org/A5031889135"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24449,6 +25179,7 @@
       "openalex_ids": [
         "https://openalex.org/A5026156865"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -24472,6 +25203,7 @@
       "openalex_ids": [
         "https://openalex.org/A5004160117"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24496,6 +25228,7 @@
       "openalex_ids": [
         "https://openalex.org/A5019701818"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24519,6 +25252,7 @@
       "openalex_ids": [
         "https://openalex.org/A5087661335"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24542,6 +25276,7 @@
       "openalex_ids": [
         "https://openalex.org/A5023417934"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24565,6 +25300,7 @@
       "openalex_ids": [
         "https://openalex.org/A5093465254"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24588,6 +25324,7 @@
       "openalex_ids": [
         "https://openalex.org/A5025202709"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24611,6 +25348,7 @@
       "openalex_ids": [
         "https://openalex.org/A5085431857"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24634,6 +25372,7 @@
       "openalex_ids": [
         "https://openalex.org/A5090038040"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24657,6 +25396,7 @@
       "openalex_ids": [
         "https://openalex.org/A5052145058"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24681,6 +25421,7 @@
       "openalex_ids": [
         "https://openalex.org/A5063188178"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24705,6 +25446,7 @@
       "openalex_ids": [
         "https://openalex.org/A5050973490"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24728,6 +25470,7 @@
       "openalex_ids": [
         "https://openalex.org/A5012949384"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24751,6 +25494,7 @@
       "openalex_ids": [
         "https://openalex.org/A5108120097"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24774,6 +25518,7 @@
       "openalex_ids": [
         "https://openalex.org/A5060697786"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -24797,6 +25542,7 @@
       "openalex_ids": [
         "https://openalex.org/A5090739768"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24820,6 +25566,7 @@
       "openalex_ids": [
         "https://openalex.org/A5049537601"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24843,6 +25590,7 @@
       "openalex_ids": [
         "https://openalex.org/A5030959595"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -24866,6 +25614,7 @@
       "openalex_ids": [
         "https://openalex.org/A5012283901"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24890,6 +25639,7 @@
       "openalex_ids": [
         "https://openalex.org/A5002788688"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24913,6 +25663,7 @@
       "openalex_ids": [
         "https://openalex.org/A5054704744"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24937,6 +25688,7 @@
       "openalex_ids": [
         "https://openalex.org/A5006607273"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24960,6 +25712,7 @@
       "openalex_ids": [
         "https://openalex.org/A5009850093"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -24983,6 +25736,7 @@
       "openalex_ids": [
         "https://openalex.org/A5078572572"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25006,6 +25760,7 @@
       "openalex_ids": [
         "https://openalex.org/A5057960317"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25029,6 +25784,7 @@
       "openalex_ids": [
         "https://openalex.org/A5133177346"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25052,6 +25808,7 @@
       "openalex_ids": [
         "https://openalex.org/A5084553837"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25075,6 +25832,7 @@
       "openalex_ids": [
         "https://openalex.org/A5086987119"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -25098,6 +25856,7 @@
       "openalex_ids": [
         "https://openalex.org/A5060482319"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -25121,6 +25880,7 @@
       "openalex_ids": [
         "https://openalex.org/A5113986593"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25145,6 +25905,7 @@
       "openalex_ids": [
         "https://openalex.org/A5064012222"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25168,6 +25929,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101265241"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25192,6 +25954,7 @@
       "openalex_ids": [
         "https://openalex.org/A5057059202"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25215,6 +25978,7 @@
       "openalex_ids": [
         "https://openalex.org/A5029718103"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25238,6 +26002,7 @@
       "openalex_ids": [
         "https://openalex.org/A5078714341"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -25261,6 +26026,7 @@
       "openalex_ids": [
         "https://openalex.org/A5069369290"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -25285,6 +26051,7 @@
       "openalex_ids": [
         "https://openalex.org/A5028049979"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25308,6 +26075,7 @@
       "openalex_ids": [
         "https://openalex.org/A5003248538"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25331,6 +26099,7 @@
       "openalex_ids": [
         "https://openalex.org/A5024805161"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25354,6 +26123,7 @@
       "openalex_ids": [
         "https://openalex.org/A5032079957"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25377,6 +26147,7 @@
       "openalex_ids": [
         "https://openalex.org/A5112677169"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25400,6 +26171,7 @@
       "openalex_ids": [
         "https://openalex.org/A5017719260"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -25423,6 +26195,7 @@
       "openalex_ids": [
         "https://openalex.org/A5023687589"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25447,6 +26220,7 @@
       "openalex_ids": [
         "https://openalex.org/A5004313289"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -25471,6 +26245,7 @@
       "openalex_ids": [
         "https://openalex.org/A5079452617"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25494,6 +26269,7 @@
       "openalex_ids": [
         "https://openalex.org/A5022749120"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25517,6 +26293,7 @@
       "openalex_ids": [
         "https://openalex.org/A5079688999"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25540,6 +26317,7 @@
       "openalex_ids": [
         "https://openalex.org/A5037762932"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25563,6 +26341,7 @@
       "openalex_ids": [
         "https://openalex.org/A5020766802"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25586,6 +26365,7 @@
       "openalex_ids": [
         "https://openalex.org/A5076693831"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25609,6 +26389,7 @@
       "openalex_ids": [
         "https://openalex.org/A5083293836"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25632,6 +26413,7 @@
       "openalex_ids": [
         "https://openalex.org/A5111269712"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25655,6 +26437,7 @@
         }
       ],
       "openalex_ids": [],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25678,6 +26461,7 @@
       "openalex_ids": [
         "https://openalex.org/A5017711145"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -25701,6 +26485,7 @@
       "openalex_ids": [
         "https://openalex.org/A5060215117"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25725,6 +26510,7 @@
       "openalex_ids": [
         "https://openalex.org/A5077558822"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -25748,6 +26534,7 @@
       "openalex_ids": [
         "https://openalex.org/A5089882794"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25771,6 +26558,7 @@
       "openalex_ids": [
         "https://openalex.org/A5071263925"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -25794,6 +26582,7 @@
       "openalex_ids": [
         "https://openalex.org/A5051342744"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25817,6 +26606,7 @@
       "openalex_ids": [
         "https://openalex.org/A5047709762"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25840,6 +26630,7 @@
       "openalex_ids": [
         "https://openalex.org/A5068045588"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25866,6 +26657,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100715957"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25889,6 +26681,7 @@
       "openalex_ids": [
         "https://openalex.org/A5068866357"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25912,6 +26705,7 @@
       "openalex_ids": [
         "https://openalex.org/A5103782103"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25935,6 +26729,7 @@
       "openalex_ids": [
         "https://openalex.org/A5069502162"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25958,6 +26753,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100359087"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -25984,6 +26780,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100359094"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -26008,6 +26805,7 @@
       "openalex_ids": [
         "https://openalex.org/A5102190096"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -26031,6 +26829,7 @@
       "openalex_ids": [
         "https://openalex.org/A5041806431"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -26052,6 +26851,7 @@
       "openalex_ids": [
         "https://openalex.org/A5124908239"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -26076,6 +26876,7 @@
       "openalex_ids": [
         "https://openalex.org/A5017540235"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -26102,6 +26903,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101905763"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -26125,6 +26927,7 @@
       "openalex_ids": [
         "https://openalex.org/A5033338317"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -26149,6 +26952,7 @@
       "openalex_ids": [
         "https://openalex.org/A5087798220"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -26172,6 +26976,7 @@
       "openalex_ids": [
         "https://openalex.org/A5077829046"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -26195,6 +27000,7 @@
       "openalex_ids": [
         "https://openalex.org/A5028130589"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -26218,6 +27024,7 @@
       "openalex_ids": [
         "https://openalex.org/A5006297907"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -26242,6 +27049,7 @@
       "openalex_ids": [
         "https://openalex.org/A5100394381"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -26265,6 +27073,7 @@
       "openalex_ids": [
         "https://openalex.org/A5036307064"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -26288,6 +27097,7 @@
       "openalex_ids": [
         "https://openalex.org/A5075399513"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -26311,6 +27121,7 @@
       "openalex_ids": [
         "https://openalex.org/A5059828885"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -26334,6 +27145,7 @@
       "openalex_ids": [
         "https://openalex.org/A5079531245"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -26357,6 +27169,7 @@
       "openalex_ids": [
         "https://openalex.org/A5101997298"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -26378,6 +27191,7 @@
       "openalex_ids": [
         "https://openalex.org/A5124959002"
       ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -26401,6 +27215,7 @@
       "openalex_ids": [
         "https://openalex.org/A5024198530"
       ],
+      "consortium_only": true,
       "is_self": false
     },
     {
@@ -26424,6 +27239,7 @@
       "openalex_ids": [
         "https://openalex.org/A5064907616"
       ],
+      "consortium_only": true,
       "is_self": false
     }
   ]
