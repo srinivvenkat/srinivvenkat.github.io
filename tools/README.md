@@ -26,9 +26,10 @@ few multi-word phrases (e.g. *genomic surveillance*), and scores terms by a TF-I
 weight. Corpus frequency is aggregated with per-document damping so one long,
 citation-heavy abstract can't dominate, and a gentle IDF keeps recurring cross-paper
 themes above single-paper jargon. It keeps the top 60 terms, assigns each a research
-theme from curated seed keywords, and records per-era weights (for the time-lapse
-slider) plus the publication keys each term appears in (for the click-through filter
-on `publications.html`).
+theme from curated seed keywords, and records the publication keys each term appears
+in (for the click-through filter on `publications.html`). It also records per-era
+weights; the home page no longer animates across eras, so these are currently unused
+but kept in the data.
 
 ### Tuning
 
@@ -37,7 +38,7 @@ All knobs are near the top of the script and commented:
 - `STOPWORDS` — words to exclude. Add filler that slips through.
 - `THEME_SEEDS` / `THEMES` — keyword→theme mapping and the (WCAG-validated) hues.
 - `BIGRAM_ALLOWLIST` — multi-word phrases to always keep together.
-- `ERAS` — the career year-ranges the time-lapse slider steps through.
+- `ERAS` — career year-ranges used for the per-era weights (currently unused by the page).
 - `TOP_N` / `MOBILE_N` — how many terms to show (and how many on small screens).
 
 After changing anything, rerun the script and eyeball the printed top-25 list: the

@@ -1,22 +1,20 @@
 /*
- * Renders the interactive "Research Themes" word cloud on the home page.
+ * Renders the "Research Themes" word cloud on the home page.
  *
  * Data comes from wordcloud-data.json, precomputed by tools/build_wordcloud.py
- * (TF-IDF-style weights, per-era weights, theme, and the publication keys each
- * term appears in). This script does no text analysis — it only lays out and
- * animates what the precompute produced.
+ * (TF-IDF-style weights, theme, and the publication keys each term appears in).
+ * This script does no text analysis — it only lays out what the precompute
+ * produced, using each term's combined all-time weight.
  *
  * Progressive enhancement: if the fetch fails, JS is off, or the page is opened
  * over file:// (where fetch is blocked), the section keeps its heading and intro
- * and simply shows no cloud. The controls/legend start hidden in the markup and
- * are revealed only after a successful render.
+ * and simply shows no cloud. The legend starts hidden in the markup and is
+ * revealed only after a successful render.
  *
  * Design choices worth knowing:
- *  - SVG (not canvas) so every word is a real <a>, focusable and clickable, and
- *    the click-through works even if this interaction layer errors after render.
- *  - The spiral layout runs ONCE, from all-time weights, and each word is packed
- *    at its worst-case size across all eras — so the time-lapse only rescales and
- *    fades words in place and can never cause overlap or reflow.
+ *  - SVG (not canvas) so every word is a real <a>, focusable and clickable.
+ *  - Words are packed once via an Archimedean spiral, biggest first, so the
+ *    layout is stable and never overlaps.
  */
 (function () {
   "use strict";
@@ -24,30 +22,27 @@
   var SOURCE = "wordcloud-data.json";
   var SVGNS = "http://www.w3.org/2000/svg";
 
-  // Font-size mapping. Area ~ weight, so radius (font size) ~ sqrt(weight).
-  var FONT_MIN = 13;
-  var FONT_MAX_DESKTOP = 54;
-  var FONT_MAX_MOBILE = 40;
+  // Font-size mapping. Weights are normalized to [0,1] across the displayed
+  // terms, then curved so the smallest and largest words are well separated.
+  var FONT_MIN = 15;
+  var FONT_MAX_DESKTOP = 62;
+  var FONT_MAX_MOBILE = 44;
+  var SIZE_EXP = 0.72; // <1 lifts the middle; the spread stays wide at the ends
   var MOBILE_BP = 640;
 
-  var GHOST_OPACITY = 0.12; // words absent from the selected era
-  var PAD = 3;              // px padding around each word's box when packing
-  var AUTOPLAY_MS = 1600;
+  var PAD = 3; // px padding around each word's box when packing
 
   function isMobile() {
     return window.matchMedia("(max-width: " + MOBILE_BP + "px)").matches;
-  }
-
-  function prefersReducedMotion() {
-    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
 
   function fontMax() {
     return isMobile() ? FONT_MAX_MOBILE : FONT_MAX_DESKTOP;
   }
 
-  function sizeFor(weight, max) {
-    return FONT_MIN + (max - FONT_MIN) * Math.sqrt(Math.max(0, weight));
+  // norm is a 0..1 rank of this term's weight within the displayed set.
+  function sizeFor(norm, max) {
+    return FONT_MIN + (max - FONT_MIN) * Math.pow(Math.max(0, norm), SIZE_EXP);
   }
 
   function rectsOverlap(a, b) {
@@ -89,6 +84,16 @@
     var max = fontMax();
     var themes = data.themes || {};
 
+    // Normalize weights across the displayed terms so the full font-size range
+    // is used regardless of the raw weight distribution.
+    var wMin = Infinity, wMax = -Infinity;
+    terms.forEach(function (t) {
+      if (t.weight < wMin) wMin = t.weight;
+      if (t.weight > wMax) wMax = t.weight;
+    });
+    var span = wMax - wMin;
+    function norm(w) { return span > 0 ? (w - wMin) / span : 1; }
+
     // Biggest first, placed from the centre out.
     terms = terms.slice().sort(function (a, b) { return b.weight - a.weight; });
 
@@ -105,13 +110,9 @@
     svg.appendChild(meas);
 
     terms.forEach(function (t) {
-      // Pack at the largest size this word ever reaches across all eras, so no
-      // era can make it outgrow its slot.
-      var peak = t.weight;
-      (t.eraWeights || []).forEach(function (w) { if (w > peak) peak = w; });
-      var packSize = sizeFor(peak, max);
+      var size = sizeFor(norm(t.weight), max);
 
-      meas.style.fontSize = packSize + "px";
+      meas.style.fontSize = size + "px";
       meas.textContent = t.term;
       var bb = meas.getBBox();
       var box = { w: bb.width + PAD * 2, h: bb.height + PAD * 2 };
@@ -126,7 +127,7 @@
         // descenders; placing the baseline near the box bottom looks right.
         x: pos.x + PAD,
         baseline: pos.y + box.h - PAD - bb.height * 0.18,
-        packSize: packSize
+        size: size
       });
     });
 
@@ -162,7 +163,7 @@
       var text = document.createElementNS(SVGNS, "text");
       text.setAttribute("x", n.x);
       text.setAttribute("y", n.baseline);
-      text.setAttribute("font-size", n.packSize);
+      text.setAttribute("font-size", n.size);
       text.textContent = t.term;
       // Set the theme color inline from the data so word colors never depend on
       // the external stylesheet loading (or a stale cached copy of it).
@@ -171,27 +172,10 @@
 
       a.appendChild(text);
       svg.appendChild(a);
-      wordEls.push({ el: text, wrap: a, term: t, packSize: n.packSize });
+      wordEls.push({ el: text, wrap: a, term: t });
     });
 
-    return { wordEls: wordEls, max: max };
-  }
-
-  // Apply an era's weights to already-placed words (rescale + fade in place).
-  function applyEra(wordEls, max, eraIndex) {
-    wordEls.forEach(function (w) {
-      var t = w.term;
-      var weight, present;
-      if (eraIndex === 0) {
-        weight = t.weight; present = true; // "All time"
-      } else {
-        weight = (t.eraWeights || [])[eraIndex - 1] || 0;
-        present = weight > 0;
-      }
-      var size = present ? sizeFor(weight, max) : FONT_MIN;
-      w.el.setAttribute("font-size", size);
-      w.el.style.opacity = present ? "1" : String(GHOST_OPACITY);
-    });
+    return { wordEls: wordEls };
   }
 
   function fillLegend(legend, data) {
@@ -208,71 +192,6 @@
       li.appendChild(document.createTextNode(th.label));
       legend.appendChild(li);
     });
-  }
-
-  function setupControls(root, data, wordEls, max) {
-    var controls = root.querySelector(".wc-controls");
-    var slider = root.querySelector(".wc-slider");
-    var label = root.querySelector(".wc-era-label");
-    var play = root.querySelector(".wc-play");
-    if (!controls || !slider || !label) return;
-
-    var eras = data.eras || [];
-    // Slider stops: 0 = All time, then one per era.
-    slider.min = "0";
-    slider.max = String(eras.length);
-    slider.value = "0";
-
-    function labelFor(idx) {
-      if (idx === 0) return { main: "All time", sub: "every era combined" };
-      var e = eras[idx - 1];
-      return { main: e.label, sub: e.sub };
-    }
-
-    function update(idx) {
-      applyEra(wordEls, max, idx);
-      var l = labelFor(idx);
-      label.innerHTML = "";
-      label.appendChild(document.createTextNode(l.main));
-      var sub = document.createElement("span");
-      sub.className = "wc-era-sub";
-      sub.textContent = l.sub;
-      label.appendChild(sub);
-    }
-
-    slider.addEventListener("input", function () {
-      stop();
-      update(parseInt(slider.value, 10));
-    });
-
-    var timer = null;
-    function playing() { return timer !== null; }
-    function stop() {
-      if (timer) { clearInterval(timer); timer = null; }
-      if (play) { play.setAttribute("aria-pressed", "false"); play.textContent = "▶ Play evolution"; }
-    }
-    function start() {
-      if (playing()) return;
-      if (play) { play.setAttribute("aria-pressed", "true"); play.textContent = "❚❚ Pause"; }
-      timer = setInterval(function () {
-        var next = (parseInt(slider.value, 10) + 1) % (eras.length + 1);
-        slider.value = String(next);
-        update(next);
-      }, AUTOPLAY_MS);
-    }
-
-    if (play) {
-      if (prefersReducedMotion()) {
-        play.hidden = true; // no autoplay when motion is unwelcome
-      } else {
-        play.addEventListener("click", function () {
-          if (playing()) stop(); else start();
-        });
-      }
-    }
-
-    controls.hidden = false;
-    update(0);
   }
 
   function init() {
@@ -302,7 +221,6 @@
         }
 
         fillLegend(root.querySelector(".wc-legend"), data);
-        setupControls(root, data, built.wordEls, built.max);
         var legend = root.querySelector(".wc-legend");
         if (legend) legend.hidden = false;
       })

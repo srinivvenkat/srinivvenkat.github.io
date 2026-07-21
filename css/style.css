@@ -17,11 +17,11 @@
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-heading: Georgia, "Times New Roman", serif;
   /* Word-cloud theme hues (dark-on-white, WCAG-validated). See tools/README.md. */
-  --theme-epi: #9a2f26;
-  --theme-networks: #265c41;
-  --theme-ml: var(--orange-dark);
-  --theme-methods: var(--navy-light);
-  --theme-neutral: var(--text-muted);
+  --theme-epi: #c1121f;
+  --theme-networks: #157347;
+  --theme-ml: #e8590c;
+  --theme-methods: #1a5fb4;
+  --theme-neutral: #55606e;
 }
 
 * {
@@ -558,13 +558,6 @@ svg.wc {
 .wc-word[data-theme="methods"] text { fill: var(--theme-methods); }
 .wc-word[data-theme="neutral"] text { fill: var(--theme-neutral); }
 
-/* Size + fade transitions are motion; suppress under reduced-motion. */
-@media (prefers-reduced-motion: no-preference) {
-  .wc-word text {
-    transition: font-size 0.5s ease, opacity 0.5s ease, fill 0.15s ease;
-  }
-}
-
 .wc-word { text-decoration: none; }
 
 .wc-word:hover text,
@@ -610,59 +603,6 @@ svg.wc {
   height: 12px;
   border-radius: 3px;
   flex-shrink: 0;
-}
-
-/* Time-lapse controls. */
-.wc-controls {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 1.25em;
-  padding-top: 1em;
-  border-top: 1px solid var(--border);
-}
-
-.wc-play {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  border: 1px solid var(--navy);
-  border-radius: 20px;
-  background: transparent;
-  color: var(--navy);
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.wc-play:hover { background: var(--navy); color: #fff; }
-.wc-play:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
-
-.wc-slider-wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex: 1;
-  min-width: 220px;
-}
-
-.wc-slider { flex: 1; accent-color: var(--orange); cursor: pointer; }
-
-.wc-era-label {
-  font-size: 0.9rem;
-  color: var(--navy);
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.wc-era-label .wc-era-sub {
-  display: block;
-  font-weight: 400;
-  font-size: 0.78rem;
-  color: var(--text-muted);
 }
 
 /* ------------------------------------------------------------------ */
@@ -727,6 +667,4 @@ svg.wc {
   .site-header .container { flex-direction: column; align-items: flex-start; }
   h1 { font-size: 1.6rem; }
   svg.wc { max-height: 300px; }
-  .wc-controls { gap: 10px; }
-  .wc-slider-wrap { min-width: 100%; order: 3; }
 }

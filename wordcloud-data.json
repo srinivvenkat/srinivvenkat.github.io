@@ -32,23 +32,23 @@
  "themes": {
   "epi": {
    "label": "Epidemiology",
-   "color": "#9a2f26"
+   "color": "#c1121f"
   },
   "networks": {
    "label": "Networks & mobility",
-   "color": "#265c41"
+   "color": "#157347"
   },
   "ml": {
    "label": "Machine learning",
-   "color": "#c46200"
+   "color": "#e8590c"
   },
   "methods": {
    "label": "Methods & computing",
-   "color": "#2f3d63"
+   "color": "#1a5fb4"
   },
   "neutral": {
    "label": "General",
-   "color": "#5a5f6b"
+   "color": "#55606e"
   }
  },
  "themeOrder": [

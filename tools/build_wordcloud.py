@@ -4,7 +4,7 @@ Precompute the homepage research word cloud from abstracts.json.
 
 Reads ../abstracts.json (the single source of truth for publication abstracts)
 and writes ../wordcloud-data.json, a small file the homepage fetches to render an
-interactive, TF-IDF-weighted, theme-colored, time-lapse word cloud.
+interactive, TF-IDF-weighted, theme-colored word cloud.
 
 Run manually after editing abstracts.json:
 
@@ -40,8 +40,8 @@ TOP_N = 60
 MOBILE_N = 40
 
 # ---------------------------------------------------------------------------
-# Career eras. Stop 0 ("All time") is synthesized by the client from the global
-# weight; these five are the year ranges the slider steps through. Ranges are
+# Career eras. Per-era weights are still emitted for possible future use, but the
+# home page currently renders only the combined all-time cloud. Ranges are
 # inclusive and must cover every year present in the data.
 # ---------------------------------------------------------------------------
 ERAS = [
@@ -60,11 +60,11 @@ ERAS = [
 # ---------------------------------------------------------------------------
 THEME_ORDER = ["epi", "networks", "ml", "methods", "neutral"]
 THEMES = {
-    "epi": {"label": "Epidemiology", "color": "#9a2f26"},
-    "networks": {"label": "Networks & mobility", "color": "#265c41"},
-    "ml": {"label": "Machine learning", "color": "#c46200"},
-    "methods": {"label": "Methods & computing", "color": "#2f3d63"},
-    "neutral": {"label": "General", "color": "#5a5f6b"},
+    "epi": {"label": "Epidemiology", "color": "#c1121f"},
+    "networks": {"label": "Networks & mobility", "color": "#157347"},
+    "ml": {"label": "Machine learning", "color": "#e8590c"},
+    "methods": {"label": "Methods & computing", "color": "#1a5fb4"},
+    "neutral": {"label": "General", "color": "#55606e"},
 }
 THEME_SEEDS = {
     "epi": {
