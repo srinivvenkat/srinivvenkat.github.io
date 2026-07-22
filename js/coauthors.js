@@ -79,7 +79,9 @@
       line.setAttribute("stroke-width", edgeWidth(e.w).toFixed(2));
       line.setAttribute("class", "cn-edge");
       edgeGroup.appendChild(line);
-      edgeEls.push({ el: line, a: e.a, b: e.b });
+      // na/nb: did endpoint a / endpoint b nominate this tie (one of its own top-N)?
+      // Used on hover to color the focused node's own picks vs. ties it accrued.
+      edgeEls.push({ el: line, a: e.a, b: e.b, na: !!e.na, nb: !!e.nb });
     });
     svg.appendChild(edgeGroup);
 
@@ -117,7 +119,7 @@
       a.appendChild(circle);
 
       // Label: fit the last name inside the bubble; if even the minimum font is
-      // too wide, drop it just beneath the bubble instead.
+      // too wide, hide the label and only reveal it beneath the bubble on hover.
       var w10 = labelWidthAt10(n.short);
       var fitFont = (2 * n.r - 8) / w10 * 10;      // largest font that fits inside
       var text = document.createElementNS(SVGNS, "text");
@@ -134,10 +136,12 @@
         // ink with a light halo instead (precomputed as n.pale in build_coauthors).
         if (n.pale) text.setAttribute("class", "cn-label cn-label-dark");
       } else {
+        // Too small to hold a legible label at rest; surface it beneath the bubble
+        // only while the node is hovered or focused (CSS reveals .cn-label-hover).
         text.setAttribute("x", n.x);
         text.setAttribute("y", n.y + n.r + LABEL_BELOW_FONT);
         text.setAttribute("font-size", LABEL_BELOW_FONT);
-        text.setAttribute("class", "cn-label cn-label-below");
+        text.setAttribute("class", "cn-label cn-label-below cn-label-hover");
       }
       a.appendChild(text);
 
@@ -166,6 +170,13 @@
         var on = ee.a === id || ee.b === id;
         ee.el.classList.toggle("cn-on", on);
         ee.el.classList.toggle("cn-off", !on);
+        ee.el.classList.remove("cn-nom-out", "cn-nom-in");
+        if (on) {
+          // Did the focused node nominate this tie (its own top-N pick, orange) or
+          // merely accrue it because the neighbor nominated it (grey)?
+          var mine = (ee.a === id) ? ee.na : ee.nb;
+          ee.el.classList.add(mine ? "cn-nom-out" : "cn-nom-in");
+        }
       });
     }
 
@@ -175,7 +186,7 @@
         ne.el.classList.remove("cn-on", "cn-off");
       });
       built.edgeEls.forEach(function (ee) {
-        ee.el.classList.remove("cn-on", "cn-off");
+        ee.el.classList.remove("cn-on", "cn-off", "cn-nom-out", "cn-nom-in");
       });
     }
 

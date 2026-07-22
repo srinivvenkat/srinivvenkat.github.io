@@ -12,8 +12,8 @@
    "span": 9,
    "firstYear": 2017,
    "lastYear": 2026,
-   "x": -133.23,
-   "y": -98.55,
+   "x": 330.05,
+   "y": 126.09,
    "r": 46.0,
    "keys": [
     "book-chapters|1",
@@ -98,9 +98,9 @@
    "span": 9,
    "firstYear": 2017,
    "lastYear": 2026,
-   "x": -16.17,
-   "y": -8.34,
-   "r": 43.26,
+   "x": -175.31,
+   "y": -56.5,
+   "r": 43.38,
    "keys": [
     "book-chapters|1",
     "book-chapters|2",
@@ -173,9 +173,9 @@
    "span": 9,
    "firstYear": 2017,
    "lastYear": 2026,
-   "x": 425.43,
-   "y": -92.01,
-   "r": 37.75,
+   "x": 379.28,
+   "y": -277.48,
+   "r": 38.17,
    "keys": [
     "book-chapters|1",
     "book-chapters|3",
@@ -229,9 +229,9 @@
    "span": 6,
    "firstYear": 2020,
    "lastYear": 2026,
-   "x": 186.08,
-   "y": 141.45,
-   "r": 35.71,
+   "x": 394.0,
+   "y": 24.8,
+   "r": 36.27,
    "keys": [
     "book-chapters|1",
     "book-chapters|2",
@@ -279,9 +279,9 @@
    "span": 10,
    "firstYear": 2016,
    "lastYear": 2026,
-   "x": 456.63,
-   "y": -14.12,
-   "r": 32.62,
+   "x": 518.62,
+   "y": -164.94,
+   "r": 33.42,
    "keys": [
     "book-chapters|2",
     "conference-papers|10",
@@ -321,9 +321,9 @@
    "span": 8,
    "firstYear": 2017,
    "lastYear": 2025,
-   "x": 304.15,
-   "y": -190.0,
-   "r": 31.76,
+   "x": -7.39,
+   "y": -257.97,
+   "r": 32.63,
    "keys": [
     "book-chapters|1",
     "conference-papers|10",
@@ -361,9 +361,9 @@
    "span": 6,
    "firstYear": 2020,
    "lastYear": 2026,
-   "x": 267.76,
-   "y": 78.19,
-   "r": 30.38,
+   "x": 287.3,
+   "y": -10.14,
+   "r": 31.39,
    "keys": [
     "book-chapters|1",
     "conference-papers|18",
@@ -398,9 +398,9 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": -45.41,
-   "y": -190.18,
-   "r": 28.32,
+   "x": -61.46,
+   "y": -193.5,
+   "r": 29.56,
    "keys": [
     "conference-papers|21",
     "conference-papers|24",
@@ -432,9 +432,9 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": 239.22,
-   "y": 13.34,
-   "r": 27.75,
+   "x": 469.39,
+   "y": -43.26,
+   "r": 29.07,
    "keys": [
     "book-chapters|2",
     "book-chapters|3",
@@ -465,9 +465,9 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": 57.76,
-   "y": -235.17,
-   "r": 27.75,
+   "x": 265.9,
+   "y": -250.34,
+   "r": 29.07,
    "keys": [
     "conference-papers|21",
     "conference-papers|24",
@@ -498,9 +498,9 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": 62.01,
-   "y": 103.05,
-   "r": 27.16,
+   "x": 196.98,
+   "y": 86.43,
+   "r": 28.55,
    "keys": [
     "conference-papers|23",
     "conference-papers|29",
@@ -530,9 +530,9 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": 27.99,
-   "y": -82.91,
-   "r": 26.54,
+   "x": 409.83,
+   "y": -147.95,
+   "r": 28.02,
    "keys": [
     "conference-papers|18",
     "conference-papers|21",
@@ -561,9 +561,9 @@
    "span": 5,
    "firstYear": 2020,
    "lastYear": 2025,
-   "x": 122.62,
-   "y": -45.29,
-   "r": 25.88,
+   "x": 28.03,
+   "y": -27.12,
+   "r": 27.47,
    "keys": [
     "conference-papers|20",
     "conference-papers|24",
@@ -590,9 +590,9 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": -173.59,
-   "y": -8.5,
-   "r": 25.88,
+   "x": 257.09,
+   "y": 250.5,
+   "r": 27.47,
    "keys": [
     "journal-articles|18",
     "journal-articles|22",
@@ -619,9 +619,9 @@
    "span": 8,
    "firstYear": 2016,
    "lastYear": 2024,
-   "x": 175.67,
-   "y": -210.58,
-   "r": 25.17,
+   "x": -8.38,
+   "y": -83.8,
+   "r": 26.89,
    "keys": [
     "conference-papers|12",
     "conference-papers|14",
@@ -647,9 +647,9 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": -189.21,
-   "y": 95.93,
-   "r": 25.17,
+   "x": -36.7,
+   "y": 194.91,
+   "r": 26.89,
    "keys": [
     "journal-articles|18",
     "journal-articles|19",
@@ -675,9 +675,9 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": 294.55,
-   "y": -124.99,
-   "r": 25.17,
+   "x": 426.49,
+   "y": -209.92,
+   "r": 26.89,
    "keys": [
     "conference-papers|18",
     "conference-papers|21",
@@ -704,9 +704,9 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": 79.09,
-   "y": -175.06,
-   "r": 25.17,
+   "x": 39.34,
+   "y": -136.39,
+   "r": 26.89,
    "keys": [
     "conference-papers|18",
     "conference-papers|21",
@@ -733,9 +733,9 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": -412.38,
-   "y": 90.0,
-   "r": 25.17,
+   "x": -112.07,
+   "y": 235.74,
+   "r": 26.89,
    "keys": [
     "journal-articles|18",
     "journal-articles|22",
@@ -761,9 +761,9 @@
    "span": 7,
    "firstYear": 2017,
    "lastYear": 2024,
-   "x": 190.63,
-   "y": -152.71,
-   "r": 24.42,
+   "x": 192.15,
+   "y": -140.08,
+   "r": 26.28,
    "keys": [
     "conference-papers|12",
     "conference-papers|14",
@@ -788,9 +788,9 @@
    "span": 4,
    "firstYear": 2021,
    "lastYear": 2025,
-   "x": -118.54,
-   "y": 48.71,
-   "r": 24.42,
+   "x": 44.31,
+   "y": 157.56,
+   "r": 26.28,
    "keys": [
     "journal-articles|18",
     "journal-articles|22",
@@ -816,9 +816,9 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": 357.48,
-   "y": 31.39,
-   "r": 24.42,
+   "x": 256.4,
+   "y": -186.89,
+   "r": 26.28,
    "keys": [
     "conference-papers|18",
     "conference-papers|25",
@@ -844,9 +844,9 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": -353.99,
-   "y": 39.78,
-   "r": 24.42,
+   "x": -17.69,
+   "y": 254.38,
+   "r": 26.28,
    "keys": [
     "journal-articles|18",
     "journal-articles|19",
@@ -871,9 +871,9 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": -339.44,
-   "y": 136.04,
-   "r": 24.42,
+   "x": -112.19,
+   "y": 155.43,
+   "r": 26.28,
    "keys": [
     "journal-articles|18",
     "journal-articles|22",
@@ -898,9 +898,9 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": -234.72,
-   "y": 42.49,
-   "r": 24.42,
+   "x": 77.65,
+   "y": 272.92,
+   "r": 26.28,
    "keys": [
     "journal-articles|18",
     "journal-articles|22",
@@ -925,9 +925,9 @@
    "span": 6,
    "firstYear": 2017,
    "lastYear": 2023,
-   "x": 190.46,
-   "y": -94.29,
-   "r": 24.42,
+   "x": 41.56,
+   "y": -198.34,
+   "r": 26.28,
    "keys": [
     "conference-papers|12",
     "conference-papers|14",
@@ -952,9 +952,9 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": -199.51,
-   "y": 200.37,
-   "r": 23.6,
+   "x": -142.48,
+   "y": 39.01,
+   "r": 25.63,
    "keys": [
     "journal-articles|17",
     "journal-articles|18",
@@ -979,9 +979,9 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": 292.13,
-   "y": -69.14,
-   "r": 22.69,
+   "x": 302.5,
+   "y": -74.49,
+   "r": 24.95,
    "keys": [
     "conference-papers|25",
     "conference-papers|36",
@@ -1005,9 +1005,9 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": -229.6,
-   "y": 148.0,
-   "r": 21.66,
+   "x": -141.42,
+   "y": 97.79,
+   "r": 24.21,
    "keys": [
     "journal-articles|18",
     "journal-articles|22",
@@ -1030,9 +1030,9 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": -290.01,
-   "y": -4.97,
-   "r": 21.66,
+   "x": 205.22,
+   "y": 199.8,
+   "r": 24.21,
    "keys": [
     "journal-articles|18",
     "journal-articles|22",
@@ -1054,9 +1054,9 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": -290.21,
-   "y": -93.94,
-   "r": 21.66,
+   "x": 125.46,
+   "y": 128.29,
+   "r": 24.21,
    "keys": [
     "journal-articles|22",
     "journal-articles|26",
@@ -1079,9 +1079,9 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": -347.03,
-   "y": -49.66,
-   "r": 21.66,
+   "x": 53.51,
+   "y": 215.06,
+   "r": 24.21,
    "keys": [
     "journal-articles|18",
     "journal-articles|22",
@@ -1103,9 +1103,9 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": -18.56,
-   "y": 157.43,
-   "r": 21.66,
+   "x": 86.31,
+   "y": 78.26,
+   "r": 24.21,
    "keys": [
     "journal-articles|18",
     "journal-articles|19",
@@ -1128,9 +1128,9 @@
    "span": 2,
    "firstYear": 2020,
    "lastYear": 2022,
-   "x": 331.68,
-   "y": -20.34,
-   "r": 20.44,
+   "x": 372.94,
+   "y": -40.13,
+   "r": 23.41,
    "keys": [
     "book-chapters|3",
     "conference-papers|20",
@@ -1152,9 +1152,9 @@
    "span": 4,
    "firstYear": 2010,
    "lastYear": 2014,
-   "x": 504.68,
-   "y": 69.51,
-   "r": 20.44,
+   "x": -220.55,
+   "y": 12.86,
+   "r": 23.41,
    "keys": [
     "conference-papers|1",
     "conference-papers|2",
@@ -1176,9 +1176,9 @@
    "span": 3,
    "firstYear": 2015,
    "lastYear": 2018,
-   "x": 406.05,
-   "y": 83.23,
-   "r": 20.44,
+   "x": -291.07,
+   "y": -76.89,
+   "r": 23.41,
    "keys": [
     "conference-papers|13",
     "conference-papers|5",
@@ -1200,9 +1200,9 @@
    "span": 2,
    "firstYear": 2022,
    "lastYear": 2024,
-   "x": -308.55,
-   "y": 198.99,
-   "r": 20.44,
+   "x": -260.76,
+   "y": 180.81,
+   "r": 23.41,
    "keys": [
     "journal-articles|22",
     "journal-articles|24",
@@ -1224,9 +1224,9 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": -299.57,
-   "y": 86.15,
-   "r": 20.44,
+   "x": -64.96,
+   "y": 67.36,
+   "r": 23.41,
    "keys": [
     "journal-articles|24",
     "journal-articles|28",
@@ -1248,9 +1248,9 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": -127.44,
-   "y": 159.98,
-   "r": 20.44,
+   "x": 7.14,
+   "y": 104.05,
+   "r": 23.41,
    "keys": [
     "journal-articles|18",
     "journal-articles|19",
@@ -1272,9 +1272,9 @@
    "span": 4,
    "firstYear": 2021,
    "lastYear": 2025,
-   "x": -406.61,
-   "y": -7.67,
-   "r": 20.44,
+   "x": 171.94,
+   "y": 278.5,
+   "r": 23.41,
    "keys": [
     "journal-articles|18",
     "journal-articles|22",
@@ -1296,9 +1296,9 @@
    "span": 2,
    "firstYear": 2022,
    "lastYear": 2024,
-   "x": -403.46,
-   "y": 179.99,
-   "r": 20.44,
+   "x": -328.43,
+   "y": 61.56,
+   "r": 23.41,
    "keys": [
     "journal-articles|22",
     "journal-articles|24",
@@ -1320,9 +1320,9 @@
    "span": 5,
    "firstYear": 2020,
    "lastYear": 2025,
-   "x": -2.12,
-   "y": -136.97,
-   "r": 20.44,
+   "x": -39.78,
+   "y": 14.95,
+   "r": 23.41,
    "keys": [
     "conference-papers|32",
     "conference-papers|34",
@@ -1343,9 +1343,9 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": 76.09,
-   "y": 48.51,
-   "r": 18.85,
+   "x": 295.11,
+   "y": 52.56,
+   "r": 22.52,
    "keys": [
     "conference-papers|18",
     "conference-papers|23",
@@ -1366,9 +1366,9 @@
    "span": 6,
    "firstYear": 2020,
    "lastYear": 2026,
-   "x": 124.72,
-   "y": 8.33,
-   "r": 18.85,
+   "x": 491.43,
+   "y": -102.54,
+   "r": 22.52,
    "keys": [
     "conference-papers|36",
     "journal-articles|21",
@@ -1388,9 +1388,9 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": 101.2,
-   "y": -123.41,
-   "r": 18.85,
+   "x": 282.49,
+   "y": -132.92,
+   "r": 22.52,
    "keys": [
     "conference-papers|18",
     "conference-papers|24",
@@ -1411,9 +1411,9 @@
    "span": 2,
    "firstYear": 2022,
    "lastYear": 2024,
-   "x": -15.0,
-   "y": 62.62,
-   "r": 18.85,
+   "x": 143.25,
+   "y": 37.13,
+   "r": 22.52,
    "keys": [
     "conference-papers|29",
     "conference-papers|30",
@@ -1434,9 +1434,9 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": -245.21,
-   "y": -49.46,
-   "r": 18.85,
+   "x": 211.52,
+   "y": 144.72,
+   "r": 22.52,
    "keys": [
     "journal-articles|18",
     "journal-articles|22",
@@ -1457,9 +1457,9 @@
    "span": 3,
    "firstYear": 2023,
    "lastYear": 2026,
-   "x": -461.34,
-   "y": 42.45,
-   "r": 18.85,
+   "x": 6.61,
+   "y": 310.27,
+   "r": 22.52,
    "keys": [
     "journal-articles|30",
     "journal-articles|32",
@@ -1480,9 +1480,9 @@
    "span": 3,
    "firstYear": 2023,
    "lastYear": 2026,
-   "x": 164.2,
-   "y": 49.26,
-   "r": 15.0,
+   "x": 220.61,
+   "y": -54.87,
+   "r": 21.51,
    "keys": [
     "conference-papers|36",
     "conference-papers|41",
@@ -1502,9 +1502,9 @@
    "span": 4,
    "firstYear": 2017,
    "lastYear": 2021,
-   "x": 222.64,
-   "y": -36.91,
-   "r": 15.0,
+   "x": 409.89,
+   "y": -88.46,
+   "r": 21.51,
    "keys": [
     "conference-papers|11",
     "journal-articles|17",
@@ -1513,1033 +1513,4876 @@
     "journal-articles|8"
    ],
    "pale": true
+  },
+  {
+   "id": "david-leblang",
+   "name": "David Leblang",
+   "short": "Leblang",
+   "papers": 5,
+   "inst": "University of Virginia",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2024,
+   "lastYear": 2025,
+   "x": -62.01,
+   "y": -36.98,
+   "r": 21.51,
+   "keys": [
+    "conference-papers|32",
+    "conference-papers|34",
+    "conference-papers|38",
+    "conference-papers|39",
+    "journal-articles|31"
+   ],
+   "pale": true
+  },
+  {
+   "id": "nikos-i-bosse",
+   "name": "Nikos I Bosse",
+   "short": "Bosse",
+   "papers": 5,
+   "inst": "London School of Hygiene & Tropical Medicine",
+   "color": "#5598e7",
+   "span": 4,
+   "firstYear": 2022,
+   "lastYear": 2026,
+   "x": -176.57,
+   "y": 195.1,
+   "r": 21.51,
+   "keys": [
+    "journal-articles|24",
+    "journal-articles|25",
+    "journal-articles|27",
+    "journal-articles|39",
+    "journal-articles|44"
+   ],
+   "pale": true
+  },
+  {
+   "id": "rajesh-sundaresan",
+   "name": "Rajesh Sundaresan",
+   "short": "Sundaresan",
+   "papers": 5,
+   "inst": "Indian Institute of Science Bangalore",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2021,
+   "lastYear": 2023,
+   "x": 517.81,
+   "y": 149.92,
+   "r": 21.51,
+   "keys": [
+    "conference-papers|22",
+    "conference-papers|33",
+    "journal-articles|29",
+    "tech-reports|11",
+    "tech-reports|9"
+   ],
+   "pale": true
+  },
+  {
+   "id": "amanda-wilson",
+   "name": "Amanda Wilson",
+   "short": "Wilson",
+   "papers": 4,
+   "inst": "University of Virginia",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2022,
+   "lastYear": 2023,
+   "x": 115.09,
+   "y": -165.91,
+   "r": 20.32,
+   "keys": [
+    "book-chapters|1",
+    "journal-articles|26",
+    "journal-articles|30",
+    "journal-articles|32"
+   ],
+   "pale": true
+  },
+  {
+   "id": "arindam-fadikar",
+   "name": "Arindam Fadikar",
+   "short": "Fadikar",
+   "papers": 4,
+   "inst": "Argonne National Laboratory",
+   "color": "#6da7ec",
+   "span": 3,
+   "firstYear": 2018,
+   "lastYear": 2021,
+   "x": 336.31,
+   "y": -211.73,
+   "r": 20.32,
+   "keys": [
+    "conference-papers|21",
+    "journal-articles|17",
+    "journal-articles|7",
+    "journal-articles|8"
+   ],
+   "pale": true
+  },
+  {
+   "id": "erik-rosenstrom",
+   "name": "Erik Rosenstrom",
+   "short": "Rosenstrom",
+   "papers": 4,
+   "inst": "North Carolina State University",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2022,
+   "lastYear": 2024,
+   "x": 123.47,
+   "y": 181.77,
+   "r": 20.32,
+   "keys": [
+    "journal-articles|24",
+    "journal-articles|30",
+    "journal-articles|32",
+    "journal-articles|37"
+   ],
+   "pale": true
+  },
+  {
+   "id": "justin-crow",
+   "name": "Justin Crow",
+   "short": "Crow",
+   "papers": 4,
+   "inst": "Virginia Department of Health",
+   "color": "#6da7ec",
+   "span": 3,
+   "firstYear": 2021,
+   "lastYear": 2024,
+   "x": 114.25,
+   "y": -10.79,
+   "r": 20.32,
+   "keys": [
+    "book-chapters|1",
+    "conference-papers|24",
+    "journal-articles|40",
+    "tech-reports|12"
+   ],
+   "pale": true
+  },
+  {
+   "id": "katie-yan",
+   "name": "Katie Yan",
+   "short": "Yan",
+   "papers": 4,
+   "inst": "Pennsylvania State University",
+   "color": "#6da7ec",
+   "span": 3,
+   "firstYear": 2023,
+   "lastYear": 2026,
+   "x": 135.78,
+   "y": 230.81,
+   "r": 20.32,
+   "keys": [
+    "journal-articles|32",
+    "journal-articles|37",
+    "journal-articles|42",
+    "tech-reports|13"
+   ],
+   "pale": true
+  },
+  {
+   "id": "logan-stundal",
+   "name": "Logan Stundal",
+   "short": "Stundal",
+   "papers": 4,
+   "inst": "University of Virginia",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2024,
+   "lastYear": 2025,
+   "x": -131.46,
+   "y": -130.02,
+   "r": 20.32,
+   "keys": [
+    "conference-papers|32",
+    "conference-papers|34",
+    "conference-papers|38",
+    "journal-articles|31"
+   ],
+   "pale": true
+  },
+  {
+   "id": "marta-galanti",
+   "name": "Marta Galanti",
+   "short": "Galanti",
+   "papers": 4,
+   "inst": "Columbia University",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2022,
+   "lastYear": 2023,
+   "x": -221.05,
+   "y": 64.1,
+   "r": 20.32,
+   "keys": [
+    "journal-articles|22",
+    "journal-articles|26",
+    "journal-articles|28",
+    "journal-articles|30"
+   ],
+   "pale": true
+  },
+  {
+   "id": "sam-abbott",
+   "name": "Sam Abbott",
+   "short": "Abbott",
+   "papers": 4,
+   "inst": "London School of Hygiene & Tropical Medicine",
+   "color": "#5598e7",
+   "span": 4,
+   "firstYear": 2022,
+   "lastYear": 2026,
+   "x": -395.27,
+   "y": 217.23,
+   "r": 20.32,
+   "keys": [
+    "journal-articles|24",
+    "journal-articles|25",
+    "journal-articles|27",
+    "journal-articles|44"
+   ],
+   "pale": true
+  },
+  {
+   "id": "siva-athreya",
+   "name": "Siva Athreya",
+   "short": "Athreya",
+   "papers": 4,
+   "inst": "Indian Statistical Institute",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2021,
+   "lastYear": 2023,
+   "x": 437.62,
+   "y": 161.63,
+   "r": 20.32,
+   "keys": [
+    "conference-papers|33",
+    "journal-articles|29",
+    "tech-reports|11",
+    "tech-reports|9"
+   ],
+   "pale": true
+  },
+  {
+   "id": "thomas-mcandrew",
+   "name": "Thomas McAndrew",
+   "short": "McAndrew",
+   "papers": 4,
+   "inst": "Lehigh University",
+   "color": "#5598e7",
+   "span": 4,
+   "firstYear": 2022,
+   "lastYear": 2026,
+   "x": -394.36,
+   "y": 167.6,
+   "r": 20.32,
+   "keys": [
+    "journal-articles|24",
+    "journal-articles|25",
+    "journal-articles|39",
+    "journal-articles|44"
+   ],
+   "pale": true
+  },
+  {
+   "id": "yan-wu",
+   "name": "Yan Wu",
+   "short": "Wu",
+   "papers": 4,
+   "inst": "Chinese University of Hong Kong",
+   "color": "#6da7ec",
+   "span": 3,
+   "firstYear": 2015,
+   "lastYear": 2018,
+   "x": -279.68,
+   "y": -25.02,
+   "r": 20.32,
+   "keys": [
+    "conference-papers|6",
+    "conference-papers|8",
+    "journal-articles|2",
+    "journal-articles|5"
+   ],
+   "pale": true
+  },
+  {
+   "id": "abhishek-pandey",
+   "name": "Abhishek Pandey",
+   "short": "Pandey",
+   "papers": 3,
+   "inst": "Yale University",
+   "color": "#86b6ef",
+   "span": 0,
+   "firstYear": 2024,
+   "lastYear": 2024,
+   "x": -238.58,
+   "y": -133.68,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|32",
+    "conference-papers|34",
+    "journal-articles|31"
+   ],
+   "pale": true
+  },
+  {
+   "id": "alison-p-galvani",
+   "name": "Alison P. Galvani",
+   "short": "Galvani",
+   "papers": 3,
+   "inst": "Yale University",
+   "color": "#86b6ef",
+   "span": 0,
+   "firstYear": 2024,
+   "lastYear": 2024,
+   "x": -198.52,
+   "y": -211.2,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|32",
+    "conference-papers|34",
+    "journal-articles|31"
+   ],
+   "pale": true
+  },
+  {
+   "id": "alok-talekar",
+   "name": "Alok Talekar",
+   "short": "Talekar",
+   "papers": 3,
+   "inst": "Google (United States)",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2020,
+   "lastYear": 2021,
+   "x": 550.63,
+   "y": -17.49,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|20",
+    "conference-papers|22",
+    "tech-reports|5"
+   ],
+   "pale": true
+  },
+  {
+   "id": "ashish-v-tendulkar",
+   "name": "Ashish V. Tendulkar",
+   "short": "Tendulkar",
+   "papers": 3,
+   "inst": "Google (United States)",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2020,
+   "lastYear": 2021,
+   "x": 554.8,
+   "y": -63.93,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|20",
+    "conference-papers|22",
+    "tech-reports|5"
+   ],
+   "pale": true
+  },
+  {
+   "id": "b-aditya-prakash",
+   "name": "B. Aditya Prakash",
+   "short": "Prakash",
+   "papers": 3,
+   "inst": "Georgia Institute of Technology",
+   "color": "#6da7ec",
+   "span": 3,
+   "firstYear": 2020,
+   "lastYear": 2023,
+   "x": -328.28,
+   "y": 120.65,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|16",
+    "journal-articles|24",
+    "journal-articles|39"
+   ],
+   "pale": true
+  },
+  {
+   "id": "burton-h-singer",
+   "name": "Burton H. Singer",
+   "short": "Singer",
+   "papers": 3,
+   "inst": "University of Florida",
+   "color": "#86b6ef",
+   "span": 0,
+   "firstYear": 2024,
+   "lastYear": 2024,
+   "x": -271.29,
+   "y": -224.16,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|32",
+    "conference-papers|34",
+    "journal-articles|31"
+   ],
+   "pale": true
+  },
+  {
+   "id": "chad-r-wells",
+   "name": "Chad R. Wells",
+   "short": "Wells",
+   "papers": 3,
+   "inst": "Yale University",
+   "color": "#86b6ef",
+   "span": 0,
+   "firstYear": 2024,
+   "lastYear": 2024,
+   "x": -182.32,
+   "y": -165.36,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|32",
+    "conference-papers|34",
+    "journal-articles|31"
+   ],
+   "pale": true
+  },
+  {
+   "id": "gaia-dempsey",
+   "name": "Gaia Dempsey",
+   "short": "Dempsey",
+   "papers": 3,
+   "inst": "Metaculus",
+   "color": "#5598e7",
+   "span": 4,
+   "firstYear": 2022,
+   "lastYear": 2026,
+   "x": -660.75,
+   "y": 205.38,
+   "r": 18.76,
+   "keys": [
+    "journal-articles|25",
+    "journal-articles|44",
+    "tech-reports|12"
+   ],
+   "pale": true
+  },
+  {
+   "id": "gaurav-aggarwal",
+   "name": "Gaurav Aggarwal",
+   "short": "Aggarwal",
+   "papers": 3,
+   "inst": "Google (United States)",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2020,
+   "lastYear": 2021,
+   "x": 572.28,
+   "y": 27.02,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|20",
+    "conference-papers|22",
+    "tech-reports|5"
+   ],
+   "pale": true
+  },
+  {
+   "id": "h-vincent-poor",
+   "name": "H. Vincent Poor",
+   "short": "Poor",
+   "papers": 3,
+   "inst": "Princeton University",
+   "color": "#5598e7",
+   "span": 4,
+   "firstYear": 2022,
+   "lastYear": 2026,
+   "x": 223.43,
+   "y": 32.26,
+   "r": 18.76,
+   "keys": [
+    "book-chapters|2",
+    "journal-articles|29",
+    "journal-articles|43"
+   ],
+   "pale": true
+  },
+  {
+   "id": "james-schlitt",
+   "name": "James Schlitt",
+   "short": "Schlitt",
+   "papers": 3,
+   "inst": "University of Virginia",
+   "color": "#6da7ec",
+   "span": 3,
+   "firstYear": 2020,
+   "lastYear": 2023,
+   "x": 116.3,
+   "y": -112.73,
+   "r": 18.76,
+   "keys": [
+    "journal-articles|18",
+    "journal-articles|28",
+    "tech-reports|4"
+   ],
+   "pale": true
+  },
+  {
+   "id": "juan-cambeiro",
+   "name": "Juan Cambeiro",
+   "short": "Cambeiro",
+   "papers": 3,
+   "inst": "Columbia University",
+   "color": "#5598e7",
+   "span": 4,
+   "firstYear": 2022,
+   "lastYear": 2026,
+   "x": -646.29,
+   "y": 131.93,
+   "r": 18.76,
+   "keys": [
+    "journal-articles|25",
+    "journal-articles|44",
+    "tech-reports|12"
+   ],
+   "pale": true
+  },
+  {
+   "id": "mark-orr",
+   "name": "Mark Orr",
+   "short": "Orr",
+   "papers": 3,
+   "inst": "University of Virginia",
+   "color": "#6da7ec",
+   "span": 3,
+   "firstYear": 2020,
+   "lastYear": 2023,
+   "x": -48.84,
+   "y": -136.74,
+   "r": 18.76,
+   "keys": [
+    "journal-articles|28",
+    "tech-reports|12",
+    "tech-reports|4"
+   ],
+   "pale": true
+  },
+  {
+   "id": "milind-tambe",
+   "name": "Milind Tambe",
+   "short": "Tambe",
+   "papers": 3,
+   "inst": "Google (United States)",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2020,
+   "lastYear": 2021,
+   "x": 617.65,
+   "y": -38.43,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|20",
+    "conference-papers|22",
+    "tech-reports|5"
+   ],
+   "pale": true
+  },
+  {
+   "id": "naren-ramakrishnan",
+   "name": "Naren Ramakrishnan",
+   "short": "Ramakrishnan",
+   "papers": 3,
+   "inst": "Virginia Tech",
+   "color": "#104281",
+   "span": 9,
+   "firstYear": 2017,
+   "lastYear": 2026,
+   "x": 12.52,
+   "y": 54.68,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|41",
+    "journal-articles|3",
+    "journal-articles|39"
+   ]
+  },
+  {
+   "id": "nihesh-rathod",
+   "name": "Nihesh Rathod",
+   "short": "Rathod",
+   "papers": 3,
+   "inst": "Indian Institute of Science Bangalore",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2021,
+   "lastYear": 2023,
+   "x": 532.39,
+   "y": 101.4,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|33",
+    "tech-reports|11",
+    "tech-reports|9"
+   ],
+   "pale": true
+  },
+  {
+   "id": "pyrros-a-telionis",
+   "name": "Pyrros A. Telionis",
+   "short": "Telionis",
+   "papers": 3,
+   "inst": "University of Virginia",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2020,
+   "lastYear": 2021,
+   "x": 74.78,
+   "y": -73.83,
+   "r": 18.76,
+   "keys": [
+    "journal-articles|10",
+    "journal-articles|18",
+    "tech-reports|4"
+   ],
+   "pale": true
+  },
+  {
+   "id": "qiu-fang-ying",
+   "name": "Qiu Fang Ying",
+   "short": "Ying",
+   "papers": 3,
+   "inst": "Chinese University of Hong Kong",
+   "color": "#6da7ec",
+   "span": 3,
+   "firstYear": 2015,
+   "lastYear": 2018,
+   "x": -351.67,
+   "y": -6.88,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|13",
+    "conference-papers|5",
+    "journal-articles|6"
+   ],
+   "pale": true
+  },
+  {
+   "id": "r-muniappan",
+   "name": "R. Muniappan",
+   "short": "Muniappan",
+   "papers": 3,
+   "inst": "Virginia Tech",
+   "color": "#6da7ec",
+   "span": 3,
+   "firstYear": 2017,
+   "lastYear": 2020,
+   "x": -365.08,
+   "y": -99.56,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|12",
+    "journal-articles|16",
+    "journal-articles|9"
+   ],
+   "pale": true
+  },
+  {
+   "id": "rita-r-colwell",
+   "name": "Rita R. Colwell",
+   "short": "Colwell",
+   "papers": 3,
+   "inst": "University of Maryland, College Park",
+   "color": "#86b6ef",
+   "span": 0,
+   "firstYear": 2024,
+   "lastYear": 2024,
+   "x": -254.11,
+   "y": -178.95,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|32",
+    "conference-papers|34",
+    "journal-articles|31"
+   ],
+   "pale": true
+  },
+  {
+   "id": "s-s-ravi",
+   "name": "S. S. Ravi",
+   "short": "Ravi",
+   "papers": 3,
+   "inst": "University of Virginia",
+   "color": "#6da7ec",
+   "span": 3,
+   "firstYear": 2022,
+   "lastYear": 2025,
+   "x": 66.31,
+   "y": 22.23,
+   "r": 18.76,
+   "keys": [
+    "book-chapters|2",
+    "conference-papers|38",
+    "conference-papers|39"
+   ],
+   "pale": true
+  },
+  {
+   "id": "sarath-yasodharan",
+   "name": "Sarath Yasodharan",
+   "short": "Yasodharan",
+   "papers": 3,
+   "inst": "Indian Institute of Science Bangalore",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2021,
+   "lastYear": 2023,
+   "x": 460.9,
+   "y": 116.08,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|33",
+    "tech-reports|11",
+    "tech-reports|9"
+   ],
+   "pale": true
+  },
+  {
+   "id": "sasikiran-kandula",
+   "name": "Sasikiran Kandula",
+   "short": "Kandula",
+   "papers": 3,
+   "inst": "Columbia University",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2021,
+   "lastYear": 2023,
+   "x": -196.78,
+   "y": 148.38,
+   "r": 18.76,
+   "keys": [
+    "journal-articles|19",
+    "journal-articles|28",
+    "journal-articles|39"
+   ],
+   "pale": true
+  },
+  {
+   "id": "simon-a-levin",
+   "name": "Simon A. Levin",
+   "short": "Levin",
+   "papers": 3,
+   "inst": "Princeton University",
+   "color": "#5598e7",
+   "span": 4,
+   "firstYear": 2022,
+   "lastYear": 2026,
+   "x": 192.5,
+   "y": -10.13,
+   "r": 18.76,
+   "keys": [
+    "book-chapters|2",
+    "journal-articles|29",
+    "journal-articles|43"
+   ],
+   "pale": true
+  },
+  {
+   "id": "wen-you",
+   "name": "Wen You",
+   "short": "You",
+   "papers": 3,
+   "inst": "University of Virginia",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2020,
+   "lastYear": 2021,
+   "x": 180.84,
+   "y": -231.55,
+   "r": 18.76,
+   "keys": [
+    "journal-articles|13",
+    "journal-articles|20",
+    "tech-reports|10"
+   ],
+   "pale": true
+  },
+  {
+   "id": "xue-ben",
+   "name": "Xue Ben",
+   "short": "Ben",
+   "papers": 3,
+   "inst": "Google (United States)",
+   "color": "#86b6ef",
+   "span": 0,
+   "firstYear": 2020,
+   "lastYear": 2020,
+   "x": 497.57,
+   "y": 22.53,
+   "r": 18.76,
+   "keys": [
+    "conference-papers|20",
+    "tech-reports|5",
+    "tech-reports|6"
+   ],
+   "pale": true
+  },
+  {
+   "id": "young-yun-baek",
+   "name": "Young Yun Baek",
+   "short": "Baek",
+   "papers": 3,
+   "inst": "University of Virginia",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2020,
+   "lastYear": 2022,
+   "x": 142.6,
+   "y": -54.14,
+   "r": 18.76,
+   "keys": [
+    "journal-articles|21",
+    "tech-reports|4",
+    "tech-reports|7"
+   ],
+   "pale": true
+  },
+  {
+   "id": "allison-codi",
+   "name": "Allison Codi",
+   "short": "Codi",
+   "papers": 2,
+   "inst": "Emory University",
+   "color": "#5598e7",
+   "span": 4,
+   "firstYear": 2022,
+   "lastYear": 2026,
+   "x": -590.72,
+   "y": 205.62,
+   "r": 15.0,
+   "keys": [
+    "journal-articles|25",
+    "journal-articles|44"
+   ],
+   "pale": true
+  },
+  {
+   "id": "andrew-a-lover",
+   "name": "Andrew A. Lover",
+   "short": "Lover",
+   "papers": 2,
+   "inst": "University of Massachusetts Amherst",
+   "color": "#5598e7",
+   "span": 4,
+   "firstYear": 2022,
+   "lastYear": 2026,
+   "x": -578.14,
+   "y": 141.75,
+   "r": 15.0,
+   "keys": [
+    "journal-articles|25",
+    "journal-articles|44"
+   ],
+   "pale": true
+  },
+  {
+   "id": "arash-haddadan",
+   "name": "Arash Haddadan",
+   "short": "Haddadan",
+   "papers": 2,
+   "inst": "University of Virginia",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2021,
+   "lastYear": 2022,
+   "x": 77.37,
+   "y": -279.52,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|28",
+    "tech-reports|8"
+   ],
+   "pale": true
+  },
+  {
+   "id": "aravind-srinivasan",
+   "name": "Aravind Srinivasan",
+   "short": "Srinivasan",
+   "papers": 2,
+   "inst": "University of Maryland, College Park",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2021,
+   "lastYear": 2022,
+   "x": 135.1,
+   "y": -263.16,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|28",
+    "tech-reports|8"
+   ],
+   "pale": true
+  },
+  {
+   "id": "arup-giri",
+   "name": "Arup Giri",
+   "short": "Giri",
+   "papers": 2,
+   "inst": "AVRDC - The World Vegetable Center",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2017,
+   "lastYear": 2019,
+   "x": -665.15,
+   "y": -65.33,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|12",
+    "journal-articles|9"
+   ],
+   "pale": true
+  },
+  {
+   "id": "bijaya-adhikari",
+   "name": "Bijaya Adhikari",
+   "short": "Adhikari",
+   "papers": 2,
+   "inst": "University of Iowa",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2020,
+   "lastYear": 2022,
+   "x": -494.31,
+   "y": 85.21,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|16",
+    "journal-articles|24"
+   ],
+   "pale": true
+  },
+  {
+   "id": "bowen-shi",
+   "name": "Bowen Shi",
+   "short": "Shi",
+   "papers": 2,
+   "inst": "Virginia Tech",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2017,
+   "lastYear": 2019,
+   "x": -601.78,
+   "y": -64.79,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|12",
+    "journal-articles|9"
+   ],
+   "pale": true
+  },
+  {
+   "id": "carrie-reed",
+   "name": "Carrie Reed",
+   "short": "Reed",
+   "papers": 2,
+   "inst": "Centers for Disease Control and Prevention",
+   "color": "#86b6ef",
+   "span": 0,
+   "firstYear": 2023,
+   "lastYear": 2023,
+   "x": -262.78,
+   "y": 133.74,
+   "r": 15.0,
+   "keys": [
+    "journal-articles|28",
+    "journal-articles|39"
+   ],
+   "pale": true
+  },
+  {
+   "id": "erin-raymond",
+   "name": "Erin Raymond",
+   "short": "Raymond",
+   "papers": 2,
+   "inst": "University of Virginia",
+   "color": "#86b6ef",
+   "span": 0,
+   "firstYear": 2020,
+   "lastYear": 2020,
+   "x": 349.22,
+   "y": -114.11,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|18",
+    "tech-reports|4"
+   ],
+   "pale": true
+  },
+  {
+   "id": "farzaneh-sadat-tabataba",
+   "name": "Farzaneh Sadat Tabataba",
+   "short": "Tabataba",
+   "papers": 2,
+   "inst": "Virginia Tech",
+   "color": "#86b6ef",
+   "span": 0,
+   "firstYear": 2017,
+   "lastYear": 2017,
+   "x": 174.18,
+   "y": -91.23,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|11",
+    "journal-articles|3"
+   ],
+   "pale": true
+  },
+  {
+   "id": "gal-ehrlich",
+   "name": "Gal Ehrlich",
+   "short": "Ehrlich",
+   "papers": 2,
+   "inst": "Ehrlich & Fenster (Ehrlich Group)",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2021,
+   "lastYear": 2022,
+   "x": 121.05,
+   "y": -209.67,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|28",
+    "tech-reports|8"
+   ],
+   "pale": true
+  },
+  {
+   "id": "george-w-norton",
+   "name": "George W. Norton",
+   "short": "Norton",
+   "papers": 2,
+   "inst": "Virginia Tech",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2017,
+   "lastYear": 2019,
+   "x": -602.81,
+   "y": -133.1,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|12",
+    "journal-articles|9"
+   ],
+   "pale": true
+  },
+  {
+   "id": "ira-m-longini",
+   "name": "Ira M. Longini",
+   "short": "Longini",
+   "papers": 2,
+   "inst": "University of Florida",
+   "color": "#86b6ef",
+   "span": 0,
+   "firstYear": 2023,
+   "lastYear": 2023,
+   "x": -274.7,
+   "y": 94.35,
+   "r": 15.0,
+   "keys": [
+    "journal-articles|28",
+    "journal-articles|30"
+   ],
+   "pale": true
+  },
+  {
+   "id": "k-s-nitin",
+   "name": "K. S. Nitin",
+   "short": "Nitin",
+   "papers": 2,
+   "inst": "Indian Institute of Horticultural Research",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2017,
+   "lastYear": 2019,
+   "x": -665.92,
+   "y": -131.36,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|12",
+    "journal-articles|9"
+   ],
+   "pale": true
+  },
+  {
+   "id": "lalit-prasad-sah",
+   "name": "Lalit Prasad Sah",
+   "short": "Sah",
+   "papers": 2,
+   "inst": "AVRDC - The World Vegetable Center",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2017,
+   "lastYear": 2019,
+   "x": -632.91,
+   "y": -98.4,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|12",
+    "journal-articles|9"
+   ],
+   "pale": true
+  },
+  {
+   "id": "luke-a-colavito",
+   "name": "Luke A. Colavito",
+   "short": "Colavito",
+   "papers": 2,
+   "inst": "AVRDC - The World Vegetable Center",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2017,
+   "lastYear": 2019,
+   "x": -539.8,
+   "y": -133.65,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|12",
+    "journal-articles|9"
+   ],
+   "pale": true
+  },
+  {
+   "id": "maier-fenster",
+   "name": "Maier Fenster",
+   "short": "Fenster",
+   "papers": 2,
+   "inst": "Ehrlich & Fenster (Ehrlich Group)",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2021,
+   "lastYear": 2022,
+   "x": 83.39,
+   "y": -240.92,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|28",
+    "tech-reports|8"
+   ],
+   "pale": true
+  },
+  {
+   "id": "maimuna-s-majumder",
+   "name": "Maimuna S. Majumder",
+   "short": "Majumder",
+   "papers": 2,
+   "inst": "Boston Children's Hospital",
+   "color": "#5598e7",
+   "span": 4,
+   "firstYear": 2022,
+   "lastYear": 2026,
+   "x": -619.9,
+   "y": 171.12,
+   "r": 15.0,
+   "keys": [
+    "journal-articles|25",
+    "journal-articles|44"
+   ],
+   "pale": true
+  },
+  {
+   "id": "p-r-eastham",
+   "name": "P. R. Eastham",
+   "short": "Eastham",
+   "papers": 2,
+   "inst": "Google (United States)",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2020,
+   "lastYear": 2021,
+   "x": 417.39,
+   "y": 82.78,
+   "r": 15.0,
+   "keys": [
+    "journal-articles|17",
+    "tech-reports|6"
+   ],
+   "pale": true
+  },
+  {
+   "id": "paolo-bocchini",
+   "name": "Paolo Bocchini",
+   "short": "Bocchini",
+   "papers": 2,
+   "inst": "Lehigh University",
+   "color": "#5598e7",
+   "span": 4,
+   "firstYear": 2022,
+   "lastYear": 2026,
+   "x": -548.99,
+   "y": 176.23,
+   "r": 15.0,
+   "keys": [
+    "journal-articles|25",
+    "journal-articles|44"
+   ],
+   "pale": true
+  },
+  {
+   "id": "patrick-corbett",
+   "name": "Patrick Corbett",
+   "short": "Corbett",
+   "papers": 2,
+   "inst": "Virginia Department of Health",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2020,
+   "lastYear": 2021,
+   "x": -87.7,
+   "y": -94.98,
+   "r": 15.0,
+   "keys": [
+    "journal-articles|10",
+    "journal-articles|18"
+   ],
+   "pale": true
+  },
+  {
+   "id": "pragati-prasad",
+   "name": "Pragati Prasad",
+   "short": "Prasad",
+   "papers": 2,
+   "inst": "Centers for Disease Control and Prevention",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2023,
+   "lastYear": 2024,
+   "x": -215.46,
+   "y": 107.51,
+   "r": 15.0,
+   "keys": [
+    "journal-articles|28",
+    "journal-articles|33"
+   ],
+   "pale": true
+  },
+  {
+   "id": "prathyush-sambaturu",
+   "name": "Prathyush Sambaturu",
+   "short": "Sambaturu",
+   "papers": 2,
+   "inst": "University of Virginia",
+   "color": "#86b6ef",
+   "span": 0,
+   "firstYear": 2020,
+   "lastYear": 2020,
+   "x": 678.92,
+   "y": -143.93,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|16",
+    "journal-articles|12"
+   ],
+   "pale": true
+  },
+  {
+   "id": "r-asokan",
+   "name": "R. Asokan",
+   "short": "Asokan",
+   "papers": 2,
+   "inst": "Indian Institute of Horticultural Research",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2017,
+   "lastYear": 2019,
+   "x": -538.8,
+   "y": -65.73,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|12",
+    "journal-articles|9"
+   ],
+   "pale": true
+  },
+  {
+   "id": "sandeep-gupta",
+   "name": "Sandeep Gupta",
+   "short": "Gupta",
+   "papers": 2,
+   "inst": "University of Virginia",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2017,
+   "lastYear": 2019,
+   "x": 235.52,
+   "y": -99.94,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|10",
+    "journal-articles|8"
+   ],
+   "pale": true
+  },
+  {
+   "id": "shawn-t-brown",
+   "name": "Shawn T. Brown",
+   "short": "Brown",
+   "papers": 2,
+   "inst": "Hewlett-Packard (United States)",
+   "color": "#6da7ec",
+   "span": 3,
+   "firstYear": 2021,
+   "lastYear": 2024,
+   "x": 175.59,
+   "y": -188.92,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|25",
+    "journal-articles|35"
+   ],
+   "pale": true
+  },
+  {
+   "id": "sichao-wu",
+   "name": "Sichao Wu",
+   "short": "Wu",
+   "papers": 2,
+   "inst": "Virginia Tech",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2017,
+   "lastYear": 2019,
+   "x": -507.49,
+   "y": -100.02,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|12",
+    "journal-articles|9"
+   ],
+   "pale": true
+  },
+  {
+   "id": "sifat-afroj-moon",
+   "name": "Sifat Afroj Moon",
+   "short": "Moon",
+   "papers": 2,
+   "inst": "University of Virginia",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2023,
+   "lastYear": 2024,
+   "x": 332.45,
+   "y": -167.47,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|36",
+    "journal-articles|29"
+   ],
+   "pale": true
+  },
+  {
+   "id": "srikar-mutnuri",
+   "name": "Srikar Mutnuri",
+   "short": "Mutnuri",
+   "papers": 2,
+   "inst": "University of Virginia",
+   "color": "#86b6ef",
+   "span": 0,
+   "firstYear": 2025,
+   "lastYear": 2025,
+   "x": 478.91,
+   "y": 74.58,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|37",
+    "conference-papers|40"
+   ],
+   "pale": true
+  },
+  {
+   "id": "steven-riley",
+   "name": "Steven Riley",
+   "short": "Riley",
+   "papers": 2,
+   "inst": "Imperial College London",
+   "color": "#86b6ef",
+   "span": 1,
+   "firstYear": 2021,
+   "lastYear": 2022,
+   "x": -69.19,
+   "y": 113.64,
+   "r": 15.0,
+   "keys": [
+    "journal-articles|19",
+    "journal-articles|24"
+   ],
+   "pale": true
+  },
+  {
+   "id": "sylvain-chevalier",
+   "name": "Sylvain Chevalier",
+   "short": "Chevalier",
+   "papers": 2,
+   "inst": "Metaculus",
+   "color": "#5598e7",
+   "span": 4,
+   "firstYear": 2022,
+   "lastYear": 2026,
+   "x": -528.8,
+   "y": 213.23,
+   "r": 15.0,
+   "keys": [
+    "journal-articles|25",
+    "journal-articles|44"
+   ],
+   "pale": true
+  },
+  {
+   "id": "tamay-besiroglu",
+   "name": "Tamay Besiroglu",
+   "short": "Besiroglu",
+   "papers": 2,
+   "inst": "MIT Computer Science and Artificial Intelligence Laboratory",
+   "color": "#5598e7",
+   "span": 4,
+   "firstYear": 2022,
+   "lastYear": 2026,
+   "x": -487.27,
+   "y": 183.85,
+   "r": 15.0,
+   "keys": [
+    "journal-articles|25",
+    "journal-articles|44"
+   ],
+   "pale": true
+  },
+  {
+   "id": "v-sridhar",
+   "name": "V. Sridhar",
+   "short": "Sridhar",
+   "papers": 2,
+   "inst": "Indian Institute of Horticultural Research",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2017,
+   "lastYear": 2019,
+   "x": -570.41,
+   "y": -99.54,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|12",
+    "journal-articles|9"
+   ],
+   "pale": true
+  },
+  {
+   "id": "willem-g-van-panhuis",
+   "name": "Willem G. van Panhuis",
+   "short": "Panhuis",
+   "papers": 2,
+   "inst": "National Institute of Allergy and Infectious Diseases",
+   "color": "#86b6ef",
+   "span": 2,
+   "firstYear": 2021,
+   "lastYear": 2023,
+   "x": -32.36,
+   "y": 145.26,
+   "r": 15.0,
+   "keys": [
+    "journal-articles|19",
+    "journal-articles|30"
+   ],
+   "pale": true
+  },
+  {
+   "id": "xiaopeng-zhang",
+   "name": "Xiaopeng Zhang",
+   "short": "Zhang",
+   "papers": 2,
+   "inst": "Tencent (China)",
+   "color": "#86b6ef",
+   "span": 0,
+   "firstYear": 2018,
+   "lastYear": 2018,
+   "x": -296.25,
+   "y": 18.59,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|13",
+    "journal-articles|6"
+   ],
+   "pale": true
   }
  ],
  "edges": [
   {
    "a": "madhav-marathe",
    "b": "bryan-lewis",
-   "w": 57
+   "w": 57,
+   "na": true,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "jiangzhuo-chen",
-   "w": 38
+   "w": 38,
+   "na": true,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "aniruddha-adiga",
-   "w": 34
+   "w": 34,
+   "na": true,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "anil-vullikanti",
-   "w": 23
+   "w": 23,
+   "na": true,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "henning-mortveit",
-   "w": 24
+   "w": 24,
+   "na": true,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "przemyslaw-porebski",
-   "w": 21
+   "w": 21,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "christopher-l-barrett",
-   "w": 17
+   "w": 17,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "lijing-wang",
-   "w": 15
+   "w": 15,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "stefan-hoops",
-   "w": 16
+   "w": 16,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "benjamin-hurt",
-   "w": 15
+   "w": 15,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "parantapa-bhattacharya",
-   "w": 14
+   "w": 14,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "samarth-swarup",
-   "w": 13
+   "w": 13,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "shaun-truelove",
-   "w": 12
+   "w": 12,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "abhijin-adiga",
-   "w": 10
+   "w": 10,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "dustin-machi",
-   "w": 12
+   "w": 12,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "mandy-wilson",
-   "w": 11
+   "w": 11,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "achla-marathe",
-   "w": 10
+   "w": 10,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "ajitesh-srivastava",
-   "w": 10
+   "w": 10,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "brian-klahn",
-   "w": 11
+   "w": 11,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "justin-lessler",
-   "w": 11
+   "w": 11,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "stephen-eubank",
-   "w": 10
+   "w": 10,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "joseph-outten",
-   "w": 9
+   "w": 9,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "harry-hochheiser",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "adam-sadilek",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "zakaria-mehrab",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "akhil-sai-peddireddy",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "andrew-warren",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "dawen-xie",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "gursharn-kaur",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "rebecca-k-borchering",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "baltazar-espinoza",
-   "w": 4
+   "w": 4,
+   "na": false,
+   "nb": true
   },
   {
    "a": "madhav-marathe",
    "b": "dave-higdon",
-   "w": 5
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "david-leblang",
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "rajesh-sundaresan",
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "arindam-fadikar",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "erik-rosenstrom",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "justin-crow",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "siva-athreya",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "h-vincent-poor",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "naren-ramakrishnan",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "nihesh-rathod",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "s-s-ravi",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "sarath-yasodharan",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "simon-a-levin",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "xue-ben",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "young-yun-baek",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "farzaneh-sadat-tabataba",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "p-r-eastham",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "sandeep-gupta",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "madhav-marathe",
+   "b": "srikar-mutnuri",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "jiangzhuo-chen",
-   "w": 36
+   "w": 36,
+   "na": true,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "aniruddha-adiga",
-   "w": 27
+   "w": 27,
+   "na": true,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "anil-vullikanti",
-   "w": 22
+   "w": 22,
+   "na": true,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "henning-mortveit",
-   "w": 23
+   "w": 23,
+   "na": true,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "przemyslaw-porebski",
-   "w": 20
+   "w": 20,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "christopher-l-barrett",
-   "w": 17
+   "w": 17,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "lijing-wang",
-   "w": 14
+   "w": 14,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "stefan-hoops",
-   "w": 16
+   "w": 16,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "benjamin-hurt",
-   "w": 15
+   "w": 15,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "parantapa-bhattacharya",
-   "w": 13
+   "w": 13,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "samarth-swarup",
-   "w": 11
+   "w": 11,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "shaun-truelove",
-   "w": 12
+   "w": 12,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "alessandro-vespignani",
-   "w": 11
+   "w": 11,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "dustin-machi",
-   "w": 11
+   "w": 11,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "mandy-wilson",
-   "w": 11
+   "w": 11,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "matteo-chinazzi",
-   "w": 11
+   "w": 11,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "ajitesh-srivastava",
-   "w": 10
+   "w": 10,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "brian-klahn",
-   "w": 10
+   "w": 10,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "c-cile-viboud",
-   "w": 9
+   "w": 9,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "jessica-t-davis",
-   "w": 11
+   "w": 11,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "justin-lessler",
-   "w": 11
+   "w": 11,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "stephen-eubank",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "matthew-biggerstaff",
-   "w": 9
+   "w": 9,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "joseph-outten",
-   "w": 9
+   "w": 9,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "ana-pastore-y-piontti",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "emily-howerton",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "harry-hochheiser",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "katriona-shea",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "adam-sadilek",
-   "w": 4
+   "w": 4,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "lauren-ancel-meyers",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "zakaria-mehrab",
-   "w": 5
+   "w": 5,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "akhil-sai-peddireddy",
-   "w": 5
+   "w": 5,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "andrew-warren",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "gursharn-kaur",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "rebecca-k-borchering",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "baltazar-espinoza",
-   "w": 4
+   "w": 4,
+   "na": false,
+   "nb": true
   },
   {
    "a": "bryan-lewis",
    "b": "dave-higdon",
-   "w": 5
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "david-leblang",
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "amanda-wilson",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "arindam-fadikar",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "erik-rosenstrom",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "justin-crow",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "logan-stundal",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "h-vincent-poor",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "james-schlitt",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "mark-orr",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "naren-ramakrishnan",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "pyrros-a-telionis",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "s-s-ravi",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "simon-a-levin",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "farzaneh-sadat-tabataba",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "patrick-corbett",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "sandeep-gupta",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "bryan-lewis",
+   "b": "sifat-afroj-moon",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "aniruddha-adiga",
-   "w": 17
+   "w": 17,
+   "na": true,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "anil-vullikanti",
-   "w": 21
+   "w": 21,
+   "na": true,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "henning-mortveit",
-   "w": 19
+   "w": 19,
+   "na": true,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "przemyslaw-porebski",
-   "w": 13
+   "w": 13,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "christopher-l-barrett",
-   "w": 13
+   "w": 13,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "lijing-wang",
-   "w": 9
+   "w": 9,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "stefan-hoops",
-   "w": 16
+   "w": 16,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "parantapa-bhattacharya",
-   "w": 13
+   "w": 13,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "abhijin-adiga",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "dustin-machi",
-   "w": 11
+   "w": 11,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "mandy-wilson",
-   "w": 11
+   "w": 11,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "achla-marathe",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "brian-klahn",
-   "w": 10
+   "w": 10,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "stephen-eubank",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "joseph-outten",
-   "w": 9
+   "w": 9,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "adam-sadilek",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "andrew-warren",
-   "w": 4
+   "w": 4,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jiangzhuo-chen",
    "b": "dave-higdon",
-   "w": 5
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "jiangzhuo-chen",
+   "b": "amanda-wilson",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "jiangzhuo-chen",
+   "b": "arindam-fadikar",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "jiangzhuo-chen",
+   "b": "james-schlitt",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "jiangzhuo-chen",
+   "b": "wen-you",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "jiangzhuo-chen",
+   "b": "farzaneh-sadat-tabataba",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "jiangzhuo-chen",
+   "b": "sandeep-gupta",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "jiangzhuo-chen",
+   "b": "sifat-afroj-moon",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "aniruddha-adiga",
    "b": "anil-vullikanti",
-   "w": 11
+   "w": 11,
+   "na": false,
+   "nb": true
   },
   {
    "a": "aniruddha-adiga",
    "b": "przemyslaw-porebski",
-   "w": 16
+   "w": 16,
+   "na": true,
+   "nb": true
   },
   {
    "a": "aniruddha-adiga",
    "b": "lijing-wang",
-   "w": 14
+   "w": 14,
+   "na": false,
+   "nb": true
   },
   {
    "a": "aniruddha-adiga",
    "b": "benjamin-hurt",
-   "w": 15
+   "w": 15,
+   "na": true,
+   "nb": true
   },
   {
    "a": "aniruddha-adiga",
    "b": "samarth-swarup",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "aniruddha-adiga",
    "b": "nicholas-g-reich",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "aniruddha-adiga",
    "b": "adam-sadilek",
-   "w": 5
+   "w": 5,
+   "na": false,
+   "nb": true
   },
   {
    "a": "aniruddha-adiga",
    "b": "akhil-sai-peddireddy",
-   "w": 5
+   "w": 5,
+   "na": false,
+   "nb": true
   },
   {
    "a": "aniruddha-adiga",
    "b": "andrew-warren",
-   "w": 4
+   "w": 4,
+   "na": false,
+   "nb": true
   },
   {
    "a": "aniruddha-adiga",
    "b": "gursharn-kaur",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "aniruddha-adiga",
-   "b": "baltazar-espinoza",
-   "w": 2
+   "b": "rajesh-sundaresan",
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "aniruddha-adiga",
+   "b": "amanda-wilson",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "aniruddha-adiga",
+   "b": "justin-crow",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "aniruddha-adiga",
+   "b": "siva-athreya",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "aniruddha-adiga",
+   "b": "nihesh-rathod",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "aniruddha-adiga",
+   "b": "sarath-yasodharan",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "aniruddha-adiga",
+   "b": "srikar-mutnuri",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "anil-vullikanti",
    "b": "henning-mortveit",
-   "w": 11
+   "w": 11,
+   "na": true,
+   "nb": false
   },
   {
    "a": "anil-vullikanti",
    "b": "baltazar-espinoza",
-   "w": 3
+   "w": 3,
+   "na": false,
+   "nb": true
   },
   {
    "a": "anil-vullikanti",
    "b": "dave-higdon",
-   "w": 3
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "anil-vullikanti",
+   "b": "prathyush-sambaturu",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "anil-vullikanti",
+   "b": "sandeep-gupta",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "anil-vullikanti",
+   "b": "sifat-afroj-moon",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "henning-mortveit",
    "b": "christopher-l-barrett",
-   "w": 13
+   "w": 13,
+   "na": true,
+   "nb": true
   },
   {
    "a": "henning-mortveit",
    "b": "stefan-hoops",
-   "w": 15
+   "w": 15,
+   "na": true,
+   "nb": true
   },
   {
    "a": "henning-mortveit",
    "b": "samarth-swarup",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "henning-mortveit",
    "b": "abhijin-adiga",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "henning-mortveit",
    "b": "zakaria-mehrab",
-   "w": 5
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "henning-mortveit",
+   "b": "david-leblang",
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "henning-mortveit",
+   "b": "amanda-wilson",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "henning-mortveit",
+   "b": "justin-crow",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "henning-mortveit",
+   "b": "logan-stundal",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "henning-mortveit",
+   "b": "sandeep-gupta",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "przemyslaw-porebski",
    "b": "benjamin-hurt",
-   "w": 14
+   "w": 14,
+   "na": true,
+   "nb": true
   },
   {
    "a": "przemyslaw-porebski",
    "b": "brian-klahn",
-   "w": 11
+   "w": 11,
+   "na": false,
+   "nb": true
   },
   {
    "a": "przemyslaw-porebski",
    "b": "joseph-outten",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "przemyslaw-porebski",
    "b": "akhil-sai-peddireddy",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "przemyslaw-porebski",
    "b": "gursharn-kaur",
-   "w": 4
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "przemyslaw-porebski",
+   "b": "amanda-wilson",
+   "w": 4,
+   "na": false,
+   "nb": true
   },
   {
    "a": "christopher-l-barrett",
    "b": "stefan-hoops",
-   "w": 11
+   "w": 11,
+   "na": true,
+   "nb": false
   },
   {
    "a": "christopher-l-barrett",
    "b": "mandy-wilson",
-   "w": 9
+   "w": 9,
+   "na": false,
+   "nb": true
   },
   {
    "a": "christopher-l-barrett",
    "b": "stephen-eubank",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "christopher-l-barrett",
-   "b": "zakaria-mehrab",
-   "w": 2
+   "b": "arindam-fadikar",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "christopher-l-barrett",
+   "b": "justin-crow",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "christopher-l-barrett",
+   "b": "mark-orr",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "christopher-l-barrett",
+   "b": "wen-you",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "lijing-wang",
    "b": "benjamin-hurt",
-   "w": 7
+   "w": 7,
+   "na": true,
+   "nb": false
   },
   {
    "a": "lijing-wang",
    "b": "adam-sadilek",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "lijing-wang",
+   "b": "alok-talekar",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "lijing-wang",
+   "b": "ashish-v-tendulkar",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "lijing-wang",
+   "b": "gaurav-aggarwal",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "lijing-wang",
+   "b": "milind-tambe",
+   "w": 3,
+   "na": false,
+   "nb": true
   },
   {
    "a": "stefan-hoops",
    "b": "parantapa-bhattacharya",
-   "w": 12
+   "w": 12,
+   "na": true,
+   "nb": true
   },
   {
    "a": "stefan-hoops",
    "b": "abhijin-adiga",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "stefan-hoops",
    "b": "dustin-machi",
-   "w": 11
+   "w": 11,
+   "na": false,
+   "nb": true
   },
   {
    "a": "stefan-hoops",
    "b": "mandy-wilson",
-   "w": 9
+   "w": 9,
+   "na": false,
+   "nb": true
   },
   {
    "a": "stefan-hoops",
    "b": "achla-marathe",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "stefan-hoops",
    "b": "dawen-xie",
-   "w": 5
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "stefan-hoops",
+   "b": "wen-you",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "benjamin-hurt",
    "b": "ajitesh-srivastava",
-   "w": 9
+   "w": 9,
+   "na": true,
+   "nb": false
   },
   {
    "a": "benjamin-hurt",
    "b": "nicholas-g-reich",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "benjamin-hurt",
    "b": "akhil-sai-peddireddy",
-   "w": 4
+   "w": 4,
+   "na": false,
+   "nb": true
   },
   {
    "a": "benjamin-hurt",
    "b": "gursharn-kaur",
-   "w": 5
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "benjamin-hurt",
+   "b": "nikos-i-bosse",
+   "w": 3,
+   "na": false,
+   "nb": true
   },
   {
    "a": "parantapa-bhattacharya",
    "b": "dustin-machi",
-   "w": 11
+   "w": 11,
+   "na": true,
+   "nb": true
   },
   {
    "a": "samarth-swarup",
    "b": "zakaria-mehrab",
-   "w": 7
+   "w": 7,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "samarth-swarup",
+   "b": "david-leblang",
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "samarth-swarup",
+   "b": "logan-stundal",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "samarth-swarup",
+   "b": "s-s-ravi",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "shaun-truelove",
    "b": "alessandro-vespignani",
-   "w": 10
+   "w": 10,
+   "na": false,
+   "nb": true
   },
   {
    "a": "shaun-truelove",
    "b": "matteo-chinazzi",
-   "w": 11
+   "w": 11,
+   "na": true,
+   "nb": true
   },
   {
    "a": "shaun-truelove",
    "b": "ajitesh-srivastava",
-   "w": 10
+   "w": 10,
+   "na": false,
+   "nb": true
   },
   {
    "a": "shaun-truelove",
    "b": "c-cile-viboud",
-   "w": 10
+   "w": 10,
+   "na": false,
+   "nb": true
   },
   {
    "a": "shaun-truelove",
    "b": "jessica-t-davis",
-   "w": 10
+   "w": 10,
+   "na": true,
+   "nb": true
   },
   {
    "a": "shaun-truelove",
    "b": "justin-lessler",
-   "w": 11
+   "w": 11,
+   "na": true,
+   "nb": true
   },
   {
    "a": "shaun-truelove",
    "b": "emily-howerton",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "shaun-truelove",
    "b": "harry-hochheiser",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "shaun-truelove",
    "b": "katriona-shea",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "shaun-truelove",
    "b": "michael-c-runge",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "shaun-truelove",
    "b": "rebecca-k-borchering",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "shaun-truelove",
    "b": "sara-l-loo",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "shaun-truelove",
+   "b": "erik-rosenstrom",
+   "w": 4,
+   "na": false,
+   "nb": true
   },
   {
    "a": "abhijin-adiga",
    "b": "achla-marathe",
-   "w": 8
+   "w": 8,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "abhijin-adiga",
+   "b": "r-muniappan",
+   "w": 3,
+   "na": false,
+   "nb": true
   },
   {
    "a": "alessandro-vespignani",
    "b": "matteo-chinazzi",
-   "w": 11
+   "w": 11,
+   "na": true,
+   "nb": true
   },
   {
    "a": "alessandro-vespignani",
    "b": "c-cile-viboud",
-   "w": 9
+   "w": 9,
+   "na": false,
+   "nb": true
   },
   {
    "a": "alessandro-vespignani",
    "b": "jessica-t-davis",
-   "w": 11
+   "w": 11,
+   "na": true,
+   "nb": true
   },
   {
    "a": "alessandro-vespignani",
    "b": "justin-lessler",
-   "w": 10
+   "w": 10,
+   "na": true,
+   "nb": false
   },
   {
    "a": "alessandro-vespignani",
    "b": "matthew-biggerstaff",
-   "w": 9
+   "w": 9,
+   "na": false,
+   "nb": true
   },
   {
    "a": "alessandro-vespignani",
    "b": "ana-pastore-y-piontti",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "alessandro-vespignani",
    "b": "nicholas-g-reich",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "alessandro-vespignani",
    "b": "lauren-ancel-meyers",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "alessandro-vespignani",
    "b": "michael-a-johansson",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "alessandro-vespignani",
+   "b": "sasikiran-kandula",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "alessandro-vespignani",
+   "b": "steven-riley",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "alessandro-vespignani",
+   "b": "willem-g-van-panhuis",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "dustin-machi",
    "b": "brian-klahn",
-   "w": 9
+   "w": 9,
+   "na": false,
+   "nb": true
   },
   {
    "a": "dustin-machi",
    "b": "dawen-xie",
-   "w": 5
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "dustin-machi",
+   "b": "erin-raymond",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "mandy-wilson",
    "b": "dawen-xie",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "mandy-wilson",
+   "b": "mark-orr",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "mandy-wilson",
+   "b": "erin-raymond",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "mandy-wilson",
+   "b": "shawn-t-brown",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "matteo-chinazzi",
    "b": "ajitesh-srivastava",
-   "w": 10
+   "w": 10,
+   "na": false,
+   "nb": true
   },
   {
    "a": "matteo-chinazzi",
    "b": "c-cile-viboud",
-   "w": 9
+   "w": 9,
+   "na": false,
+   "nb": true
   },
   {
    "a": "matteo-chinazzi",
    "b": "jessica-t-davis",
-   "w": 11
+   "w": 11,
+   "na": true,
+   "nb": true
   },
   {
    "a": "matteo-chinazzi",
    "b": "justin-lessler",
-   "w": 10
+   "w": 10,
+   "na": true,
+   "nb": true
   },
   {
    "a": "matteo-chinazzi",
    "b": "matthew-biggerstaff",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "matteo-chinazzi",
    "b": "ana-pastore-y-piontti",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "matteo-chinazzi",
    "b": "jeffrey-shaman",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "matteo-chinazzi",
    "b": "lauren-ancel-meyers",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "matteo-chinazzi",
    "b": "sen-pei",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "matteo-chinazzi",
    "b": "sara-l-loo",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "achla-marathe",
    "b": "stephen-eubank",
-   "w": 8
+   "w": 8,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "achla-marathe",
+   "b": "wen-you",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "achla-marathe",
+   "b": "arash-haddadan",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "achla-marathe",
+   "b": "aravind-srinivasan",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "achla-marathe",
+   "b": "gal-ehrlich",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "achla-marathe",
+   "b": "maier-fenster",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "achla-marathe",
+   "b": "shawn-t-brown",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "ajitesh-srivastava",
    "b": "justin-lessler",
-   "w": 9
+   "w": 9,
+   "na": true,
+   "nb": false
   },
   {
    "a": "ajitesh-srivastava",
    "b": "nicholas-g-reich",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "ajitesh-srivastava",
+   "b": "nikos-i-bosse",
+   "w": 3,
+   "na": false,
+   "nb": true
   },
   {
    "a": "brian-klahn",
    "b": "joseph-outten",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "brian-klahn",
    "b": "dawen-xie",
-   "w": 5
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "brian-klahn",
+   "b": "pyrros-a-telionis",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "brian-klahn",
+   "b": "young-yun-baek",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "brian-klahn",
+   "b": "erin-raymond",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "brian-klahn",
+   "b": "shawn-t-brown",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "c-cile-viboud",
    "b": "justin-lessler",
-   "w": 9
+   "w": 9,
+   "na": true,
+   "nb": false
   },
   {
    "a": "c-cile-viboud",
    "b": "emily-howerton",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "c-cile-viboud",
    "b": "katriona-shea",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "c-cile-viboud",
    "b": "michael-c-runge",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "c-cile-viboud",
    "b": "rebecca-k-borchering",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "c-cile-viboud",
    "b": "sara-l-loo",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "c-cile-viboud",
+   "b": "katie-yan",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "c-cile-viboud",
+   "b": "willem-g-van-panhuis",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jessica-t-davis",
    "b": "justin-lessler",
-   "w": 10
+   "w": 10,
+   "na": true,
+   "nb": true
   },
   {
    "a": "jessica-t-davis",
    "b": "matthew-biggerstaff",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jessica-t-davis",
    "b": "ana-pastore-y-piontti",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jessica-t-davis",
    "b": "jeffrey-shaman",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jessica-t-davis",
    "b": "lauren-ancel-meyers",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "jessica-t-davis",
    "b": "sen-pei",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "jessica-t-davis",
+   "b": "marta-galanti",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "jessica-t-davis",
+   "b": "pragati-prasad",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "justin-lessler",
    "b": "emily-howerton",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "justin-lessler",
    "b": "katriona-shea",
-   "w": 8
+   "w": 8,
+   "na": false,
+   "nb": true
   },
   {
    "a": "justin-lessler",
    "b": "lauren-ancel-meyers",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "justin-lessler",
    "b": "michael-a-johansson",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "justin-lessler",
    "b": "michael-c-runge",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "justin-lessler",
    "b": "rebecca-k-borchering",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "justin-lessler",
    "b": "sara-l-loo",
-   "w": 5
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "justin-lessler",
+   "b": "erik-rosenstrom",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "justin-lessler",
+   "b": "katie-yan",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "stephen-eubank",
+   "b": "mark-orr",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "stephen-eubank",
+   "b": "wen-you",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "stephen-eubank",
+   "b": "young-yun-baek",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "stephen-eubank",
+   "b": "arash-haddadan",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "stephen-eubank",
+   "b": "aravind-srinivasan",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "stephen-eubank",
+   "b": "gal-ehrlich",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "stephen-eubank",
+   "b": "maier-fenster",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "matthew-biggerstaff",
    "b": "ana-pastore-y-piontti",
-   "w": 8
+   "w": 8,
+   "na": true,
+   "nb": true
   },
   {
    "a": "matthew-biggerstaff",
    "b": "nicholas-g-reich",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "matthew-biggerstaff",
    "b": "jeffrey-shaman",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "matthew-biggerstaff",
    "b": "michael-a-johansson",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "matthew-biggerstaff",
    "b": "sen-pei",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "matthew-biggerstaff",
+   "b": "marta-galanti",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "matthew-biggerstaff",
+   "b": "sasikiran-kandula",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "matthew-biggerstaff",
+   "b": "pragati-prasad",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "matthew-biggerstaff",
+   "b": "steven-riley",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "matthew-biggerstaff",
+   "b": "willem-g-van-panhuis",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "joseph-outten",
+   "b": "shawn-t-brown",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "ana-pastore-y-piontti",
    "b": "jeffrey-shaman",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "ana-pastore-y-piontti",
    "b": "michael-a-johansson",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
   },
   {
    "a": "ana-pastore-y-piontti",
    "b": "sen-pei",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "ana-pastore-y-piontti",
+   "b": "marta-galanti",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "ana-pastore-y-piontti",
+   "b": "carrie-reed",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "ana-pastore-y-piontti",
+   "b": "ira-m-longini",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "ana-pastore-y-piontti",
+   "b": "pragati-prasad",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "emily-howerton",
    "b": "harry-hochheiser",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
   },
   {
    "a": "emily-howerton",
    "b": "katriona-shea",
-   "w": 8
+   "w": 8,
+   "na": true,
+   "nb": true
   },
   {
    "a": "emily-howerton",
    "b": "michael-c-runge",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "emily-howerton",
+   "b": "katie-yan",
+   "w": 4,
+   "na": false,
+   "nb": true
   },
   {
    "a": "harry-hochheiser",
    "b": "katriona-shea",
-   "w": 7
+   "w": 7,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "harry-hochheiser",
+   "b": "katie-yan",
+   "w": 4,
+   "na": false,
+   "nb": true
   },
   {
    "a": "katriona-shea",
    "b": "michael-c-runge",
-   "w": 7
+   "w": 7,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "katriona-shea",
+   "b": "katie-yan",
+   "w": 4,
+   "na": false,
+   "nb": true
   },
   {
    "a": "nicholas-g-reich",
    "b": "michael-a-johansson",
-   "w": 6
+   "w": 6,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "nicholas-g-reich",
+   "b": "nikos-i-bosse",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "nicholas-g-reich",
+   "b": "steven-riley",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "nicholas-g-reich",
+   "b": "willem-g-van-panhuis",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "adam-sadilek",
+   "b": "alok-talekar",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "adam-sadilek",
+   "b": "ashish-v-tendulkar",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "adam-sadilek",
+   "b": "gaurav-aggarwal",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "adam-sadilek",
+   "b": "milind-tambe",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "adam-sadilek",
+   "b": "xue-ben",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "adam-sadilek",
+   "b": "p-r-eastham",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "dah-ming-chiu",
+   "b": "yan-wu",
+   "w": 4,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "dah-ming-chiu",
+   "b": "qiu-fang-ying",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "dah-ming-chiu",
+   "b": "xiaopeng-zhang",
+   "w": 2,
+   "na": true,
+   "nb": true
   },
   {
    "a": "jeffrey-shaman",
    "b": "sen-pei",
-   "w": 7
+   "w": 7,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "jeffrey-shaman",
+   "b": "marta-galanti",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "jeffrey-shaman",
+   "b": "carrie-reed",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "jeffrey-shaman",
+   "b": "ira-m-longini",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "jeffrey-shaman",
+   "b": "pragati-prasad",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "lauren-ancel-meyers",
    "b": "sara-l-loo",
-   "w": 5
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "lauren-ancel-meyers",
+   "b": "b-aditya-prakash",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "lauren-ancel-meyers",
+   "b": "sasikiran-kandula",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "lauren-ancel-meyers",
+   "b": "carrie-reed",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "lauren-ancel-meyers",
+   "b": "ira-m-longini",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "michael-a-johansson",
+   "b": "steven-riley",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "michael-a-johansson",
+   "b": "willem-g-van-panhuis",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "michael-c-runge",
+   "b": "erik-rosenstrom",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "sen-pei",
+   "b": "marta-galanti",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "sen-pei",
+   "b": "b-aditya-prakash",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "sen-pei",
+   "b": "sasikiran-kandula",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "sen-pei",
+   "b": "carrie-reed",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "sen-pei",
+   "b": "ira-m-longini",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "sen-pei",
+   "b": "pragati-prasad",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "zakaria-mehrab",
+   "b": "david-leblang",
+   "w": 5,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "zakaria-mehrab",
+   "b": "logan-stundal",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "zakaria-mehrab",
+   "b": "s-s-ravi",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "akhil-sai-peddireddy",
+   "b": "james-schlitt",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "akhil-sai-peddireddy",
+   "b": "pyrros-a-telionis",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "akhil-sai-peddireddy",
+   "b": "erin-raymond",
+   "w": 2,
+   "na": false,
+   "nb": true
   },
   {
    "a": "andrew-warren",
    "b": "baltazar-espinoza",
-   "w": 4
+   "w": 4,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "andrew-warren",
+   "b": "h-vincent-poor",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "andrew-warren",
+   "b": "simon-a-levin",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "andrew-warren",
+   "b": "young-yun-baek",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "andrew-warren",
+   "b": "sifat-afroj-moon",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "dawen-xie",
+   "b": "young-yun-baek",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "dawen-xie",
+   "b": "erin-raymond",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "dawen-xie",
+   "b": "shawn-t-brown",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "baltazar-espinoza",
+   "b": "h-vincent-poor",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "baltazar-espinoza",
+   "b": "simon-a-levin",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "baltazar-espinoza",
+   "b": "sifat-afroj-moon",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "dave-higdon",
+   "b": "arindam-fadikar",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "david-leblang",
+   "b": "logan-stundal",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "david-leblang",
+   "b": "s-s-ravi",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "nikos-i-bosse",
+   "b": "sam-abbott",
+   "w": 4,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "nikos-i-bosse",
+   "b": "thomas-mcandrew",
+   "w": 4,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "nikos-i-bosse",
+   "b": "b-aditya-prakash",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "rajesh-sundaresan",
+   "b": "siva-athreya",
+   "w": 4,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "rajesh-sundaresan",
+   "b": "nihesh-rathod",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "rajesh-sundaresan",
+   "b": "sarath-yasodharan",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "logan-stundal",
+   "b": "abhishek-pandey",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "logan-stundal",
+   "b": "alison-p-galvani",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "logan-stundal",
+   "b": "burton-h-singer",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "logan-stundal",
+   "b": "chad-r-wells",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "logan-stundal",
+   "b": "rita-r-colwell",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "marta-galanti",
+   "b": "ira-m-longini",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "sam-abbott",
+   "b": "thomas-mcandrew",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "sam-abbott",
+   "b": "paolo-bocchini",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "sam-abbott",
+   "b": "sylvain-chevalier",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "sam-abbott",
+   "b": "tamay-besiroglu",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "siva-athreya",
+   "b": "nihesh-rathod",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "siva-athreya",
+   "b": "sarath-yasodharan",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "thomas-mcandrew",
+   "b": "b-aditya-prakash",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "thomas-mcandrew",
+   "b": "paolo-bocchini",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "thomas-mcandrew",
+   "b": "sylvain-chevalier",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "thomas-mcandrew",
+   "b": "tamay-besiroglu",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "abhishek-pandey",
+   "b": "alison-p-galvani",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "abhishek-pandey",
+   "b": "burton-h-singer",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "abhishek-pandey",
+   "b": "chad-r-wells",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "abhishek-pandey",
+   "b": "rita-r-colwell",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "alison-p-galvani",
+   "b": "burton-h-singer",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "alison-p-galvani",
+   "b": "chad-r-wells",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "alison-p-galvani",
+   "b": "rita-r-colwell",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "alok-talekar",
+   "b": "ashish-v-tendulkar",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "alok-talekar",
+   "b": "gaurav-aggarwal",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "alok-talekar",
+   "b": "milind-tambe",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "ashish-v-tendulkar",
+   "b": "gaurav-aggarwal",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "ashish-v-tendulkar",
+   "b": "milind-tambe",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "ashish-v-tendulkar",
+   "b": "xue-ben",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "b-aditya-prakash",
+   "b": "bijaya-adhikari",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "burton-h-singer",
+   "b": "chad-r-wells",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "burton-h-singer",
+   "b": "rita-r-colwell",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "chad-r-wells",
+   "b": "rita-r-colwell",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "gaia-dempsey",
+   "b": "juan-cambeiro",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "gaia-dempsey",
+   "b": "maimuna-s-majumder",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "gaia-dempsey",
+   "b": "paolo-bocchini",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "gaia-dempsey",
+   "b": "sylvain-chevalier",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "gaia-dempsey",
+   "b": "tamay-besiroglu",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "gaurav-aggarwal",
+   "b": "milind-tambe",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "gaurav-aggarwal",
+   "b": "xue-ben",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "h-vincent-poor",
+   "b": "simon-a-levin",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "james-schlitt",
+   "b": "mark-orr",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "james-schlitt",
+   "b": "pyrros-a-telionis",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "juan-cambeiro",
+   "b": "maimuna-s-majumder",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "juan-cambeiro",
+   "b": "paolo-bocchini",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "juan-cambeiro",
+   "b": "sylvain-chevalier",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "juan-cambeiro",
+   "b": "tamay-besiroglu",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "milind-tambe",
+   "b": "xue-ben",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "nihesh-rathod",
+   "b": "sarath-yasodharan",
+   "w": 3,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "pyrros-a-telionis",
+   "b": "patrick-corbett",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "qiu-fang-ying",
+   "b": "xiaopeng-zhang",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "r-muniappan",
+   "b": "luke-a-colavito",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "r-muniappan",
+   "b": "r-asokan",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "r-muniappan",
+   "b": "sichao-wu",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "r-muniappan",
+   "b": "v-sridhar",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "sasikiran-kandula",
+   "b": "carrie-reed",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "allison-codi",
+   "b": "andrew-a-lover",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "allison-codi",
+   "b": "maimuna-s-majumder",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "allison-codi",
+   "b": "paolo-bocchini",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "allison-codi",
+   "b": "sylvain-chevalier",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "allison-codi",
+   "b": "tamay-besiroglu",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "andrew-a-lover",
+   "b": "maimuna-s-majumder",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "andrew-a-lover",
+   "b": "paolo-bocchini",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "andrew-a-lover",
+   "b": "sylvain-chevalier",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "andrew-a-lover",
+   "b": "tamay-besiroglu",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "arash-haddadan",
+   "b": "aravind-srinivasan",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "arash-haddadan",
+   "b": "gal-ehrlich",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "arash-haddadan",
+   "b": "maier-fenster",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "aravind-srinivasan",
+   "b": "gal-ehrlich",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "aravind-srinivasan",
+   "b": "maier-fenster",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "arup-giri",
+   "b": "lalit-prasad-sah",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "arup-giri",
+   "b": "luke-a-colavito",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "arup-giri",
+   "b": "r-asokan",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "arup-giri",
+   "b": "sichao-wu",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "arup-giri",
+   "b": "v-sridhar",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "bowen-shi",
+   "b": "lalit-prasad-sah",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "bowen-shi",
+   "b": "luke-a-colavito",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "bowen-shi",
+   "b": "r-asokan",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "bowen-shi",
+   "b": "sichao-wu",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "bowen-shi",
+   "b": "v-sridhar",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "gal-ehrlich",
+   "b": "maier-fenster",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "george-w-norton",
+   "b": "lalit-prasad-sah",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "george-w-norton",
+   "b": "luke-a-colavito",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "george-w-norton",
+   "b": "r-asokan",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "george-w-norton",
+   "b": "sichao-wu",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "george-w-norton",
+   "b": "v-sridhar",
+   "w": 2,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "k-s-nitin",
+   "b": "lalit-prasad-sah",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "k-s-nitin",
+   "b": "luke-a-colavito",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "k-s-nitin",
+   "b": "r-asokan",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "k-s-nitin",
+   "b": "sichao-wu",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "k-s-nitin",
+   "b": "v-sridhar",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "lalit-prasad-sah",
+   "b": "luke-a-colavito",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "lalit-prasad-sah",
+   "b": "r-asokan",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "lalit-prasad-sah",
+   "b": "sichao-wu",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "lalit-prasad-sah",
+   "b": "v-sridhar",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "luke-a-colavito",
+   "b": "r-asokan",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "luke-a-colavito",
+   "b": "sichao-wu",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "luke-a-colavito",
+   "b": "v-sridhar",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "maimuna-s-majumder",
+   "b": "paolo-bocchini",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "maimuna-s-majumder",
+   "b": "sylvain-chevalier",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "maimuna-s-majumder",
+   "b": "tamay-besiroglu",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "paolo-bocchini",
+   "b": "sylvain-chevalier",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "paolo-bocchini",
+   "b": "tamay-besiroglu",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "r-asokan",
+   "b": "sichao-wu",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "r-asokan",
+   "b": "v-sridhar",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "sichao-wu",
+   "b": "v-sridhar",
+   "w": 2,
+   "na": true,
+   "nb": true
+  },
+  {
+   "a": "sylvain-chevalier",
+   "b": "tamay-besiroglu",
+   "w": 2,
+   "na": true,
+   "nb": true
   }
  ]
 }

@@ -750,7 +750,7 @@ svg.cn {
 /* Edges: faint at rest so the bubbles lead; a hovered node's ties light up. */
 .cn-edge {
   stroke: var(--navy);
-  stroke-opacity: 0.16;
+  stroke-opacity: 0.09;
   stroke-linecap: round;
   transition: stroke-opacity 0.15s ease;
 }
@@ -787,6 +787,12 @@ svg.cn {
   stroke-width: 2.5px;
 }
 
+/* Labels too small to fit inside their bubble are hidden at rest and only
+   revealed (beneath the bubble) while that node is hovered or keyboard-focused. */
+.cn-label-hover { opacity: 0; transition: opacity 0.12s ease; }
+.cn-node:hover .cn-label-hover,
+.cn-node:focus-visible .cn-label-hover { opacity: 1; }
+
 /* Pale (short-tenure) bubbles are too light for white text, so their in-bubble
    label flips to dark ink with a white halo -- same treatment as a dropped label,
    but kept centered inside the bubble. */
@@ -813,6 +819,11 @@ svg.cn {
 .cn.cn-active .cn-node.cn-off { opacity: 0.22; }
 .cn.cn-active .cn-edge.cn-off { stroke-opacity: 0.05; }
 .cn.cn-active .cn-edge.cn-on { stroke-opacity: 0.5; }
+/* A focused node's lit ties, colored by direction: dark orange for the node's OWN
+   top-N nominations, light orange for ties it only accrued because a neighbor
+   nominated it. (Rest edges above are faint grey, so orange reads as "active".) */
+.cn.cn-active .cn-edge.cn-nom-out { stroke: var(--orange-dark); stroke-opacity: 0.9; }
+.cn.cn-active .cn-edge.cn-nom-in  { stroke: #e8c24d; stroke-opacity: 0.85; }
 
 /* ------------------------------------------------------------------ */
 /* Publications: cross-page term filter (from the word cloud)          */

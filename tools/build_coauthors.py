@@ -50,7 +50,7 @@ OUT = os.path.join(ROOT, "coauthors-data.json")
 
 # --- node selection --------------------------------------------------------
 MIN_PAPERS = 2     # a co-author needs at least this many shared papers to appear
-TOP_N = 50         # ...and we keep at most this many (largest first)
+TOP_N = 1000       # ...and we keep at most this many (largest first)
 
 # --- edge selection --------------------------------------------------------
 EDGE_MIN = 2           # draw an edge only when two co-authors share >= this many papers
@@ -76,7 +76,10 @@ COLLIDE_PAD = 9.0  # min gap between bubble edges (breathing room for labels)
 # strong tie to the epi cluster) tucked in as satellites rather than flung wide.
 GRAVITY_X = 0.020
 GRAVITY_Y = 0.048
-ISOLATE_GRAVITY = 7.0   # extra centre-pull for edge-less nodes (tuck them in)
+ISOLATE_GRAVITY = 12.0  # extra centre-pull for nodes in a small component (tuck them in)
+MINOR_COMPONENT_MAX = 6 # a connected component this small is an off-topic mini-cluster
+                        # (or a lone isolate); every node in it gets ISOLATE_GRAVITY so it
+                        # seats against the core's rim instead of being flung to a corner
 # The collision step pushes overlapping bubbles apart isotropically, which rounds
 # the settled pack toward a near-square blob -- and a square graph, dropped into the
 # wide homepage panel, gets shrunk by the CSS max-height and stranded between big
@@ -160,7 +163,14 @@ def is_pale(hexcolor):
 
 def build_edges(nodes):
     """Weight between two co-authors = number of papers they share. Kept when the
-    weight clears EDGE_MIN and the edge is among the strongest for BOTH endpoints."""
+    weight clears EDGE_MIN and the edge is among the top MAX_EDGES_PER_NODE strongest
+    for AT LEAST ONE endpoint (a strong tie one side cares about survives even if the
+    other side is a busy hub -- so a hub's degree far exceeds MAX_EDGES_PER_NODE).
+
+    Each kept edge is returned as (i, j, w, na, nb): na/nb record whether endpoint i/j
+    was one of the two endpoints that nominated it (put it in its own top-N). This lets
+    the renderer tell a node's OWN picks apart from ties it merely accrued because
+    others nominated it."""
     keysets = [set(p["key"] for p in n["papers"]) for n in nodes]
     raw = []  # (i, j, weight)
     for i in range(len(nodes)):
@@ -169,19 +179,22 @@ def build_edges(nodes):
             if w >= EDGE_MIN:
                 raw.append((i, j, w))
 
-    # Rank each node's incident edges; keep an edge only if it is within the top
-    # MAX_EDGES_PER_NODE for at least one endpoint (a strong tie one side cares
-    # about survives even if the other side is a busy hub).
+    # Rank each node's incident edges and let it nominate its top MAX_EDGES_PER_NODE.
+    # An edge is kept if either endpoint nominated it; we remember which did.
     incident = {i: [] for i in range(len(nodes))}
     for idx, (i, j, w) in enumerate(raw):
         incident[i].append((w, idx))
         incident[j].append((w, idx))
-    keep_idx = set()
+    nominators = {}  # kept edge idx -> set of endpoint node-indices that nominated it
     for i, lst in incident.items():
         lst.sort(reverse=True)
         for _w, idx in lst[:MAX_EDGES_PER_NODE]:
-            keep_idx.add(idx)
-    return [raw[idx] for idx in sorted(keep_idx)]
+            nominators.setdefault(idx, set()).add(i)
+    out = []
+    for idx in sorted(nominators):
+        i, j, w = raw[idx]
+        out.append((i, j, w, i in nominators[idx], j in nominators[idx]))
+    return out
 
 
 def layout(nodes, edges, radii):
@@ -190,15 +203,33 @@ def layout(nodes, edges, radii):
     rng = random.Random(SEED)
     n = len(nodes)
 
-    # Nodes with no kept edge (early-career co-authors with no strong tie to the
-    # rest of the set) feel only repulsion + gravity, so they drift to a far
-    # equilibrium and waste canvas. Give them a much firmer pull to the centre so
-    # collision seats them as satellites on the cluster rim instead.
-    degree = [0] * n
-    for i, j, _w in edges:
-        degree[i] += 1
-        degree[j] += 1
-    grav_mult = [ISOLATE_GRAVITY if degree[i] == 0 else 1.0 for i in range(n)]
+    # Nodes in a small connected component (a lone isolate, or an off-topic
+    # mini-cluster with no strong tie to the main epi cluster) feel only repulsion
+    # + gravity, so they drift to a far equilibrium and waste canvas -- or worse, a
+    # tight mini-cluster gets flung to a corner where it visually stands out. Give
+    # every node in a small component a much firmer pull to the centre so collision
+    # seats it as a satellite on the core's rim instead.
+    adj = [[] for _ in range(n)]
+    for i, j, _w, _na, _nb in edges:
+        adj[i].append(j)
+        adj[j].append(i)
+    comp_id = [-1] * n
+    comp_size = []
+    for s in range(n):
+        if comp_id[s] != -1:
+            continue
+        cid = len(comp_size)
+        stack, size = [s], 0
+        while stack:
+            x = stack.pop()
+            if comp_id[x] != -1:
+                continue
+            comp_id[x] = cid
+            size += 1
+            stack.extend(adj[x])
+        comp_size.append(size)
+    grav_mult = [ISOLATE_GRAVITY if comp_size[comp_id[i]] <= MINOR_COMPONENT_MAX
+                 else 1.0 for i in range(n)]
     area = CANVAS_W * CANVAS_H
     k = 0.75 * math.sqrt(area / max(n, 1))   # natural spring length
 
@@ -212,7 +243,7 @@ def layout(nodes, edges, radii):
         py[i] = math.sin(ang) * r
 
     # Edge attraction is amplified for heavier ties so tight collaborators sit closer.
-    ew = [1.0 + math.log(w) for (_i, _j, w) in edges]
+    ew = [1.0 + math.log(w) for (_i, _j, w, _na, _nb) in edges]
 
     t = 0.12 * CANVAS_W   # temperature (max displacement per step), cooled linearly
     for step in range(ITERS):
@@ -235,7 +266,7 @@ def layout(nodes, edges, radii):
                 dx[j] -= ux * f; dy[j] -= uy * f
 
         # Attraction along edges (d^2 / k), scaled by tie strength.
-        for e, (i, j, _w) in enumerate(edges):
+        for e, (i, j, _w, _na, _nb) in enumerate(edges):
             ox = px[i] - px[j]
             oy = py[i] - py[j]
             d = math.hypot(ox, oy) or 1e-6
@@ -348,8 +379,11 @@ def main():
             node["pale"] = True        # fill too light for white text -> dark label
         nodes_out.append(node)
 
-    edges_out = [{"a": nodes_out[i]["id"], "b": nodes_out[j]["id"], "w": w}
-                 for (i, j, w) in edges]
+    # na/nb: whether endpoint a/b nominated this tie (one of its own top-N) vs merely
+    # accrued it because the other endpoint did -- the renderer colors hover edges by it.
+    edges_out = [{"a": nodes_out[i]["id"], "b": nodes_out[j]["id"], "w": w,
+                  "na": na, "nb": nb}
+                 for (i, j, w, na, nb) in edges]
 
     out = {
         "_readme": (
@@ -376,7 +410,7 @@ def main():
     print("Wrote %s (%.1f KB): %d nodes, %d edges."
           % (os.path.relpath(OUT, ROOT), size_kb, len(nodes_out), len(edges_out)))
     deg = Counter()
-    for i, j, _w in edges:
+    for i, j, _w, _na, _nb in edges:
         deg[i] += 1; deg[j] += 1
     isolated = [nodes_out[i]["name"] for i in range(len(nodes)) if deg[i] == 0]
     print("Top nodes (papers | span yrs | institution):")
