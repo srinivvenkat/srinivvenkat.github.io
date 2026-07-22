@@ -413,6 +413,67 @@ ol.pub-list li::marker {
 .abs-body p { margin: 0 0 0.7em; }
 .abs-body p:last-child { margin-bottom: 0; }
 
+/* Hoverable ellipsis that reveals a paper's full author list */
+.author-ellipsis {
+  font: inherit;
+  color: var(--navy);
+  background: transparent;
+  border: none;
+  padding: 0 1px;
+  margin: 0;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  border-bottom: 1px dotted var(--navy);
+  line-height: inherit;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: color 0.12s ease, border-color 0.12s ease;
+}
+
+.author-ellipsis:hover,
+.author-ellipsis[aria-expanded="true"] {
+  color: var(--orange);
+  border-bottom-color: var(--orange);
+}
+
+.author-ellipsis:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.author-popover {
+  position: absolute;
+  z-index: 60;
+  max-width: min(360px, calc(100vw - 16px));
+  padding: 10px 4px 10px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(35, 45, 75, 0.16), 0 2px 6px rgba(35, 45, 75, 0.1);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.author-popover[hidden] { display: none; }
+
+.author-popover-title {
+  font-weight: 600;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.68rem;
+  margin: 0 10px 7px 0;
+}
+
+.author-popover-list {
+  margin: 0;
+  padding-right: 10px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
 /* Card grid (open data & software) */
 .card-grid {
   display: grid;
