@@ -93,7 +93,8 @@ K_FACTOR = 0.45    # fraction of the uniform-area spring length sqrt(area/n)
 # stronger pull, so it densifies TOWARD the landscape TARGET_ASPECT and the final
 # fit_aspect stretch (which would re-dilute the fill) has nothing left to do.
 COMPACT_ITERS = 400
-COMPACT_PULL = 0.03
+COMPACT_PULL = 0.05   # firm enough to reach target fill against the separation
+                      # pass pushing blobs apart each iteration
 COMPACT_TARGET_FILL = 0.18  # stop once sum(circle areas) / bbox area reaches this
 # Centrality-weighted gravity: the graph's most central co-authors -- many shared
 # papers (weight), many kept ties (degree), and high betweenness (bridges between
@@ -164,6 +165,32 @@ SUB_COMPACT_PULL = 0.02    # ...and during compaction (< COMM_COMPACT_PULL)
 MISFIT_MIN_COMM = 12       # only communities at least this big get the treatment
 MISFIT_COHESION = 0.6      # cohesion multiplier for misfit members
 MISFIT_FLOOR = 0.95        # min misfit offset, x the community's non-misfit p90
+
+# --- community separation ----------------------------------------------------
+# Nothing else keeps two DIFFERENT communities from occupying the same spot:
+# cohesion packs each blob tight internally, but blobs happily interleave (the
+# CUHK four ended up buried inside the scenario-hub clusters; the agriculture
+# and human-judgment groups sat on top of each other). This pass treats each
+# community as a disc (centroid + p80 covering radius) and rigidly pushes
+# overlapping pairs apart along their centroid axis, the smaller community
+# yielding most. Gentle and re-asserted throughout packing, like the misfit
+# band and the radial cap.
+SEP_GAP = 10               # required clearance between community blob edges
+SEP_STRENGTH = 0.6         # fraction of the overlap resolved per pass
+# ...and its counterpart: communities with INTER-community edges attract each
+# other, with an equilibrium gap that shrinks as the tie strengthens -- a blob
+# heavily tied to the UVA-BI community snugs against it at ~SEP_GAP, a weakly
+# tied one keeps up to TIE_EXTRA_GAP of standoff, and an untied one (CUHK) is
+# never pulled at all. This is what keeps cross-community edges SHORT: without
+# it, community_sort's radial placement ignores who is wired to whom and long
+# edges stretch across the layout.
+COMM_ATTRACT = 0.06        # per-pass closing fraction toward the target gap
+TIE_PLACE_PULL = 0.8       # placement-cost weight drawing a community toward
+                           # already-placed communities it shares papers with,
+                           # so related satellites (the scenario-hub groups)
+                           # consolidate on one side instead of scattering
+TIE_EXTRA_GAP = 30         # extra standoff at the weakest tie (0 at the strongest)
+UNTIED_EXTRA_GAP = 25      # additional standoff for a community with NO tie to the anchor
 ISOLATE_GRAVITY = 12.0  # extra centre-pull for nodes in a small component (tuck them in)
 MINOR_COMPONENT_MAX = 6 # a connected component this small is an off-topic mini-cluster
                         # (or a lone isolate); every node in it gets ISOLATE_GRAVITY so it
@@ -358,7 +385,10 @@ def collide_pair(px, py, radii, cent, padf, i, j):
     if d >= mind:
         return
     push = mind - d
-    ci, cj = cent[i] + 0.2, cent[j] + 0.2
+    if cent is None:          # no centrality bias (intra-community tightening)
+        ci = cj = 1.0
+    else:
+        ci, cj = cent[i] + 0.2, cent[j] + 0.2
     share_i = cj / (ci + cj)          # i moves in proportion to j's centrality
     ux, uy = ox / d, oy / d
     px[i] += ux * push * share_i
@@ -691,6 +721,93 @@ def layout(nodes, edges, radii, cent, comm, cscore, sub, padf, cohf):
     return px, py
 
 
+def community_blobs(px, py, radii, comm):
+    """Each community as a disc: centroid + p80 covering radius (member offset +
+    bubble radius, 80th percentile -- the full max would count a blob's own
+    rim-band misfits and make giants like the UVA community unseparable from
+    everything) + total bubble area. Shared by the separation and attraction
+    passes."""
+    mem = {}
+    for i, c in enumerate(comm):
+        mem.setdefault(c, []).append(i)
+    blobs = {}
+    for c, ms in mem.items():
+        cx = sum(px[i] for i in ms) / len(ms)
+        cy = sum(py[i] for i in ms) / len(ms)
+        offs = sorted(math.hypot(px[i] - cx, py[i] - cy) + radii[i] for i in ms)
+        r80 = offs[min(len(offs) - 1, int(0.8 * len(offs)))]
+        blobs[c] = (cx, cy, r80, sum(radii[i] ** 2 for i in ms))
+    return mem, blobs
+
+
+def _shift_pair(px, py, mem, c1, c2, ux, uy, amount, s1):
+    """Rigidly translate two communities along (ux, uy) by `amount`, community
+    c1 taking share s1 of the motion and c2 the rest (in opposite directions)."""
+    for i in mem[c1]:
+        px[i] += ux * amount * s1
+        py[i] += uy * amount * s1
+    for i in mem[c2]:
+        px[i] -= ux * amount * (1 - s1)
+        py[i] -= uy * amount * (1 - s1)
+
+
+def separate_communities(px, py, radii, comm, strength=SEP_STRENGTH):
+    """Push overlapping community blobs apart (see SEP_GAP/SEP_STRENGTH).
+    Overlapping pairs are translated RIGIDLY along the centroid axis so internal
+    structure is untouched, split by total bubble area: the smaller community
+    yields, the anchor barely moves."""
+    mem, blobs = community_blobs(px, py, radii, comm)
+    cs = sorted(blobs)
+    for a in range(len(cs)):
+        for b in range(a + 1, len(cs)):
+            c1, c2 = cs[a], cs[b]
+            x1, y1, r1, a1 = blobs[c1]
+            x2, y2, r2, a2 = blobs[c2]
+            d = math.hypot(x1 - x2, y1 - y2) or 1e-6
+            mind = r1 + r2 + SEP_GAP
+            if d >= mind:
+                continue
+            ux, uy = (x1 - x2) / d, (y1 - y2) / d
+            _shift_pair(px, py, mem, c1, c2, ux, uy,
+                        (mind - d) * strength, a2 / (a1 + a2))
+
+
+def community_ties(comm, edges):
+    """Total inter-community edge weight per community pair: how strongly two
+    research groups are wired to each other. Drives attract_communities."""
+    ties = {}
+    for i, j, w, _na, _nb in edges:
+        c1, c2 = comm[i], comm[j]
+        if c1 != c2:
+            key = (min(c1, c2), max(c1, c2))
+            ties[key] = ties.get(key, 0) + w
+    return ties
+
+
+def attract_communities(px, py, radii, comm, ties, strength=COMM_ATTRACT):
+    """Pull tied community blobs toward each other, to an equilibrium gap that
+    shrinks with tie strength: the strongest pair meets at ~SEP_GAP, the weakest
+    keeps ~TIE_EXTRA_GAP of standoff, untied pairs are never pulled. Rigid
+    translations split by area (small blob travels, the anchor barely moves).
+    This is what keeps cross-community edges short -- placement by centrality
+    rank alone ignores who is wired to whom."""
+    if not ties:
+        return
+    mem, blobs = community_blobs(px, py, radii, comm)
+    wmax = max(ties.values())
+    for (c1, c2), wt in sorted(ties.items()):
+        wfrac = math.log1p(wt) / math.log1p(wmax)
+        x1, y1, r1, a1 = blobs[c1]
+        x2, y2, r2, a2 = blobs[c2]
+        d = math.hypot(x1 - x2, y1 - y2) or 1e-6
+        target = r1 + r2 + SEP_GAP + TIE_EXTRA_GAP * (1 - wfrac)
+        if d <= target:
+            continue
+        ux, uy = (x2 - x1) / d, (y2 - y1) / d   # pull c1 toward c2
+        _shift_pair(px, py, mem, c1, c2, ux, uy,
+                    (d - target) * strength * wfrac, a2 / (a1 + a2))
+
+
 def misfit_band(px, py, comm, mis, strength=0.5):
     """Keep affiliation misfits at their community's rim. One-sided, like
     radial_cap: a misfit sitting INSIDE the floor (closer to the community
@@ -725,90 +842,114 @@ def misfit_band(px, py, comm, mis, strength=0.5):
                 py[i] = my + (py[i] - my) * f
 
 
-def community_sort(px, py, comm, cscore, radii, mis):
-    """Place whole COMMUNITIES radially by their centrality score: each community
-    is rigidly translated (internal structure untouched) so its centroid sits at
-    an area-aware rank radius -- highest-scoring community innermost, radius
-    allocated by cumulative member bubble area so big communities claim
-    proportional room and the middle packs without voids. Angles are kept from
-    the sim, so neighborhoods stay where FR put them. Rigid translation is the
-    point: the earlier per-NODE radial sort tore communities apart radially,
-    and the user wants research groups to travel together."""
-    n = len(px)
-    cx = sum(px) / n
-    cy = sum(py) / n
-    sx = math.sqrt(sum((x - cx) ** 2 for x in px) / n) or 1.0
-    sy = math.sqrt(sum((y - cy) ** 2 for y in py) / n) or 1.0
+def community_sort(px, py, comm, cscore, radii, mis, ties):
+    """Anchor the highest-scoring community (UVA-BI) at the origin, then pack
+    the rest around it by GREEDY CONTACT PACKING, like a circle-packing layout
+    at community granularity: strongest-tied community first, each blob slid
+    inward along ~240 candidate angles until first contact with the already-
+    placed mass, taking the feasible spot with the lowest landscape-biased cost
+    (horizontal positions cheap, vertical dear -- the pack comes out wide
+    without any later stretching, which only re-inflated whitespace). The
+    clearance to the ANCHOR is tie-specific -- SEP_GAP for the strongest tie,
+    up to TIE_EXTRA_GAP (+UNTIED_EXTRA_GAP) for weak/absent ties -- so wired
+    groups hug the UVA blob and strangers stand off; satellite-satellite
+    clearance is plain SEP_GAP. Each community is translated RIGIDLY (internal
+    structure untouched); a small preference for its FR angle keeps
+    neighborhoods roughly where the sim put them. Distances are COMPUTED, not
+    equilibrated: the earlier attraction/separation tug-of-war settled loose
+    and let long cross-community edges linger."""
+    mem, blobs = community_blobs(px, py, radii, comm)
+    anchor = max(mem, key=lambda c: cscore[c])
+    ax, ay, ar, _ = blobs[anchor]
+    for i in range(len(px)):
+        px[i] -= ax
+        py[i] -= ay
 
-    members = {}
-    for i, c in enumerate(comm):
-        members.setdefault(c, []).append(i)
-    ccx = {c: sum((px[i] - cx) / sx for i in ms) / len(ms)
-           for c, ms in members.items()}
-    ccy = {c: sum((py[i] - cy) / sy for i in ms) / len(ms)
-           for c, ms in members.items()}
-    # Effective area gets the same size-scaled bonus as the collision pads, so a
-    # big community claims proportionally more radial room to breathe in.
-    maxsz = max(len(ms) for ms in members.values())
-    area = {c: sum(math.pi * radii[i] ** 2 for i in ms)
-            * (1 + COMM_BREATHE * len(ms) / maxsz)
-            for c, ms in members.items()}
-
-    rmax = max(math.hypot(ccx[c], ccy[c]) for c in members) or 1.0
-    order = sorted(members, key=lambda c: -cscore[c])
-    total = sum(area.values()) or 1.0
-    cum = 0.0
+    aw = {c: ties.get((min(c, anchor), max(c, anchor)), 0) for c in mem}
+    wmax = max(aw.values()) or 1
+    ea = math.sqrt(TARGET_ASPECT)      # landscape bias for the placement cost
+    placed = [(0.0, 0.0, ar, True, anchor)]   # anchor disc (flag: is_anchor)
+    order = sorted((c for c in mem if c != anchor),
+                   key=lambda c: (-aw[c], -len(mem[c]), c))
+    # Affinity between any two communities, for the placement cost: log-scaled
+    # inter-community tie weight, normalized over ALL pairs (not just anchor ties).
+    wmax_all = max(ties.values()) if ties else 1
+    def affinity(c1, c2):
+        w = ties.get((min(c1, c2), max(c1, c2)), 0)
+        return math.log1p(w) / math.log1p(wmax_all)
     for c in order:
-        target = rmax * math.sqrt((cum + area[c] / 2) / total)
-        cum += area[c]
-        d = math.hypot(ccx[c], ccy[c])
-        if d > 1e-9:
-            f = target / d
-            tx, ty = ccx[c] * f, ccy[c] * f
-        else:               # centroid already at the origin: leave it there
-            tx, ty = ccx[c], ccy[c]
-        dx, dy = tx - ccx[c], ty - ccy[c]
-        for i in members[c]:
-            px[i] += dx * sx
-            py[i] += dy * sy
+        ox, oy, cr, _ = blobs[c]
+        pref = math.atan2(oy - ay, ox - ax)   # the sim's angle, as a soft preference
+        wfrac = math.log1p(aw[c]) / math.log1p(wmax)
+        stand = SEP_GAP + TIE_EXTRA_GAP * (1 - wfrac) \
+            + (UNTIED_EXTRA_GAP if aw[c] == 0 else 0)
+        best = None
+        for k in range(240):
+            th = 2 * math.pi * k / 240
+            ux, uy = math.cos(th), math.sin(th)
+            # Minimal distance along this ray clearing every placed disc.
+            t = 0.0
+            for (qx, qy, qr, is_a, _qc) in placed:
+                need = qr + cr + (stand if is_a else SEP_GAP)
+                b = qx * ux + qy * uy
+                disc = b * b - (qx * qx + qy * qy - need * need)
+                if disc >= 0:
+                    t = max(t, b + math.sqrt(disc))
+            x, y = ux * t, uy * t
+            dang = abs((th - pref + math.pi) % (2 * math.pi) - math.pi)
+            cost = math.hypot(x / ea, y * ea) * (1 + 0.06 * dang)
+            # Affinity: spots far from already-placed co-publishing communities
+            # are expensive, so related satellites end up side by side.
+            for (qx, qy, _qr, is_a, qc) in placed:
+                if not is_a:
+                    af = affinity(c, qc)
+                    if af > 0:
+                        cost += TIE_PLACE_PULL * af * math.hypot(x - qx, y - qy)
+            if best is None or cost < best[0]:
+                best = (cost, x, y)
+        _, bx, by = best
+        placed.append((bx, by, cr, False, c))
+        cx0, cy0 = ox - ax, oy - ay
+        for i in mem[c]:
+            px[i] += bx - cx0
+            py[i] += by - cy0
 
     misfit_band(px, py, comm, mis, strength=1.0)   # initial placement: full push
     return px, py
 
 
-def compact(px, py, radii, cent, comm, cscore, sub, padf, cohf, mis):
-    """Nudge the settled layout toward a NOMINAL density: repeatedly pull every
-    node a small fraction toward the centroid and resolve collisions, stopping
-    once circle-area fill reaches COMPACT_TARGET_FILL. The pull is anisotropic
-    and STEERED: the axis the blob is too long on (vs TARGET_ASPECT) pulls
-    harder, so the pack densifies into a landscape shape directly and the later
-    fit_aspect stretch -- which would re-dilute the fill -- has nothing to do.
-    The FR sim settles at a sparse repulsion equilibrium (fine for STRUCTURE,
-    wasteful on whitespace); full contact packing proved far too dense, so the
-    fill target caps this partway. Preserves the relative arrangement."""
+def tighten_communities(px, py, radii, comm, padf, iters=60, pull=0.06):
+    """Densify each community INDEPENDENTLY: pull members toward their own
+    centroid and resolve intra-community collisions, so every blob arrives at
+    the packer already snug. Global density then comes from packing tight blobs
+    edge to edge -- there is no global centre-pull anywhere anymore, because
+    every version of one eventually scrambled the community placement."""
+    mem = {}
+    for i, c in enumerate(comm):
+        mem.setdefault(c, []).append(i)
+    for c, ms in mem.items():
+        for _ in range(iters):
+            cx = sum(px[i] for i in ms) / len(ms)
+            cy = sum(py[i] for i in ms) / len(ms)
+            for i in ms:
+                px[i] += (cx - px[i]) * pull
+                py[i] += (cy - py[i]) * pull
+            for _p in range(2):
+                for a in range(len(ms)):
+                    for b in range(a + 1, len(ms)):
+                        collide_pair(px, py, radii, None, padf, ms[a], ms[b])
+    return px, py
+
+
+def polish(px, py, radii, cent, comm, cscore, sub, padf, cohf, mis, ties):
+    """Maintenance only -- NO global centre pulls. The greedy contact packing in
+    community_sort IS the layout; this pass just lets it breathe consistently:
+    per-community cohesion (damped for misfits) and sub-community cohesion keep
+    blobs snug against collision jiggle, the misfit band and blob separation and
+    tie attraction hold the arrangement, and node collisions clear overlaps.
+    Ends with pure collision passes so no bubbles intersect."""
     n = len(px)
-    carea = sum(math.pi * r * r for r in radii)
-    for _ in range(COMPACT_ITERS):
-        w = (max(px[i] + radii[i] for i in range(n))
-             - min(px[i] - radii[i] for i in range(n)))
-        h = (max(py[i] + radii[i] for i in range(n))
-             - min(py[i] - radii[i] for i in range(n)))
-        if carea / (w * h) >= COMPACT_TARGET_FILL:
-            break   # nominal density reached; keep the remaining air
-        wide = (w / h) > TARGET_ASPECT   # too wide -> squeeze x; else squeeze y
-        pull_x = COMPACT_PULL * (1.5 if wide else 0.25)
-        pull_y = COMPACT_PULL * (0.25 if wide else 1.5)
-        cx = sum(px) / n
-        cy = sum(py) / n
-        # Central nodes densify inward first (pull scaled up with centrality);
-        # rim dwellers lag behind and stay outside.
-        for i in range(n):
-            cm = 0.6 + 0.8 * cent[i]
-            px[i] += (cx - px[i]) * pull_x * cm
-            py[i] += (cy - py[i]) * pull_y * cm
-        # Community cohesion during packing too: pull members toward their
-        # community's current centroid so densification can't smear blobs apart
-        # (damped for misfits, plus the subordinate micro-community pull).
+    for _ in range(30):
         csx = {}
         csy = {}
         cnum = {}
@@ -833,46 +974,14 @@ def compact(px, py, radii, cent, comm, cscore, sub, padf, cohf, mis):
                 s = sub[i]
                 px[i] += (ssx[s] / snum[s] - px[i]) * SUB_COMPACT_PULL * cohf[i]
                 py[i] += (ssy[s] / snum[s] - py[i]) * SUB_COMPACT_PULL * cohf[i]
-        # Keep the radial sorting while the pack densifies. The cap is keyed to
-        # the COMMUNITY score, not the node's own centrality, so it confines
-        # whole blobs rather than tearing individual members out of them. The
-        # misfit band is re-asserted every iteration for the same reason.
         misfit_band(px, py, comm, mis)
-        capscore = [cscore[comm[i]] for i in range(n)]
-        radial_cap(px, py, capscore)
-        for _p in range(3):
+        attract_communities(px, py, radii, comm, ties)
+        separate_communities(px, py, radii, comm)
+        for _p in range(2):
             for i in range(n):
                 for j in range(i + 1, n):
                     collide_pair(px, py, radii, cent, padf, i, j)
-
-    # Fix the aspect WITHOUT changing density: exiting on fill alone can strand
-    # the blob overstretched, and further compaction pulls would over-densify it.
-    # An area-preserving anisotropic rescale (squeeze one axis, stretch the other
-    # by the same factor) hits TARGET_ASPECT at constant fill.
-    w = (max(px[i] + radii[i] for i in range(n))
-         - min(px[i] - radii[i] for i in range(n)))
-    h = (max(py[i] + radii[i] for i in range(n))
-         - min(py[i] - radii[i] for i in range(n)))
-    if abs(w / h - TARGET_ASPECT) / TARGET_ASPECT > 0.05:
-        s = math.sqrt(TARGET_ASPECT / (w / h))
-        cx = sum(px) / n
-        cy = sum(py) / n
-        for i in range(n):
-            px[i] = cx + (px[i] - cx) * s
-            py[i] = cy + (py[i] - cy) / s
-
-    # UNCONDITIONAL settle: the main loop's fill check fires at the top of an
-    # iteration, so it can exit before a single collision pass has run (the
-    # community placement + misfit band routinely arrive already at target
-    # fill, full of overlaps). Interleave the band with collision passes, then
-    # finish with pure collision passes so no overlap survives.
-    for _ in range(20):
-        misfit_band(px, py, comm, mis)
-        for _p in range(3):
-            for i in range(n):
-                for j in range(i + 1, n):
-                    collide_pair(px, py, radii, cent, padf, i, j)
-    for _ in range(10):
+    for _ in range(6):
         for i in range(n):
             for j in range(i + 1, n):
                 collide_pair(px, py, radii, cent, padf, i, j)
@@ -937,6 +1046,7 @@ def main():
     cent = centrality(nodes, edges)
     comm = communities(nodes, edges)
     cscore = community_scores(comm, cent, radii)
+    ties = community_ties(comm, edges)   # inter-community wiring -> blob attraction
     sub = sub_communities(nodes, edges, comm)   # micro-structure, if it's natural
     mis = find_misfits(nodes, comm)             # affiliation misfits -> blob rims
     csizes = {}
@@ -947,15 +1057,10 @@ def main():
     cohf = [MISFIT_COHESION if mis[i] else 1.0 for i in range(len(nodes))]
 
     px, py = layout(nodes, edges, radii, cent, comm, cscore, sub, padf, cohf)
-    px, py = community_sort(px, py, comm, cscore, radii, mis)  # placed whole
-    # Order matters: stretch to landscape FIRST, then densify. The FR blob is
-    # square-ish and often already at nominal fill, so compacting first would
-    # no-op and the stretch would then re-dilute the fill it was meant to fix.
-    # compact() steers its pulls to hold TARGET_ASPECT while it densifies, and
-    # the trailing fit_aspect is only a guard (no-op unless still too square).
-    px = fit_aspect(px, py, radii)
-    px, py = compact(px, py, radii, cent, comm, cscore, sub, padf, cohf, mis)
-    px = fit_aspect(px, py, radii)
+    px, py = tighten_communities(px, py, radii, comm, padf)   # snug each blob
+    px, py = community_sort(px, py, comm, cscore, radii, mis, ties)  # pack blobs
+    px, py = polish(px, py, radii, cent, comm, cscore, sub, padf, cohf, mis, ties)
+    px = fit_aspect(px, py, radii)   # guard: stretch only if still too square
 
     # Recentre to the origin, then emit rounded coordinates. The renderer derives
     # its own viewBox from node extents, so absolute placement doesn't matter.
