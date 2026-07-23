@@ -28,6 +28,11 @@ his collaboration circle:
   * edges   = papers two co-authors share WITH EACH OTHER (i.e. both appear on the
               same paper). This is what pulls real sub-communities together: the
               UVA epi group, the Northeastern crowd, the scenario-hub collaborators.
+              On a CONSORTIUM paper (a big hub effort with many authors) a shared
+              paper only counts when BOTH co-authors are LEAD (first few) or SENIOR
+              (last few) authors -- co-membership in the long middle of a 100-author
+              roster isn't a real pairwise tie and would just wire the hub into a
+              hairball. Normal papers count in full.
 
 Layout is precomputed here (Fruchterman-Reingold with weighted edges, gravity, and
 hard collision so bubbles pack without overlapping) so the browser only renders and
@@ -58,6 +63,14 @@ MAX_EDGES_PER_NODE = 5 # keep only each node's few strongest ties, so the graph 
                        # as clusters rather than a hairball. Genuine hubs (co-authors
                        # on nearly everything) still accrue high degree -- that is the
                        # true story -- but nobody contributes more than a few weak ties.
+
+# On a consortium paper (paper_meta[key].consortium), a shared paper counts toward an
+# edge only when BOTH co-authors are among the first LEAD_N or last SENIOR_N authors --
+# the leads and the senior/PI anchors of the effort. This keeps the real leadership of a
+# hub clustered while letting its middle-author-only collaborators drift to the rim,
+# instead of manufacturing a near-complete subgraph among everyone on a 100-author paper.
+LEAD_N = 3             # first N authors count as "lead"
+SENIOR_N = 3           # last N authors count as "senior"
 
 # --- node sizing (logical units; the viewBox is derived from final extents) --
 R_MIN = 15.0
@@ -161,21 +174,41 @@ def is_pale(hexcolor):
     return (1.05 / (_rel_lum(hexcolor) + 0.05)) < PALE_CONTRAST
 
 
-def build_edges(nodes):
-    """Weight between two co-authors = number of papers they share. Kept when the
-    weight clears EDGE_MIN and the edge is among the top MAX_EDGES_PER_NODE strongest
-    for AT LEAST ONE endpoint (a strong tie one side cares about survives even if the
-    other side is a busy hub -- so a hub's degree far exceeds MAX_EDGES_PER_NODE).
+def _is_core(pos, total):
+    """True when position `pos` (0-based) is a LEAD (first LEAD_N) or SENIOR (last
+    SENIOR_N) author on a paper of `total` authors. Missing data -> not core, so a
+    consortium paper we can't place someone on doesn't get to link them."""
+    if pos is None or total is None:
+        return False
+    return pos < LEAD_N or pos >= total - SENIOR_N
+
+
+def build_edges(nodes, paper_meta):
+    """Weight between two co-authors = number of papers they share. On a consortium
+    paper the pair must BOTH be lead/senior authors for it to count (see _is_core);
+    normal papers count in full. Kept when the weight clears EDGE_MIN and the edge is
+    among the top MAX_EDGES_PER_NODE strongest for AT LEAST ONE endpoint (a strong tie
+    one side cares about survives even if the other side is a busy hub -- so a hub's
+    degree far exceeds MAX_EDGES_PER_NODE).
 
     Each kept edge is returned as (i, j, w, na, nb): na/nb record whether endpoint i/j
     was one of the two endpoints that nominated it (put it in its own top-N). This lets
     the renderer tell a node's OWN picks apart from ties it merely accrued because
     others nominated it."""
-    keysets = [set(p["key"] for p in n["papers"]) for n in nodes]
+    pos_by_key = [{p["key"]: p.get("pos") for p in n["papers"]} for n in nodes]
+    keysets = [set(m) for m in pos_by_key]
     raw = []  # (i, j, weight)
     for i in range(len(nodes)):
         for j in range(i + 1, len(nodes)):
-            w = len(keysets[i] & keysets[j])
+            w = 0
+            for key in keysets[i] & keysets[j]:
+                meta = paper_meta.get(key)
+                if meta and meta.get("consortium"):
+                    total = meta.get("authors")
+                    if not (_is_core(pos_by_key[i][key], total)
+                            and _is_core(pos_by_key[j][key], total)):
+                        continue  # a middle-author co-membership on a big hub paper
+                w += 1
             if w >= EDGE_MIN:
                 raw.append((i, j, w))
 
@@ -330,12 +363,13 @@ def fit_aspect(px, py, radii, target=TARGET_ASPECT):
 def main():
     doc = json.load(open(SRC, encoding="utf-8"))
     authors = doc["authors"]
+    paper_meta = doc.get("paper_meta", {})
 
     nodes = select_nodes(authors)
     if not nodes:
         raise SystemExit("No co-authors selected -- check authors.json / MIN_PAPERS")
 
-    edges = build_edges(nodes)
+    edges = build_edges(nodes, paper_meta)
 
     counts = [a["paper_count"] for a in nodes]
     cmin, cmax = min(counts), max(counts)
@@ -393,7 +427,8 @@ def main():
             "shared-paper count ('papers'), shaded by length of collaboration -- the "
             "'span' in years from first to latest shared paper -- on a light->dark ramp "
             "('color'); 'pale' marks a fill light enough that its label flips to dark ink. "
-            "edges weight how many papers two co-authors share with each other. 'x','y','r' "
+            "edges weight how many papers two co-authors share with each other (on a big "
+            "consortium/hub paper only its lead and senior authors count). 'x','y','r' "
             "are precomputed layout coordinates (arbitrary units; the page derives its "
             "viewBox from them). 'keys' are '<section-id>|<number>' matching "
             "publications.html so a node can filter the publication list."),

@@ -252,11 +252,11 @@ def build(entries, cache):
         author_count[entry_key] = len(valid)
         year = rec.get("publication_year") or \
             (int(meta["year"]) if str(meta.get("year", "")).isdigit() else None)
-        for a in rec.get("authorships", []):
+        # pos = 0-based rank within the (name-bearing) author list, so downstream can
+        # tell a paper's lead/senior authors from its long middle -- see build_coauthors.
+        for pos, a in enumerate(valid):
             au = a.get("author") or {}
             name = au.get("display_name")
-            if not name:
-                continue
             k = akey(a)
             insts = [i.get("display_name") for i in a.get("institutions", []) if i.get("display_name")] \
                 or (a.get("raw_affiliation_strings") or [])
@@ -276,7 +276,7 @@ def build(entries, cache):
                 node["last_year"] = year if node["last_year"] is None else max(node["last_year"], year)
                 node["first_year"] = year if node["first_year"] is None else min(node["first_year"], year)
             node["papers"].append({"key": entry_key, "title": meta["title"],
-                                   "year": year, "section": meta["section_label"]})
+                                   "year": year, "section": meta["section_label"], "pos": pos})
 
     # merge duplicate OpenAlex profiles for one person (guarded by ORCID)
     by_name = OrderedDict()
@@ -374,6 +374,11 @@ def main():
         {"key": k, "title": entries[k]["title"], "url": entries[k]["url"],
          "reason": "not indexed in OpenAlex; no full author names/affiliations available"}
         for k in unresolved]
+    # Per-paper author count + consortium flag. Paired with each author's `pos`, this
+    # lets build_coauthors keep only lead/senior authors of a big hub paper when
+    # weighting edges (a middle-of-the-roster co-membership isn't a real pairwise tie).
+    out["paper_meta"] = {k: {"authors": author_count[k], "consortium": k in consortium_keys}
+                         for k in sorted(author_count) if author_count[k] is not None}
     out["authors"] = authors
 
     json.dump(out, open(OUT, "w"), indent=2, ensure_ascii=False)
