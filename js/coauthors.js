@@ -4,8 +4,9 @@
  * Data comes from coauthors-data.json, precomputed by tools/build_coauthors.py:
  * an ego network with the site owner removed. Nodes are his most frequent
  * co-authors (sized by shared-paper count, shaded light->dark by length of
- * collaboration); edges weight
- * how many papers two co-authors share with each other. Layout coordinates
+ * collaboration, labeled by surname with the full name as a hover popup); edges
+ * weight how many papers two co-authors have published together across all their
+ * work (copub.json), not just papers with the owner. Layout coordinates
  * (x, y, r) are precomputed there — this script does no simulation, it only draws
  * what the precompute produced and wires up interaction, mirroring wordcloud.js.
  *
@@ -19,6 +20,9 @@
  *  - Edges are faint at rest; hovering/focusing a node lights up that node, its
  *    neighbors, and the ties between them while the rest recede — the same
  *    "emphasis dims the siblings" idea the word cloud uses.
+ *  - Bubbles are draggable (pointer events), purely for play: dragging moves the
+ *    node and its incident edges live, and a drag suppresses the click-through
+ *    to the publications page. Positions reset on reload — nothing is persisted.
  */
 (function () {
   "use strict";
@@ -28,7 +32,8 @@
 
   var LABEL_MIN_FONT = 8;   // below this a label won't fit inside its bubble...
   var LABEL_MAX_FONT = 17;  // ...and above this it stops growing with the bubble
-  var LABEL_BELOW_FONT = 11; // font used when a label is dropped beneath a bubble
+  var LABEL_BELOW_FONT = 11; // font of the full-name popup beneath a hovered bubble
+  var DRAG_THRESHOLD = 3;   // svg units of movement before a press counts as a drag
 
   function edgeWidth(w) {
     return 0.6 + Math.sqrt(w) * 0.25;
@@ -106,7 +111,7 @@
       a.setAttribute("data-id", n.id);
       a.setAttribute("role", "link");
       a.setAttribute("aria-label",
-        n.name + " — " + n.papers +
+        n.name + ", " + n.papers +
         (n.papers === 1 ? " paper" : " papers") + " co-authored with me" +
         (n.inst ? ", " + n.inst : ""));
 
@@ -118,40 +123,130 @@
       circle.style.fill = n.color;
       a.appendChild(circle);
 
-      // Label: fit the last name inside the bubble; if even the minimum font is
-      // too wide, hide the label and only reveal it beneath the bubble on hover.
+      // Resting label: the surname inside the bubble (n.short, precomputed by
+      // build_coauthors). Ambiguous alone ('Wen You' reads as a bubble labeled
+      // 'You'), so the full name always appears in the hover popup below.
       var w10 = labelWidthAt10(n.short);
       var fitFont = (2 * n.r - 8) / w10 * 10;      // largest font that fits inside
-      var text = document.createElementNS(SVGNS, "text");
-      text.setAttribute("class", "cn-label");
-      text.setAttribute("text-anchor", "middle");
-      text.textContent = n.short;
-
+      var label = null, labelDy = 0;
       if (fitFont >= LABEL_MIN_FONT) {
+        label = document.createElementNS(SVGNS, "text");
         var font = Math.max(LABEL_MIN_FONT, Math.min(LABEL_MAX_FONT, fitFont));
-        text.setAttribute("x", n.x);
-        text.setAttribute("y", n.y + font * 0.35); // optical vertical centering
-        text.setAttribute("font-size", font.toFixed(1));
+        labelDy = font * 0.35;                     // optical vertical centering
+        label.setAttribute("text-anchor", "middle");
+        label.setAttribute("x", n.x);
+        label.setAttribute("y", n.y + labelDy);
+        label.setAttribute("font-size", font.toFixed(1));
+        label.textContent = n.short;
         // Pale (short-tenure) fills can't carry white text; flip the label to dark
         // ink with a light halo instead (precomputed as n.pale in build_coauthors).
-        if (n.pale) text.setAttribute("class", "cn-label cn-label-dark");
-      } else {
-        // Too small to hold a legible label at rest; surface it beneath the bubble
-        // only while the node is hovered or focused (CSS reveals .cn-label-hover).
-        text.setAttribute("x", n.x);
-        text.setAttribute("y", n.y + n.r + LABEL_BELOW_FONT);
-        text.setAttribute("font-size", LABEL_BELOW_FONT);
-        text.setAttribute("class", "cn-label cn-label-below cn-label-hover");
+        label.setAttribute("class", n.pale ? "cn-label cn-label-dark" : "cn-label");
+        a.appendChild(label);
       }
-      a.appendChild(text);
+
+      // Full-name popup: every node reveals its complete name beneath the bubble
+      // while hovered or keyboard-focused (CSS shows .cn-label-hover; surrounding
+      // nodes dim at the same time, so the name stays legible over the pack).
+      var popDy = n.r + LABEL_BELOW_FONT;
+      var pop = document.createElementNS(SVGNS, "text");
+      pop.setAttribute("text-anchor", "middle");
+      pop.setAttribute("x", n.x);
+      pop.setAttribute("y", n.y + popDy);
+      pop.setAttribute("font-size", LABEL_BELOW_FONT);
+      pop.setAttribute("class", "cn-label cn-label-below cn-label-hover");
+      pop.textContent = n.name;
+      a.appendChild(pop);
 
       svg.appendChild(a);
-      nodeEls.push({ el: a, node: n });
+      nodeEls.push({ el: a, node: n, circle: circle,
+                     label: label, labelDy: labelDy, pop: pop, popDy: popDy });
     });
 
     svg.removeChild(meas);
 
     return { nodeEls: nodeEls, edgeEls: edgeEls, neighbors: neighbors };
+  }
+
+  // Bubbles are draggable, purely for play: pointer events move the node, its
+  // labels, and its incident edges live. A real drag (past DRAG_THRESHOLD)
+  // suppresses the click-through to the publications page; a plain click still
+  // navigates. Positions are not persisted — reload restores the layout.
+  function setupDrag(svg, built) {
+    var edgesByNode = {};
+    built.edgeEls.forEach(function (ee) {
+      (edgesByNode[ee.a] = edgesByNode[ee.a] || []).push(ee);
+      (edgesByNode[ee.b] = edgesByNode[ee.b] || []).push(ee);
+    });
+
+    function toSvgPoint(evt) {
+      var m = svg.getScreenCTM();
+      if (!m) return null;
+      var pt = svg.createSVGPoint();
+      pt.x = evt.clientX;
+      pt.y = evt.clientY;
+      return pt.matrixTransform(m.inverse());
+    }
+
+    function moveNode(ne, x, y) {
+      var n = ne.node;
+      n.x = x; n.y = y;
+      ne.circle.setAttribute("cx", x);
+      ne.circle.setAttribute("cy", y);
+      if (ne.label) {
+        ne.label.setAttribute("x", x);
+        ne.label.setAttribute("y", y + ne.labelDy);
+      }
+      ne.pop.setAttribute("x", x);
+      ne.pop.setAttribute("y", y + ne.popDy);
+      (edgesByNode[n.id] || []).forEach(function (ee) {
+        if (ee.a === n.id) {
+          ee.el.setAttribute("x1", x); ee.el.setAttribute("y1", y);
+        }
+        if (ee.b === n.id) {
+          ee.el.setAttribute("x2", x); ee.el.setAttribute("y2", y);
+        }
+      });
+    }
+
+    built.nodeEls.forEach(function (ne) {
+      var drag = null;
+
+      ne.el.addEventListener("pointerdown", function (evt) {
+        if (evt.pointerType === "mouse" && evt.button !== 0) return;
+        var p = toSvgPoint(evt);
+        if (!p) return;
+        drag = { dx: ne.node.x - p.x, dy: ne.node.y - p.y,
+                 x0: ne.node.x, y0: ne.node.y, moved: false };
+        ne.el.setPointerCapture(evt.pointerId);
+      });
+
+      ne.el.addEventListener("pointermove", function (evt) {
+        if (!drag) return;
+        var p = toSvgPoint(evt);
+        if (!p) return;
+        var x = p.x + drag.dx, y = p.y + drag.dy;
+        if (!drag.moved &&
+            Math.hypot(x - drag.x0, y - drag.y0) < DRAG_THRESHOLD) return;
+        drag.moved = true;
+        moveNode(ne, x, y);
+      });
+
+      function endDrag() {
+        if (drag && drag.moved) ne.el.setAttribute("data-dragged", "1");
+        drag = null;
+      }
+      ne.el.addEventListener("pointerup", endDrag);
+      ne.el.addEventListener("pointercancel", endDrag);
+
+      // A completed drag ends with a click on the same element; swallow that one
+      // so letting go of a dragged bubble doesn't navigate to the publications page.
+      ne.el.addEventListener("click", function (evt) {
+        if (ne.el.getAttribute("data-dragged")) {
+          ne.el.removeAttribute("data-dragged");
+          evt.preventDefault();
+        }
+      });
+    });
   }
 
   // Hovering/focusing a node emphasizes it, its neighbors, and the ties between
@@ -214,6 +309,7 @@
         var built = build(data, svg);
         if (!built) return;
         setupHighlight(svg, built);
+        setupDrag(svg, built);
       })
       .catch(function (err) {
         console.warn("Co-author network unavailable (" + SOURCE + "):", err.message);

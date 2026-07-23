@@ -168,7 +168,7 @@
       a.setAttribute("data-theme", t.theme);
       a.setAttribute("role", "link");
       a.setAttribute("aria-label",
-        t.term + " — " + themeLabel + ", appears in " + count +
+        t.term + ", " + themeLabel + ", appears in " + count +
         (count === 1 ? " publication" : " publications"));
 
       var text = document.createElementNS(SVGNS, "text");

@@ -828,6 +828,14 @@ svg.cn {
 .cn-node:hover,
 .cn-node:focus-visible { text-decoration: none; }
 
+/* Bubbles are draggable (see setupDrag in coauthors.js): grab cursor advertises
+   it, and touch-action keeps a touch drag from scrolling the page instead. */
+.cn-node {
+  cursor: grab;
+  touch-action: none;
+}
+.cn-node:active { cursor: grabbing; }
+
 .cn-label {
   font-family: var(--font-heading);
   fill: #fff;

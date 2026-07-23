@@ -14,14 +14,17 @@ the pages, in this order:
 2. **`authors.json`** — regenerate: `python3 tools/build_authors.py --refresh`
    (pulls full author names + affiliations for the new DOIs from OpenAlex).
 3. **`wordcloud-data.json`** — regenerate: `python3 tools/build_wordcloud.py`.
-4. **`coauthors-data.json`** — regenerate: `python3 tools/build_coauthors.py`
-   (reads `authors.json`, so it must run **after** step 2).
-5. Commit all four regenerated files together, then re-render / redeploy the pages.
+4. **`copub.json`** — regenerate: `python3 tools/build_copub.py`
+   (reads `authors.json`; fetches every node author's full works list from OpenAlex
+   to count pairwise co-publications — needs network, cached so reruns are fast).
+5. **`coauthors-data.json`** — regenerate: `python3 tools/build_coauthors.py`
+   (reads `authors.json` **and** `copub.json`, so it must run **after** steps 2 and 4).
+6. Commit all five regenerated files together, then re-render / redeploy the pages.
 
 Order matters: `build_authors.py` and `build_wordcloud.py` both read `abstracts.json`
-(step 1 first); `build_coauthors.py` reads the `authors.json` that step 2 produces.
-Skipping steps 2–4 leaves the co-author roster, the home-page word cloud, and the
-collaboration network stale relative to the CV.
+(step 1 first); `build_copub.py` reads the `authors.json` that step 2 produces; and
+`build_coauthors.py` reads both. Skipping steps 2–5 leaves the co-author roster, the
+home-page word cloud, and the collaboration network stale relative to the CV.
 
 ## build_authors.py
 
@@ -61,20 +64,43 @@ unless their ORCIDs conflict. Eight venue/workshop papers (Google Scholar / Open
 **Rerun this whenever you add or change a paper in `abstracts.json`**, then commit the
 regenerated `authors.json`.
 
+## build_copub.py
+
+Fetches **pairwise co-publication counts** for the collaboration network's nodes.
+
+```bash
+python3 tools/build_copub.py            # use cache where present
+python3 tools/build_copub.py --refresh  # ignore cache, refetch everything
+```
+
+- **Input:** `../authors.json` (produced by `build_authors.py` — run that first).
+- **Output:** `../copub.json` — for every pair of node co-authors, how many papers
+  they have published together across **all** their work (not just papers with the
+  site owner), so edges reflect real ties instead of fragmenting the graph.
+  Works with more than 30 authors are excluded at the API level (`authors_count`
+  filter): consortium co-membership isn't a pairwise tie, and OpenAlex truncates
+  huge author lists anyway.
+- **Requirements:** Python 3 stdlib + `curl`. Reaches the network (OpenAlex API);
+  per-author responses cached in `tools/.openalex_works_cache.json` (gitignored).
+
+**Rerun this whenever `authors.json` changes** (new papers can add nodes), then
+run `build_coauthors.py` and commit both regenerated files.
+
 ## build_coauthors.py
 
-Precomputes the home-page **Collaboration Network** from `authors.json`.
+Precomputes the home-page **Collaboration Network** from `authors.json` + `copub.json`.
 
 ```bash
 python3 tools/build_coauthors.py
 ```
 
-- **Input:** `../authors.json` (produced by `build_authors.py` — run that first).
-- **Output:** `../coauthors-data.json` (~35 KB) — the small file the home page fetches.
-- **Requirements:** Python 3 standard library only. No packages, no build step.
+- **Input:** `../authors.json` and `../copub.json` (run `build_authors.py` then
+  `build_copub.py` first).
+- **Output:** `../coauthors-data.json` — the small file the home page fetches.
+- **Requirements:** Python 3 standard library only. No packages, no network.
 
-**Rerun this whenever `authors.json` changes**, then commit the regenerated
-`coauthors-data.json`. The file is committed, not generated at deploy time.
+**Rerun this whenever `authors.json` or `copub.json` changes**, then commit the
+regenerated `coauthors-data.json`. The file is committed, not generated at deploy time.
 
 ### What it does
 
