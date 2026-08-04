@@ -1,10 +1,10 @@
 {
   "_readme": "Co-author roster derived from abstracts.json. For every paper with a resolvable DOI/arXiv/medRxiv id, the full author list, full names, and institutional affiliations were retrieved from OpenAlex (api.openalex.org, keyed by DOI). paper_count and first_year/last_year are computed over the resolved papers only. Duplicate OpenAlex author profiles for the same person are merged by name unless their ORCIDs conflict; the site owner's spelling variants (incl. 'Srini Venkat' and OpenAlex typos) are unified, and a curated list of human-confirmed same-person aliases is merged even across conflicting ORCIDs. Affiliation strings are normalized (known mislinks remapped, addresses/departments/HTML-entities stripped; 'Unaffiliated' -> 'Independent'). affiliations are ranked by how often they appear (primary_affiliation = most frequent); strings occasionally reflect OpenAlex mis-linkage (e.g. 'Biocom' for the Biocomplexity Institute). consortium_only flags authors whose every paper has >30 authors (large hub efforts) so they can be filtered out of a co-author view. Regenerate with tools/build_authors.py.",
   "counts": {
-    "authors": 814,
-    "consortium_only_authors": 577,
-    "papers_resolved": 95,
-    "papers_total": 103,
+    "authors": 816,
+    "consortium_only_authors": 576,
+    "papers_resolved": 96,
+    "papers_total": 104,
     "consortium_papers": 11
   },
   "source": "OpenAlex (https://openalex.org)",
@@ -411,6 +411,10 @@
       "authors": 10,
       "consortium": false
     },
+    "tech-reports|15": {
+      "authors": 9,
+      "consortium": false
+    },
     "tech-reports|2": {
       "authors": 2,
       "consortium": false
@@ -461,7 +465,7 @@
         "Budapest University of Technology and Economics",
         "University Vascular Associates"
       ],
-      "paper_count": 95,
+      "paper_count": 96,
       "last_year": 2026,
       "first_year": 2010,
       "papers": [
@@ -499,6 +503,13 @@
           "year": 2026,
           "section": "Technical Reports and Preprints",
           "pos": 9
+        },
+        {
+          "key": "tech-reports|15",
+          "title": "EpiNarrate: Agentic Generation of Grounded Narratives from Epidemiological Scenario Projections",
+          "year": 2026,
+          "section": "Technical Reports and Preprints",
+          "pos": 1
         },
         {
           "key": "conference-papers|37",
@@ -2672,7 +2683,7 @@
         "Expedition Technology (United States)",
         "Behavioral Tech"
       ],
-      "paper_count": 26,
+      "paper_count": 27,
       "last_year": 2026,
       "first_year": 2016,
       "papers": [
@@ -2682,6 +2693,13 @@
           "year": 2026,
           "section": "Conference and Workshop Papers",
           "pos": 7
+        },
+        {
+          "key": "tech-reports|15",
+          "title": "EpiNarrate: Agentic Generation of Grounded Narratives from Epidemiological Scenario Projections",
+          "year": 2026,
+          "section": "Technical Reports and Preprints",
+          "pos": 8
         },
         {
           "key": "conference-papers|36",
@@ -2861,7 +2879,8 @@
       ],
       "openalex_ids": [
         "https://openalex.org/A5044848288",
-        "https://openalex.org/A5124872783"
+        "https://openalex.org/A5124872783",
+        "https://openalex.org/A5141189690"
       ],
       "consortium_only": false,
       "is_self": false
@@ -3771,10 +3790,17 @@
         "University of Virginia",
         "University Vascular Associates"
       ],
-      "paper_count": 14,
-      "last_year": 2024,
+      "paper_count": 15,
+      "last_year": 2026,
       "first_year": 2020,
       "papers": [
+        {
+          "key": "tech-reports|15",
+          "title": "EpiNarrate: Agentic Generation of Grounded Narratives from Epidemiological Scenario Projections",
+          "year": 2026,
+          "section": "Technical Reports and Preprints",
+          "pos": 6
+        },
         {
           "key": "journal-articles|35",
           "title": "Novel multi-cluster workflow system to support real-time HPC-enabled epidemic science: Investigating the impact of vaccine acceptance on COVID-19 spread",
@@ -5611,6 +5637,88 @@
       "is_self": false
     },
     {
+      "name": "Harry Hochheiser",
+      "orcid": "https://orcid.org/0000-0001-8793-9982",
+      "primary_affiliation": "University of Pittsburgh",
+      "affiliations": [
+        "University of Pittsburgh"
+      ],
+      "paper_count": 9,
+      "last_year": 2026,
+      "first_year": 2022,
+      "papers": [
+        {
+          "key": "tech-reports|13",
+          "title": "Assessing the Impact of Timing and Coverage of United States COVID-19 Vaccination Campaigns: A Multi-Model Approach",
+          "year": 2026,
+          "section": "Technical Reports and Preprints",
+          "pos": 19
+        },
+        {
+          "key": "tech-reports|14",
+          "title": "IDOBE: Infectious Disease Outbreak forecasting Benchmark Ecosystem",
+          "year": 2026,
+          "section": "Technical Reports and Preprints",
+          "pos": 8
+        },
+        {
+          "key": "tech-reports|15",
+          "title": "EpiNarrate: Agentic Generation of Grounded Narratives from Epidemiological Scenario Projections",
+          "year": 2026,
+          "section": "Technical Reports and Preprints",
+          "pos": 4
+        },
+        {
+          "key": "journal-articles|42",
+          "title": "Scenario Projections of COVID-19 Burden in the US, 2024–2025",
+          "year": 2025,
+          "section": "Journal Articles",
+          "pos": 5
+        },
+        {
+          "key": "journal-articles|37",
+          "title": "Scenario Design for Infectious Disease Projections: Integrating Concepts from Decision Analysis and Experimental Design",
+          "year": 2024,
+          "section": "Journal Articles",
+          "pos": 4
+        },
+        {
+          "key": "journal-articles|30",
+          "title": "Evaluation of the US COVID-19 Scenario Modeling Hub for informing pandemic response under uncertainty",
+          "year": 2023,
+          "section": "Journal Articles",
+          "pos": 14
+        },
+        {
+          "key": "journal-articles|32",
+          "title": "Potential impact of annual vaccination with reformulated COVID-19 vaccines: lessons from the U.S. COVID-19 Scenario Modeling Hub",
+          "year": 2023,
+          "section": "Journal Articles",
+          "pos": 53
+        },
+        {
+          "key": "journal-articles|22",
+          "title": "Projected resurgence of COVID-19 in the United States in July–December 2021 resulting from the increased transmissibility of the Delta variant and faltering vaccination",
+          "year": 2022,
+          "section": "Journal Articles",
+          "pos": 11
+        },
+        {
+          "key": "journal-articles|26",
+          "title": "Impact of SARS-CoV-2 vaccination of children ages 5–11 years on COVID-19 disease burden and resilience to new variants in the United States, November 2021–March 2022: a multi-model study",
+          "year": 2022,
+          "section": "Journal Articles",
+          "pos": 11
+        }
+      ],
+      "openalex_ids": [
+        "https://openalex.org/A5082929960",
+        "https://openalex.org/A5135539234"
+      ],
+      "consortium_only": false,
+      "is_self": false
+    },
+    {
       "name": "Joseph Outten",
       "orcid": "https://orcid.org/0000-0003-1588-4382",
       "primary_affiliation": "University of Virginia",
@@ -5929,80 +6037,6 @@
       "is_self": false
     },
     {
-      "name": "Harry Hochheiser",
-      "orcid": "https://orcid.org/0000-0001-8793-9982",
-      "primary_affiliation": "University of Pittsburgh",
-      "affiliations": [
-        "University of Pittsburgh"
-      ],
-      "paper_count": 8,
-      "last_year": 2026,
-      "first_year": 2022,
-      "papers": [
-        {
-          "key": "tech-reports|13",
-          "title": "Assessing the Impact of Timing and Coverage of United States COVID-19 Vaccination Campaigns: A Multi-Model Approach",
-          "year": 2026,
-          "section": "Technical Reports and Preprints",
-          "pos": 19
-        },
-        {
-          "key": "tech-reports|14",
-          "title": "IDOBE: Infectious Disease Outbreak forecasting Benchmark Ecosystem",
-          "year": 2026,
-          "section": "Technical Reports and Preprints",
-          "pos": 8
-        },
-        {
-          "key": "journal-articles|42",
-          "title": "Scenario Projections of COVID-19 Burden in the US, 2024–2025",
-          "year": 2025,
-          "section": "Journal Articles",
-          "pos": 5
-        },
-        {
-          "key": "journal-articles|37",
-          "title": "Scenario Design for Infectious Disease Projections: Integrating Concepts from Decision Analysis and Experimental Design",
-          "year": 2024,
-          "section": "Journal Articles",
-          "pos": 4
-        },
-        {
-          "key": "journal-articles|30",
-          "title": "Evaluation of the US COVID-19 Scenario Modeling Hub for informing pandemic response under uncertainty",
-          "year": 2023,
-          "section": "Journal Articles",
-          "pos": 14
-        },
-        {
-          "key": "journal-articles|32",
-          "title": "Potential impact of annual vaccination with reformulated COVID-19 vaccines: lessons from the U.S. COVID-19 Scenario Modeling Hub",
-          "year": 2023,
-          "section": "Journal Articles",
-          "pos": 53
-        },
-        {
-          "key": "journal-articles|22",
-          "title": "Projected resurgence of COVID-19 in the United States in July–December 2021 resulting from the increased transmissibility of the Delta variant and faltering vaccination",
-          "year": 2022,
-          "section": "Journal Articles",
-          "pos": 11
-        },
-        {
-          "key": "journal-articles|26",
-          "title": "Impact of SARS-CoV-2 vaccination of children ages 5–11 years on COVID-19 disease burden and resilience to new variants in the United States, November 2021–March 2022: a multi-model study",
-          "year": 2022,
-          "section": "Journal Articles",
-          "pos": 11
-        }
-      ],
-      "openalex_ids": [
-        "https://openalex.org/A5082929960"
-      ],
-      "consortium_only": false,
-      "is_self": false
-    },
-    {
       "name": "Katriona Shea",
       "orcid": "https://orcid.org/0000-0002-7607-8248",
       "primary_affiliation": "Pennsylvania State University",
@@ -6160,6 +6194,83 @@
         "https://openalex.org/A5074470720"
       ],
       "consortium_only": true,
+      "is_self": false
+    },
+    {
+      "name": "Lucie Contamin",
+      "orcid": "https://orcid.org/0000-0001-5797-1279",
+      "primary_affiliation": "University of Pittsburgh",
+      "affiliations": [
+        "University of Pittsburgh",
+        "Virginia Department of Health",
+        "Expedition Technology (United States)",
+        "University of Virginia"
+      ],
+      "paper_count": 8,
+      "last_year": 2026,
+      "first_year": 2021,
+      "papers": [
+        {
+          "key": "tech-reports|13",
+          "title": "Assessing the Impact of Timing and Coverage of United States COVID-19 Vaccination Campaigns: A Multi-Model Approach",
+          "year": 2026,
+          "section": "Technical Reports and Preprints",
+          "pos": 7
+        },
+        {
+          "key": "tech-reports|15",
+          "title": "EpiNarrate: Agentic Generation of Grounded Narratives from Epidemiological Scenario Projections",
+          "year": 2026,
+          "section": "Technical Reports and Preprints",
+          "pos": 5
+        },
+        {
+          "key": "journal-articles|42",
+          "title": "Scenario Projections of COVID-19 Burden in the US, 2024–2025",
+          "year": 2025,
+          "section": "Journal Articles",
+          "pos": 2
+        },
+        {
+          "key": "journal-articles|30",
+          "title": "Evaluation of the US COVID-19 Scenario Modeling Hub for informing pandemic response under uncertainty",
+          "year": 2023,
+          "section": "Journal Articles",
+          "pos": 1
+        },
+        {
+          "key": "journal-articles|32",
+          "title": "Potential impact of annual vaccination with reformulated COVID-19 vaccines: lessons from the U.S. COVID-19 Scenario Modeling Hub",
+          "year": 2023,
+          "section": "Journal Articles",
+          "pos": 3
+        },
+        {
+          "key": "journal-articles|22",
+          "title": "Projected resurgence of COVID-19 in the United States in July–December 2021 resulting from the increased transmissibility of the Delta variant and faltering vaccination",
+          "year": 2022,
+          "section": "Journal Articles",
+          "pos": 8
+        },
+        {
+          "key": "journal-articles|26",
+          "title": "Impact of SARS-CoV-2 vaccination of children ages 5–11 years on COVID-19 disease burden and resilience to new variants in the United States, November 2021–March 2022: a multi-model study",
+          "year": 2022,
+          "section": "Journal Articles",
+          "pos": 7
+        },
+        {
+          "key": "journal-articles|18",
+          "title": "Modeling of future COVID-19 cases, hospitalizations, and deaths, by vaccination rates and nonpharmaceutical intervention scenarios—United States, April–September 2021",
+          "year": 2021,
+          "section": "Journal Articles",
+          "pos": 7
+        }
+      ],
+      "openalex_ids": [
+        "https://openalex.org/A5082249376"
+      ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -6576,76 +6687,6 @@
         "https://openalex.org/A5088820305"
       ],
       "consortium_only": false,
-      "is_self": false
-    },
-    {
-      "name": "Lucie Contamin",
-      "orcid": "https://orcid.org/0000-0001-5797-1279",
-      "primary_affiliation": "University of Pittsburgh",
-      "affiliations": [
-        "University of Pittsburgh",
-        "Virginia Department of Health",
-        "Expedition Technology (United States)",
-        "University of Virginia"
-      ],
-      "paper_count": 7,
-      "last_year": 2026,
-      "first_year": 2021,
-      "papers": [
-        {
-          "key": "tech-reports|13",
-          "title": "Assessing the Impact of Timing and Coverage of United States COVID-19 Vaccination Campaigns: A Multi-Model Approach",
-          "year": 2026,
-          "section": "Technical Reports and Preprints",
-          "pos": 7
-        },
-        {
-          "key": "journal-articles|42",
-          "title": "Scenario Projections of COVID-19 Burden in the US, 2024–2025",
-          "year": 2025,
-          "section": "Journal Articles",
-          "pos": 2
-        },
-        {
-          "key": "journal-articles|30",
-          "title": "Evaluation of the US COVID-19 Scenario Modeling Hub for informing pandemic response under uncertainty",
-          "year": 2023,
-          "section": "Journal Articles",
-          "pos": 1
-        },
-        {
-          "key": "journal-articles|32",
-          "title": "Potential impact of annual vaccination with reformulated COVID-19 vaccines: lessons from the U.S. COVID-19 Scenario Modeling Hub",
-          "year": 2023,
-          "section": "Journal Articles",
-          "pos": 3
-        },
-        {
-          "key": "journal-articles|22",
-          "title": "Projected resurgence of COVID-19 in the United States in July–December 2021 resulting from the increased transmissibility of the Delta variant and faltering vaccination",
-          "year": 2022,
-          "section": "Journal Articles",
-          "pos": 8
-        },
-        {
-          "key": "journal-articles|26",
-          "title": "Impact of SARS-CoV-2 vaccination of children ages 5–11 years on COVID-19 disease burden and resilience to new variants in the United States, November 2021–March 2022: a multi-model study",
-          "year": 2022,
-          "section": "Journal Articles",
-          "pos": 7
-        },
-        {
-          "key": "journal-articles|18",
-          "title": "Modeling of future COVID-19 cases, hospitalizations, and deaths, by vaccination rates and nonpharmaceutical intervention scenarios—United States, April–September 2021",
-          "year": 2021,
-          "section": "Journal Articles",
-          "pos": 7
-        }
-      ],
-      "openalex_ids": [
-        "https://openalex.org/A5082249376"
-      ],
-      "consortium_only": true,
       "is_self": false
     },
     {
@@ -9760,6 +9801,55 @@
       "is_self": false
     },
     {
+      "name": "Naren Ramakrishnan",
+      "orcid": "https://orcid.org/0000-0002-1821-9743",
+      "primary_affiliation": "Virginia Tech",
+      "affiliations": [
+        "Virginia Tech",
+        "University of Virginia"
+      ],
+      "paper_count": 4,
+      "last_year": 2026,
+      "first_year": 2017,
+      "papers": [
+        {
+          "key": "conference-papers|41",
+          "title": "Agentic Framework for Epidemiological Modeling",
+          "year": 2026,
+          "section": "Conference and Workshop Papers",
+          "pos": 6
+        },
+        {
+          "key": "tech-reports|15",
+          "title": "EpiNarrate: Agentic Generation of Grounded Narratives from Epidemiological Scenario Projections",
+          "year": 2026,
+          "section": "Technical Reports and Preprints",
+          "pos": 7
+        },
+        {
+          "key": "journal-articles|39",
+          "title": "Evaluation of FluSight influenza forecasting in the 2021–22 and 2022–23 seasons with a new target laboratory-confirmed influenza hospitalizations",
+          "year": 2023,
+          "section": "Journal Articles",
+          "pos": 106
+        },
+        {
+          "key": "journal-articles|3",
+          "title": "A Framework for Evaluating Epidemic Forecasts",
+          "year": 2017,
+          "section": "Journal Articles",
+          "pos": 2
+        }
+      ],
+      "openalex_ids": [
+        "https://openalex.org/A5035052603",
+        "https://openalex.org/A5124956422",
+        "https://openalex.org/A5141185059"
+      ],
+      "consortium_only": false,
+      "is_self": false
+    },
+    {
       "name": "Nutcha Wattanachit",
       "orcid": "https://orcid.org/0000-0003-4739-1697",
       "primary_affiliation": "University of Massachusetts Amherst",
@@ -11561,47 +11651,6 @@
       ],
       "openalex_ids": [
         "https://openalex.org/A5000327528"
-      ],
-      "consortium_only": false,
-      "is_self": false
-    },
-    {
-      "name": "Naren Ramakrishnan",
-      "orcid": "https://orcid.org/0000-0002-1821-9743",
-      "primary_affiliation": "Virginia Tech",
-      "affiliations": [
-        "Virginia Tech",
-        "University of Virginia"
-      ],
-      "paper_count": 3,
-      "last_year": 2026,
-      "first_year": 2017,
-      "papers": [
-        {
-          "key": "conference-papers|41",
-          "title": "Agentic Framework for Epidemiological Modeling",
-          "year": 2026,
-          "section": "Conference and Workshop Papers",
-          "pos": 6
-        },
-        {
-          "key": "journal-articles|39",
-          "title": "Evaluation of FluSight influenza forecasting in the 2021–22 and 2022–23 seasons with a new target laboratory-confirmed influenza hospitalizations",
-          "year": 2023,
-          "section": "Journal Articles",
-          "pos": 106
-        },
-        {
-          "key": "journal-articles|3",
-          "title": "A Framework for Evaluating Epidemic Forecasts",
-          "year": 2017,
-          "section": "Journal Articles",
-          "pos": 2
-        }
-      ],
-      "openalex_ids": [
-        "https://openalex.org/A5035052603",
-        "https://openalex.org/A5124956422"
       ],
       "consortium_only": false,
       "is_self": false
@@ -14798,6 +14847,36 @@
         "https://openalex.org/A5045732747"
       ],
       "consortium_only": true,
+      "is_self": false
+    },
+    {
+      "name": "Rituparna Datta",
+      "orcid": "https://orcid.org/0000-0003-3816-2438",
+      "primary_affiliation": null,
+      "affiliations": [],
+      "paper_count": 2,
+      "last_year": 2026,
+      "first_year": 2026,
+      "papers": [
+        {
+          "key": "conference-papers|41",
+          "title": "Agentic Framework for Epidemiological Modeling",
+          "year": 2026,
+          "section": "Conference and Workshop Papers",
+          "pos": 0
+        },
+        {
+          "key": "tech-reports|15",
+          "title": "EpiNarrate: Agentic Generation of Grounded Narratives from Epidemiological Scenario Projections",
+          "year": 2026,
+          "section": "Technical Reports and Preprints",
+          "pos": 0
+        }
+      ],
+      "openalex_ids": [
+        "https://openalex.org/A5084806883"
+      ],
+      "consortium_only": false,
       "is_self": false
     },
     {
@@ -18014,6 +18093,29 @@
       ],
       "openalex_ids": [
         "https://openalex.org/A5086272871"
+      ],
+      "consortium_only": false,
+      "is_self": false
+    },
+    {
+      "name": "Bryan L. Lewis",
+      "orcid": "https://orcid.org/0000-0003-0793-6082",
+      "primary_affiliation": null,
+      "affiliations": [],
+      "paper_count": 1,
+      "last_year": 2026,
+      "first_year": 2026,
+      "papers": [
+        {
+          "key": "tech-reports|15",
+          "title": "EpiNarrate: Agentic Generation of Grounded Narratives from Epidemiological Scenario Projections",
+          "year": 2026,
+          "section": "Technical Reports and Preprints",
+          "pos": 2
+        }
+      ],
+      "openalex_ids": [
+        "https://openalex.org/A5137277501"
       ],
       "consortium_only": false,
       "is_self": false
@@ -26312,29 +26414,6 @@
       "is_self": false
     },
     {
-      "name": "Rituparna Datta",
-      "orcid": "https://orcid.org/0000-0003-3816-2438",
-      "primary_affiliation": null,
-      "affiliations": [],
-      "paper_count": 1,
-      "last_year": 2026,
-      "first_year": 2026,
-      "papers": [
-        {
-          "key": "conference-papers|41",
-          "title": "Agentic Framework for Epidemiological Modeling",
-          "year": 2026,
-          "section": "Conference and Workshop Papers",
-          "pos": 0
-        }
-      ],
-      "openalex_ids": [
-        "https://openalex.org/A5084806883"
-      ],
-      "consortium_only": false,
-      "is_self": false
-    },
-    {
       "name": "Rob Tibshirani",
       "orcid": null,
       "primary_affiliation": "Carnegie Mellon University",
@@ -28981,6 +29060,29 @@
         "https://openalex.org/A5068045588"
       ],
       "consortium_only": true,
+      "is_self": false
+    },
+    {
+      "name": "Y W Su",
+      "orcid": null,
+      "primary_affiliation": null,
+      "affiliations": [],
+      "paper_count": 1,
+      "last_year": 2026,
+      "first_year": 2026,
+      "papers": [
+        {
+          "key": "tech-reports|15",
+          "title": "EpiNarrate: Agentic Generation of Grounded Narratives from Epidemiological Scenario Projections",
+          "year": 2026,
+          "section": "Technical Reports and Preprints",
+          "pos": 3
+        }
+      ],
+      "openalex_ids": [
+        "https://openalex.org/A5027153226"
+      ],
+      "consortium_only": false,
       "is_self": false
     },
     {

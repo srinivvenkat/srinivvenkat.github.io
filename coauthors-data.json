@@ -12,8 +12,8 @@
    "span": 9,
    "firstYear": 2017,
    "lastYear": 2026,
-   "x": -60.35,
-   "y": -183.41,
+   "x": 34.97,
+   "y": -55.18,
    "r": 46.0,
    "keys": [
     "book-chapters|1",
@@ -98,8 +98,8 @@
    "span": 9,
    "firstYear": 2017,
    "lastYear": 2026,
-   "x": 41.14,
-   "y": 79.62,
+   "x": -37.8,
+   "y": 133.84,
    "r": 43.38,
    "keys": [
     "book-chapters|1",
@@ -173,8 +173,8 @@
    "span": 9,
    "firstYear": 2017,
    "lastYear": 2026,
-   "x": -106.6,
-   "y": 175.01,
+   "x": 64.77,
+   "y": -256.57,
    "r": 38.17,
    "keys": [
     "book-chapters|1",
@@ -229,8 +229,8 @@
    "span": 6,
    "firstYear": 2020,
    "lastYear": 2026,
-   "x": 93.06,
-   "y": 201.37,
+   "x": 327.64,
+   "y": 39.12,
    "r": 36.27,
    "keys": [
     "book-chapters|1",
@@ -273,15 +273,15 @@
    "id": "anil-vullikanti",
    "name": "Anil Vullikanti",
    "short": "Vullikanti",
-   "papers": 26,
+   "papers": 27,
    "inst": "University of Virginia",
    "color": "#0d366b",
    "span": 10,
    "firstYear": 2016,
    "lastYear": 2026,
-   "x": 94.68,
-   "y": -98.24,
-   "r": 33.42,
+   "x": 344.9,
+   "y": -47.24,
+   "r": 33.8,
    "keys": [
     "book-chapters|2",
     "conference-papers|10",
@@ -307,6 +307,7 @@
     "journal-articles|35",
     "journal-articles|4",
     "journal-articles|8",
+    "tech-reports|15",
     "tech-reports|5",
     "tech-reports|8"
    ]
@@ -321,8 +322,8 @@
    "span": 8,
    "firstYear": 2017,
    "lastYear": 2025,
-   "x": -274.4,
-   "y": -77.22,
+   "x": 252.17,
+   "y": -263.29,
    "r": 32.63,
    "keys": [
     "book-chapters|1",
@@ -361,8 +362,8 @@
    "span": 6,
    "firstYear": 2020,
    "lastYear": 2026,
-   "x": -322.26,
-   "y": 42.4,
+   "x": -57.34,
+   "y": -225.87,
    "r": 31.39,
    "keys": [
     "book-chapters|1",
@@ -398,8 +399,8 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": -192.7,
-   "y": 41.47,
+   "x": -153.67,
+   "y": -195.18,
    "r": 29.56,
    "keys": [
     "conference-papers|21",
@@ -432,8 +433,8 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": -158.53,
-   "y": 105.65,
+   "x": 134.68,
+   "y": 112.05,
    "r": 29.07,
    "keys": [
     "book-chapters|2",
@@ -465,8 +466,8 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": 23.17,
-   "y": -141.32,
+   "x": -184.79,
+   "y": -74.31,
    "r": 29.07,
    "keys": [
     "conference-papers|21",
@@ -498,8 +499,8 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": -30.29,
-   "y": 134.47,
+   "x": 260.51,
+   "y": -14.02,
    "r": 28.55,
    "keys": [
     "conference-papers|23",
@@ -524,15 +525,15 @@
    "id": "parantapa-bhattacharya",
    "name": "Parantapa Bhattacharya",
    "short": "Bhattacharya",
-   "papers": 14,
+   "papers": 15,
    "inst": "University of Virginia",
-   "color": "#5598e7",
-   "span": 4,
+   "color": "#2a78d6",
+   "span": 6,
    "firstYear": 2020,
-   "lastYear": 2024,
-   "x": 178.17,
-   "y": 73.11,
-   "r": 28.02,
+   "lastYear": 2026,
+   "x": 50.4,
+   "y": 76.11,
+   "r": 28.55,
    "keys": [
     "conference-papers|18",
     "conference-papers|21",
@@ -547,9 +548,9 @@
     "journal-articles|35",
     "journal-articles|36",
     "journal-articles|41",
+    "tech-reports|15",
     "tech-reports|8"
-   ],
-   "pale": true
+   ]
   },
   {
    "id": "samarth-swarup",
@@ -561,8 +562,8 @@
    "span": 5,
    "firstYear": 2020,
    "lastYear": 2025,
-   "x": -204.82,
-   "y": -182.21,
+   "x": 197.17,
+   "y": -102.76,
    "r": 27.47,
    "keys": [
     "conference-papers|20",
@@ -590,8 +591,8 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": 352.36,
-   "y": 166.1,
+   "x": -501.46,
+   "y": 271.54,
    "r": 27.47,
    "keys": [
     "journal-articles|18",
@@ -619,8 +620,8 @@
    "span": 8,
    "firstYear": 2016,
    "lastYear": 2024,
-   "x": -147.03,
-   "y": -141.92,
+   "x": -19.6,
+   "y": -136.08,
    "r": 26.89,
    "keys": [
     "conference-papers|12",
@@ -647,8 +648,8 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": 384.3,
-   "y": -9.89,
+   "x": -423.87,
+   "y": 3.39,
    "r": 26.89,
    "keys": [
     "journal-articles|18",
@@ -675,8 +676,8 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": 174.85,
-   "y": 6.41,
+   "x": -102.36,
+   "y": -46.18,
    "r": 26.89,
    "keys": [
     "conference-papers|18",
@@ -704,8 +705,8 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": -195.08,
-   "y": 166.01,
+   "x": 63.97,
+   "y": -136.3,
    "r": 26.89,
    "keys": [
     "conference-papers|18",
@@ -733,8 +734,8 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": 420.84,
-   "y": -105.01,
+   "x": -408.62,
+   "y": 103.74,
    "r": 26.89,
    "keys": [
     "journal-articles|18",
@@ -761,8 +762,8 @@
    "span": 7,
    "firstYear": 2017,
    "lastYear": 2024,
-   "x": -147.6,
-   "y": -72.5,
+   "x": 277.19,
+   "y": -152.53,
    "r": 26.28,
    "keys": [
     "conference-papers|12",
@@ -788,8 +789,8 @@
    "span": 4,
    "firstYear": 2021,
    "lastYear": 2025,
-   "x": 40.03,
-   "y": -204.79,
+   "x": 352.07,
+   "y": 114.22,
    "r": 26.28,
    "keys": [
     "journal-articles|18",
@@ -816,8 +817,8 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": -19.65,
-   "y": 199.38,
+   "x": -116.13,
+   "y": -118.97,
    "r": 26.28,
    "keys": [
     "conference-papers|18",
@@ -844,8 +845,8 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": 451.87,
-   "y": -13.16,
+   "x": -364.69,
+   "y": 49.54,
    "r": 26.28,
    "keys": [
     "journal-articles|18",
@@ -871,8 +872,8 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": 477.43,
-   "y": -70.58,
+   "x": -494.98,
+   "y": 93.73,
    "r": 26.28,
    "keys": [
     "journal-articles|18",
@@ -898,8 +899,8 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": 266.02,
-   "y": 226.59,
+   "x": -423.6,
+   "y": 188.53,
    "r": 26.28,
    "keys": [
     "journal-articles|18",
@@ -925,8 +926,8 @@
    "span": 6,
    "firstYear": 2017,
    "lastYear": 2023,
-   "x": -91.62,
-   "y": -104.93,
+   "x": 165.39,
+   "y": -223.84,
    "r": 26.28,
    "keys": [
     "conference-papers|12",
@@ -952,8 +953,8 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": 218.19,
-   "y": 120.8,
+   "x": -645.51,
+   "y": 99.12,
    "r": 25.63,
    "keys": [
     "journal-articles|17",
@@ -970,6 +971,32 @@
    "pale": true
   },
   {
+   "id": "harry-hochheiser",
+   "name": "Harry Hochheiser",
+   "short": "Hochheiser",
+   "papers": 9,
+   "inst": "University of Pittsburgh",
+   "color": "#5598e7",
+   "span": 4,
+   "firstYear": 2022,
+   "lastYear": 2026,
+   "x": -149.01,
+   "y": 172.72,
+   "r": 24.95,
+   "keys": [
+    "journal-articles|22",
+    "journal-articles|26",
+    "journal-articles|30",
+    "journal-articles|32",
+    "journal-articles|37",
+    "journal-articles|42",
+    "tech-reports|13",
+    "tech-reports|14",
+    "tech-reports|15"
+   ],
+   "pale": true
+  },
+  {
    "id": "joseph-outten",
    "name": "Joseph Outten",
    "short": "Outten",
@@ -979,8 +1006,8 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": 119.99,
-   "y": -30.38,
+   "x": 358.47,
+   "y": -120.99,
    "r": 24.95,
    "keys": [
     "conference-papers|25",
@@ -1005,8 +1032,8 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": 368.36,
-   "y": -68.7,
+   "x": -497.06,
+   "y": 33.76,
    "r": 24.21,
    "keys": [
     "journal-articles|18",
@@ -1030,8 +1057,8 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": 252.18,
-   "y": -188.95,
+   "x": -355.89,
+   "y": 152.37,
    "r": 24.21,
    "keys": [
     "journal-articles|18",
@@ -1045,31 +1072,6 @@
    ]
   },
   {
-   "id": "harry-hochheiser",
-   "name": "Harry Hochheiser",
-   "short": "Hochheiser",
-   "papers": 8,
-   "inst": "University of Pittsburgh",
-   "color": "#5598e7",
-   "span": 4,
-   "firstYear": 2022,
-   "lastYear": 2026,
-   "x": 207.14,
-   "y": -151.56,
-   "r": 24.21,
-   "keys": [
-    "journal-articles|22",
-    "journal-articles|26",
-    "journal-articles|30",
-    "journal-articles|32",
-    "journal-articles|37",
-    "journal-articles|42",
-    "tech-reports|13",
-    "tech-reports|14"
-   ],
-   "pale": true
-  },
-  {
    "id": "katriona-shea",
    "name": "Katriona Shea",
    "short": "Shea",
@@ -1079,8 +1081,8 @@
    "span": 5,
    "firstYear": 2021,
    "lastYear": 2026,
-   "x": 310.19,
-   "y": -104.12,
+   "x": -288.64,
+   "y": 185.82,
    "r": 24.21,
    "keys": [
     "journal-articles|18",
@@ -1091,6 +1093,30 @@
     "journal-articles|37",
     "journal-articles|42",
     "tech-reports|13"
+   ]
+  },
+  {
+   "id": "lucie-contamin",
+   "name": "Lucie Contamin",
+   "short": "Contamin",
+   "papers": 8,
+   "inst": "University of Pittsburgh",
+   "color": "#3987e5",
+   "span": 5,
+   "firstYear": 2021,
+   "lastYear": 2026,
+   "x": -161.48,
+   "y": 114.42,
+   "r": 24.21,
+   "keys": [
+    "journal-articles|18",
+    "journal-articles|22",
+    "journal-articles|26",
+    "journal-articles|30",
+    "journal-articles|32",
+    "journal-articles|42",
+    "tech-reports|13",
+    "tech-reports|15"
    ]
   },
   {
@@ -1103,8 +1129,8 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": 254.35,
-   "y": 168.83,
+   "x": -381.71,
+   "y": 243.2,
    "r": 24.21,
    "keys": [
     "journal-articles|18",
@@ -1128,8 +1154,8 @@
    "span": 2,
    "firstYear": 2020,
    "lastYear": 2022,
-   "x": -255.6,
-   "y": 75.77,
+   "x": 286.19,
+   "y": 157.3,
    "r": 23.41,
    "keys": [
     "book-chapters|3",
@@ -1152,8 +1178,8 @@
    "span": 4,
    "firstYear": 2010,
    "lastYear": 2014,
-   "x": 325.59,
-   "y": 24.68,
+   "x": 645.86,
+   "y": -23.22,
    "r": 23.41,
    "keys": [
     "conference-papers|1",
@@ -1176,8 +1202,8 @@
    "span": 3,
    "firstYear": 2015,
    "lastYear": 2018,
-   "x": -471.65,
-   "y": -60.48,
+   "x": 584.3,
+   "y": -202.12,
    "r": 23.41,
    "keys": [
     "conference-papers|13",
@@ -1200,8 +1226,8 @@
    "span": 2,
    "firstYear": 2022,
    "lastYear": 2024,
-   "x": 433.4,
-   "y": 126.98,
+   "x": -556.54,
+   "y": -55.84,
    "r": 23.41,
    "keys": [
     "journal-articles|22",
@@ -1224,8 +1250,8 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": 604.23,
-   "y": 48.73,
+   "x": -329.3,
+   "y": -168.05,
    "r": 23.41,
    "keys": [
     "journal-articles|24",
@@ -1248,8 +1274,8 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": 157.49,
-   "y": 139.13,
+   "x": -580.96,
+   "y": 62.72,
    "r": 23.41,
    "keys": [
     "journal-articles|18",
@@ -1272,8 +1298,8 @@
    "span": 4,
    "firstYear": 2021,
    "lastYear": 2025,
-   "x": 306.9,
-   "y": -162.28,
+   "x": -223.98,
+   "y": 150.72,
    "r": 23.41,
    "keys": [
     "journal-articles|18",
@@ -1296,8 +1322,8 @@
    "span": 2,
    "firstYear": 2022,
    "lastYear": 2024,
-   "x": 375.31,
-   "y": 110.03,
+   "x": -461.97,
+   "y": -109.93,
    "r": 23.41,
    "keys": [
     "journal-articles|22",
@@ -1320,8 +1346,8 @@
    "span": 5,
    "firstYear": 2020,
    "lastYear": 2025,
-   "x": -23.43,
-   "y": 24.99,
+   "x": 259.71,
+   "y": 93.86,
    "r": 23.41,
    "keys": [
     "conference-papers|32",
@@ -1343,8 +1369,8 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": -234.9,
-   "y": -19.16,
+   "x": -186.5,
+   "y": 46.19,
    "r": 22.52,
    "keys": [
     "conference-papers|18",
@@ -1366,8 +1392,8 @@
    "span": 6,
    "firstYear": 2020,
    "lastYear": 2026,
-   "x": 122.73,
-   "y": 42.93,
+   "x": -113.49,
+   "y": 26.5,
    "r": 22.52,
    "keys": [
     "conference-papers|36",
@@ -1388,8 +1414,8 @@
    "span": 4,
    "firstYear": 2020,
    "lastYear": 2024,
-   "x": -128.92,
-   "y": -0.97,
+   "x": 20.93,
+   "y": -190.27,
    "r": 22.52,
    "keys": [
     "conference-papers|18",
@@ -1411,8 +1437,8 @@
    "span": 2,
    "firstYear": 2022,
    "lastYear": 2024,
-   "x": -96.64,
-   "y": 102.76,
+   "x": -36.4,
+   "y": 57.19,
    "r": 22.52,
    "keys": [
     "conference-papers|29",
@@ -1434,8 +1460,8 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": 267.26,
-   "y": -63.89,
+   "x": -214.49,
+   "y": 205.9,
    "r": 22.52,
    "keys": [
     "journal-articles|18",
@@ -1457,8 +1483,8 @@
    "span": 3,
    "firstYear": 2023,
    "lastYear": 2026,
-   "x": 332.46,
-   "y": 225.38,
+   "x": -502.62,
+   "y": 209.11,
    "r": 22.52,
    "keys": [
     "journal-articles|30",
@@ -1480,8 +1506,8 @@
    "span": 3,
    "firstYear": 2023,
    "lastYear": 2026,
-   "x": 59.55,
-   "y": -40.82,
+   "x": 200.56,
+   "y": -164.93,
    "r": 21.51,
    "keys": [
     "conference-papers|36",
@@ -1502,8 +1528,8 @@
    "span": 4,
    "firstYear": 2017,
    "lastYear": 2021,
-   "x": -209.8,
-   "y": -120.78,
+   "x": 359.06,
+   "y": -228.67,
    "r": 21.51,
    "keys": [
     "conference-papers|11",
@@ -1524,8 +1550,8 @@
    "span": 1,
    "firstYear": 2024,
    "lastYear": 2025,
-   "x": -35.95,
-   "y": 76.12,
+   "x": -46.68,
+   "y": -4.3,
    "r": 21.51,
    "keys": [
     "conference-papers|32",
@@ -1546,8 +1572,8 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": -223.49,
-   "y": 273.58,
+   "x": 564.72,
+   "y": 139.74,
    "r": 21.51,
    "keys": [
     "journal-articles|24",
@@ -1568,8 +1594,8 @@
    "span": 2,
    "firstYear": 2021,
    "lastYear": 2023,
-   "x": 301.15,
-   "y": 76.19,
+   "x": 571.02,
+   "y": -13.78,
    "r": 21.51,
    "keys": [
     "conference-papers|22",
@@ -1590,8 +1616,8 @@
    "span": 1,
    "firstYear": 2022,
    "lastYear": 2023,
-   "x": 27.59,
-   "y": -82.82,
+   "x": 177.71,
+   "y": 10.52,
    "r": 20.32,
    "keys": [
     "book-chapters|1",
@@ -1611,8 +1637,8 @@
    "span": 3,
    "firstYear": 2018,
    "lastYear": 2021,
-   "x": 33.8,
-   "y": 156.25,
+   "x": -192.93,
+   "y": -137.85,
    "r": 20.32,
    "keys": [
     "conference-papers|21",
@@ -1632,8 +1658,8 @@
    "span": 2,
    "firstYear": 2022,
    "lastYear": 2024,
-   "x": 221.77,
-   "y": -95.8,
+   "x": -232.88,
+   "y": 96.51,
    "r": 20.32,
    "keys": [
     "journal-articles|24",
@@ -1653,8 +1679,8 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": -167.68,
-   "y": 221.25,
+   "x": 67.12,
+   "y": 146.97,
    "r": 20.32,
    "keys": [
     "book-chapters|1",
@@ -1674,8 +1700,8 @@
    "span": 3,
    "firstYear": 2023,
    "lastYear": 2026,
-   "x": 259.79,
-   "y": -131.63,
+   "x": -289.97,
+   "y": 125.8,
    "r": 20.32,
    "keys": [
     "journal-articles|32",
@@ -1695,8 +1721,8 @@
    "span": 1,
    "firstYear": 2024,
    "lastYear": 2025,
-   "x": 78.89,
-   "y": 14.21,
+   "x": 188.49,
+   "y": 68.41,
    "r": 20.32,
    "keys": [
     "conference-papers|32",
@@ -1716,8 +1742,8 @@
    "span": 1,
    "firstYear": 2022,
    "lastYear": 2023,
-   "x": 453.63,
-   "y": 77.08,
+   "x": -482.41,
+   "y": -58.44,
    "r": 20.32,
    "keys": [
     "journal-articles|22",
@@ -1726,6 +1752,26 @@
     "journal-articles|30"
    ],
    "pale": true
+  },
+  {
+   "id": "naren-ramakrishnan",
+   "name": "Naren Ramakrishnan",
+   "short": "Ramakrishnan",
+   "papers": 4,
+   "inst": "Virginia Tech",
+   "color": "#104281",
+   "span": 9,
+   "firstYear": 2017,
+   "lastYear": 2026,
+   "x": 424.43,
+   "y": -85.26,
+   "r": 20.32,
+   "keys": [
+    "conference-papers|41",
+    "journal-articles|3",
+    "journal-articles|39",
+    "tech-reports|15"
+   ]
   },
   {
    "id": "sam-abbott",
@@ -1737,8 +1783,8 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": -231.9,
-   "y": 213.41,
+   "x": 532.45,
+   "y": 94.29,
    "r": 20.32,
    "keys": [
     "journal-articles|24",
@@ -1758,8 +1804,8 @@
    "span": 2,
    "firstYear": 2021,
    "lastYear": 2023,
-   "x": 236.93,
-   "y": -1.11,
+   "x": 596.07,
+   "y": -62.61,
    "r": 20.32,
    "keys": [
     "conference-papers|33",
@@ -1779,8 +1825,8 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": -280.84,
-   "y": 192.34,
+   "x": 180.5,
+   "y": 268.77,
    "r": 20.32,
    "keys": [
     "journal-articles|24",
@@ -1800,8 +1846,8 @@
    "span": 3,
    "firstYear": 2015,
    "lastYear": 2018,
-   "x": -514.22,
-   "y": -96.38,
+   "x": 596.08,
+   "y": -149.1,
    "r": 20.32,
    "keys": [
     "conference-papers|6",
@@ -1821,8 +1867,8 @@
    "span": 0,
    "firstYear": 2024,
    "lastYear": 2024,
-   "x": 547.51,
-   "y": 60.31,
+   "x": -331.43,
+   "y": -221.81,
    "r": 18.76,
    "keys": [
     "conference-papers|32",
@@ -1841,8 +1887,8 @@
    "span": 0,
    "firstYear": 2024,
    "lastYear": 2024,
-   "x": 567.21,
-   "y": -32.06,
+   "x": -450.21,
+   "y": -181.72,
    "r": 18.76,
    "keys": [
     "conference-papers|32",
@@ -1861,8 +1907,8 @@
    "span": 1,
    "firstYear": 2020,
    "lastYear": 2021,
-   "x": -387.33,
-   "y": -26.12,
+   "x": 159.31,
+   "y": 221.96,
    "r": 18.76,
    "keys": [
     "conference-papers|20",
@@ -1881,8 +1927,8 @@
    "span": 1,
    "firstYear": 2020,
    "lastYear": 2021,
-   "x": -382.1,
-   "y": 20.56,
+   "x": 153.17,
+   "y": 169.14,
    "r": 18.76,
    "keys": [
     "conference-papers|20",
@@ -1901,8 +1947,8 @@
    "span": 3,
    "firstYear": 2020,
    "lastYear": 2023,
-   "x": -6.97,
-   "y": -245.23,
+   "x": 416.87,
+   "y": 64.21,
    "r": 18.76,
    "keys": [
     "conference-papers|16",
@@ -1921,8 +1967,8 @@
    "span": 0,
    "firstYear": 2024,
    "lastYear": 2024,
-   "x": 519.48,
-   "y": -10.86,
+   "x": -436.5,
+   "y": -229.74,
    "r": 18.76,
    "keys": [
     "conference-papers|32",
@@ -1941,8 +1987,8 @@
    "span": 0,
    "firstYear": 2024,
    "lastYear": 2024,
-   "x": 561.81,
-   "y": 15.14,
+   "x": -388.04,
+   "y": -198.02,
    "r": 18.76,
    "keys": [
     "conference-papers|32",
@@ -1961,8 +2007,8 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": -382.77,
-   "y": 122.33,
+   "x": 343.7,
+   "y": 264.08,
    "r": 18.76,
    "keys": [
     "journal-articles|25",
@@ -1981,8 +2027,8 @@
    "span": 1,
    "firstYear": 2020,
    "lastYear": 2021,
-   "x": -338.56,
-   "y": -16.54,
+   "x": 217.61,
+   "y": 189.56,
    "r": 18.76,
    "keys": [
     "conference-papers|20",
@@ -2001,8 +2047,8 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": 201.94,
-   "y": -48.02,
+   "x": -166.86,
+   "y": -13.22,
    "r": 18.76,
    "keys": [
     "book-chapters|2",
@@ -2021,8 +2067,8 @@
    "span": 3,
    "firstYear": 2020,
    "lastYear": 2023,
-   "x": -131.55,
-   "y": 52.41,
+   "x": 135.97,
+   "y": -53.82,
    "r": 18.76,
    "keys": [
     "journal-articles|18",
@@ -2041,8 +2087,8 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": -300.45,
-   "y": 106.12,
+   "x": 248.16,
+   "y": 318.87,
    "r": 18.76,
    "keys": [
     "journal-articles|25",
@@ -2061,8 +2107,8 @@
    "span": 3,
    "firstYear": 2020,
    "lastYear": 2023,
-   "x": -98.24,
-   "y": -44.48,
+   "x": 292.05,
+   "y": -98.52,
    "r": 18.76,
    "keys": [
     "journal-articles|28",
@@ -2081,8 +2127,8 @@
    "span": 1,
    "firstYear": 2020,
    "lastYear": 2021,
-   "x": -353.1,
-   "y": -61.1,
+   "x": 211.49,
+   "y": 138.47,
    "r": 18.76,
    "keys": [
     "conference-papers|20",
@@ -2090,25 +2136,6 @@
     "tech-reports|5"
    ],
    "pale": true
-  },
-  {
-   "id": "naren-ramakrishnan",
-   "name": "Naren Ramakrishnan",
-   "short": "Ramakrishnan",
-   "papers": 3,
-   "inst": "Virginia Tech",
-   "color": "#104281",
-   "span": 9,
-   "firstYear": 2017,
-   "lastYear": 2026,
-   "x": 161.71,
-   "y": -118.23,
-   "r": 18.76,
-   "keys": [
-    "conference-papers|41",
-    "journal-articles|3",
-    "journal-articles|39"
-   ]
   },
   {
    "id": "nihesh-rathod",
@@ -2120,8 +2147,8 @@
    "span": 2,
    "firstYear": 2021,
    "lastYear": 2023,
-   "x": 288.0,
-   "y": -12.84,
+   "x": 501.35,
+   "y": -12.33,
    "r": 18.76,
    "keys": [
     "conference-papers|33",
@@ -2140,8 +2167,8 @@
    "span": 1,
    "firstYear": 2020,
    "lastYear": 2021,
-   "x": 5.8,
-   "y": -22.25,
+   "x": 14.44,
+   "y": 19.92,
    "r": 18.76,
    "keys": [
     "journal-articles|10",
@@ -2160,8 +2187,8 @@
    "span": 3,
    "firstYear": 2015,
    "lastYear": 2018,
-   "x": -523.99,
-   "y": -43.12,
+   "x": 511.5,
+   "y": -204.7,
    "r": 18.76,
    "keys": [
     "conference-papers|13",
@@ -2180,8 +2207,8 @@
    "span": 3,
    "firstYear": 2017,
    "lastYear": 2020,
-   "x": -408.27,
-   "y": -137.47,
+   "x": -238.55,
+   "y": -27.18,
    "r": 18.76,
    "keys": [
     "conference-papers|12",
@@ -2200,8 +2227,8 @@
    "span": 0,
    "firstYear": 2024,
    "lastYear": 2024,
-   "x": 608.46,
-   "y": -3.44,
+   "x": -398.56,
+   "y": -151.6,
    "r": 18.76,
    "keys": [
     "conference-papers|32",
@@ -2220,8 +2247,8 @@
    "span": 3,
    "firstYear": 2022,
    "lastYear": 2025,
-   "x": -26.55,
-   "y": -108.99,
+   "x": 126.21,
+   "y": 52.09,
    "r": 18.76,
    "keys": [
     "book-chapters|2",
@@ -2240,8 +2267,8 @@
    "span": 2,
    "firstYear": 2021,
    "lastYear": 2023,
-   "x": 271.29,
-   "y": 35.52,
+   "x": 529.27,
+   "y": -54.8,
    "r": 18.76,
    "keys": [
     "conference-papers|33",
@@ -2260,8 +2287,8 @@
    "span": 2,
    "firstYear": 2021,
    "lastYear": 2023,
-   "x": 402.93,
-   "y": 65.31,
+   "x": -533.47,
+   "y": -104.62,
    "r": 18.76,
    "keys": [
     "journal-articles|19",
@@ -2280,8 +2307,8 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": 119.17,
-   "y": 98.92,
+   "x": 158.37,
+   "y": -281.89,
    "r": 18.76,
    "keys": [
     "book-chapters|2",
@@ -2300,8 +2327,8 @@
    "span": 1,
    "firstYear": 2020,
    "lastYear": 2021,
-   "x": -181.84,
-   "y": -20.98,
+   "x": 98.64,
+   "y": -190.88,
    "r": 18.76,
    "keys": [
     "journal-articles|13",
@@ -2320,8 +2347,8 @@
    "span": 0,
    "firstYear": 2020,
    "lastYear": 2020,
-   "x": -261.38,
-   "y": 27.17,
+   "x": 94.37,
+   "y": 199.0,
    "r": 18.76,
    "keys": [
     "conference-papers|20",
@@ -2340,8 +2367,8 @@
    "span": 2,
    "firstYear": 2020,
    "lastYear": 2022,
-   "x": -208.99,
-   "y": -66.39,
+   "x": 139.49,
+   "y": -143.8,
    "r": 18.76,
    "keys": [
     "journal-articles|21",
@@ -2360,8 +2387,8 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": -294.56,
-   "y": 149.55,
+   "x": 242.2,
+   "y": 275.6,
    "r": 15.0,
    "keys": [
     "journal-articles|25",
@@ -2379,8 +2406,8 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": -261.98,
-   "y": 127.87,
+   "x": 229.82,
+   "y": 236.37,
    "r": 15.0,
    "keys": [
     "journal-articles|25",
@@ -2398,8 +2425,8 @@
    "span": 1,
    "firstYear": 2021,
    "lastYear": 2022,
-   "x": -76.33,
-   "y": 12.34,
+   "x": 196.9,
+   "y": -42.21,
    "r": 15.0,
    "keys": [
     "conference-papers|28",
@@ -2417,8 +2444,8 @@
    "span": 1,
    "firstYear": 2021,
    "lastYear": 2022,
-   "x": 129.33,
-   "y": -153.28,
+   "x": 404.99,
+   "y": -164.2,
    "r": 15.0,
    "keys": [
     "conference-papers|28",
@@ -2436,8 +2463,8 @@
    "span": 2,
    "firstYear": 2017,
    "lastYear": 2019,
-   "x": -379.98,
-   "y": -102.55,
+   "x": -315.75,
+   "y": -81.95,
    "r": 15.0,
    "keys": [
     "conference-papers|12",
@@ -2455,8 +2482,8 @@
    "span": 2,
    "firstYear": 2020,
    "lastYear": 2022,
-   "x": 102.37,
-   "y": -199.79,
+   "x": 401.37,
+   "y": 1.3,
    "r": 15.0,
    "keys": [
     "conference-papers|16",
@@ -2474,8 +2501,8 @@
    "span": 2,
    "firstYear": 2017,
    "lastYear": 2019,
-   "x": -362.77,
-   "y": -209.53,
+   "x": -274.95,
+   "y": -112.0,
    "r": 15.0,
    "keys": [
     "conference-papers|12",
@@ -2493,8 +2520,8 @@
    "span": 0,
    "firstYear": 2023,
    "lastYear": 2023,
-   "x": 198.84,
-   "y": 167.64,
+   "x": -628.89,
+   "y": 29.55,
    "r": 15.0,
    "keys": [
     "journal-articles|28",
@@ -2512,8 +2539,8 @@
    "span": 0,
    "firstYear": 2020,
    "lastYear": 2020,
-   "x": -80.05,
-   "y": 54.42,
+   "x": -50.77,
+   "y": -89.1,
    "r": 15.0,
    "keys": [
     "conference-papers|18",
@@ -2531,8 +2558,8 @@
    "span": 0,
    "firstYear": 2017,
    "lastYear": 2017,
-   "x": 86.29,
-   "y": 136.21,
+   "x": 237.37,
+   "y": -206.63,
    "r": 15.0,
    "keys": [
     "conference-papers|11",
@@ -2550,8 +2577,8 @@
    "span": 1,
    "firstYear": 2021,
    "lastYear": 2022,
-   "x": 156.88,
-   "y": -70.28,
+   "x": 299.05,
+   "y": -206.17,
    "r": 15.0,
    "keys": [
     "conference-papers|28",
@@ -2569,8 +2596,8 @@
    "span": 2,
    "firstYear": 2017,
    "lastYear": 2019,
-   "x": -336.95,
-   "y": -104.19,
+   "x": -283.58,
+   "y": 2.05,
    "r": 15.0,
    "keys": [
     "conference-papers|12",
@@ -2588,8 +2615,8 @@
    "span": 0,
    "firstYear": 2023,
    "lastYear": 2023,
-   "x": 418.66,
-   "y": -53.61,
+   "x": -435.38,
+   "y": 55.2,
    "r": 15.0,
    "keys": [
     "journal-articles|28",
@@ -2607,8 +2634,8 @@
    "span": 2,
    "firstYear": 2017,
    "lastYear": 2019,
-   "x": -319.64,
-   "y": -208.43,
+   "x": -368.65,
+   "y": -89.12,
    "r": 15.0,
    "keys": [
     "conference-papers|12",
@@ -2626,8 +2653,8 @@
    "span": 2,
    "firstYear": 2017,
    "lastYear": 2019,
-   "x": -316.58,
-   "y": -139.35,
+   "x": -335.28,
+   "y": -12.42,
    "r": 15.0,
    "keys": [
     "conference-papers|12",
@@ -2645,8 +2672,8 @@
    "span": 2,
    "firstYear": 2017,
    "lastYear": 2019,
-   "x": -382.66,
-   "y": -174.14,
+   "x": -295.85,
+   "y": -42.35,
    "r": 15.0,
    "keys": [
     "conference-papers|12",
@@ -2664,8 +2691,8 @@
    "span": 1,
    "firstYear": 2021,
    "lastYear": 2022,
-   "x": -140.24,
-   "y": -197.85,
+   "x": 346.14,
+   "y": -177.31,
    "r": 15.0,
    "keys": [
     "conference-papers|28",
@@ -2683,8 +2710,8 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": -326.4,
-   "y": 176.19,
+   "x": 326.41,
+   "y": 222.65,
    "r": 15.0,
    "keys": [
     "journal-articles|25",
@@ -2702,8 +2729,8 @@
    "span": 1,
    "firstYear": 2020,
    "lastYear": 2021,
-   "x": -289.58,
-   "y": -13.28,
+   "x": 28.74,
+   "y": 188.58,
    "r": 15.0,
    "keys": [
     "journal-articles|17",
@@ -2721,8 +2748,8 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": -346.32,
-   "y": 95.7,
+   "x": 294.42,
+   "y": 289.35,
    "r": 15.0,
    "keys": [
     "journal-articles|25",
@@ -2740,8 +2767,8 @@
    "span": 1,
    "firstYear": 2023,
    "lastYear": 2024,
-   "x": 237.3,
-   "y": 69.7,
+   "x": -672.83,
+   "y": 53.14,
    "r": 15.0,
    "keys": [
     "journal-articles|28",
@@ -2759,8 +2786,8 @@
    "span": 0,
    "firstYear": 2020,
    "lastYear": 2020,
-   "x": 29.04,
-   "y": 11.04,
+   "x": 252.7,
+   "y": -61.52,
    "r": 15.0,
    "keys": [
     "conference-papers|16",
@@ -2778,12 +2805,31 @@
    "span": 2,
    "firstYear": 2017,
    "lastYear": 2019,
-   "x": -296.43,
-   "y": -174.63,
+   "x": -330.08,
+   "y": -119.46,
    "r": 15.0,
    "keys": [
     "conference-papers|12",
     "journal-articles|9"
+   ],
+   "pale": true
+  },
+  {
+   "id": "rituparna-datta",
+   "name": "Rituparna Datta",
+   "short": "Datta",
+   "papers": 2,
+   "inst": "Unknown",
+   "color": "#86b6ef",
+   "span": 0,
+   "firstYear": 2026,
+   "lastYear": 2026,
+   "x": 76.66,
+   "y": 19.63,
+   "r": 15.0,
+   "keys": [
+    "conference-papers|41",
+    "tech-reports|15"
    ],
    "pale": true
   },
@@ -2797,8 +2843,8 @@
    "span": 2,
    "firstYear": 2017,
    "lastYear": 2019,
-   "x": -48.34,
-   "y": -21.08,
+   "x": 118.54,
+   "y": -13.1,
    "r": 15.0,
    "keys": [
     "conference-papers|10",
@@ -2816,8 +2862,8 @@
    "span": 3,
    "firstYear": 2021,
    "lastYear": 2024,
-   "x": -218.27,
-   "y": 116.38,
+   "x": -83.21,
+   "y": -169.4,
    "r": 15.0,
    "keys": [
     "conference-papers|25",
@@ -2835,8 +2881,8 @@
    "span": 2,
    "firstYear": 2017,
    "lastYear": 2019,
-   "x": -360.65,
-   "y": -138.24,
+   "x": -261.34,
+   "y": -73.59,
    "r": 15.0,
    "keys": [
     "conference-papers|12",
@@ -2854,8 +2900,8 @@
    "span": 1,
    "firstYear": 2023,
    "lastYear": 2024,
-   "x": -59.15,
-   "y": -66.84,
+   "x": 118.01,
+   "y": -98.16,
    "r": 15.0,
    "keys": [
     "conference-papers|36",
@@ -2873,8 +2919,8 @@
    "span": 0,
    "firstYear": 2025,
    "lastYear": 2025,
-   "x": -11.93,
-   "y": -59.41,
+   "x": 240.76,
+   "y": 35.71,
    "r": 15.0,
    "keys": [
     "conference-papers|37",
@@ -2892,8 +2938,8 @@
    "span": 1,
    "firstYear": 2021,
    "lastYear": 2022,
-   "x": 302.27,
-   "y": 187.65,
+   "x": -448.82,
+   "y": 235.9,
    "r": 15.0,
    "keys": [
     "journal-articles|19",
@@ -2911,8 +2957,8 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": -367.04,
-   "y": 163.25,
+   "x": 273.43,
+   "y": 210.41,
    "r": 15.0,
    "keys": [
     "journal-articles|25",
@@ -2930,8 +2976,8 @@
    "span": 4,
    "firstYear": 2022,
    "lastYear": 2026,
-   "x": -334.89,
-   "y": 135.81,
+   "x": 283.79,
+   "y": 249.47,
    "r": 15.0,
    "keys": [
     "journal-articles|25",
@@ -2949,8 +2995,8 @@
    "span": 2,
    "firstYear": 2017,
    "lastYear": 2019,
-   "x": -339.62,
-   "y": -173.07,
+   "x": -350.23,
+   "y": -50.8,
    "r": 15.0,
    "keys": [
     "conference-papers|12",
@@ -2968,8 +3014,8 @@
    "span": 2,
    "firstYear": 2021,
    "lastYear": 2023,
-   "x": 81.68,
-   "y": -159.75,
+   "x": -102.73,
+   "y": 78.09,
    "r": 15.0,
    "keys": [
     "journal-articles|19",
@@ -2987,8 +3033,8 @@
    "span": 0,
    "firstYear": 2018,
    "lastYear": 2018,
-   "x": -556.37,
-   "y": -74.09,
+   "x": 538.5,
+   "y": -166.19,
    "r": 15.0,
    "keys": [
     "conference-papers|13",
@@ -3531,8 +3577,8 @@
    "nb": true
   },
   {
-   "a": "b-aditya-prakash",
-   "b": "naren-ramakrishnan",
+   "a": "naren-ramakrishnan",
+   "b": "b-aditya-prakash",
    "w": 23,
    "na": true,
    "nb": true
@@ -3685,15 +3731,15 @@
    "nb": true
   },
   {
-   "a": "jiangzhuo-chen",
-   "b": "aniruddha-adiga",
-   "w": 14,
+   "a": "anil-vullikanti",
+   "b": "parantapa-bhattacharya",
+   "w": 15,
    "na": false,
    "nb": true
   },
   {
-   "a": "anil-vullikanti",
-   "b": "parantapa-bhattacharya",
+   "a": "jiangzhuo-chen",
+   "b": "aniruddha-adiga",
    "w": 14,
    "na": false,
    "nb": true
@@ -3741,6 +3787,13 @@
    "nb": false
   },
   {
+   "a": "anil-vullikanti",
+   "b": "naren-ramakrishnan",
+   "w": 13,
+   "na": false,
+   "nb": true
+  },
+  {
    "a": "aniruddha-adiga",
    "b": "lijing-wang",
    "w": 13,
@@ -3780,13 +3833,6 @@
    "b": "justin-lessler",
    "w": 12,
    "na": true,
-   "nb": true
-  },
-  {
-   "a": "anil-vullikanti",
-   "b": "naren-ramakrishnan",
-   "w": 12,
-   "na": false,
    "nb": true
   },
   {
@@ -3944,6 +3990,13 @@
    "nb": false
   },
   {
+   "a": "anil-vullikanti",
+   "b": "rituparna-datta",
+   "w": 10,
+   "na": false,
+   "nb": true
+  },
+  {
    "a": "nicholas-g-reich",
    "b": "thomas-mcandrew",
    "w": 10,
@@ -3972,8 +4025,8 @@
    "nb": true
   },
   {
-   "a": "emily-howerton",
-   "b": "harry-hochheiser",
+   "a": "harry-hochheiser",
+   "b": "emily-howerton",
    "w": 9,
    "na": true,
    "nb": true
@@ -4224,6 +4277,13 @@
    "nb": true
   },
   {
+   "a": "harry-hochheiser",
+   "b": "lucie-contamin",
+   "w": 7,
+   "na": true,
+   "nb": true
+  },
+  {
    "a": "matteo-chinazzi",
    "b": "c-cile-viboud",
    "w": 7,
@@ -4344,17 +4404,17 @@
   },
   {
    "a": "shaun-truelove",
-   "b": "emily-howerton",
+   "b": "harry-hochheiser",
    "w": 6,
    "na": true,
    "nb": false
   },
   {
    "a": "shaun-truelove",
-   "b": "harry-hochheiser",
+   "b": "emily-howerton",
    "w": 6,
    "na": true,
-   "nb": true
+   "nb": false
   },
   {
    "a": "shaun-truelove",
@@ -4756,6 +4816,13 @@
    "nb": true
   },
   {
+   "a": "emily-howerton",
+   "b": "lucie-contamin",
+   "w": 5,
+   "na": false,
+   "nb": true
+  },
+  {
    "a": "nicholas-g-reich",
    "b": "steven-riley",
    "w": 5,
@@ -5106,6 +5173,13 @@
    "nb": true
   },
   {
+   "a": "parantapa-bhattacharya",
+   "b": "rituparna-datta",
+   "w": 4,
+   "na": false,
+   "nb": true
+  },
+  {
    "a": "ana-pastore-y-piontti",
    "b": "alison-p-galvani",
    "w": 4,
@@ -5225,28 +5299,28 @@
    "nb": true
   },
   {
-   "a": "emily-howerton",
+   "a": "harry-hochheiser",
    "b": "erik-rosenstrom",
    "w": 3,
    "na": false,
    "nb": true
   },
   {
-   "a": "emily-howerton",
+   "a": "harry-hochheiser",
    "b": "katie-yan",
    "w": 3,
    "na": false,
    "nb": true
   },
   {
-   "a": "harry-hochheiser",
+   "a": "emily-howerton",
    "b": "erik-rosenstrom",
    "w": 3,
    "na": false,
    "nb": true
   },
   {
-   "a": "harry-hochheiser",
+   "a": "emily-howerton",
    "b": "katie-yan",
    "w": 3,
    "na": false,
@@ -5470,6 +5544,13 @@
    "nb": true
   },
   {
+   "a": "naren-ramakrishnan",
+   "b": "rituparna-datta",
+   "w": 3,
+   "na": false,
+   "nb": true
+  },
+  {
    "a": "samarth-swarup",
    "b": "mark-orr",
    "w": 3,
@@ -5496,6 +5577,20 @@
    "w": 3,
    "na": false,
    "nb": true
+  },
+  {
+   "a": "lucie-contamin",
+   "b": "rebecca-k-borchering",
+   "w": 3,
+   "na": true,
+   "nb": false
+  },
+  {
+   "a": "lucie-contamin",
+   "b": "nicholas-g-reich",
+   "w": 3,
+   "na": true,
+   "nb": false
   },
   {
    "a": "qiu-fang-ying",
@@ -6079,6 +6174,20 @@
    "nb": false
   },
   {
+   "a": "harry-hochheiser",
+   "b": "rituparna-datta",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "lucie-contamin",
+   "b": "rituparna-datta",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
    "a": "c-cile-viboud",
    "b": "sara-l-loo",
    "w": 2,
@@ -6088,6 +6197,13 @@
   {
    "a": "justin-lessler",
    "b": "sara-l-loo",
+   "w": 2,
+   "na": false,
+   "nb": true
+  },
+  {
+   "a": "katriona-shea",
+   "b": "lucie-contamin",
    "w": 2,
    "na": false,
    "nb": true

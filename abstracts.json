@@ -1,8 +1,8 @@
 {
   "_readme": "Single source of truth for the publication abstracts shown on publications.html. The page fetches this file at load time (js/abstracts.js) and renders an 'Abstract' toggle for every entry whose 'abstract' field is non-null. Keys are '<section-id>|<entry-number>' and match the <section id> and <li value> in publications.html — edit an abstract here and the page picks it up, no HTML changes. Abstract text is the authors' own, retrieved verbatim from the publisher record for each DOI/arXiv/medRxiv ID; none is paraphrased or generated. Blank lines (\\n\\n) separate paragraphs and **bold** marks structured-abstract section labels. author_count and consortium_paper are auto-maintained by tools/build_authors.py: author_count is the full OpenAlex author count (null when the paper isn't in OpenAlex), and consortium_paper is true when author_count > 30 (large forecasting/scenario-hub efforts).",
   "counts": {
-    "entries": 103,
-    "with_abstract": 90,
+    "entries": 104,
+    "with_abstract": 91,
     "without_abstract": 13,
     "consortium_papers": 11
   },
@@ -11,7 +11,7 @@
     "Crossref": 29,
     "medRxiv": 12,
     "Semantic Scholar": 8,
-    "arXiv": 4
+    "arXiv": 5
   },
   "entries": {
     "book-chapters|3": {
@@ -1181,6 +1181,20 @@
       "abstract": "We provide new analytical results concerning the spread of information or influence under the linear threshold social network model introduced by Kempe et al. in [1], in the information dissemination context. The seeder starts by providing the message to a set of initial nodes and is interested in maximizing the number of nodes that will receive the message ultimately. A node's decision to forward the message depends on the set of nodes from which it has received the message. Under the linear threshold model, the decision to forward the information depends on the comparison of the total influence of the nodes from which a node has received the packet with its own threshold of influence. We derive analytical expressions for the expected number of nodes that receive the message ultimately, as a function of the initial set of nodes, for a generic network. We show that the problem can be recast in the framework of Markov chains. We then use the analytical expression to gain insights into information dissemination in some simple network topologies such as the star, ring, mesh and on acyclic graphs. We also derive the optimal initial set in the above networks, and also hint at general heuristics for picking a good initial set.",
       "abstract_source": "OpenAlex",
       "author_count": 2,
+      "consortium_paper": false
+    },
+    "tech-reports|15": {
+      "section": "tech-reports",
+      "section_label": "Technical Reports and Preprints",
+      "number": 15,
+      "year": "2026",
+      "title": "EpiNarrate: Agentic Generation of Grounded Narratives from Epidemiological Scenario Projections",
+      "citation": "R. Datta, SV, B. L. Lewis, Y. Su, H. Hochheiser, L. Contamin, P. Bhattacharya, N. Ramakrishnan, and A. Vullikanti, \"EpiNarrate: Agentic Generation of Grounded Narratives from Epidemiological Scenario Projections\", arXiv:2607.15544",
+      "url": "https://arxiv.org/abs/2607.15544",
+      "abstract": "Generation of clear and accessible public health narratives is critical for communicating complex epidemiological projections to policymakers and the general public at large. Such narratives require more than simply reporting numbers: projections must be contextualized and quantitatively grounded across multiple dimensions. Further, projections are often derived from large ensemble datasets which combine intervention assumptions, geographic and demographic strata, outcomes, time horizons, and uncertainty quantiles. However, directly using large language models (LLMs) to summarize and contextualize such data often leads to inconsistencies, omissions, and fragile behavior. We introduce an agentic framework (EpiNarrate) for public health report generation that separates structured numerical reasoning from natural-language generation. The framework first extracts scenario axes and organizes them into a partial-order schema, enabling systematic traversal of the underlying multidimensional space. It then constructs an augmented dataset and derives valid quantitative statements through a comparison grammar that enforces semantic and arithmetic consistency. To balance coverage and non-redundancy, we introduce an interestingness-driven selection mechanism based on maximum-entropy principles. Experiments on the COVID-19 Scenario Modeling Hub demonstrate that our model produces narratives with improved factual grounding and broader coverage of salient epidemiological patterns, while preserving the style of expert-written reports.",
+      "abstract_source": "arXiv",
+      "abstract_unavailable_reason": null,
+      "author_count": 9,
       "consortium_paper": false
     },
     "tech-reports|14": {
