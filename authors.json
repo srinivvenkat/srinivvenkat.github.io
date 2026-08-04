@@ -456,6 +456,7 @@
         "Expedition Technology (United States)",
         "Virginia–Maryland College of Veterinary Medicine",
         "Public Health Dayton & Montgomery County",
+        "IR Dynamics (United States)",
         "Chinese University of Hong Kong",
         "Budapest University of Technology and Economics",
         "University Vascular Associates"
@@ -2668,7 +2669,8 @@
         "University of Virginia",
         "Virginia Tech",
         "Virginia Department of Health",
-        "Expedition Technology (United States)"
+        "Expedition Technology (United States)",
+        "Behavioral Tech"
       ],
       "paper_count": 26,
       "last_year": 2026,
@@ -3994,6 +3996,7 @@
       "primary_affiliation": "Johns Hopkins University",
       "affiliations": [
         "Johns Hopkins University",
+        "Johns Hopkins Medicine",
         "University of Colorado Boulder",
         "University of Colorado System",
         "JHU-IDD",
@@ -8314,7 +8317,7 @@
       "primary_affiliation": "University of Virginia",
       "affiliations": [
         "University of Virginia",
-        "Ethics and Public Policy Center"
+        "University of Virginia,Department of Politics and Batten School of Public Policy,VA,USA"
       ],
       "paper_count": 5,
       "last_year": 2025,
@@ -28783,7 +28786,8 @@
       "orcid": "https://orcid.org/0000-0002-3437-759X",
       "primary_affiliation": "University of Oxford",
       "affiliations": [
-        "University of Oxford"
+        "University of Oxford",
+        "Science Oxford"
       ],
       "paper_count": 1,
       "last_year": 2024,
