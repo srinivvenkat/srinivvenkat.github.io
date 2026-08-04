@@ -354,6 +354,35 @@ ol.pub-list li::marker {
   vertical-align: middle;
 }
 
+/* Slide-deck pill; sized to sit alongside the .abs summary pill */
+.slides-link {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 1px 8px;
+  margin-left: 6px;
+  border: 1px solid var(--orange-dark);
+  border-radius: 10px;
+  color: var(--orange-dark);
+  background: transparent;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.slides-link:hover {
+  background: var(--orange-dark);
+  color: #fff;
+  text-decoration: none;
+}
+
+.slides-link:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
 /* Abstract disclosure (publications page) */
 .abs {
   display: inline;            /* keeps the pill on the citation's last line */
