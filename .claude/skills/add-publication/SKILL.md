@@ -1,6 +1,6 @@
 ---
 name: add-publication
-description: Add a new publication to the LaTeX CV (SV_CV/srini_resume.tex), rebuild SV_CV.pdf, and propagate it through the whole site pipeline (abstracts.json → publications.html → authors/wordcloud/copub/coauthors). Use when the user says they have a new paper, preprint, book chapter, or conference paper accepted/published, or asks to add a publication / update the CV with a paper / sync the site to a new paper.
+description: Add a new publication to the LaTeX CV (SV_CV/srini_resume.tex), rebuild SV_CV.pdf, and propagate it through the whole site pipeline (abstracts.json → publications.html → authors/wordcloud/copub/coauthors/bibtex, then restamp the footer date). Use when the user says they have a new paper, preprint, book chapter, or conference paper accepted/published, or asks to add a publication / update the CV with a paper / sync the site to a new paper.
 ---
 
 # Add a publication and resync the site
@@ -37,6 +37,13 @@ curl -sL "https://export.arxiv.org/api/query?id_list=<ID>" -o "$SCRATCH/arxiv.xm
 # medRxiv / bioRxiv preprint
 curl -sL "https://api.biorxiv.org/details/medrxiv/<DOI>" -o "$SCRATCH/meta.json"
 ```
+
+> **medRxiv DOIs are no longer always `10.1101/`.** openRxiv now mints new deposits under
+> `10.64898/`, keeping the same date-based suffix. A 2026 preprint given as
+> `10.1101/2026.04.07.26349269` returned not-found from doi.org, Crossref, the medRxiv API
+> and OpenAlex, while `10.64898/2026.04.07.26349269` resolved fine. If a medRxiv DOI looks
+> dead, retry with the other prefix before concluding the paper is unregistered. Older
+> `10.1101/` deposits are unaffected.
 
 Parse the downloaded file locally — arXiv Atom lives under the
 `http://www.w3.org/2005/Atom` namespace, with `a:title`, `a:summary` (the abstract),
@@ -151,6 +158,7 @@ python3 tools/build_authors.py --refresh   # needs network; also writes author_c
 python3 tools/build_wordcloud.py           # reads abstracts.json
 python3 tools/build_copub.py               # reads authors.json; needs network
 python3 tools/build_coauthors.py           # reads authors.json + copub.json — must run last
+python3 tools/build_bibtex.py              # reads publications.html (Step 3), so run it after that
 ```
 
 `build_copub.py` is the slow one (per-author OpenAlex works fetch, cached in
@@ -159,13 +167,38 @@ minute. Eyeball each script's printed summary — `build_authors.py` lists
 `unresolved_papers`, and a brand-new DOI often isn't in OpenAlex yet, which is expected
 (the entry still renders; just note it to the user).
 
-## Step 5 — commit both repos
+`build_bibtex.py` only depends on `publications.html`, not on the OpenAlex chain, so its
+position in the list is about Step 3, not about the other four. It prints a `FAILED` line
+for any entry whose identifier will not resolve. If the new paper is one of them (no DOI,
+a Scholar-search link, an unregistered DOI), it gets **no BibTeX button** until you add a
+hand-written record to `tools/bibtex-overrides.json` — see that file's `_comment` block
+for the format and the provenance convention. `--report` lists everything currently
+lacking both an identifier and an override.
+
+## Step 5 — restamp the footer date
+
+```bash
+python3 tools/stamp_updated.py             # writes today's date into all 8 pages
+python3 tools/stamp_updated.py --check     # verify: exits non-zero on drift
+```
+
+Run this **after** every content edit and **before** committing, so the "Last updated"
+line in the footer matches the day the change actually ships. It rewrites the `datetime`
+attribute and the human-readable text together in all eight HTML files, `404.html`
+included, which is why the `git add` below has to cover `*.html` and not just
+`publications.html`.
+
+A stale date here is worse than no date: it is the only signal on the site telling a
+reviewer or a prospective student whether they are looking at current work.
+
+## Step 6 — commit both repos
 
 They are separate repos; `SV_CV/` is gitignored by the site repo.
 
 ```bash
 git -C SV_CV add -A && git -C SV_CV commit -m "add <short paper handle>"
-git add SV_CV.pdf abstracts.json publications.html authors.json wordcloud-data.json copub.json coauthors-data.json
+git add SV_CV.pdf abstracts.json authors.json wordcloud-data.json copub.json \
+        coauthors-data.json bibtex.json tools/bibtex-overrides.json *.html
 git commit -m "add <short paper handle>"
 ```
 
@@ -178,5 +211,7 @@ when the user says so — "C&P" is standing authorization to commit and push.
 - [ ] `pdflatex` run twice, log clean, `SV_CV.pdf` copied to repo root
 - [ ] `abstracts.json` entry added, `counts` and `abstract_sources` updated
 - [ ] `publications.html` TOC count bumped and `<li value=N>` added under the right year
-- [ ] all four `tools/build_*.py` re-run **in order**
-- [ ] both repos committed
+- [ ] all five `tools/build_*.py` re-run **in order**
+- [ ] new paper got a BibTeX record, or an override added if its identifier will not resolve
+- [ ] `tools/stamp_updated.py` run, `--check` clean
+- [ ] both repos committed, `git add` covered `*.html` (the footer date touches all of them)
