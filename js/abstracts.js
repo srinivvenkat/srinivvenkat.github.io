@@ -68,7 +68,12 @@
       var li = section.querySelector('li[value="' + parts[1] + '"]');
       if (!li || li.querySelector(".abs")) return;
 
-      li.appendChild(buildToggle(entry.abstract));
+      // The Abstract toggle always precedes the BibTeX one. Both are appended by
+      // independent fetches that can land in either order, so insert ahead of
+      // pub-bibtex.js's element when it has already arrived.
+      var bib = li.querySelector(".bib");
+      if (bib) li.insertBefore(buildToggle(entry.abstract), bib);
+      else li.appendChild(buildToggle(entry.abstract));
     });
   }
 

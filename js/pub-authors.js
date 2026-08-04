@@ -203,11 +203,18 @@
     if (activeBtn && popover && !popover.hidden) position(activeBtn);
   });
 
-  fetch(SOURCE)
-    .then(function (res) {
+  // pub-search.js needs the same file to index authors hidden behind an ellipsis.
+  // Both scripts are deferred and start at essentially the same moment, so a
+  // plain fetch in each would put two requests for the same 50 KB on the wire
+  // before either could populate the HTTP cache. Sharing one promise on window
+  // keeps it to a single request, whichever script happens to run first.
+  window.paperAuthorsPromise = window.paperAuthorsPromise ||
+    fetch(SOURCE).then(function (res) {
       if (!res.ok) throw new Error("HTTP " + res.status);
       return res.json();
-    })
+    });
+
+  window.paperAuthorsPromise
     .then(function (data) {
       enhance((data && data.entries) || {});
     })

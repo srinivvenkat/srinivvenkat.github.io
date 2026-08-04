@@ -19,13 +19,55 @@ the pages, in this order:
    to count pairwise co-publications — needs network, cached so reruns are fast).
 5. **`coauthors-data.json`** — regenerate: `python3 tools/build_coauthors.py`
    (reads `authors.json` **and** `copub.json`, so it must run **after** steps 2 and 4).
-6. **Footer date** — refresh: `python3 tools/stamp_updated.py` (see below).
-7. Commit all five regenerated files together, then re-render / redeploy the pages.
+6. **`bibtex.json`** — regenerate: `python3 tools/build_bibtex.py`
+   (reads the DOI/arXiv link out of the new entry in `publications.html`, so it must
+   run **after** the entry exists there; cached, so this costs one network call).
+7. **Footer date** — refresh: `python3 tools/stamp_updated.py` (see below).
+8. Commit the regenerated files together, then re-render / redeploy the pages.
 
 Order matters: `build_authors.py` and `build_wordcloud.py` both read `abstracts.json`
 (step 1 first); `build_copub.py` reads the `authors.json` that step 2 produces; and
 `build_coauthors.py` reads both. Skipping steps 2–5 leaves the co-author roster, the
 home-page word cloud, and the collaboration network stale relative to the CV.
+
+## build_bibtex.py
+
+Writes `../bibtex.json`: one BibTeX record per publication, keyed
+`"<section-id>|<entry-number>"`, which `js/pub-bibtex.js` turns into the copy
+buttons on the publications page.
+
+```
+python3 tools/build_bibtex.py            # use cache where present
+python3 tools/build_bibtex.py --refresh  # ignore cache, refetch everything
+python3 tools/build_bibtex.py --report   # list entries with no identifier
+```
+
+Sources the record from the identifier already in each citation's link: doi.org
+content negotiation (`Accept: application/x-bibtex`) for a DOI, the arXiv Atom API
+for an arXiv-only preprint. It must therefore run **after** the entry has been
+added to `publications.html`.
+
+It has to be a build step: doi.org sends no CORS headers, so a page script cannot
+read that response at all. Baking the records in also keeps the page fast.
+
+Cite keys are rewritten to `<surname><year><first-title-word>` (with a/b/c
+disambiguation) rather than kept as the publisher sent them, since Crossref's
+`Surname_Year` keys collide as soon as an author has two papers in a year.
+
+Entries whose link is a Google Scholar search have no identifier to resolve and
+are skipped; `pub-bibtex.js` renders no button for them. `--report` lists them.
+
+`bibtex-overrides.json` (committed, alongside this script) supplies hand-written
+records for entries nothing can resolve, keyed the same way. An override beats the
+network, so it doubles as the place to correct a wrong publisher record. It
+currently holds one: the ANNSIM 2024 paper, whose DOI was never deposited with the
+handle system even though its ACM page is live.
+
+Currently **97 of 104** entries have a record: 96 fetched, 1 hand-written. The
+remaining 7 link to a Google Scholar search or an OpenReview forum and would each
+need an override to gain a button.
+
+Like the OpenAlex tools, this needs only Python 3 stdlib plus `curl` on PATH.
 
 ## stamp_updated.py
 

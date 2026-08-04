@@ -1074,6 +1074,175 @@ svg.cn {
   border-color: var(--orange);
 }
 
+/* ------------------------------------------------------------------ */
+/* Publication search / filter toolbar (built by js/pub-search.js)      */
+/* ------------------------------------------------------------------ */
+
+/* This file's hiding layer. pub-filter.js uses the `hidden` property instead, so
+   the two compose: whichever hides an element, it stays hidden, and each
+   restores only its own. */
+.is-filtered-out { display: none; }
+
+.pub-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px 16px;
+  margin: 20px 0 8px;
+  padding: 16px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.pub-control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pub-control:first-child { flex: 1 1 260px; }
+
+.pub-control label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pub-control input,
+.pub-control select {
+  font: inherit;
+  font-size: 0.92rem;
+  padding: 7px 10px;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid #c7ccd6;
+  border-radius: var(--radius);
+  min-height: 38px;
+}
+
+.pub-control input { width: 100%; }
+
+.pub-control input:focus-visible,
+.pub-control select:focus-visible,
+.pub-clear:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 1px;
+}
+
+.pub-clear {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  min-height: 38px;
+  color: var(--navy);
+  background: var(--bg);
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.pub-clear:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+/* Takes the full row under the controls, so the count never squeezes them. */
+.pub-count {
+  flex: 1 0 100%;
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.pub-count.is-empty {
+  color: var(--orange-text);
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------------ */
+/* BibTeX disclosure (built by js/pub-bibtex.js)                        */
+/* ------------------------------------------------------------------ */
+.bib {
+  margin-top: 6px;
+  font-size: 0.85rem;
+}
+
+.bib > summary {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  list-style: none;
+}
+
+.bib > summary::-webkit-details-marker { display: none; }
+
+.bib > summary::before {
+  content: "▸ ";
+  font-size: 0.8em;
+}
+
+.bib[open] > summary::before { content: "▾ "; }
+
+.bib > summary:hover { color: var(--orange-text); }
+
+.bib > summary:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.bib-body {
+  position: relative;
+  margin-top: 8px;
+}
+
+.bib-pre {
+  margin: 0;
+  padding: 12px 14px;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  white-space: pre;
+  tab-size: 2;
+}
+
+.bib-copy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font: inherit;
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  color: var(--navy);
+  background: var(--bg);
+  border: 1px solid #c7ccd6;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.bib-copy:hover { background: var(--navy); color: #fff; }
+
+.bib-copy.is-copied {
+  background: var(--orange-text);
+  border-color: var(--orange-text);
+  color: #fff;
+}
+
+.bib-copy:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
 /* Skip link: the first focusable thing on every page. Off-screen until focused,
    so it costs sighted users nothing but lets a keyboard user jump the header
    nav (7 links) and land straight on <main>. */
