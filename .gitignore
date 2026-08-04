@@ -16,8 +16,9 @@ Desktop.ini
 *.swp
 *~
 
-# Local agent tooling
-.claude/
+# Local agent tooling: skills are shared, settings stay local
+.claude/*
+!.claude/skills/
 
 # Python
 __pycache__/
