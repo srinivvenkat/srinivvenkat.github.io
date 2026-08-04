@@ -558,6 +558,45 @@ ol.pub-list li::marker {
   margin-bottom: 0.5em;
 }
 
+/* Open data & software cards carry two extra lines so a visitor can tell what a
+   thing is for and whether they may use it, without opening the repo: a "who
+   it's for" sentence, and a footer of hard facts (license, language, last
+   activity). The date is stated plainly rather than translated into a
+   maintenance label, since a stable tool and an abandoned one look identical
+   from commit dates alone. */
+.card-for {
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  align-items: baseline;
+  margin: 10px 0 0;
+  padding: 8px 0 0;
+  border-top: 1px solid var(--border);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  list-style: none;
+}
+
+.card-meta li + li::before {
+  content: "· ";
+  margin-right: 6px;
+  color: var(--border);
+}
+
+.card-lic {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* No license means legally not reusable, which is exactly what a practitioner
+   needs to notice, so it is called out rather than blending into the row. */
+.card-lic.is-missing { color: var(--orange-text); }
+
 /* Research areas: topic cards with SVG cover art. The top border carries the
    same theme color the word cloud uses, so a topic reads the same everywhere.
 
