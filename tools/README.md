@@ -19,12 +19,39 @@ the pages, in this order:
    to count pairwise co-publications — needs network, cached so reruns are fast).
 5. **`coauthors-data.json`** — regenerate: `python3 tools/build_coauthors.py`
    (reads `authors.json` **and** `copub.json`, so it must run **after** steps 2 and 4).
-6. Commit all five regenerated files together, then re-render / redeploy the pages.
+6. **Footer date** — refresh: `python3 tools/stamp_updated.py` (see below).
+7. Commit all five regenerated files together, then re-render / redeploy the pages.
 
 Order matters: `build_authors.py` and `build_wordcloud.py` both read `abstracts.json`
 (step 1 first); `build_copub.py` reads the `authors.json` that step 2 produces; and
 `build_coauthors.py` reads both. Skipping steps 2–5 leaves the co-author roster, the
 home-page word cloud, and the collaboration network stale relative to the CV.
+
+## stamp_updated.py
+
+Rewrites the `Last updated <time>` element in the footer of every `*.html` page
+(all seven site pages plus `404.html`), setting the `datetime` attribute and the
+human-readable text together so they cannot drift apart.
+
+```
+python3 tools/stamp_updated.py                # today  <- the normal case
+python3 tools/stamp_updated.py --from-git     # date of the last commit
+python3 tools/stamp_updated.py --date 2026-08-04
+python3 tools/stamp_updated.py --check        # verify only, exits 1 on drift
+```
+
+Run it **immediately before committing** a content change. The default of today is
+right for that case, since the commit you are about to make carries today's date;
+`--from-git` is for re-stamping a repo whose content has not changed since it was
+last committed.
+
+`--check` writes nothing and exits non-zero if any page is stale or has lost its
+stamp, so it works as a pre-commit hook or CI step.
+
+Why it exists: that footer date is the only signal on the site telling a reviewer
+or a prospective student whether they are looking at current work. Maintained by
+hand it rots silently, and a stale date is worse than no date because it actively
+misinforms.
 
 ## build_authors.py
 

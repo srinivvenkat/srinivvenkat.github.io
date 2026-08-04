@@ -21,9 +21,83 @@
 <meta name="twitter:image" content="https://srinivvenkat.github.io/assets/og-card.jpg">
 <meta name="twitter:image:alt" content="Srini Venkatramanan, Research Assistant Professor, Biocomplexity Institute, University of Virginia">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/style.css?v=8">
+<link rel="stylesheet" href="css/style.css?v=10">
+
+<!-- Structured data. Lets search engines, knowledge panels and LLM crawlers read
+     the identity facts (affiliation, identifiers, topics) rather than infer them
+     from prose. sameAs is the link that ties this page to ORCID and Scholar. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://srinivvenkat.github.io/#person",
+  "name": "Srinivasan Venkatramanan",
+  "alternateName": ["Srini Venkatramanan", "Srinivasan (Srini) Venkatramanan"],
+  "givenName": "Srinivasan",
+  "familyName": "Venkatramanan",
+  "jobTitle": "Research Assistant Professor",
+  "url": "https://srinivvenkat.github.io/",
+  "image": "https://srinivvenkat.github.io/assets/og-card.jpg",
+  "email": "mailto:srini@virginia.edu",
+  "telephone": "+1-434-243-4462",
+  "affiliation": {
+    "@type": "ResearchOrganization",
+    "name": "Biocomplexity Institute, University of Virginia",
+    "url": "https://biocomplexity.virginia.edu",
+    "parentOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Virginia",
+      "url": "https://www.virginia.edu"
+    }
+  },
+  "workLocation": {
+    "@type": "PostalAddress",
+    "streetAddress": "946 Grady Avenue, Suite 100",
+    "addressLocality": "Charlottesville",
+    "addressRegion": "VA",
+    "postalCode": "22903",
+    "addressCountry": "US"
+  },
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Indian Institute of Science",
+      "url": "https://iisc.ac.in"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "College of Engineering Guindy, Anna University"
+    }
+  ],
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "ORCID",
+    "value": "0000-0002-0874-8692",
+    "url": "https://orcid.org/0000-0002-0874-8692"
+  },
+  "sameAs": [
+    "https://orcid.org/0000-0002-0874-8692",
+    "https://scholar.google.com/citations?user=kVvcbN0AAAAJ&hl=en",
+    "https://github.com/srinivvenkat"
+  ],
+  "knowsAbout": [
+    "Computational modeling and simulation",
+    "Agentic AI systems",
+    "Network science",
+    "Stochastic processes",
+    "Epidemiology",
+    "Epidemic forecasting",
+    "Human mobility",
+    "Healthy buildings",
+    "AI for science",
+    "Neuroscience"
+  ]
+}
+</script>
 </head>
 <body>
+
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site-header">
   <div class="container">
@@ -64,7 +138,7 @@
   </div>
 </section>
 
-<main>
+<main id="main" tabindex="-1">
   <div class="container">
 
     <section id="about">
@@ -230,6 +304,7 @@
     <div class="footer-links">
       <a href="mailto:srini@virginia.edu">srini@virginia.edu</a>
       <a href="SV_CV.pdf">CV</a>
+      <span>Last updated <time datetime="2026-08-04">4 August 2026</time></span>
       <span>&copy; 2026</span>
     </div>
   </div>

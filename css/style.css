@@ -6,6 +6,15 @@
   --navy-light: #2f3d63;
   --orange: #e57200;
   --orange-dark: #c46200;
+  /* Orange as *text*. The brand orange above is fine for fills, borders and
+     focus rings (3:1 non-text threshold) but only reaches 3.1:1 on white, so
+     text uses these two instead: one for light backgrounds, one for navy. Both
+     clear 4.5:1 WCAG AA. */
+  --orange-text: #a35200;
+  --orange-on-navy: #ef8420;
+  /* Hover shade for a *filled* orange control, one step darker than
+     --orange-text so the white label keeps clearing 4.5:1 throughout. */
+  --orange-text-hover: #8f4900;
   --bg: #ffffff;
   --bg-alt: #f5f6f8;
   --text: #24262b;
@@ -16,13 +25,16 @@
   --shadow: 0 1px 3px rgba(35, 45, 75, 0.08), 0 1px 2px rgba(35, 45, 75, 0.06);
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-heading: Georgia, "Times New Roman", serif;
-  /* Word-cloud theme hues (dark-on-white, WCAG-validated). See tools/README.md. */
+  /* Word-cloud theme hues (dark-on-white, WCAG-validated). See tools/README.md.
+     --theme-neutral is the fallback fill for an unthemed word and the fallback
+     border on an area card; it is darkened to clear 4.5:1 while staying visibly
+     lighter than --theme-methods. */
   --theme-epi: #c1121f;
   --theme-evoeco: #2e7d32;
   --theme-migration: #7b2cbf;
   --theme-social: #1a5fb4;
   --theme-methods: #5b6473;
-  --theme-neutral: #9aa0ab;
+  --theme-neutral: #6d7585;
 }
 
 * {
@@ -48,7 +60,7 @@ a {
 }
 
 a:hover {
-  color: var(--orange);
+  color: var(--orange-text);
   text-decoration: underline;
 }
 
@@ -104,7 +116,7 @@ ul { margin: 0 0 1em; padding-left: 1.25em; }
 }
 
 .site-title a:hover {
-  color: var(--orange);
+  color: var(--orange-on-navy);
   text-decoration: none;
 }
 
@@ -179,7 +191,7 @@ ul { margin: 0 0 1em; padding-left: 1.25em; }
 .hero-info h1 { margin-bottom: 0.15em; }
 
 .hero-role {
-  color: var(--orange-dark);
+  color: var(--orange-text);
   font-weight: 600;
   margin-bottom: 0.5em;
 }
@@ -210,15 +222,19 @@ ul { margin: 0 0 1em; padding-left: 1.25em; }
   text-decoration: none;
 }
 
+/* The one filled orange control on the site. It carries a white label, so its
+   fill is the text-grade orange (5.6:1 against white) rather than the brand
+   orange, which would leave the label at 3.1:1. */
 .hero-links a.btn-primary {
-  background: var(--orange);
-  border-color: var(--orange);
+  background: var(--orange-text);
+  border-color: var(--orange-text);
   color: #fff;
 }
 
 .hero-links a.btn-primary:hover {
-  background: var(--orange-dark);
-  border-color: var(--orange-dark);
+  background: var(--orange-text-hover);
+  border-color: var(--orange-text-hover);
+  color: #fff;
 }
 
 /* ------------------------------------------------------------------ */
@@ -331,7 +347,7 @@ ol.pub-list {
 
 ol.pub-list::marker,
 ol.pub-list li::marker {
-  color: var(--orange-dark);
+  color: var(--orange-text);
   font-weight: 600;
 }
 
@@ -346,7 +362,7 @@ ol.pub-list li::marker {
   margin: 1.75em 0 0.4em;
   padding-bottom: 0.25em;
   font-size: 1rem;
-  color: var(--orange-dark);
+  color: var(--orange-text);
   border-bottom: 1px solid var(--border);
 }
 
@@ -377,9 +393,9 @@ ol.pub-list li::marker {
   letter-spacing: 0.03em;
   padding: 1px 8px;
   margin-left: 6px;
-  border: 1px solid var(--orange-dark);
+  border: 1px solid var(--orange-text);
   border-radius: 10px;
-  color: var(--orange-dark);
+  color: var(--orange-text);
   background: transparent;
   vertical-align: middle;
   white-space: nowrap;
@@ -387,7 +403,7 @@ ol.pub-list li::marker {
 }
 
 .slides-link:hover {
-  background: var(--orange-dark);
+  background: var(--orange-text);
   color: #fff;
   text-decoration: none;
 }
@@ -475,8 +491,8 @@ ol.pub-list li::marker {
 
 .author-ellipsis:hover,
 .author-ellipsis[aria-expanded="true"] {
-  color: var(--orange);
-  border-bottom-color: var(--orange);
+  color: var(--orange-text);
+  border-bottom-color: var(--orange-text);
 }
 
 .author-ellipsis:focus-visible {
@@ -694,7 +710,7 @@ ol.pub-list li::marker {
 }
 
 .site-footer a { color: #dfe3ee; }
-.site-footer a:hover { color: var(--orange); }
+.site-footer a:hover { color: var(--orange-on-navy); }
 
 .footer-links {
   display: flex;
@@ -1056,6 +1072,37 @@ svg.cn {
 .pub-banner .pub-banner-close:hover {
   background: var(--orange);
   border-color: var(--orange);
+}
+
+/* Skip link: the first focusable thing on every page. Off-screen until focused,
+   so it costs sighted users nothing but lets a keyboard user jump the header
+   nav (7 links) and land straight on <main>. */
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -100px;
+  z-index: 100;
+  padding: 10px 18px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.95rem;
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.skip-link:focus {
+  top: 0;
+  color: #fff;
+  text-decoration: none;
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+/* Keeps the sticky-free header from covering the target when jumped to. */
+main:target,
+main:focus {
+  outline: none;
+  scroll-margin-top: 12px;
 }
 
 /* Screen-reader-only utility. */
