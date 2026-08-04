@@ -26,3 +26,6 @@ __pycache__/
 # Local build caches
 tools/.openalex_cache.json
 tools/.openalex_works_cache.json
+
+# CV LaTeX sources (separate repo: github.com/srinivvenkat/SV_CV)
+SV_CV/
