@@ -1,11 +1,14 @@
 /*
- * Filters the publication list down to a subset arriving from a home-page
- * visualization, via one of two URL params:
+ * Filters the publication list down to a subset arriving from another page, via
+ * one of three URL params:
  *   ?term=genomic-surveillance  — from the word cloud (wordcloud-data.json maps
  *       every cloud term to the publication keys whose abstract contains it).
  *   ?author=madhav-marathe      — from the collaboration network
  *       (coauthors-data.json maps every co-author node to the keys of the papers
  *       co-authored with the site owner).
+ *   ?topic=epi                  — from the research areas page. Every cloud term
+ *       already carries a theme, so a topic is just the union of the keys of its
+ *       terms; no separate topic-to-paper mapping is maintained.
  * Both data files key papers as "<section-id>|<number>" — the same keys
  * abstracts.js uses — so we locate the exact <li> entries without re-analyzing
  * anything here.
@@ -62,14 +65,20 @@
 
   // mode "term": "…publications mentioning “label”"; the label is the cloud term.
   // mode "author": "…publications co-authored with label"; the label is a name.
+  // mode "topic": "…publications in label"; the label is a research area.
   function buildBanner(label, count, onClear, mode) {
     var banner = document.createElement("div");
     banner.className = "pub-banner";
     banner.setAttribute("role", "status");
 
-    var connector = mode === "author"
-      ? (count === 1 ? " publication co-authored with " : " publications co-authored with ")
-      : (count === 1 ? " publication mentioning " : " publications mentioning ");
+    var connector;
+    if (mode === "author") {
+      connector = count === 1 ? " publication co-authored with " : " publications co-authored with ";
+    } else if (mode === "topic") {
+      connector = count === 1 ? " publication in " : " publications in ";
+    } else {
+      connector = count === 1 ? " publication mentioning " : " publications mentioning ";
+    }
 
     var msg = document.createElement("span");
     msg.appendChild(document.createTextNode("Showing "));
@@ -79,7 +88,8 @@
     msg.appendChild(document.createTextNode(connector));
     var termEl = document.createElement("span");
     termEl.className = "pub-banner-term";
-    termEl.textContent = mode === "author" ? label : "“" + label + "”";
+    // Names and area labels read as themselves; a cloud term is quoted as a word.
+    termEl.textContent = mode === "term" ? "“" + label + "”" : label;
     msg.appendChild(termEl);
     banner.appendChild(msg);
 
@@ -196,7 +206,29 @@
       });
   }
 
+  // A research area is a theme in the word cloud data. Its papers are the union
+  // of the keys of every term carrying that theme, so the areas page and the
+  // cloud stay in sync automatically when wordcloud-data.json is regenerated.
+  function filterByTopic(slug) {
+    fetchJson(SOURCE)
+      .then(function (data) {
+        var theme = data && data.themes && data.themes[slug];
+        if (!theme) { clearParam(); return; }
+        var seen = Object.create(null);
+        ((data && data.terms) || []).forEach(function (t) {
+          if (t.theme !== slug) return;
+          (t.keys || []).forEach(function (key) { seen[key] = true; });
+        });
+        apply(theme.label, Object.keys(seen), "topic");
+      })
+      .catch(function (err) {
+        console.warn("Publication filter unavailable (" + SOURCE + "):", err.message);
+      });
+  }
+
   function init() {
+    var topic = getParam("topic");
+    if (topic) { filterByTopic(slugify(topic)); return; }
     var term = getParam("term");
     if (term) { filterByTerm(slugify(term)); return; }
     var author = getParam("author");

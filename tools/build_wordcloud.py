@@ -72,12 +72,12 @@ THEME_PRIORITY = ["evoeco", "migration", "social", "methods", "epi"]
 THEMES = {
     "epi": {"label": "Epidemiology", "color": "#c1121f"},
     # Genomics/evolution and agriculture/ecology merged into one area.
-    "evoeco": {"label": "Evolution & Ecology", "color": "#2e7d32"},
+    "evoeco": {"label": "Evolution & ecology", "color": "#2e7d32"},
     "migration": {"label": "Migration & mobility", "color": "#7b2cbf"},
     "social": {"label": "Social & information networks", "color": "#1a5fb4"},
     # ML and computing methods are merged into one recessive gray: they describe
     # HOW the work is done, so they should not compete with the domain colors.
-    "methods": {"label": "Methods & ML", "color": "#5b6473"},
+    "methods": {"label": "Methods & machine learning", "color": "#5b6473"},
     "neutral": {"label": "General", "color": "#9aa0ab"},
 }
 # Seeds are single tokens only — theme_for splits multi-word terms into words and

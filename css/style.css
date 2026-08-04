@@ -111,7 +111,21 @@ ul { margin: 0 0 1em; padding-left: 1.25em; }
 .site-nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 4px;
+}
+
+/* Links are clustered into thematic groups (research, then service), set off by
+   a hairline rule. Each group is one flex item, so a group wraps as a whole
+   unit on narrow screens instead of splitting mid-cluster. */
+.site-nav-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  padding-left: 12px;
+  border-left: 1px solid rgba(223, 227, 238, 0.28);
 }
 
 .site-nav a {
@@ -526,6 +540,87 @@ ol.pub-list li::marker {
   font-size: 0.9rem;
   color: var(--text-muted);
   margin-bottom: 0.5em;
+}
+
+/* Research areas: topic cards with SVG cover art. The top border carries the
+   same theme color the word cloud uses, so a topic reads the same everywhere.
+
+   Flex rather than grid: with five cards the last row is always short, and a
+   grid would leave its empty tracks hanging to the right. Flex centers the
+   leftover cards under the full rows instead.
+
+   Cards are sized to an exact fraction of the row and never grow, so a full row
+   still spans the container edge to edge while a short row keeps that same card
+   width and simply centers. Column count steps at fixed widths (1 up, then 2,
+   then 3) rather than auto-fitting, because a fraction has to know the count. */
+.card-grid--areas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card--area {
+  flex: 0 1 100%;
+  max-width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border-top: 4px solid var(--theme-neutral);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.card--area[data-theme="epi"] { border-top-color: var(--theme-epi); }
+.card--area[data-theme="evoeco"] { border-top-color: var(--theme-evoeco); }
+.card--area[data-theme="migration"] { border-top-color: var(--theme-migration); }
+.card--area[data-theme="social"] { border-top-color: var(--theme-social); }
+.card--area[data-theme="methods"] { border-top-color: var(--theme-methods); }
+
+.card--area:hover,
+.card--area:focus-within {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.card-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.card--area .card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card--area .card-body p {
+  flex: 1;
+}
+
+.card-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+/* 641px matches the breakpoint where the site header stops stacking. */
+@media (min-width: 641px) {
+  .card--area { flex-basis: calc((100% - 20px) / 2); }
+}
+
+@media (min-width: 901px) {
+  .card--area { flex-basis: calc((100% - 40px) / 3); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card--area { transition: none; }
+  .card--area:hover,
+  .card--area:focus-within { transform: none; }
 }
 
 /* Publications page category nav */

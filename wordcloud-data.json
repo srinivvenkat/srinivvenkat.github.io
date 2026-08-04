@@ -35,7 +35,7 @@
    "color": "#c1121f"
   },
   "evoeco": {
-   "label": "Evolution & Ecology",
+   "label": "Evolution & ecology",
    "color": "#2e7d32"
   },
   "migration": {
@@ -47,7 +47,7 @@
    "color": "#1a5fb4"
   },
   "methods": {
-   "label": "Methods & ML",
+   "label": "Methods & machine learning",
    "color": "#5b6473"
   },
   "neutral": {
