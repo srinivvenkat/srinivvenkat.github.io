@@ -19,12 +19,35 @@ Confirm before writing:
 - **Year** — the year the site should group it under (publication year, not acceptance year).
 - **Author list** — abbreviated initials style, with Srini as `SV`.
 
-Fetch metadata from the DOI when you have one:
+Fetch metadata from the DOI when you have one.
+
+> **Always fetch with `curl`, never from Python.** This machine's Python has no CA bundle
+> wired up, so `urllib.request.urlopen` dies with `SSL: CERTIFICATE_VERIFY_FAILED`. That is
+> why every script in `tools/` shells out to `curl`. Download to a file first, then parse
+> the local file in Python.
 
 ```bash
-curl -sL "https://api.crossref.org/works/<DOI>" | python3 -m json.tool | head -80
+# DOI (journal / conference / book chapter)
+curl -sL "https://api.crossref.org/works/<DOI>" -o "$SCRATCH/meta.json"
 # fallback: https://api.openalex.org/works/doi:<DOI>
-# arXiv:    https://api.crossref.org/works fails → use https://export.arxiv.org/api/query?id_list=<ID>
+
+# arXiv preprint — Crossref has no record; use the Atom API
+curl -sL "https://export.arxiv.org/api/query?id_list=<ID>" -o "$SCRATCH/arxiv.xml"
+
+# medRxiv / bioRxiv preprint
+curl -sL "https://api.biorxiv.org/details/medrxiv/<DOI>" -o "$SCRATCH/meta.json"
+```
+
+Parse the downloaded file locally — arXiv Atom lives under the
+`http://www.w3.org/2005/Atom` namespace, with `a:title`, `a:summary` (the abstract),
+`a:author/a:name`, and `a:published`:
+
+```python
+import xml.etree.ElementTree as ET
+ns = {'a': 'http://www.w3.org/2005/Atom'}
+e = ET.parse(f"{scratch}/arxiv.xml").getroot().find('a:entry', ns)
+title    = ' '.join(e.find('a:title',   ns).text.split())   # collapse the wrapped newlines
+abstract = ' '.join(e.find('a:summary', ns).text.split())
 ```
 
 ## Step 1 — LaTeX CV (`SV_CV/srini_resume.tex`)
@@ -68,7 +91,16 @@ Check the log for errors (`grep -n "^!" SV_CV/srini_resume.log`) before moving o
 Add one entry to `entries`, keyed `"<section-id>|<number>"` where `<number>` is
 **max existing number in that section + 1** (numbering ascends oldest→newest, so
 existing keys never shift). Current maxima: book-chapters 3, journal-articles 44,
-conference-papers 42, tech-reports 14 — re-derive them, don't trust these.
+conference-papers 42, tech-reports 15 — re-derive them, don't trust these:
+
+```bash
+python3 -c "import json;d=json.load(open('abstracts.json'))['entries'];m={};[m.__setitem__(v['section'],max(m.get(v['section'],0),v['number'])) for v in d.values()];print(m)"
+```
+
+Insert the new key **immediately before** the current highest-numbered key of that
+section so the file keeps its descending order, and preserve key order when rewriting
+(`json.load(..., object_pairs_hook=collections.OrderedDict)`, then
+`json.dump(..., indent=2, ensure_ascii=False)` plus a trailing newline).
 
 ```json
 "journal-articles|45": {
