@@ -16,6 +16,9 @@ Desktop.ini
 *.swp
 *~
 
+# Local agent tooling
+.claude/
+
 # Python
 __pycache__/
 *.py[cod]
