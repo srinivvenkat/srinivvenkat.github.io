@@ -723,6 +723,42 @@ ol.pub-list li::marker {
   font-size: 0.95rem;
 }
 
+/* Mentoring: the four questions an inquiry should answer. A <dl> rather than a
+   list of sentences so the questions stay scannable and a student can check
+   their draft against them. The term sits on its own line at narrow widths and
+   beside the answer once there is room for both. */
+.ask-list {
+  margin: 0;
+  padding: 14px 16px;
+  background: var(--bg-alt);
+  border-left: 3px solid var(--orange);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.ask-list dt {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.ask-list dd {
+  margin: 0 0 0.7em;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.ask-list dd:last-child { margin-bottom: 0; }
+
+@media (min-width: 560px) {
+  .ask-list {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 8px 16px;
+  }
+
+  .ask-list dt { text-align: right; }
+  .ask-list dd { margin-bottom: 0; }
+}
+
 /* Page hero (non-home pages) */
 .page-hero {
   background: var(--bg-alt);
