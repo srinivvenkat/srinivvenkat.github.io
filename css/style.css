@@ -120,31 +120,26 @@ ul { margin: 0 0 1em; padding-left: 1.25em; }
   text-decoration: none;
 }
 
+/* One flat row of links. Every link is its own flex item, so the bar can break
+   at any gap and only when the row genuinely runs out of width -- there are no
+   grouping wrappers forcing an early break at a fixed point. When it does wrap,
+   margin-left:auto keeps the block hard right against the container edge. */
 .site-nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 4px;
-}
-
-/* Links are clustered into thematic groups (research, then service), set off by
-   a hairline rule. Each group is one flex item, so a group wraps as a whole
-   unit on narrow screens instead of splitting mid-cluster. */
-.site-nav-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px;
-  margin-left: 8px;
-  padding-left: 12px;
-  border-left: 1px solid rgba(223, 227, 238, 0.28);
+  justify-content: flex-end;
+  margin-left: auto;
+  gap: 2px;
 }
 
 .site-nav a {
   color: #dfe3ee;
-  padding: 8px 12px;
+  padding: 8px 10px;
   border-radius: var(--radius);
   font-size: 0.95rem;
+  /* A label never breaks mid-word; it moves to the next row whole. */
+  white-space: nowrap;
 }
 
 .site-nav a:hover,
@@ -1332,7 +1327,9 @@ main:focus {
 @media (max-width: 640px) {
   .hero .container { flex-direction: column; text-align: center; }
   .hero-links { justify-content: center; }
-  .site-header .container { flex-direction: column; align-items: flex-start; }
+  /* The header is deliberately not stacked here. It is a wrapping flex row, so
+     the nav drops below the name on its own once the row is out of width, and
+     stays alongside it whenever it still fits. */
   h1 { font-size: 1.6rem; }
   svg.wc { max-height: 300px; }
   /* Smaller, tighter tabs on phones so the two fit as a toggle rather than
