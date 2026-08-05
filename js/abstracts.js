@@ -6,6 +6,13 @@
  * "<section-id>|<entry-number>" and map onto the <section id> / <li value> in
  * the page, so editing an abstract there needs no change here or in the HTML.
  *
+ * The parsed file is published on window.abstractsPromise because pub-search.js
+ * indexes the same abstract text for its search box. abstracts.json is ~200 KB,
+ * by far the largest thing this page loads, so the two share one fetch rather
+ * than issuing it twice (the same arrangement pub-authors.js and pub-search.js
+ * have for paper-authors.json). Either script may create the promise, so both
+ * guard with `||` and neither depends on the other's <script> order.
+ *
  * Progressive enhancement: if the fetch fails, or JS is off, or the page is
  * opened over file:// (where fetch is blocked by CORS), the page still renders
  * fully — it just shows no abstract toggles.
@@ -77,11 +84,13 @@
     });
   }
 
-  fetch(SOURCE)
-    .then(function (res) {
+  window.abstractsPromise = window.abstractsPromise ||
+    fetch(SOURCE).then(function (res) {
       if (!res.ok) throw new Error("HTTP " + res.status);
       return res.json();
-    })
+    });
+
+  window.abstractsPromise
     .then(function (data) {
       render((data && data.entries) || {});
     })

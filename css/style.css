@@ -1196,6 +1196,18 @@ svg.cn {
   font-weight: 600;
 }
 
+/* Set on a row the search matched only inside its abstract, where the citation
+   on screen carries no trace of what was typed. Tinting the existing Abstract
+   pill points at where the match actually is, and pairs with the "matched in
+   their abstracts only" note in the count.
+   Scoped to the resting state so the pill's own hover and open styling, which
+   is defined earlier in this file, still wins when either applies. */
+.is-abs-match .abs:not([open]) > summary:not(:hover) {
+  border-color: var(--orange);
+  color: var(--orange-text);
+  background: #fdf3e8;
+}
+
 /* ------------------------------------------------------------------ */
 /* BibTeX disclosure (built by js/pub-bibtex.js)                        */
 /* ------------------------------------------------------------------ */

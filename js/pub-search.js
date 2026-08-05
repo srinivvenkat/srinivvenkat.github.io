@@ -21,13 +21,32 @@
  * The toolbar is built here rather than sitting in the HTML so that with JS off
  * there are no dead controls, matching how viz-carousel.js builds its tabs.
  *
- * The search index is the citation text only, with the Abstract and BibTeX
- * disclosures excluded, plus the full author list from paper-authors.json. Full
- * authors matter because long lists are condensed to "..." in the markup, so
- * without them searching for a middle author of a 30-author paper would silently
- * fail. Abstract text is deliberately NOT indexed: it loads asynchronously, so
- * including it would make results depend on fetch timing, and the home-page word
- * cloud already offers abstract-level entry into this list.
+ * WHAT IS INDEXED
+ * Three sources per row, all reduced to one lowercase string:
+ *   - the citation text in the markup, with the Abstract and BibTeX disclosures
+ *     stripped out (they are appended asynchronously by other scripts, and the
+ *     abstract is indexed from JSON instead — see below);
+ *   - the full author list from paper-authors.json, because long lists are
+ *     condensed to "..." in the markup and without it searching for a middle
+ *     author of a 30-author paper would silently fail;
+ *   - the abstract from abstracts.json, which is the same file abstracts.js
+ *     renders the toggles from, reached through the window.abstractsPromise it
+ *     shares so the ~200 KB is fetched once.
+ * Reading abstracts from the JSON rather than from the rendered .abs elements is
+ * what makes this safe: the index is built from the parsed data in one pass, so
+ * it never depends on how far abstracts.js has got through the DOM.
+ *
+ * Abstract text is kept in a SEPARATE field from the citation text, not
+ * concatenated onto it, so apply() can tell a citation hit from an abstract-only
+ * hit. That distinction is the difference between a useful result and an
+ * apparently random one: a row matching only on abstract text shows a citation
+ * with the query nowhere in it, so those rows get flagged (is-abs-match) and the
+ * count says how many there are.
+ *
+ * Both enrichments land asynchronously and simply rebuild the index and re-run
+ * apply() when they do. A search typed in the first moments therefore matches on
+ * citation text alone and widens once the JSON arrives; the live count keeps up,
+ * and nothing already shown disappears.
  *
  * Progressive enhancement: if any fetch fails or JS is off, the full list renders
  * normally, just without the toolbar.
@@ -36,13 +55,20 @@
   "use strict";
 
   var AUTHORS = "paper-authors.json";
+  var ABSTRACTS = "abstracts.json";
   var HIDDEN = "is-filtered-out";
+  var ABS_MATCH = "is-abs-match";
   var DEBOUNCE = 120;
 
-  var rows = [];      // { li, ol, heading, section, year, text }
+  var rows = [];      // { li, ol, heading, section, year, key, text, abstract }
   var toolbar = null;
   var qInput = null, typeSel = null, yearSel = null, countEl = null;
   var timer = null;
+
+  // Keyed "<section-id>|<entry-number>", matching both JSON files. Filled in by
+  // their fetches; empty until then, which just means a narrower index.
+  var authorsByKey = {};
+  var abstractsByKey = {};
 
   // Visible means: hidden by neither layer. pub-filter.js owns the property,
   // this file owns the class.
@@ -64,7 +90,16 @@
         var heading = prev && prev.classList.contains("pub-year") ? prev : null;
         var year = heading ? heading.textContent.trim() : "";
         ol.querySelectorAll("li").forEach(function (li) {
-          out.push({ li: li, ol: ol, heading: heading, section: section, year: year, text: "" });
+          out.push({
+            li: li,
+            ol: ol,
+            heading: heading,
+            section: section,
+            year: year,
+            key: section.id + "|" + li.getAttribute("value"),
+            text: "",
+            abstract: ""
+          });
         });
       });
     });
@@ -78,14 +113,37 @@
     return clone.textContent.replace(/\s+/g, " ").trim().toLowerCase();
   }
 
-  function indexRows(authorsByKey) {
+  // Rebuilt from scratch each time a source arrives, rather than appended to, so
+  // a late fetch can never double-index a row it already contributed to.
+  function indexRows() {
     rows.forEach(function (row) {
-      var extra = "";
-      var key = row.section.id + "|" + row.li.getAttribute("value");
-      var names = authorsByKey[key];
-      if (names && names.length) extra = " " + names.join(" ");
+      var names = authorsByKey[row.key];
+      var extra = names && names.length ? " " + names.join(" ") : "";
       row.text = citationText(row.li) + extra.toLowerCase();
+
+      var entry = abstractsByKey[row.key];
+      var abstract = entry && entry.abstract ? entry.abstract : "";
+      // ** marks structured-abstract labels in the JSON; drop it so a search for
+      // "methods" matches "**Methods**" the way the reader sees it.
+      row.abstract = abstract.replace(/\*\*/g, "").replace(/\s+/g, " ").toLowerCase();
     });
+  }
+
+  /* Flags a row whose only match is inside its abstract, so the reader is not
+     left staring at a citation that has nothing to do with what they typed. The
+     class styles the existing Abstract pill; the title says why in words, for
+     anyone who would not read a colour. The summary belongs to abstracts.js and
+     may not be there — an entry can have no abstract at all, and in the ordering
+     where this script creates the shared promise, abstracts.js has not rendered
+     yet on the first pass. The class is set on the <li> either way, so the
+     styling lands whenever the pill appears; only the tooltip waits for the next
+     apply(). */
+  function markAbstractMatch(row, on) {
+    row.li.classList.toggle(ABS_MATCH, on);
+    var summary = row.li.querySelector(".abs > summary");
+    if (!summary) return;
+    if (on) summary.title = "Your search matched this abstract";
+    else summary.removeAttribute("title");
   }
 
   function option(value, label) {
@@ -117,7 +175,7 @@
 
     qInput = document.createElement("input");
     qInput.type = "search";
-    qInput.placeholder = "Title, author, journal…";
+    qInput.placeholder = "Title, author, journal, abstract…";
     qInput.autocomplete = "off";
     form.appendChild(control("Search", "pub-q", qInput));
 
@@ -177,14 +235,26 @@
 
     rows.forEach(function (row) {
       var hit = true;
+      var absOnly = false;
       if (type && row.section.id !== type) hit = false;
       if (hit && year && row.year !== year) hit = false;
       if (hit && tokens.length) {
+        // Every token must appear somewhere, in the citation or in the abstract,
+        // but a row is only "abstract-only" when at least one token is missing
+        // from the citation — that is the row whose match is invisible on screen.
+        var inCitation = true;
         for (var i = 0; i < tokens.length; i++) {
-          if (row.text.indexOf(tokens[i]) === -1) { hit = false; break; }
+          var onCitation = row.text.indexOf(tokens[i]) !== -1;
+          if (!onCitation) {
+            inCitation = false;
+            if (row.abstract.indexOf(tokens[i]) === -1) { hit = false; break; }
+          }
         }
+        absOnly = hit && !inCitation;
       }
+      row.absOnly = absOnly;
       setHidden(row.li, !hit);
+      markAbstractMatch(row, absOnly);
     });
 
     // Roll the result up: a year list, its heading, and a whole category section
@@ -205,7 +275,14 @@
       });
       setHidden(section, !any);
     });
-    rows.forEach(function (row) { if (isVisible(row.li)) shown++; });
+    // Counted here, not where the flag is set, so a row hidden by the other
+    // layer is left out of both totals.
+    var absOnly = 0;
+    rows.forEach(function (row) {
+      if (!isVisible(row.li)) return;
+      shown++;
+      if (row.absOnly) absOnly++;
+    });
 
     // Report what is actually on screen, which is the product of BOTH layers, not
     // just of this toolbar's controls: arriving with ?topic=epi narrows the list
@@ -216,11 +293,20 @@
     // The category table of contents carries counts that no longer hold.
     setHidden(document.querySelector("nav.pub-toc"), narrowed);
 
-    countEl.textContent = !narrowed
+    var text = !narrowed
       ? "Showing all " + rows.length + " publications"
       : shown === 0
         ? "No publications match"
         : "Showing " + shown + " of " + rows.length + " publications";
+
+    // Explains the rows whose citation looks unrelated to the query.
+    if (absOnly) {
+      text += absOnly === 1
+        ? " · 1 matched in its abstract only"
+        : " · " + absOnly + " matched in their abstracts only";
+    }
+
+    countEl.textContent = text;
     countEl.classList.toggle("is-empty", shown === 0);
   }
 
@@ -259,13 +345,15 @@
       if (main) main.insertBefore(toolbar, main.firstChild);
     }
 
-    indexRows({});
+    indexRows();
     apply();
     watchOtherLayer();
 
-    // Enrich the index with full author lists once they arrive. pub-authors.js
-    // needs the same file, and both scripts start together, so the promise is
-    // shared on window rather than fetched twice (see pub-authors.js).
+    // Both enrichments come from files another script on this page already
+    // fetches, so each promise is shared on window rather than fetched twice
+    // (see pub-authors.js and abstracts.js). Whichever script runs first creates
+    // it. They resolve independently and each rebuilds the whole index, so
+    // arriving in either order gives the same result.
     window.paperAuthorsPromise = window.paperAuthorsPromise ||
       fetch(AUTHORS).then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
@@ -274,12 +362,31 @@
 
     window.paperAuthorsPromise
       .then(function (data) {
-        indexRows((data && data.entries) || {});
+        authorsByKey = (data && data.entries) || {};
+        indexRows();
         apply();
       })
       .catch(function (err) {
         // Non-fatal: search still works over the visible citation text.
         console.warn("Author index unavailable (" + AUTHORS + "):", err.message);
+      });
+
+    window.abstractsPromise = window.abstractsPromise ||
+      fetch(ABSTRACTS).then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      });
+
+    window.abstractsPromise
+      .then(function (data) {
+        abstractsByKey = (data && data.entries) || {};
+        indexRows();
+        apply();
+      })
+      .catch(function (err) {
+        // Non-fatal: the abstracts simply stay out of the index, and the page
+        // shows no toggles either, so there is nothing to explain to the reader.
+        console.warn("Abstract index unavailable (" + ABSTRACTS + "):", err.message);
       });
   }
 
