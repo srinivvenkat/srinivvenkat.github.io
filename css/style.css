@@ -1346,6 +1346,51 @@ svg.cn {
   outline-offset: 2px;
 }
 
+/* ------------------------------------------------------------------ */
+/* Press page: copyable bio blocks and the photo row                    */
+/* ------------------------------------------------------------------ */
+/* A bio reads as a quotable block rather than body prose, so it is tinted and
+   rule-marked: a reporter can see at a glance where the text they may lift
+   starts and stops. Padded right so the Copy button never overlaps the last
+   line; position:relative anchors that button, which reuses .bib-copy. */
+.press-text {
+  position: relative;
+  margin: 0 0 1.25em;
+  padding: 14px 96px 14px 16px;
+  background: var(--bg-alt);
+  border-left: 3px solid var(--orange);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.press-text p { margin: 0; }
+
+/* The button sits inline under the text at narrow widths, where a 96px gutter
+   would leave the prose too cramped to read. */
+@media (max-width: 560px) {
+  .press-text { padding-right: 16px; }
+
+  .press-copy {
+    position: static;
+    display: inline-block;
+    margin-top: 10px;
+  }
+}
+
+.press-asset {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.press-asset img {
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: var(--shadow);
+}
+
+.press-asset p { margin: 0; }
+
 /* Skip link: the first focusable thing on every page. Off-screen until focused,
    so it costs sighted users nothing but lets a keyboard user jump the header
    nav (7 links) and land straight on <main>. */
