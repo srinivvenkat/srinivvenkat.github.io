@@ -2,16 +2,19 @@
   "_readme": "Single source of truth for the publication abstracts shown on publications.html. The page fetches this file once at load time (js/abstracts.js, shared with js/pub-search.js via window.abstractsPromise): abstracts.js renders an 'Abstract' toggle for every entry whose 'abstract' field is non-null, and pub-search.js indexes the same text so the search box matches on abstracts as well as citations. Keys are '<section-id>|<entry-number>' and match the <section id> and <li value> in publications.html — edit an abstract here and the page picks it up, no HTML changes. Abstract text is the authors' own, retrieved verbatim from the publisher record for each DOI/arXiv/medRxiv ID; none is paraphrased or generated. Blank lines (\\n\\n) separate paragraphs and **bold** marks structured-abstract section labels. author_count and consortium_paper are auto-maintained by tools/build_authors.py: author_count is the full OpenAlex author count (null when the paper isn't in OpenAlex), and consortium_paper is true when author_count > 30 (large forecasting/scenario-hub efforts). A separate 'talks' block holds abstracts for entries on talks.html, keyed the same way ('<section-id>|<entry-number>') against that page's sections. It is kept apart from 'entries' because everything downstream of this file (tools/build_wordcloud.py, build_authors.py, build_bibtex.py, js/pub-search.js) treats 'entries' as the publication list and would otherwise index conference talks as papers. js/abstracts.js renders both blocks and simply skips any key whose section is not on the current page.",
   "counts": {
     "entries": 102,
-    "with_abstract": 93,
-    "without_abstract": 9,
+    "with_abstract": 99,
+    "without_abstract": 3,
     "consortium_papers": 11
   },
   "abstract_sources": {
-    "OpenAlex": 37,
+    "OpenAlex": 36,
     "Crossref": 29,
-    "medRxiv": 12,
+    "medRxiv": 13,
     "Semantic Scholar": 8,
-    "arXiv": 5
+    "arXiv": 5,
+    "Author-supplied": 4,
+    "Author manuscript (PDF in papers/)": 3,
+    "OpenAlex (title match)": 1
   },
   "entries": {
     "book-chapters|3": {
@@ -35,9 +38,8 @@
       "title": "AI Techniques for Forecasting Epidemic Dynamics: Theory and Practice",
       "citation": "A. Adiga, B. Lewis, S. Levin, M. Marathe, H.V. Poor, S.S. Ravi, D.J. Rosenkrantz, R.E. Stearns, SV, A. Vullikanti, L. Wang, \"AI Techniques for Forecasting Epidemic Dynamics: Theory and Practice\", in Artificial Intelligence in COVID-19, Springer, 2022",
       "url": "https://doi.org/10.1007/978-3-031-08506-2_9",
-      "abstract": null,
-      "abstract_source": null,
-      "abstract_unavailable_reason": "no abstract deposited for this book chapter",
+      "abstract": "Forecasting epidemic dynamics has been an active area of research for at least two decades. The importance of the topic is evident: policy makers, citizens, and scientists would all like to get accurate and timely forecasts. In contrast to physical systems, the co-evolution of epidemics, individual and collective behavior, viral dynamics, and public policies make epidemic forecasting a problematic task. The situation is even more challenging during a pandemic as has become amply clear during the ongoing COVID-19 pandemic. Researchers worldwide have put in extraordinary efforts to try to forecast the time-varying evolution of the pandemic; despite their best efforts, it is fair to say that the results have been mixed. Several teams have done well on average but failed to forecast upsurges in the cases.\n\nIn this chapter, we describe the state-of-the-art in epidemic forecasting, with a particular emphasis on forecasting during an ongoing pandemic. We describe a range of methods that have been developed and discuss the experience of our team in this context. We also summarize several challenges in producing accurate and timely forecasts.",
+      "abstract_source": "Author-supplied",
       "author_count": 11,
       "consortium_paper": false
     },
@@ -49,9 +51,8 @@
       "title": "The role of Artificial Intelligence in Epidemiological Modeling",
       "citation": "A. Adiga, SV, J. Chen, P. Porebski, A. Wilson, H. Mortveit, B. Lewis, J. Crow, M. Marathe, and NSSAC-BII team, \"The role of Artificial Intelligence in Epidemiological Modeling\", in AI for Science, World Scientific Press, 2022",
       "url": "https://doi.org/10.1142/9789811265679_0020",
-      "abstract": null,
-      "abstract_source": null,
-      "abstract_unavailable_reason": "no abstract deposited for this book chapter",
+      "abstract": "We describe an AI-driven approach for supporting real-time epidemic science. The basic approach comprises of combining real-time data with techniques in AI, Machine learning and graphical dynamical systems to address complex problems arising during the course of planning and response to an ongoing epidemic.\n\nWe illustrate our approach via three large scale efforts: (i) supporting state and local public health departments on a weekly basis; (ii) weekly forecasting to support the CDC and European CDC Forecasting Hub; and (iii) supporting the CDC Scenario modeling hub. Each effort comprises a different type of model, time-scale or function in the decision making process. We outline how data-driven AI methods can be used in an operational setting to support real-time policy analysis.",
+      "abstract_source": "Author-supplied",
       "author_count": 10,
       "consortium_paper": false
     },
@@ -637,9 +638,8 @@
       "title": "Optimizing Wastewater Surveillance Sites for COVID-19 Hospitalization Forecasting Across U.S. States",
       "citation": "G. Kaur, J. Chen, ..., SV, A. Warren, A. Vullikanti, \"Optimizing Wastewater Surveillance Sites for COVID-19 Hospitalization Forecasting Across U.S. States\", accepted at Winter Simulation Conference, 2026 (medRxiv:2026.07.20.26358167)",
       "url": "https://www.medrxiv.org/content/10.64898/2026.07.20.26358167v1",
-      "abstract": null,
-      "abstract_source": null,
-      "abstract_unavailable_reason": "accepted for WSC 2026; not yet published",
+      "abstract": "In this study, we analyze viral load data from wastewater treatment plants (WWTPs) across multiple U.S. states and address the challenge of selecting an optimal subset of sites to improve COVID-19 hospitalization forecasts. Using forward (greedy) regression with a baseline ARIMA model, we identify the most informative WWTPs that enhance forecast accuracy while reducing the number of sampling locations. Our analysis, based on NWSS data, shows that the optimal number of sites typically ranges from 2-8, though some states, including NY, IL, and WI, benefit from a larger set (10-20). We also leverage a Virginia-level digital twin model specifically designed for wastewater data modeling and analysis and our results show that for different parameter settings, that forecast accuracy can be achieved with strategically chosen small number of sites, providing scalable and cost efficient wastewater surveillance.",
+      "abstract_source": "medRxiv",
       "author_count": 10,
       "consortium_paper": false
     },
@@ -729,9 +729,8 @@
       "title": "VISHN: Viral Load and Immunity Simulation on a Host Network",
       "citation": "J. Nachison, SV, \"VISHN: Viral Load and Immunity Simulation on a Host Network\", Annual Modeling and Simulation Conference (ANNSIM), 2024",
       "url": "https://dl.acm.org/doi/10.22360/ANNSIM.2024.HM.193",
-      "abstract": null,
-      "abstract_source": null,
-      "abstract_unavailable_reason": "ACM Digital Library blocks automated access",
+      "abstract": "The ongoing COVID-19 pandemic has brought to light the many complex interactions that occur at the within-host scale of viral dynamics, from waning immunity to viral load-dependent infectiousness, that affect virus transmission between hosts. We present a novel open-source framework for a multi-scale epidemiological model of virus transmission that links viral dynamics at the sub-host scale and transmission at the between-host scale. Unlike other multi-scale models, our framework allows for modeling of heterogeneity at both the sub-host and between-host scales. Our model is highly flexible, with almost every aspect of the simulation being customizable, making it adaptable to many different applications. We demonstrate the use of the model through a variety of network and parameter configurations capturing different social mixing structures and host diversity and highlight the qualitatively different population viral load patterns.",
+      "abstract_source": "Author-supplied",
       "author_count": null,
       "consortium_paper": false
     },
@@ -834,9 +833,8 @@
       "title": "Impact of Seeding and Spatial Heterogeneity on Metapopulation Disease Dynamics",
       "citation": "R. Rajuladevi, M. Marathe, P. Porebski, SV, \"Impact of Seeding and Spatial Heterogeneity on Metapopulation Disease Dynamics\", epiDAMIK 5.0: The 5th International Workshop on Epidemiology meets Data Mining and Knowledge Discovery, co-held with KDD, 2022",
       "url": "https://openreview.net/forum?id=uYuafV_Kz0",
-      "abstract": null,
-      "abstract_source": null,
-      "abstract_unavailable_reason": "OpenReview blocks automated access",
+      "abstract": "Metapopulation models capture the spatial interactions in disease dynamics through mobility and mixing matrices among regions of interest. However, the impact of seeding (initialization) in such networks is not well understood. We have constructed and open-sourced metapopulation networks for countries around the world (Patch-Flow) and we use them to study the effect of seeding using an extension of a discrete-time SEIR simulator, PatchSim. The impact of initialization is studied by looking at the resulting epidemic curves.\n\nWe use various metrics to characterize the epidemic curves, including those based on epidemic intensity entropy. Using these, we study the impact of levels of connectivity, skewness in seeding, and spatial resolution at the national scale. We find that these effects vary across countries and are more pronounced at certain transmissibility levels. This study provides early insights into the impact of model initialization and demonstrates the use of PatchFlow networks.",
+      "abstract_source": "Author-supplied",
       "author_count": null,
       "consortium_paper": false
     },
@@ -991,9 +989,8 @@
       "title": "Using Network Reliability to Understand International Food Trade Dynamics",
       "citation": "M. Nath, SV, B. Kaperick, S. Eubank, M. Marathe, A. Marathe, and A. Adiga, \"Using Network Reliability to Understand International Food Trade Dynamics\", Complex Networks, 2018",
       "url": "https://doi.org/10.1007/978-3-030-05411-3_43",
-      "abstract": null,
-      "abstract_source": null,
-      "abstract_unavailable_reason": "no abstract deposited for this proceedings chapter",
+      "abstract": "As modern society increasingly relies on long-distance agricultural trade, food networks act as conduits for invasive species spread, contamination and other disruptions. Therefore, understanding their structural and dynamical properties is critical for food security and social welfare. Here, we present a novel approach to identify important dynamics-induced clusters of highly-connected nodes in the network. The method employs Moore-Shannon network reliability coupled with discrete-time SIR diffusion model over directed weighted networks. We apply it to analyze international trade networks corresponding to four solanaceous crops obtained using the Food and Agricultural Organization trade database. Our analysis shows that the structure and dynamics can greatly vary across commodities. However, a consistent pattern that we observe in these commodity-specific networks is that almost all clusters that are formed are between adjacent countries in regions where liberal bilateral trade relations exist. Our analysis of networks of different years shows that intensification of trade has led to increased size of clusters, which in turn implies that the number of countries spared from the network effects of disruption is reducing. Finally, applying this method to the aggregate network obtained by combining the four networks reveals clusters very different from those found in the constituent networks.",
+      "abstract_source": "Author manuscript (PDF in papers/)",
       "author_count": 7,
       "consortium_paper": false
     },
