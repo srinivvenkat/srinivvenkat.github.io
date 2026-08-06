@@ -353,6 +353,17 @@ ol.pub-list li::marker {
 
 .pub-list li:last-child { border-bottom: none; }
 
+/* Deep-linked entry (a mentoring chip pointing at the talk a project produced).
+   Landing mid-list is disorienting with nothing marking the arrival point, so
+   the target entry is tinted and flagged in the margin. Background tint only,
+   the text keeps its own contrast. */
+.pub-list li:target {
+  background: #fdf3e7;
+  box-shadow: inset 3px 0 0 var(--orange);
+  padding-left: 12px;
+  margin-left: -12px;
+}
+
 .pub-year {
   margin: 1.75em 0 0.4em;
   padding-bottom: 0.25em;
@@ -380,7 +391,11 @@ ol.pub-list li::marker {
 }
 
 /* Slide-deck pill; sized to sit alongside the .abs summary pill */
-.slides-link {
+/* Chip links: slide decks on publications/talks, and on the mentoring page the
+   paper or repository a student's project produced. Same affordance in both
+   places, so a chip always reads as "the artifact itself is one click away". */
+.slides-link,
+.entry-link {
   display: inline-block;
   font-size: 0.65rem;
   font-weight: 600;
@@ -397,13 +412,15 @@ ol.pub-list li::marker {
   transition: background 0.12s ease, color 0.12s ease;
 }
 
-.slides-link:hover {
+.slides-link:hover,
+.entry-link:hover {
   background: var(--orange-text);
   color: #fff;
   text-decoration: none;
 }
 
-.slides-link:focus-visible {
+.slides-link:focus-visible,
+.entry-link:focus-visible {
   outline: 2px solid var(--orange);
   outline-offset: 2px;
 }
