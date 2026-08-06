@@ -3,52 +3,34 @@
   "counts": {
     "authors": 816,
     "consortium_only_authors": 576,
-    "papers_resolved": 96,
-    "papers_total": 104,
+    "papers_resolved": 97,
+    "papers_total": 102,
     "consortium_papers": 11
   },
   "source": "OpenAlex (https://openalex.org)",
   "unresolved_papers": [
     {
-      "key": "conference-papers|42",
-      "title": "Optimizing Wastewater Surveillance Sites for COVID-19 Hospitalization Forecasting Across U.S. States",
-      "url": "https://scholar.google.com/scholar?q=Optimizing%20Wastewater%20Surveillance%20Sites%20for%20COVID-19%20Hospitalization%20Forecasting%20Across%20U.S.%20States",
-      "reason": "not indexed in OpenAlex; no full author names/affiliations available"
-    },
-    {
-      "key": "conference-papers|35",
+      "key": "conference-papers|33",
       "title": "VISHN: Viral Load and Immunity Simulation on a Host Network",
       "url": "https://dl.acm.org/doi/10.22360/ANNSIM.2024.HM.193",
       "reason": "not indexed in OpenAlex; no full author names/affiliations available"
     },
     {
-      "key": "conference-papers|31",
+      "key": "conference-papers|29",
       "title": "A Robust Deep Learning Framework Reveals the Spread of Multiple Invasive Plants in a Biodiversity Hotspot using Satellite Imagery",
-      "url": "https://scholar.google.com/scholar?q=A%20Robust%20Deep%20Learning%20Framework%20Reveals%20the%20Spread%20of%20Multiple%20Invasive%20Plants%20in%20a%20Biodiversity%20Hotspot%20using%20Satellite%20Imagery",
+      "url": "papers/adiga23deep-learning.pdf",
       "reason": "not indexed in OpenAlex; no full author names/affiliations available"
     },
     {
-      "key": "conference-papers|27",
+      "key": "conference-papers|25",
       "title": "Impact of Seeding and Spatial Heterogeneity on Metapopulation Disease Dynamics",
       "url": "https://openreview.net/forum?id=uYuafV_Kz0",
       "reason": "not indexed in OpenAlex; no full author names/affiliations available"
     },
     {
-      "key": "conference-papers|17",
-      "title": "A Deep Learning Framework for Invasive Species Mapping using High-Resolution Satellite Imagery",
-      "url": "https://scholar.google.com/scholar?q=A%20Deep%20Learning%20Framework%20for%20Invasive%20Species%20Mapping%20using%20High-Resolution%20Satellite%20Imagery",
-      "reason": "not indexed in OpenAlex; no full author names/affiliations available"
-    },
-    {
-      "key": "conference-papers|15",
+      "key": "conference-papers|14",
       "title": "Understanding the Role of Seasonal Food Trade Networks in Invasive Species Spread",
-      "url": "https://scholar.google.com/scholar?q=Understanding%20the%20Role%20of%20Seasonal%20Food%20Trade%20Networks%20in%20Invasive%20Species%20Spread",
-      "reason": "not indexed in OpenAlex; no full author names/affiliations available"
-    },
-    {
-      "key": "conference-papers|9",
-      "title": "Hybrid models for ecological and anthropogenic drivers of pest invasion: Case study of Tuta absoluta in Nepal",
-      "url": "https://scholar.google.com/scholar?q=Hybrid%20models%20for%20ecological%20and%20anthropogenic%20drivers%20of%20pest%20invasion%3A%20Case%20study%20of%20Tuta%20absoluta%20in%20Nepal",
+      "url": "papers/adiga19understanding.pdf",
       "reason": "not indexed in OpenAlex; no full author names/affiliations available"
     },
     {
@@ -76,35 +58,39 @@
       "consortium": false
     },
     "conference-papers|10": {
-      "authors": 7,
-      "consortium": false
-    },
-    "conference-papers|11": {
       "authors": 8,
       "consortium": false
     },
-    "conference-papers|12": {
+    "conference-papers|11": {
       "authors": 15,
       "consortium": false
     },
-    "conference-papers|13": {
+    "conference-papers|12": {
       "authors": 4,
       "consortium": false
     },
-    "conference-papers|14": {
+    "conference-papers|13": {
       "authors": 7,
       "consortium": false
     },
-    "conference-papers|16": {
+    "conference-papers|15": {
       "authors": 5,
       "consortium": false
     },
-    "conference-papers|18": {
+    "conference-papers|16": {
       "authors": 12,
       "consortium": false
     },
-    "conference-papers|19": {
+    "conference-papers|17": {
       "authors": 6,
+      "consortium": false
+    },
+    "conference-papers|18": {
+      "authors": 15,
+      "consortium": false
+    },
+    "conference-papers|19": {
+      "authors": 12,
       "consortium": false
     },
     "conference-papers|2": {
@@ -112,38 +98,34 @@
       "consortium": false
     },
     "conference-papers|20": {
-      "authors": 15,
-      "consortium": false
-    },
-    "conference-papers|21": {
-      "authors": 12,
-      "consortium": false
-    },
-    "conference-papers|22": {
       "authors": 13,
       "consortium": false
     },
-    "conference-papers|23": {
+    "conference-papers|21": {
       "authors": 8,
       "consortium": false
     },
-    "conference-papers|24": {
+    "conference-papers|22": {
       "authors": 20,
       "consortium": false
     },
-    "conference-papers|25": {
+    "conference-papers|23": {
       "authors": 18,
       "consortium": false
     },
-    "conference-papers|26": {
+    "conference-papers|24": {
       "authors": 6,
       "consortium": false
     },
-    "conference-papers|28": {
+    "conference-papers|26": {
       "authors": 17,
       "consortium": false
     },
-    "conference-papers|29": {
+    "conference-papers|27": {
+      "authors": 8,
+      "consortium": false
+    },
+    "conference-papers|28": {
       "authors": 8,
       "consortium": false
     },
@@ -152,19 +134,23 @@
       "consortium": false
     },
     "conference-papers|30": {
-      "authors": 8,
-      "consortium": false
-    },
-    "conference-papers|32": {
       "authors": 15,
       "consortium": false
     },
-    "conference-papers|33": {
+    "conference-papers|31": {
       "authors": 17,
       "consortium": false
     },
-    "conference-papers|34": {
+    "conference-papers|32": {
       "authors": 14,
+      "consortium": false
+    },
+    "conference-papers|34": {
+      "authors": 9,
+      "consortium": false
+    },
+    "conference-papers|35": {
+      "authors": 4,
       "consortium": false
     },
     "conference-papers|36": {
@@ -172,11 +158,11 @@
       "consortium": false
     },
     "conference-papers|37": {
-      "authors": 4,
+      "authors": 8,
       "consortium": false
     },
     "conference-papers|38": {
-      "authors": 9,
+      "authors": 4,
       "consortium": false
     },
     "conference-papers|39": {
@@ -188,11 +174,7 @@
       "consortium": false
     },
     "conference-papers|40": {
-      "authors": 4,
-      "consortium": false
-    },
-    "conference-papers|41": {
-      "authors": 8,
+      "authors": 10,
       "consortium": false
     },
     "conference-papers|5": {
@@ -209,6 +191,10 @@
     },
     "conference-papers|8": {
       "authors": 3,
+      "consortium": false
+    },
+    "conference-papers|9": {
+      "authors": 7,
       "consortium": false
     },
     "journal-articles|1": {
@@ -465,16 +451,23 @@
         "Budapest University of Technology and Economics",
         "University Vascular Associates"
       ],
-      "paper_count": 96,
+      "paper_count": 97,
       "last_year": 2026,
       "first_year": 2010,
       "papers": [
         {
-          "key": "conference-papers|41",
+          "key": "conference-papers|39",
           "title": "Agentic Framework for Epidemiological Modeling",
           "year": 2026,
           "section": "Conference and Workshop Papers",
           "pos": 5
+        },
+        {
+          "key": "conference-papers|40",
+          "title": "Optimizing Wastewater Surveillance Sites for COVID-19 Hospitalization Forecasting Across U.S. States",
+          "year": 2026,
+          "section": "Conference and Workshop Papers",
+          "pos": 7
         },
         {
           "key": "journal-articles|43",
@@ -512,28 +505,28 @@
           "pos": 1
         },
         {
-          "key": "conference-papers|37",
+          "key": "conference-papers|35",
           "title": "Causal Analysis of Graph Signals for Brain Effectome Inference",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 2
         },
         {
-          "key": "conference-papers|38",
+          "key": "conference-papers|36",
           "title": "Hazard Function Guided Agent-Based Models: A Case Study of Return Migration from Poland to Ukraine",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 4
         },
         {
-          "key": "conference-papers|39",
+          "key": "conference-papers|37",
           "title": "Agent-based social simulation of spatiotemporal process-triggered graph dynamical systems",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 3
         },
         {
-          "key": "conference-papers|40",
+          "key": "conference-papers|38",
           "title": "Causal Analysis of Graph Signals for Brain Effectome Inference",
           "year": 2025,
           "section": "Conference and Workshop Papers",
@@ -547,21 +540,21 @@
           "pos": 33
         },
         {
-          "key": "conference-papers|32",
+          "key": "conference-papers|30",
           "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 2
         },
         {
-          "key": "conference-papers|34",
+          "key": "conference-papers|32",
           "title": "Network Agency: An Agent-based Model of Forced Migration from Ukraine",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 3
         },
         {
-          "key": "conference-papers|36",
+          "key": "conference-papers|34",
           "title": "Agent-Based Simulation Framework for Multi-Variant Surveillance",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -638,14 +631,14 @@
           "pos": 1
         },
         {
-          "key": "conference-papers|30",
+          "key": "conference-papers|28",
           "title": "Phase-Informed Bayesian Ensemble Models Improve Performance of COVID-19 Forecasts",
           "year": 2023,
           "section": "Conference and Workshop Papers",
           "pos": 5
         },
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -708,21 +701,21 @@
           "pos": 5
         },
         {
-          "key": "conference-papers|26",
+          "key": "conference-papers|24",
           "title": "CausalGNN: Causal-Based Graph Neural Networks for Spatio-Temporal Epidemic Forecasting",
           "year": 2022,
           "section": "Conference and Workshop Papers",
           "pos": 4
         },
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
           "pos": 5
         },
         {
-          "key": "conference-papers|29",
+          "key": "conference-papers|27",
           "title": "Enhancing COVID-19 Ensemble Forecasting Model Performance Using Auxiliary Data Sources",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -785,35 +778,35 @@
           "pos": 0
         },
         {
-          "key": "conference-papers|21",
+          "key": "conference-papers|19",
           "title": "Scalable Epidemiological Workflows to Support COVID-19 Planning and Response",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 5
         },
         {
-          "key": "conference-papers|22",
+          "key": "conference-papers|20",
           "title": "Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 5
         },
         {
-          "key": "conference-papers|23",
+          "key": "conference-papers|21",
           "title": "All Models Are Useful: Bayesian Ensembling for Robust High Resolution COVID-19 Forecasting",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 5
         },
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 9
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -869,28 +862,28 @@
           "pos": 7
         },
         {
-          "key": "conference-papers|16",
+          "key": "conference-papers|15",
           "title": "Designing Near-Optimal Temporal Interventions to Contain Epidemics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
           "pos": 3
         },
         {
-          "key": "conference-papers|18",
+          "key": "conference-papers|16",
           "title": "From 5Vs to 6Cs: Operationalizing Epidemic Data Management with COVID-19 Surveillance",
           "year": 2020,
           "section": "Conference and Workshop Papers",
           "pos": 5
         },
         {
-          "key": "conference-papers|19",
+          "key": "conference-papers|17",
           "title": "Examining Deep Learning Models with Multiple Data Sources for COVID-19 Forecasting",
           "year": 2020,
           "section": "Conference and Workshop Papers",
           "pos": 2
         },
         {
-          "key": "conference-papers|20",
+          "key": "conference-papers|18",
           "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -988,14 +981,14 @@
           "pos": 0
         },
         {
-          "key": "conference-papers|13",
+          "key": "conference-papers|12",
           "title": "Profiling OSN Users Based on Temporal Posting Patterns",
           "year": 2018,
           "section": "Conference and Workshop Papers",
           "pos": 2
         },
         {
-          "key": "conference-papers|14",
+          "key": "conference-papers|13",
           "title": "Using Network Reliability to Understand International Food Trade Dynamics",
           "year": 2018,
           "section": "Conference and Workshop Papers",
@@ -1024,21 +1017,21 @@
         },
         {
           "key": "conference-papers|10",
-          "title": "Spatio-temporal optimization of seasonal vaccination using a metapopulation model of influenza",
-          "year": 2017,
-          "section": "Conference and Workshop Papers",
-          "pos": 0
-        },
-        {
-          "key": "conference-papers|11",
           "title": "Epidemic Forecasting by Combining Agent-Based Models and Smart Beam-Particle Filtering Framework",
           "year": 2017,
           "section": "Conference and Workshop Papers",
           "pos": 4
         },
         {
-          "key": "conference-papers|12",
+          "key": "conference-papers|11",
           "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
+          "year": 2017,
+          "section": "Conference and Workshop Papers",
+          "pos": 0
+        },
+        {
+          "key": "conference-papers|9",
+          "title": "Spatio-temporal optimization of seasonal vaccination using a metapopulation model of influenza",
           "year": 2017,
           "section": "Conference and Workshop Papers",
           "pos": 0
@@ -1166,10 +1159,17 @@
         "Virginia Department of Health",
         "Expedition Technology (United States)"
       ],
-      "paper_count": 70,
+      "paper_count": 71,
       "last_year": 2026,
       "first_year": 2017,
       "papers": [
+        {
+          "key": "conference-papers|40",
+          "title": "Optimizing Wastewater Surveillance Sites for COVID-19 Hospitalization Forecasting Across U.S. States",
+          "year": 2026,
+          "section": "Conference and Workshop Papers",
+          "pos": 6
+        },
         {
           "key": "journal-articles|43",
           "title": "Integrated framework to study genomic surveillance of selective sweeps in multivariants dynamics",
@@ -1192,28 +1192,28 @@
           "pos": 7
         },
         {
-          "key": "conference-papers|37",
+          "key": "conference-papers|35",
           "title": "Causal Analysis of Graph Signals for Brain Effectome Inference",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 3
         },
         {
-          "key": "conference-papers|38",
+          "key": "conference-papers|36",
           "title": "Hazard Function Guided Agent-Based Models: A Case Study of Return Migration from Poland to Ukraine",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 8
         },
         {
-          "key": "conference-papers|39",
+          "key": "conference-papers|37",
           "title": "Agent-based social simulation of spatiotemporal process-triggered graph dynamical systems",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 7
         },
         {
-          "key": "conference-papers|40",
+          "key": "conference-papers|38",
           "title": "Causal Analysis of Graph Signals for Brain Effectome Inference",
           "year": 2025,
           "section": "Conference and Workshop Papers",
@@ -1227,21 +1227,21 @@
           "pos": 36
         },
         {
-          "key": "conference-papers|32",
+          "key": "conference-papers|30",
           "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 14
         },
         {
-          "key": "conference-papers|34",
+          "key": "conference-papers|32",
           "title": "Network Agency: An Agent-based Model of Forced Migration from Ukraine",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 13
         },
         {
-          "key": "conference-papers|36",
+          "key": "conference-papers|34",
           "title": "Agent-Based Simulation Framework for Multi-Variant Surveillance",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -1311,14 +1311,14 @@
           "pos": 8
         },
         {
-          "key": "conference-papers|30",
+          "key": "conference-papers|28",
           "title": "Phase-Informed Bayesian Ensemble Models Improve Performance of COVID-19 Forecasts",
           "year": 2023,
           "section": "Conference and Workshop Papers",
           "pos": 7
         },
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -1374,21 +1374,21 @@
           "pos": 6
         },
         {
-          "key": "conference-papers|26",
+          "key": "conference-papers|24",
           "title": "CausalGNN: Causal-Based Graph Neural Networks for Spatio-Temporal Epidemic Forecasting",
           "year": 2022,
           "section": "Conference and Workshop Papers",
           "pos": 5
         },
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
           "pos": 16
         },
         {
-          "key": "conference-papers|29",
+          "key": "conference-papers|27",
           "title": "Enhancing COVID-19 Ensemble Forecasting Model Performance Using Auxiliary Data Sources",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -1444,35 +1444,35 @@
           "pos": 9
         },
         {
-          "key": "conference-papers|21",
+          "key": "conference-papers|19",
           "title": "Scalable Epidemiological Workflows to Support COVID-19 Planning and Response",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 11
         },
         {
-          "key": "conference-papers|22",
+          "key": "conference-papers|20",
           "title": "Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 10
         },
         {
-          "key": "conference-papers|23",
+          "key": "conference-papers|21",
           "title": "All Models Are Useful: Bayesian Ensembling for Robust High Resolution COVID-19 Forecasting",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 7
         },
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 18
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -1514,21 +1514,21 @@
           "pos": 3
         },
         {
-          "key": "conference-papers|18",
+          "key": "conference-papers|16",
           "title": "From 5Vs to 6Cs: Operationalizing Epidemic Data Management with COVID-19 Surveillance",
           "year": 2020,
           "section": "Conference and Workshop Papers",
           "pos": 11
         },
         {
-          "key": "conference-papers|19",
+          "key": "conference-papers|17",
           "title": "Examining Deep Learning Models with Multiple Data Sources for COVID-19 Forecasting",
           "year": 2020,
           "section": "Conference and Workshop Papers",
           "pos": 5
         },
         {
-          "key": "conference-papers|20",
+          "key": "conference-papers|18",
           "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -1612,7 +1612,7 @@
           "pos": 4
         },
         {
-          "key": "conference-papers|14",
+          "key": "conference-papers|13",
           "title": "Using Network Reliability to Understand International Food Trade Dynamics",
           "year": 2018,
           "section": "Conference and Workshop Papers",
@@ -1627,21 +1627,21 @@
         },
         {
           "key": "conference-papers|10",
-          "title": "Spatio-temporal optimization of seasonal vaccination using a metapopulation model of influenza",
-          "year": 2017,
-          "section": "Conference and Workshop Papers",
-          "pos": 4
-        },
-        {
-          "key": "conference-papers|11",
           "title": "Epidemic Forecasting by Combining Agent-Based Models and Smart Beam-Particle Filtering Framework",
           "year": 2017,
           "section": "Conference and Workshop Papers",
           "pos": 7
         },
         {
-          "key": "conference-papers|12",
+          "key": "conference-papers|11",
           "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
+          "year": 2017,
+          "section": "Conference and Workshop Papers",
+          "pos": 4
+        },
+        {
+          "key": "conference-papers|9",
+          "title": "Spatio-temporal optimization of seasonal vaccination using a metapopulation model of influenza",
           "year": 2017,
           "section": "Conference and Workshop Papers",
           "pos": 4
@@ -1663,6 +1663,7 @@
       ],
       "openalex_ids": [
         "https://openalex.org/A5020293284",
+        "https://openalex.org/A5143420826",
         "https://openalex.org/A5134200133"
       ],
       "consortium_only": false,
@@ -1684,10 +1685,17 @@
         "Virginia–Maryland College of Veterinary Medicine",
         "Public Health Dayton & Montgomery County"
       ],
-      "paper_count": 59,
+      "paper_count": 60,
       "last_year": 2026,
       "first_year": 2017,
       "papers": [
+        {
+          "key": "conference-papers|40",
+          "title": "Optimizing Wastewater Surveillance Sites for COVID-19 Hospitalization Forecasting Across U.S. States",
+          "year": 2026,
+          "section": "Conference and Workshop Papers",
+          "pos": 5
+        },
         {
           "key": "journal-articles|43",
           "title": "Integrated framework to study genomic surveillance of selective sweeps in multivariants dynamics",
@@ -1710,14 +1718,14 @@
           "pos": 3
         },
         {
-          "key": "conference-papers|38",
+          "key": "conference-papers|36",
           "title": "Hazard Function Guided Agent-Based Models: A Case Study of Return Migration from Poland to Ukraine",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 5
         },
         {
-          "key": "conference-papers|39",
+          "key": "conference-papers|37",
           "title": "Agent-based social simulation of spatiotemporal process-triggered graph dynamical systems",
           "year": 2025,
           "section": "Conference and Workshop Papers",
@@ -1731,21 +1739,21 @@
           "pos": 34
         },
         {
-          "key": "conference-papers|32",
+          "key": "conference-papers|30",
           "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 4
         },
         {
-          "key": "conference-papers|34",
+          "key": "conference-papers|32",
           "title": "Network Agency: An Agent-based Model of Forced Migration from Ukraine",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 4
         },
         {
-          "key": "conference-papers|36",
+          "key": "conference-papers|34",
           "title": "Agent-Based Simulation Framework for Multi-Variant Surveillance",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -1815,14 +1823,14 @@
           "pos": 6
         },
         {
-          "key": "conference-papers|30",
+          "key": "conference-papers|28",
           "title": "Phase-Informed Bayesian Ensemble Models Improve Performance of COVID-19 Forecasts",
           "year": 2023,
           "section": "Conference and Workshop Papers",
           "pos": 6
         },
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -1885,14 +1893,14 @@
           "pos": 3
         },
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
           "pos": 4
         },
         {
-          "key": "conference-papers|29",
+          "key": "conference-papers|27",
           "title": "Enhancing COVID-19 Ensemble Forecasting Model Performance Using Auxiliary Data Sources",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -1934,28 +1942,28 @@
           "pos": 3
         },
         {
-          "key": "conference-papers|21",
+          "key": "conference-papers|19",
           "title": "Scalable Epidemiological Workflows to Support COVID-19 Planning and Response",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 6
         },
         {
-          "key": "conference-papers|23",
+          "key": "conference-papers|21",
           "title": "All Models Are Useful: Bayesian Ensembling for Robust High Resolution COVID-19 Forecasting",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 6
         },
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 3
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -1997,14 +2005,14 @@
           "pos": 2
         },
         {
-          "key": "conference-papers|19",
+          "key": "conference-papers|17",
           "title": "Examining Deep Learning Models with Multiple Data Sources for COVID-19 Forecasting",
           "year": 2020,
           "section": "Conference and Workshop Papers",
           "pos": 4
         },
         {
-          "key": "conference-papers|20",
+          "key": "conference-papers|18",
           "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -2075,17 +2083,17 @@
         },
         {
           "key": "conference-papers|10",
-          "title": "Spatio-temporal optimization of seasonal vaccination using a metapopulation model of influenza",
-          "year": 2017,
-          "section": "Conference and Workshop Papers",
-          "pos": 3
-        },
-        {
-          "key": "conference-papers|11",
           "title": "Epidemic Forecasting by Combining Agent-Based Models and Smart Beam-Particle Filtering Framework",
           "year": 2017,
           "section": "Conference and Workshop Papers",
           "pos": 1
+        },
+        {
+          "key": "conference-papers|9",
+          "title": "Spatio-temporal optimization of seasonal vaccination using a metapopulation model of influenza",
+          "year": 2017,
+          "section": "Conference and Workshop Papers",
+          "pos": 3
         },
         {
           "key": "journal-articles|3",
@@ -2104,6 +2112,7 @@
       ],
       "openalex_ids": [
         "https://openalex.org/A5072570670",
+        "https://openalex.org/A5143443548",
         "https://openalex.org/A5011087624",
         "https://openalex.org/A5134117543"
       ],
@@ -2121,10 +2130,17 @@
         "Virginia Department of Health",
         "Expedition Technology (United States)"
       ],
-      "paper_count": 40,
+      "paper_count": 41,
       "last_year": 2026,
       "first_year": 2017,
       "papers": [
+        {
+          "key": "conference-papers|40",
+          "title": "Optimizing Wastewater Surveillance Sites for COVID-19 Hospitalization Forecasting Across U.S. States",
+          "year": 2026,
+          "section": "Conference and Workshop Papers",
+          "pos": 1
+        },
         {
           "key": "tech-reports|13",
           "title": "Assessing the Impact of Timing and Coverage of United States COVID-19 Vaccination Campaigns: A Multi-Model Approach",
@@ -2140,7 +2156,7 @@
           "pos": 35
         },
         {
-          "key": "conference-papers|36",
+          "key": "conference-papers|34",
           "title": "Agent-Based Simulation Framework for Multi-Variant Surveillance",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -2217,14 +2233,14 @@
           "pos": 2
         },
         {
-          "key": "conference-papers|26",
+          "key": "conference-papers|24",
           "title": "CausalGNN: Causal-Based Graph Neural Networks for Spatio-Temporal Epidemic Forecasting",
           "year": 2022,
           "section": "Conference and Workshop Papers",
           "pos": 2
         },
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -2252,28 +2268,28 @@
           "pos": 34
         },
         {
-          "key": "conference-papers|21",
+          "key": "conference-papers|19",
           "title": "Scalable Epidemiological Workflows to Support COVID-19 Planning and Response",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 3
         },
         {
-          "key": "conference-papers|22",
+          "key": "conference-papers|20",
           "title": "Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 4
         },
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 1
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -2315,14 +2331,14 @@
           "pos": 0
         },
         {
-          "key": "conference-papers|19",
+          "key": "conference-papers|17",
           "title": "Examining Deep Learning Models with Multiple Data Sources for COVID-19 Forecasting",
           "year": 2020,
           "section": "Conference and Workshop Papers",
           "pos": 3
         },
         {
-          "key": "conference-papers|20",
+          "key": "conference-papers|18",
           "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -2379,17 +2395,17 @@
         },
         {
           "key": "conference-papers|10",
-          "title": "Spatio-temporal optimization of seasonal vaccination using a metapopulation model of influenza",
-          "year": 2017,
-          "section": "Conference and Workshop Papers",
-          "pos": 1
-        },
-        {
-          "key": "conference-papers|11",
           "title": "Epidemic Forecasting by Combining Agent-Based Models and Smart Beam-Particle Filtering Framework",
           "year": 2017,
           "section": "Conference and Workshop Papers",
           "pos": 5
+        },
+        {
+          "key": "conference-papers|9",
+          "title": "Spatio-temporal optimization of seasonal vaccination using a metapopulation model of influenza",
+          "year": 2017,
+          "section": "Conference and Workshop Papers",
+          "pos": 1
         },
         {
           "key": "journal-articles|3",
@@ -2423,10 +2439,17 @@
         "Virginia Department of Health",
         "Expedition Technology (United States)"
       ],
-      "paper_count": 34,
+      "paper_count": 35,
       "last_year": 2026,
       "first_year": 2020,
       "papers": [
+        {
+          "key": "conference-papers|40",
+          "title": "Optimizing Wastewater Surveillance Sites for COVID-19 Hospitalization Forecasting Across U.S. States",
+          "year": 2026,
+          "section": "Conference and Workshop Papers",
+          "pos": 3
+        },
         {
           "key": "tech-reports|14",
           "title": "IDOBE: Infectious Disease Outbreak forecasting Benchmark Ecosystem",
@@ -2435,14 +2458,14 @@
           "pos": 0
         },
         {
-          "key": "conference-papers|37",
+          "key": "conference-papers|35",
           "title": "Causal Analysis of Graph Signals for Brain Effectome Inference",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 1
         },
         {
-          "key": "conference-papers|40",
+          "key": "conference-papers|38",
           "title": "Causal Analysis of Graph Signals for Brain Effectome Inference",
           "year": 2025,
           "section": "Conference and Workshop Papers",
@@ -2477,14 +2500,14 @@
           "pos": 0
         },
         {
-          "key": "conference-papers|30",
+          "key": "conference-papers|28",
           "title": "Phase-Informed Bayesian Ensemble Models Improve Performance of COVID-19 Forecasts",
           "year": 2023,
           "section": "Conference and Workshop Papers",
           "pos": 0
         },
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -2540,14 +2563,14 @@
           "pos": 1
         },
         {
-          "key": "conference-papers|26",
+          "key": "conference-papers|24",
           "title": "CausalGNN: Causal-Based Graph Neural Networks for Spatio-Temporal Epidemic Forecasting",
           "year": 2022,
           "section": "Conference and Workshop Papers",
           "pos": 1
         },
         {
-          "key": "conference-papers|29",
+          "key": "conference-papers|27",
           "title": "Enhancing COVID-19 Ensemble Forecasting Model Performance Using Auxiliary Data Sources",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -2596,14 +2619,14 @@
           "pos": 0
         },
         {
-          "key": "conference-papers|22",
+          "key": "conference-papers|20",
           "title": "Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 7
         },
         {
-          "key": "conference-papers|23",
+          "key": "conference-papers|21",
           "title": "All Models Are Useful: Bayesian Ensembling for Robust High Resolution COVID-19 Forecasting",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -2624,14 +2647,14 @@
           "pos": 0
         },
         {
-          "key": "conference-papers|19",
+          "key": "conference-papers|17",
           "title": "Examining Deep Learning Models with Multiple Data Sources for COVID-19 Forecasting",
           "year": 2020,
           "section": "Conference and Workshop Papers",
           "pos": 1
         },
         {
-          "key": "conference-papers|20",
+          "key": "conference-papers|18",
           "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -2683,16 +2706,23 @@
         "Expedition Technology (United States)",
         "Behavioral Tech"
       ],
-      "paper_count": 27,
+      "paper_count": 28,
       "last_year": 2026,
       "first_year": 2016,
       "papers": [
         {
-          "key": "conference-papers|41",
+          "key": "conference-papers|39",
           "title": "Agentic Framework for Epidemiological Modeling",
           "year": 2026,
           "section": "Conference and Workshop Papers",
           "pos": 7
+        },
+        {
+          "key": "conference-papers|40",
+          "title": "Optimizing Wastewater Surveillance Sites for COVID-19 Hospitalization Forecasting Across U.S. States",
+          "year": 2026,
+          "section": "Conference and Workshop Papers",
+          "pos": 9
         },
         {
           "key": "tech-reports|15",
@@ -2702,7 +2732,7 @@
           "pos": 8
         },
         {
-          "key": "conference-papers|36",
+          "key": "conference-papers|34",
           "title": "Agent-Based Simulation Framework for Multi-Variant Surveillance",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -2744,7 +2774,7 @@
           "pos": 9
         },
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -2765,7 +2795,7 @@
           "pos": 41
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -2800,14 +2830,14 @@
           "pos": 9
         },
         {
-          "key": "conference-papers|16",
+          "key": "conference-papers|15",
           "title": "Designing Near-Optimal Temporal Interventions to Contain Epidemics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
           "pos": 4
         },
         {
-          "key": "conference-papers|20",
+          "key": "conference-papers|18",
           "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -2856,7 +2886,7 @@
           "pos": 8
         },
         {
-          "key": "conference-papers|10",
+          "key": "conference-papers|9",
           "title": "Spatio-temporal optimization of seasonal vaccination using a metapopulation model of influenza",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -2879,6 +2909,7 @@
       ],
       "openalex_ids": [
         "https://openalex.org/A5044848288",
+        "https://openalex.org/A5143431624",
         "https://openalex.org/A5124872783",
         "https://openalex.org/A5141189690"
       ],
@@ -2900,28 +2931,28 @@
       "first_year": 2017,
       "papers": [
         {
-          "key": "conference-papers|38",
+          "key": "conference-papers|36",
           "title": "Hazard Function Guided Agent-Based Models: A Case Study of Return Migration from Poland to Ukraine",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 6
         },
         {
-          "key": "conference-papers|39",
+          "key": "conference-papers|37",
           "title": "Agent-based social simulation of spatiotemporal process-triggered graph dynamical systems",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 2
         },
         {
-          "key": "conference-papers|32",
+          "key": "conference-papers|30",
           "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 5
         },
         {
-          "key": "conference-papers|34",
+          "key": "conference-papers|32",
           "title": "Network Agency: An Agent-based Model of Forced Migration from Ukraine",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -2977,7 +3008,7 @@
           "pos": 45
         },
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -2998,21 +3029,21 @@
           "pos": 35
         },
         {
-          "key": "conference-papers|21",
+          "key": "conference-papers|19",
           "title": "Scalable Epidemiological Workflows to Support COVID-19 Planning and Response",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 4
         },
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 4
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -3061,7 +3092,7 @@
           "pos": 7
         },
         {
-          "key": "conference-papers|10",
+          "key": "conference-papers|9",
           "title": "Spatio-temporal optimization of seasonal vaccination using a metapopulation model of influenza",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -3134,14 +3165,14 @@
           "pos": 3
         },
         {
-          "key": "conference-papers|30",
+          "key": "conference-papers|28",
           "title": "Phase-Informed Bayesian Ensemble Models Improve Performance of COVID-19 Forecasts",
           "year": 2023,
           "section": "Conference and Workshop Papers",
           "pos": 4
         },
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -3169,7 +3200,7 @@
           "pos": 38
         },
         {
-          "key": "conference-papers|29",
+          "key": "conference-papers|27",
           "title": "Enhancing COVID-19 Ensemble Forecasting Model Performance Using Auxiliary Data Sources",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -3204,14 +3235,14 @@
           "pos": 27
         },
         {
-          "key": "conference-papers|23",
+          "key": "conference-papers|21",
           "title": "All Models Are Useful: Bayesian Ensembling for Robust High Resolution COVID-19 Forecasting",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 4
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -3225,7 +3256,7 @@
           "pos": 39
         },
         {
-          "key": "conference-papers|18",
+          "key": "conference-papers|16",
           "title": "From 5Vs to 6Cs: Operationalizing Epidemic Data Management with COVID-19 Surveillance",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -3257,7 +3288,7 @@
       "first_year": 2020,
       "papers": [
         {
-          "key": "conference-papers|32",
+          "key": "conference-papers|30",
           "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -3292,7 +3323,7 @@
           "pos": 9
         },
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -3313,21 +3344,21 @@
           "pos": 8
         },
         {
-          "key": "conference-papers|21",
+          "key": "conference-papers|19",
           "title": "Scalable Epidemiological Workflows to Support COVID-19 Planning and Response",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 10
         },
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 17
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -3411,7 +3442,7 @@
           "pos": 101
         },
         {
-          "key": "conference-papers|30",
+          "key": "conference-papers|28",
           "title": "Phase-Informed Bayesian Ensemble Models Improve Performance of COVID-19 Forecasts",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -3446,14 +3477,14 @@
           "pos": 0
         },
         {
-          "key": "conference-papers|26",
+          "key": "conference-papers|24",
           "title": "CausalGNN: Causal-Based Graph Neural Networks for Spatio-Temporal Epidemic Forecasting",
           "year": 2022,
           "section": "Conference and Workshop Papers",
           "pos": 0
         },
         {
-          "key": "conference-papers|29",
+          "key": "conference-papers|27",
           "title": "Enhancing COVID-19 Ensemble Forecasting Model Performance Using Auxiliary Data Sources",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -3467,14 +3498,14 @@
           "pos": 51
         },
         {
-          "key": "conference-papers|22",
+          "key": "conference-papers|20",
           "title": "Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 6
         },
         {
-          "key": "conference-papers|23",
+          "key": "conference-papers|21",
           "title": "All Models Are Useful: Bayesian Ensembling for Robust High Resolution COVID-19 Forecasting",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -3495,14 +3526,14 @@
           "pos": 48
         },
         {
-          "key": "conference-papers|19",
+          "key": "conference-papers|17",
           "title": "Examining Deep Learning Models with Multiple Data Sources for COVID-19 Forecasting",
           "year": 2020,
           "section": "Conference and Workshop Papers",
           "pos": 0
         },
         {
-          "key": "conference-papers|20",
+          "key": "conference-papers|18",
           "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -3570,7 +3601,7 @@
           "pos": 47
         },
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -3598,21 +3629,21 @@
           "pos": 38
         },
         {
-          "key": "conference-papers|21",
+          "key": "conference-papers|19",
           "title": "Scalable Epidemiological Workflows to Support COVID-19 Planning and Response",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 2
         },
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 0
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -3685,14 +3716,14 @@
           "pos": 4
         },
         {
-          "key": "conference-papers|30",
+          "key": "conference-papers|28",
           "title": "Phase-Informed Bayesian Ensemble Models Improve Performance of COVID-19 Forecasts",
           "year": 2023,
           "section": "Conference and Workshop Papers",
           "pos": 3
         },
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -3727,7 +3758,7 @@
           "pos": 98
         },
         {
-          "key": "conference-papers|29",
+          "key": "conference-papers|27",
           "title": "Enhancing COVID-19 Ensemble Forecasting Model Performance Using Auxiliary Data Sources",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -3762,7 +3793,7 @@
           "pos": 33
         },
         {
-          "key": "conference-papers|23",
+          "key": "conference-papers|21",
           "title": "All Models Are Useful: Bayesian Ensembling for Robust High Resolution COVID-19 Forecasting",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -3837,7 +3868,7 @@
           "pos": 48
         },
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -3865,14 +3896,14 @@
           "pos": 39
         },
         {
-          "key": "conference-papers|21",
+          "key": "conference-papers|19",
           "title": "Scalable Epidemiological Workflows to Support COVID-19 Planning and Response",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 1
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -3886,7 +3917,7 @@
           "pos": 7
         },
         {
-          "key": "conference-papers|18",
+          "key": "conference-papers|16",
           "title": "From 5Vs to 6Cs: Operationalizing Epidemic Data Management with COVID-19 Surveillance",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -3907,6 +3938,116 @@
       "is_self": false
     },
     {
+      "name": "Abhijin Adiga",
+      "orcid": "https://orcid.org/0000-0002-9770-034X",
+      "primary_affiliation": "University of Virginia",
+      "affiliations": [
+        "University of Virginia",
+        "Virginia Tech"
+      ],
+      "paper_count": 13,
+      "last_year": 2026,
+      "first_year": 2016,
+      "papers": [
+        {
+          "key": "conference-papers|40",
+          "title": "Optimizing Wastewater Surveillance Sites for COVID-19 Hospitalization Forecasting Across U.S. States",
+          "year": 2026,
+          "section": "Conference and Workshop Papers",
+          "pos": 2
+        },
+        {
+          "key": "journal-articles|35",
+          "title": "Novel multi-cluster workflow system to support real-time HPC-enabled epidemic science: Investigating the impact of vaccine acceptance on COVID-19 spread",
+          "year": 2024,
+          "section": "Journal Articles",
+          "pos": 14
+        },
+        {
+          "key": "journal-articles|36",
+          "title": "Role of heterogeneity: National scale data-driven agent-based modeling for the US COVID-19 Scenario Modeling Hub",
+          "year": 2024,
+          "section": "Journal Articles",
+          "pos": 4
+        },
+        {
+          "key": "conference-papers|26",
+          "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
+          "year": 2022,
+          "section": "Conference and Workshop Papers",
+          "pos": 8
+        },
+        {
+          "key": "journal-articles|21",
+          "title": "Data-Driven Scalable Pipeline using National Agent-Based Models for Real-time Pandemic Response and Decision Support",
+          "year": 2022,
+          "section": "Journal Articles",
+          "pos": 11
+        },
+        {
+          "key": "conference-papers|22",
+          "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
+          "year": 2021,
+          "section": "Conference and Workshop Papers",
+          "pos": 2
+        },
+        {
+          "key": "conference-papers|23",
+          "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
+          "year": 2021,
+          "section": "Conference and Workshop Papers",
+          "pos": 14
+        },
+        {
+          "key": "tech-reports|8",
+          "title": "Prioritizing allocation of COVID-19 vaccines based on social contacts increases vaccination effectiveness",
+          "year": 2021,
+          "section": "Technical Reports and Preprints",
+          "pos": 8
+        },
+        {
+          "key": "journal-articles|16",
+          "title": "Predicting the current and future potential distribution of an invasive weed Ageratina adenophora in Chitwan-Annapurna Landscape, Nepal",
+          "year": 2020,
+          "section": "Journal Articles",
+          "pos": 4
+        },
+        {
+          "key": "journal-articles|9",
+          "title": "Modeling commodity flow in the context of invasive species spread: Study of Tuta absoluta in Nepal",
+          "year": 2019,
+          "section": "Journal Articles",
+          "pos": 14
+        },
+        {
+          "key": "conference-papers|13",
+          "title": "Using Network Reliability to Understand International Food Trade Dynamics",
+          "year": 2018,
+          "section": "Conference and Workshop Papers",
+          "pos": 6
+        },
+        {
+          "key": "conference-papers|11",
+          "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
+          "year": 2017,
+          "section": "Conference and Workshop Papers",
+          "pos": 14
+        },
+        {
+          "key": "conference-papers|7",
+          "title": "To delay or not: Temporal Vaccination Games on Networks",
+          "year": 2016,
+          "section": "Conference and Workshop Papers",
+          "pos": 0
+        }
+      ],
+      "openalex_ids": [
+        "https://openalex.org/A5019703184"
+      ],
+      "consortium_only": false,
+      "is_self": false
+    },
+    {
       "name": "Samarth Swarup",
       "orcid": "https://orcid.org/0000-0003-3615-1663",
       "primary_affiliation": "University of Virginia",
@@ -3918,28 +4059,28 @@
       "first_year": 2020,
       "papers": [
         {
-          "key": "conference-papers|38",
+          "key": "conference-papers|36",
           "title": "Hazard Function Guided Agent-Based Models: A Case Study of Return Migration from Poland to Ukraine",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 3
         },
         {
-          "key": "conference-papers|39",
+          "key": "conference-papers|37",
           "title": "Agent-based social simulation of spatiotemporal process-triggered graph dynamical systems",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 4
         },
         {
-          "key": "conference-papers|32",
+          "key": "conference-papers|30",
           "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 3
         },
         {
-          "key": "conference-papers|34",
+          "key": "conference-papers|32",
           "title": "Network Agency: An Agent-based Model of Forced Migration from Ukraine",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -3974,7 +4115,7 @@
           "pos": 4
         },
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -3988,7 +4129,7 @@
           "pos": 6
         },
         {
-          "key": "conference-papers|20",
+          "key": "conference-papers|18",
           "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -4128,109 +4269,6 @@
       ],
       "openalex_ids": [
         "https://openalex.org/A5088439810"
-      ],
-      "consortium_only": false,
-      "is_self": false
-    },
-    {
-      "name": "Abhijin Adiga",
-      "orcid": "https://orcid.org/0000-0002-9770-034X",
-      "primary_affiliation": "University of Virginia",
-      "affiliations": [
-        "University of Virginia",
-        "Virginia Tech"
-      ],
-      "paper_count": 12,
-      "last_year": 2024,
-      "first_year": 2016,
-      "papers": [
-        {
-          "key": "journal-articles|35",
-          "title": "Novel multi-cluster workflow system to support real-time HPC-enabled epidemic science: Investigating the impact of vaccine acceptance on COVID-19 spread",
-          "year": 2024,
-          "section": "Journal Articles",
-          "pos": 14
-        },
-        {
-          "key": "journal-articles|36",
-          "title": "Role of heterogeneity: National scale data-driven agent-based modeling for the US COVID-19 Scenario Modeling Hub",
-          "year": 2024,
-          "section": "Journal Articles",
-          "pos": 4
-        },
-        {
-          "key": "conference-papers|28",
-          "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
-          "year": 2022,
-          "section": "Conference and Workshop Papers",
-          "pos": 8
-        },
-        {
-          "key": "journal-articles|21",
-          "title": "Data-Driven Scalable Pipeline using National Agent-Based Models for Real-time Pandemic Response and Decision Support",
-          "year": 2022,
-          "section": "Journal Articles",
-          "pos": 11
-        },
-        {
-          "key": "conference-papers|24",
-          "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
-          "year": 2021,
-          "section": "Conference and Workshop Papers",
-          "pos": 2
-        },
-        {
-          "key": "conference-papers|25",
-          "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
-          "year": 2021,
-          "section": "Conference and Workshop Papers",
-          "pos": 14
-        },
-        {
-          "key": "tech-reports|8",
-          "title": "Prioritizing allocation of COVID-19 vaccines based on social contacts increases vaccination effectiveness",
-          "year": 2021,
-          "section": "Technical Reports and Preprints",
-          "pos": 8
-        },
-        {
-          "key": "journal-articles|16",
-          "title": "Predicting the current and future potential distribution of an invasive weed Ageratina adenophora in Chitwan-Annapurna Landscape, Nepal",
-          "year": 2020,
-          "section": "Journal Articles",
-          "pos": 4
-        },
-        {
-          "key": "journal-articles|9",
-          "title": "Modeling commodity flow in the context of invasive species spread: Study of Tuta absoluta in Nepal",
-          "year": 2019,
-          "section": "Journal Articles",
-          "pos": 14
-        },
-        {
-          "key": "conference-papers|14",
-          "title": "Using Network Reliability to Understand International Food Trade Dynamics",
-          "year": 2018,
-          "section": "Conference and Workshop Papers",
-          "pos": 6
-        },
-        {
-          "key": "conference-papers|12",
-          "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
-          "year": 2017,
-          "section": "Conference and Workshop Papers",
-          "pos": 14
-        },
-        {
-          "key": "conference-papers|7",
-          "title": "To delay or not: Temporal Vaccination Games on Networks",
-          "year": 2016,
-          "section": "Conference and Workshop Papers",
-          "pos": 0
-        }
-      ],
-      "openalex_ids": [
-        "https://openalex.org/A5019703184"
       ],
       "consortium_only": false,
       "is_self": false
@@ -4416,21 +4454,21 @@
           "pos": 40
         },
         {
-          "key": "conference-papers|21",
+          "key": "conference-papers|19",
           "title": "Scalable Epidemiological Workflows to Support COVID-19 Planning and Response",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 0
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 1
         },
         {
-          "key": "conference-papers|18",
+          "key": "conference-papers|16",
           "title": "From 5Vs to 6Cs: Operationalizing Epidemic Data Management with COVID-19 Surveillance",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -4490,7 +4528,7 @@
           "pos": 12
         },
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -4504,21 +4542,21 @@
           "pos": 6
         },
         {
-          "key": "conference-papers|21",
+          "key": "conference-papers|19",
           "title": "Scalable Epidemiological Workflows to Support COVID-19 Planning and Response",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 7
         },
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 6
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -4532,7 +4570,7 @@
           "pos": 11
         },
         {
-          "key": "conference-papers|18",
+          "key": "conference-papers|16",
           "title": "From 5Vs to 6Cs: Operationalizing Epidemic Data Management with COVID-19 Surveillance",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -4680,7 +4718,7 @@
           "pos": 8
         },
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -4694,7 +4732,7 @@
           "pos": 15
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -4736,14 +4774,14 @@
           "pos": 3
         },
         {
-          "key": "conference-papers|14",
+          "key": "conference-papers|13",
           "title": "Using Network Reliability to Understand International Food Trade Dynamics",
           "year": 2018,
           "section": "Conference and Workshop Papers",
           "pos": 5
         },
         {
-          "key": "conference-papers|12",
+          "key": "conference-papers|11",
           "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -4919,7 +4957,7 @@
           "pos": 31
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -4933,7 +4971,7 @@
           "pos": 43
         },
         {
-          "key": "conference-papers|18",
+          "key": "conference-papers|16",
           "title": "From 5Vs to 6Cs: Operationalizing Epidemic Data Management with COVID-19 Surveillance",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -5277,7 +5315,7 @@
           "pos": 13
         },
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -5333,14 +5371,14 @@
           "pos": 5
         },
         {
-          "key": "conference-papers|14",
+          "key": "conference-papers|13",
           "title": "Using Network Reliability to Understand International Food Trade Dynamics",
           "year": 2018,
           "section": "Conference and Workshop Papers",
           "pos": 3
         },
         {
-          "key": "conference-papers|12",
+          "key": "conference-papers|11",
           "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -5733,7 +5771,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|36",
+          "key": "conference-papers|34",
           "title": "Agent-Based Simulation Framework for Multi-Variant Surveillance",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -5782,7 +5820,7 @@
           "pos": 32
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -6371,14 +6409,14 @@
           "pos": 4
         },
         {
-          "key": "conference-papers|26",
+          "key": "conference-papers|24",
           "title": "CausalGNN: Causal-Based Graph Neural Networks for Spatio-Temporal Epidemic Forecasting",
           "year": 2022,
           "section": "Conference and Workshop Papers",
           "pos": 3
         },
         {
-          "key": "conference-papers|22",
+          "key": "conference-papers|20",
           "title": "Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -6392,7 +6430,7 @@
           "pos": 1
         },
         {
-          "key": "conference-papers|20",
+          "key": "conference-papers|18",
           "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -6415,6 +6453,75 @@
       ],
       "openalex_ids": [
         "https://openalex.org/A5081476701"
+      ],
+      "consortium_only": false,
+      "is_self": false
+    },
+    {
+      "name": "Andrew Warren",
+      "orcid": "https://orcid.org/0000-0003-2660-0103",
+      "primary_affiliation": "University of Virginia",
+      "affiliations": [
+        "University of Virginia"
+      ],
+      "paper_count": 7,
+      "last_year": 2026,
+      "first_year": 2020,
+      "papers": [
+        {
+          "key": "conference-papers|40",
+          "title": "Optimizing Wastewater Surveillance Sites for COVID-19 Hospitalization Forecasting Across U.S. States",
+          "year": 2026,
+          "section": "Conference and Workshop Papers",
+          "pos": 8
+        },
+        {
+          "key": "journal-articles|43",
+          "title": "Integrated framework to study genomic surveillance of selective sweeps in multivariants dynamics",
+          "year": 2026,
+          "section": "Journal Articles",
+          "pos": 2
+        },
+        {
+          "key": "conference-papers|34",
+          "title": "Agent-Based Simulation Framework for Multi-Variant Surveillance",
+          "year": 2024,
+          "section": "Conference and Workshop Papers",
+          "pos": 8
+        },
+        {
+          "key": "journal-articles|40",
+          "title": "Wastewater-based Epidemiology for COVID-19 Surveillance: A Survey",
+          "year": 2024,
+          "section": "Journal Articles",
+          "pos": 6
+        },
+        {
+          "key": "journal-articles|29",
+          "title": "Coupled models of genomic surveillance and evolving pandemics with applications for timely public health interventions",
+          "year": 2023,
+          "section": "Journal Articles",
+          "pos": 3
+        },
+        {
+          "key": "journal-articles|21",
+          "title": "Data-Driven Scalable Pipeline using National Agent-Based Models for Real-time Pandemic Response and Decision Support",
+          "year": 2022,
+          "section": "Journal Articles",
+          "pos": 12
+        },
+        {
+          "key": "tech-reports|4",
+          "title": "Evaluating the impact of international airline suspensions on the early global spread of COVID-19",
+          "year": 2020,
+          "section": "Technical Reports and Preprints",
+          "pos": 6
+        }
+      ],
+      "openalex_ids": [
+        "https://openalex.org/A5075434620",
+        "https://openalex.org/A5016058860",
+        "https://openalex.org/A5143460400"
       ],
       "consortium_only": false,
       "is_self": false
@@ -6499,7 +6606,7 @@
       "first_year": 2015,
       "papers": [
         {
-          "key": "conference-papers|13",
+          "key": "conference-papers|12",
           "title": "Profiling OSN Users Based on Temporal Posting Patterns",
           "year": 2018,
           "section": "Conference and Workshop Papers",
@@ -6550,6 +6657,75 @@
       ],
       "openalex_ids": [
         "https://openalex.org/A5103096040"
+      ],
+      "consortium_only": false,
+      "is_self": false
+    },
+    {
+      "name": "Gursharn Kaur",
+      "orcid": "https://orcid.org/0000-0002-0900-0600",
+      "primary_affiliation": "University of Virginia",
+      "affiliations": [
+        "University of Virginia",
+        "University of Colorado Boulder",
+        "University of Colorado System"
+      ],
+      "paper_count": 7,
+      "last_year": 2026,
+      "first_year": 2022,
+      "papers": [
+        {
+          "key": "conference-papers|40",
+          "title": "Optimizing Wastewater Surveillance Sites for COVID-19 Hospitalization Forecasting Across U.S. States",
+          "year": 2026,
+          "section": "Conference and Workshop Papers",
+          "pos": 0
+        },
+        {
+          "key": "journal-articles|33",
+          "title": "Challenges of COVID-19 Case Forecasting in the US, 2020–2021",
+          "year": 2024,
+          "section": "Journal Articles",
+          "pos": 95
+        },
+        {
+          "key": "journal-articles|40",
+          "title": "Wastewater-based Epidemiology for COVID-19 Surveillance: A Survey",
+          "year": 2024,
+          "section": "Journal Articles",
+          "pos": 2
+        },
+        {
+          "key": "conference-papers|28",
+          "title": "Phase-Informed Bayesian Ensemble Models Improve Performance of COVID-19 Forecasts",
+          "year": 2023,
+          "section": "Conference and Workshop Papers",
+          "pos": 1
+        },
+        {
+          "key": "conference-papers|31",
+          "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
+          "year": 2023,
+          "section": "Conference and Workshop Papers",
+          "pos": 2
+        },
+        {
+          "key": "journal-articles|39",
+          "title": "Evaluation of FluSight influenza forecasting in the 2021–22 and 2022–23 seasons with a new target laboratory-confirmed influenza hospitalizations",
+          "year": 2023,
+          "section": "Journal Articles",
+          "pos": 99
+        },
+        {
+          "key": "conference-papers|27",
+          "title": "Enhancing COVID-19 Ensemble Forecasting Model Performance Using Auxiliary Data Sources",
+          "year": 2022,
+          "section": "Conference and Workshop Papers",
+          "pos": 1
+        }
+      ],
+      "openalex_ids": [
+        "https://openalex.org/A5063467309"
       ],
       "consortium_only": false,
       "is_self": false
@@ -6989,28 +7165,28 @@
       "first_year": 2020,
       "papers": [
         {
-          "key": "conference-papers|38",
+          "key": "conference-papers|36",
           "title": "Hazard Function Guided Agent-Based Models: A Case Study of Return Migration from Poland to Ukraine",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 0
         },
         {
-          "key": "conference-papers|39",
+          "key": "conference-papers|37",
           "title": "Agent-based social simulation of spatiotemporal process-triggered graph dynamical systems",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 0
         },
         {
-          "key": "conference-papers|32",
+          "key": "conference-papers|30",
           "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 0
         },
         {
-          "key": "conference-papers|34",
+          "key": "conference-papers|32",
           "title": "Network Agency: An Agent-based Model of Forced Migration from Ukraine",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -7074,7 +7250,7 @@
           "pos": 48
         },
         {
-          "key": "conference-papers|23",
+          "key": "conference-papers|21",
           "title": "All Models Are Useful: Bayesian Ensembling for Robust High Resolution COVID-19 Forecasting",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -7088,7 +7264,7 @@
           "pos": 49
         },
         {
-          "key": "conference-papers|18",
+          "key": "conference-papers|16",
           "title": "From 5Vs to 6Cs: Operationalizing Epidemic Data Management with COVID-19 Surveillance",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -7109,62 +7285,61 @@
       "is_self": false
     },
     {
-      "name": "Andrew Warren",
-      "orcid": "https://orcid.org/0000-0003-2660-0103",
+      "name": "Baltazar Espinoza",
+      "orcid": "https://orcid.org/0000-0002-6280-3277",
       "primary_affiliation": "University of Virginia",
       "affiliations": [
         "University of Virginia"
       ],
       "paper_count": 6,
       "last_year": 2026,
-      "first_year": 2020,
+      "first_year": 2023,
       "papers": [
+        {
+          "key": "conference-papers|39",
+          "title": "Agentic Framework for Epidemiological Modeling",
+          "year": 2026,
+          "section": "Conference and Workshop Papers",
+          "pos": 2
+        },
+        {
+          "key": "conference-papers|40",
+          "title": "Optimizing Wastewater Surveillance Sites for COVID-19 Hospitalization Forecasting Across U.S. States",
+          "year": 2026,
+          "section": "Conference and Workshop Papers",
+          "pos": 4
+        },
         {
           "key": "journal-articles|43",
           "title": "Integrated framework to study genomic surveillance of selective sweeps in multivariants dynamics",
           "year": 2026,
           "section": "Journal Articles",
-          "pos": 2
+          "pos": 0
         },
         {
-          "key": "conference-papers|36",
+          "key": "conference-papers|34",
           "title": "Agent-Based Simulation Framework for Multi-Variant Surveillance",
           "year": 2024,
           "section": "Conference and Workshop Papers",
-          "pos": 8
+          "pos": 2
         },
         {
           "key": "journal-articles|40",
           "title": "Wastewater-based Epidemiology for COVID-19 Surveillance: A Survey",
           "year": 2024,
           "section": "Journal Articles",
-          "pos": 6
+          "pos": 4
         },
         {
           "key": "journal-articles|29",
           "title": "Coupled models of genomic surveillance and evolving pandemics with applications for timely public health interventions",
           "year": 2023,
           "section": "Journal Articles",
-          "pos": 3
-        },
-        {
-          "key": "journal-articles|21",
-          "title": "Data-Driven Scalable Pipeline using National Agent-Based Models for Real-time Pandemic Response and Decision Support",
-          "year": 2022,
-          "section": "Journal Articles",
-          "pos": 12
-        },
-        {
-          "key": "tech-reports|4",
-          "title": "Evaluating the impact of international airline suspensions on the early global spread of COVID-19",
-          "year": 2020,
-          "section": "Technical Reports and Preprints",
-          "pos": 6
+          "pos": 0
         }
       ],
       "openalex_ids": [
-        "https://openalex.org/A5075434620",
-        "https://openalex.org/A5016058860"
+        "https://openalex.org/A5005409744"
       ],
       "consortium_only": false,
       "is_self": false
@@ -7195,21 +7370,21 @@
           "pos": 16
         },
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 7
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 13
         },
         {
-          "key": "conference-papers|18",
+          "key": "conference-papers|16",
           "title": "From 5Vs to 6Cs: Operationalizing Epidemic Data Management with COVID-19 Surveillance",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -7293,68 +7468,6 @@
         "https://openalex.org/A5042168299"
       ],
       "consortium_only": true,
-      "is_self": false
-    },
-    {
-      "name": "Gursharn Kaur",
-      "orcid": "https://orcid.org/0000-0002-0900-0600",
-      "primary_affiliation": "University of Virginia",
-      "affiliations": [
-        "University of Virginia",
-        "University of Colorado Boulder",
-        "University of Colorado System"
-      ],
-      "paper_count": 6,
-      "last_year": 2024,
-      "first_year": 2022,
-      "papers": [
-        {
-          "key": "journal-articles|33",
-          "title": "Challenges of COVID-19 Case Forecasting in the US, 2020–2021",
-          "year": 2024,
-          "section": "Journal Articles",
-          "pos": 95
-        },
-        {
-          "key": "journal-articles|40",
-          "title": "Wastewater-based Epidemiology for COVID-19 Surveillance: A Survey",
-          "year": 2024,
-          "section": "Journal Articles",
-          "pos": 2
-        },
-        {
-          "key": "conference-papers|30",
-          "title": "Phase-Informed Bayesian Ensemble Models Improve Performance of COVID-19 Forecasts",
-          "year": 2023,
-          "section": "Conference and Workshop Papers",
-          "pos": 1
-        },
-        {
-          "key": "conference-papers|33",
-          "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
-          "year": 2023,
-          "section": "Conference and Workshop Papers",
-          "pos": 2
-        },
-        {
-          "key": "journal-articles|39",
-          "title": "Evaluation of FluSight influenza forecasting in the 2021–22 and 2022–23 seasons with a new target laboratory-confirmed influenza hospitalizations",
-          "year": 2023,
-          "section": "Journal Articles",
-          "pos": 99
-        },
-        {
-          "key": "conference-papers|29",
-          "title": "Enhancing COVID-19 Ensemble Forecasting Model Performance Using Auxiliary Data Sources",
-          "year": 2022,
-          "section": "Conference and Workshop Papers",
-          "pos": 1
-        }
-      ],
-      "openalex_ids": [
-        "https://openalex.org/A5063467309"
-      ],
-      "consortium_only": false,
       "is_self": false
     },
     {
@@ -8135,59 +8248,6 @@
       "is_self": false
     },
     {
-      "name": "Baltazar Espinoza",
-      "orcid": "https://orcid.org/0000-0002-6280-3277",
-      "primary_affiliation": "University of Virginia",
-      "affiliations": [
-        "University of Virginia"
-      ],
-      "paper_count": 5,
-      "last_year": 2026,
-      "first_year": 2023,
-      "papers": [
-        {
-          "key": "conference-papers|41",
-          "title": "Agentic Framework for Epidemiological Modeling",
-          "year": 2026,
-          "section": "Conference and Workshop Papers",
-          "pos": 2
-        },
-        {
-          "key": "journal-articles|43",
-          "title": "Integrated framework to study genomic surveillance of selective sweeps in multivariants dynamics",
-          "year": 2026,
-          "section": "Journal Articles",
-          "pos": 0
-        },
-        {
-          "key": "conference-papers|36",
-          "title": "Agent-Based Simulation Framework for Multi-Variant Surveillance",
-          "year": 2024,
-          "section": "Conference and Workshop Papers",
-          "pos": 2
-        },
-        {
-          "key": "journal-articles|40",
-          "title": "Wastewater-based Epidemiology for COVID-19 Surveillance: A Survey",
-          "year": 2024,
-          "section": "Journal Articles",
-          "pos": 4
-        },
-        {
-          "key": "journal-articles|29",
-          "title": "Coupled models of genomic surveillance and evolving pandemics with applications for timely public health interventions",
-          "year": 2023,
-          "section": "Journal Articles",
-          "pos": 0
-        }
-      ],
-      "openalex_ids": [
-        "https://openalex.org/A5005409744"
-      ],
-      "consortium_only": false,
-      "is_self": false
-    },
-    {
       "name": "D. Karlen",
       "orcid": "https://orcid.org/0000-0002-4902-1756",
       "primary_affiliation": "University of Victoria",
@@ -8332,7 +8392,7 @@
           "pos": 1
         },
         {
-          "key": "conference-papers|11",
+          "key": "conference-papers|10",
           "title": "Epidemic Forecasting by Combining Agent-Based Models and Smart Beam-Particle Filtering Framework",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -8365,28 +8425,28 @@
       "first_year": 2024,
       "papers": [
         {
-          "key": "conference-papers|38",
+          "key": "conference-papers|36",
           "title": "Hazard Function Guided Agent-Based Models: A Case Study of Return Migration from Poland to Ukraine",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 7
         },
         {
-          "key": "conference-papers|39",
+          "key": "conference-papers|37",
           "title": "Agent-based social simulation of spatiotemporal process-triggered graph dynamical systems",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 6
         },
         {
-          "key": "conference-papers|32",
+          "key": "conference-papers|30",
           "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 12
         },
         {
-          "key": "conference-papers|34",
+          "key": "conference-papers|32",
           "title": "Network Agency: An Agent-based Model of Forced Migration from Ukraine",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -8644,7 +8704,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -8665,7 +8725,7 @@
           "pos": 5
         },
         {
-          "key": "conference-papers|22",
+          "key": "conference-papers|20",
           "title": "Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -9009,7 +9069,7 @@
       "first_year": 2018,
       "papers": [
         {
-          "key": "conference-papers|21",
+          "key": "conference-papers|19",
           "title": "Scalable Epidemiological Workflows to Support COVID-19 Planning and Response",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -9504,7 +9564,7 @@
           "pos": 7
         },
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -9674,21 +9734,21 @@
       "first_year": 2024,
       "papers": [
         {
-          "key": "conference-papers|38",
+          "key": "conference-papers|36",
           "title": "Hazard Function Guided Agent-Based Models: A Case Study of Return Migration from Poland to Ukraine",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 2
         },
         {
-          "key": "conference-papers|32",
+          "key": "conference-papers|30",
           "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 1
         },
         {
-          "key": "conference-papers|34",
+          "key": "conference-papers|32",
           "title": "Network Agency: An Agent-based Model of Forced Migration from Ukraine",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -9813,7 +9873,7 @@
       "first_year": 2017,
       "papers": [
         {
-          "key": "conference-papers|41",
+          "key": "conference-papers|39",
           "title": "Agentic Framework for Epidemiological Modeling",
           "year": 2026,
           "section": "Conference and Workshop Papers",
@@ -10003,7 +10063,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -10277,14 +10337,14 @@
       "first_year": 2024,
       "papers": [
         {
-          "key": "conference-papers|32",
+          "key": "conference-papers|30",
           "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 7
         },
         {
-          "key": "conference-papers|34",
+          "key": "conference-papers|32",
           "title": "Network Agency: An Agent-based Model of Forced Migration from Ukraine",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -10317,14 +10377,14 @@
       "first_year": 2024,
       "papers": [
         {
-          "key": "conference-papers|32",
+          "key": "conference-papers|30",
           "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 9
         },
         {
-          "key": "conference-papers|34",
+          "key": "conference-papers|32",
           "title": "Network Agency: An Agent-based Model of Forced Migration from Ukraine",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -10356,14 +10416,14 @@
       "first_year": 2020,
       "papers": [
         {
-          "key": "conference-papers|22",
+          "key": "conference-papers|20",
           "title": "Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 0
         },
         {
-          "key": "conference-papers|20",
+          "key": "conference-papers|18",
           "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -10434,14 +10494,14 @@
       "first_year": 2020,
       "papers": [
         {
-          "key": "conference-papers|22",
+          "key": "conference-papers|20",
           "title": "Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 9
         },
         {
-          "key": "conference-papers|20",
+          "key": "conference-papers|18",
           "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -10487,7 +10547,7 @@
           "pos": 306
         },
         {
-          "key": "conference-papers|16",
+          "key": "conference-papers|15",
           "title": "Designing Near-Optimal Temporal Interventions to Contain Epidemics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -10512,14 +10572,14 @@
       "first_year": 2024,
       "papers": [
         {
-          "key": "conference-papers|32",
+          "key": "conference-papers|30",
           "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 10
         },
         {
-          "key": "conference-papers|34",
+          "key": "conference-papers|32",
           "title": "Network Agency: An Agent-based Model of Forced Migration from Ukraine",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -10551,14 +10611,14 @@
       "first_year": 2024,
       "papers": [
         {
-          "key": "conference-papers|32",
+          "key": "conference-papers|30",
           "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 8
         },
         {
-          "key": "conference-papers|34",
+          "key": "conference-papers|32",
           "title": "Network Agency: An Agent-based Model of Forced Migration from Ukraine",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -10793,14 +10853,14 @@
       "first_year": 2020,
       "papers": [
         {
-          "key": "conference-papers|22",
+          "key": "conference-papers|20",
           "title": "Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 3
         },
         {
-          "key": "conference-papers|20",
+          "key": "conference-papers|18",
           "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -11628,14 +11688,14 @@
       "first_year": 2020,
       "papers": [
         {
-          "key": "conference-papers|22",
+          "key": "conference-papers|20",
           "title": "Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway",
           "year": 2021,
           "section": "Conference and Workshop Papers",
           "pos": 12
         },
         {
-          "key": "conference-papers|20",
+          "key": "conference-papers|18",
           "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -11668,7 +11728,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -11829,7 +11889,7 @@
       "first_year": 2015,
       "papers": [
         {
-          "key": "conference-papers|13",
+          "key": "conference-papers|12",
           "title": "Profiling OSN Users Based on Temporal Posting Patterns",
           "year": 2018,
           "section": "Conference and Workshop Papers",
@@ -11883,7 +11943,7 @@
           "pos": 12
         },
         {
-          "key": "conference-papers|12",
+          "key": "conference-papers|11",
           "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -11908,14 +11968,14 @@
       "first_year": 2024,
       "papers": [
         {
-          "key": "conference-papers|32",
+          "key": "conference-papers|30",
           "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
           "year": 2024,
           "section": "Conference and Workshop Papers",
           "pos": 13
         },
         {
-          "key": "conference-papers|34",
+          "key": "conference-papers|32",
           "title": "Network Agency: An Agent-based Model of Forced Migration from Ukraine",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -11992,14 +12052,14 @@
       "first_year": 2022,
       "papers": [
         {
-          "key": "conference-papers|38",
+          "key": "conference-papers|36",
           "title": "Hazard Function Guided Agent-Based Models: A Case Study of Return Migration from Poland to Ukraine",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 1
         },
         {
-          "key": "conference-papers|39",
+          "key": "conference-papers|37",
           "title": "Agent-based social simulation of spatiotemporal process-triggered graph dynamical systems",
           "year": 2025,
           "section": "Conference and Workshop Papers",
@@ -12073,7 +12133,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -12270,7 +12330,7 @@
       "first_year": 2020,
       "papers": [
         {
-          "key": "conference-papers|20",
+          "key": "conference-papers|18",
           "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -12708,7 +12768,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -12740,7 +12800,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -12781,7 +12841,7 @@
           "pos": 7
         },
         {
-          "key": "conference-papers|12",
+          "key": "conference-papers|11",
           "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -12880,7 +12940,7 @@
           "pos": 304
         },
         {
-          "key": "conference-papers|16",
+          "key": "conference-papers|15",
           "title": "Designing Near-Optimal Temporal Interventions to Contain Epidemics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -12913,7 +12973,7 @@
           "pos": 2
         },
         {
-          "key": "conference-papers|12",
+          "key": "conference-papers|11",
           "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -13362,7 +13422,7 @@
       "first_year": 2020,
       "papers": [
         {
-          "key": "conference-papers|18",
+          "key": "conference-papers|16",
           "title": "From 5Vs to 6Cs: Operationalizing Epidemic Data Management with COVID-19 Surveillance",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -13395,7 +13455,7 @@
       "first_year": 2017,
       "papers": [
         {
-          "key": "conference-papers|11",
+          "key": "conference-papers|10",
           "title": "Epidemic Forecasting by Combining Agent-Based Models and Smart Beam-Particle Filtering Framework",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -13428,7 +13488,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -13468,7 +13528,7 @@
           "pos": 13
         },
         {
-          "key": "conference-papers|12",
+          "key": "conference-papers|11",
           "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -13832,7 +13892,7 @@
           "pos": 9
         },
         {
-          "key": "conference-papers|12",
+          "key": "conference-papers|11",
           "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -14033,7 +14093,7 @@
           "pos": 6
         },
         {
-          "key": "conference-papers|12",
+          "key": "conference-papers|11",
           "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -14245,7 +14305,7 @@
           "pos": 8
         },
         {
-          "key": "conference-papers|12",
+          "key": "conference-papers|11",
           "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -14303,7 +14363,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|28",
+          "key": "conference-papers|26",
           "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
           "year": 2022,
           "section": "Conference and Workshop Papers",
@@ -14730,7 +14790,7 @@
       "first_year": 2020,
       "papers": [
         {
-          "key": "conference-papers|16",
+          "key": "conference-papers|15",
           "title": "Designing Near-Optimal Temporal Interventions to Contain Epidemics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -14803,7 +14863,7 @@
           "pos": 11
         },
         {
-          "key": "conference-papers|12",
+          "key": "conference-papers|11",
           "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -14859,7 +14919,7 @@
       "first_year": 2026,
       "papers": [
         {
-          "key": "conference-papers|41",
+          "key": "conference-papers|39",
           "title": "Agentic Framework for Epidemiological Modeling",
           "year": 2026,
           "section": "Conference and Workshop Papers",
@@ -14966,7 +15026,7 @@
           "pos": 3
         },
         {
-          "key": "conference-papers|10",
+          "key": "conference-papers|9",
           "title": "Spatio-temporal optimization of seasonal vaccination using a metapopulation model of influenza",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -15064,7 +15124,7 @@
           "pos": 15
         },
         {
-          "key": "conference-papers|25",
+          "key": "conference-papers|23",
           "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -15131,7 +15191,7 @@
           "pos": 1
         },
         {
-          "key": "conference-papers|12",
+          "key": "conference-papers|11",
           "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -15156,7 +15216,7 @@
       "first_year": 2023,
       "papers": [
         {
-          "key": "conference-papers|36",
+          "key": "conference-papers|34",
           "title": "Agent-Based Simulation Framework for Multi-Variant Surveillance",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -15253,14 +15313,14 @@
       "first_year": 2025,
       "papers": [
         {
-          "key": "conference-papers|37",
+          "key": "conference-papers|35",
           "title": "Causal Analysis of Graph Signals for Brain Effectome Inference",
           "year": 2025,
           "section": "Conference and Workshop Papers",
           "pos": 0
         },
         {
-          "key": "conference-papers|40",
+          "key": "conference-papers|38",
           "title": "Causal Analysis of Graph Signals for Brain Effectome Inference",
           "year": 2025,
           "section": "Conference and Workshop Papers",
@@ -15556,7 +15616,7 @@
           "pos": 10
         },
         {
-          "key": "conference-papers|12",
+          "key": "conference-papers|11",
           "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -15778,7 +15838,7 @@
       "first_year": 2018,
       "papers": [
         {
-          "key": "conference-papers|13",
+          "key": "conference-papers|12",
           "title": "Profiling OSN Users Based on Temporal Posting Patterns",
           "year": 2018,
           "section": "Conference and Workshop Papers",
@@ -16652,7 +16712,7 @@
       "first_year": 2023,
       "papers": [
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -16702,7 +16762,7 @@
       "first_year": 2020,
       "papers": [
         {
-          "key": "conference-papers|20",
+          "key": "conference-papers|18",
           "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -18034,7 +18094,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -18084,7 +18144,7 @@
       "first_year": 2018,
       "papers": [
         {
-          "key": "conference-papers|14",
+          "key": "conference-papers|13",
           "title": "Using Network Reliability to Understand International Food Trade Dynamics",
           "year": 2018,
           "section": "Conference and Workshop Papers",
@@ -18259,7 +18319,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -18436,7 +18496,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -18588,7 +18648,7 @@
       "first_year": 2024,
       "papers": [
         {
-          "key": "conference-papers|34",
+          "key": "conference-papers|32",
           "title": "Network Agency: An Agent-based Model of Forced Migration from Ukraine",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -19674,7 +19734,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -20104,7 +20164,7 @@
       "first_year": 2017,
       "papers": [
         {
-          "key": "conference-papers|11",
+          "key": "conference-papers|10",
           "title": "Epidemic Forecasting by Combining Agent-Based Models and Smart Beam-Particle Filtering Framework",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -20605,7 +20665,7 @@
       "first_year": 2023,
       "papers": [
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -20730,7 +20790,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -20855,7 +20915,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -22691,7 +22751,7 @@
       "first_year": 2023,
       "papers": [
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -23632,7 +23692,7 @@
       "first_year": 2018,
       "papers": [
         {
-          "key": "conference-papers|14",
+          "key": "conference-papers|13",
           "title": "Using Network Reliability to Understand International Food Trade Dynamics",
           "year": 2018,
           "section": "Conference and Workshop Papers",
@@ -24566,7 +24626,7 @@
       "first_year": 2017,
       "papers": [
         {
-          "key": "conference-papers|11",
+          "key": "conference-papers|10",
           "title": "Epidemic Forecasting by Combining Agent-Based Models and Smart Beam-Particle Filtering Framework",
           "year": 2017,
           "section": "Conference and Workshop Papers",
@@ -25043,7 +25103,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|22",
+          "key": "conference-papers|20",
           "title": "Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -25644,7 +25704,7 @@
       "first_year": 2020,
       "papers": [
         {
-          "key": "conference-papers|18",
+          "key": "conference-papers|16",
           "title": "From 5Vs to 6Cs: Operationalizing Epidemic Data Management with COVID-19 Surveillance",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -25717,7 +25777,7 @@
       "first_year": 2026,
       "papers": [
         {
-          "key": "conference-papers|41",
+          "key": "conference-papers|39",
           "title": "Agentic Framework for Epidemiological Modeling",
           "year": 2026,
           "section": "Conference and Workshop Papers",
@@ -26172,7 +26232,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -27081,7 +27141,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|24",
+          "key": "conference-papers|22",
           "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -27106,7 +27166,7 @@
       "first_year": 2024,
       "papers": [
         {
-          "key": "conference-papers|32",
+          "key": "conference-papers|30",
           "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
           "year": 2024,
           "section": "Conference and Workshop Papers",
@@ -27231,7 +27291,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|22",
+          "key": "conference-papers|20",
           "title": "Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -27332,7 +27392,7 @@
       "first_year": 2020,
       "papers": [
         {
-          "key": "conference-papers|18",
+          "key": "conference-papers|16",
           "title": "From 5Vs to 6Cs: Operationalizing Epidemic Data Management with COVID-19 Surveillance",
           "year": 2020,
           "section": "Conference and Workshop Papers",
@@ -27357,7 +27417,7 @@
       "first_year": 2023,
       "papers": [
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -28242,7 +28302,7 @@
       "first_year": 2021,
       "papers": [
         {
-          "key": "conference-papers|21",
+          "key": "conference-papers|19",
           "title": "Scalable Epidemiological Workflows to Support COVID-19 Planning and Response",
           "year": 2021,
           "section": "Conference and Workshop Papers",
@@ -28394,7 +28454,7 @@
       "first_year": 2023,
       "papers": [
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -28570,7 +28630,7 @@
       "first_year": 2023,
       "papers": [
         {
-          "key": "conference-papers|33",
+          "key": "conference-papers|31",
           "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
           "year": 2023,
           "section": "Conference and Workshop Papers",
@@ -29302,7 +29362,7 @@
       "first_year": 2026,
       "papers": [
         {
-          "key": "conference-papers|41",
+          "key": "conference-papers|39",
           "title": "Agentic Framework for Epidemiological Modeling",
           "year": 2026,
           "section": "Conference and Workshop Papers",
@@ -29656,7 +29716,7 @@
       "first_year": 2026,
       "papers": [
         {
-          "key": "conference-papers|41",
+          "key": "conference-papers|39",
           "title": "Agentic Framework for Epidemiological Modeling",
           "year": 2026,
           "section": "Conference and Workshop Papers",

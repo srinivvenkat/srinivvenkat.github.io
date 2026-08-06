@@ -1,6 +1,6 @@
 {
   "_readme": "Full, ordered author list per publication, keyed by '<section-id>|<entry-number>' to match the <section id> and <li value> in publications.html. js/pub-authors.js fetches this at load time and turns each condensing ellipsis ('...') in a citation into a hoverable button that reveals the complete list. Names are taken verbatim from OpenAlex (via tools/.openalex_cache.json); papers OpenAlex does not index are omitted (their ellipsis stays plain text). Regenerate with tools/build_paper_authors.py.",
-  "count": 95,
+  "count": 97,
   "source": "OpenAlex (https://openalex.org)",
   "entries": {
     "book-chapters|3": [
@@ -1630,7 +1630,19 @@
       "Srinivasan Venkatramanan",
       "Anurag Kumar"
     ],
-    "conference-papers|41": [
+    "conference-papers|40": [
+      "Gursharn Kaur",
+      "Jiangzhuo Chen",
+      "Abhijin Adiga",
+      "Aniruddha Adiga",
+      "Baltazar Espinoza",
+      "Bryan Lewis",
+      "Madhav Marathe",
+      "Srinivasan Venkatramanan",
+      "Andrew Warren",
+      "Anil Vullikanti"
+    ],
+    "conference-papers|39": [
       "Rituparna Datta",
       "Zihan Guan",
       "Baltazar Espinoza",
@@ -1640,13 +1652,13 @@
       "Naren Ramakrishnan",
       "Anil Vullikanti"
     ],
-    "conference-papers|40": [
+    "conference-papers|38": [
       "Srikar Mutnuri",
       "Aniruddha Adiga",
       "Srinivasan Venkatramanan",
       "Madhav Marathe"
     ],
-    "conference-papers|39": [
+    "conference-papers|37": [
       "Zakaria Mehrab",
       "S. S. Ravi",
       "Henning Mortveit",
@@ -1656,7 +1668,7 @@
       "David Leblang",
       "Madhav Marathe"
     ],
-    "conference-papers|38": [
+    "conference-papers|36": [
       "Zakaria Mehrab",
       "S. S. Ravi",
       "Logan Stundal",
@@ -1667,13 +1679,13 @@
       "David Leblang",
       "Madhav Marathe"
     ],
-    "conference-papers|37": [
+    "conference-papers|35": [
       "Srikar Mutnuri",
       "Aniruddha Adiga",
       "Srinivasan Venkatramanan",
       "Madhav Marathe"
     ],
-    "conference-papers|36": [
+    "conference-papers|34": [
       "Sifat Afroj Moon",
       "Jiangzhuo Chen",
       "Baltazar Espinoza",
@@ -1684,7 +1696,7 @@
       "Anil Vullikanti",
       "Andrew Warren"
     ],
-    "conference-papers|34": [
+    "conference-papers|32": [
       "Zakaria Mehrab",
       "Logan Stundal",
       "samarth swarup",
@@ -1700,7 +1712,7 @@
       "Rita Colwell",
       "Madhav Marathe"
     ],
-    "conference-papers|32": [
+    "conference-papers|30": [
       "Zakaria Mehrab",
       "Logan Stundal",
       "Srinivasan Venkatramanan",
@@ -1717,7 +1729,7 @@
       "Rita R. Colwell",
       "Madhav Marathe"
     ],
-    "conference-papers|33": [
+    "conference-papers|31": [
       "Aniruddha Adiga",
       "Benjamin Hurt",
       "Gursharn Kaur",
@@ -1736,27 +1748,27 @@
       "Gopal Krishna Patra",
       "Siva Athreya"
     ],
-    "conference-papers|30": [
-      "Aniruddha Adiga",
-      "Gursharn Kaur",
-      "Lijing Wang",
-      "Benjamin Hurt",
-      "Przemyslaw Porebski",
-      "Srinivasan Venkatramanan",
-      "Bryan Lewis",
-      "Madhav Marathe"
-    ],
-    "conference-papers|29": [
-      "Aniruddha Adiga",
-      "Gursharn Kaur",
-      "Benjamin Hurt",
-      "Lijing Wang",
-      "Przemyslaw Porebski",
-      "Srinivasan Venkatramanan",
-      "Bryan Lewis",
-      "Madhav Marathe"
-    ],
     "conference-papers|28": [
+      "Aniruddha Adiga",
+      "Gursharn Kaur",
+      "Lijing Wang",
+      "Benjamin Hurt",
+      "Przemyslaw Porebski",
+      "Srinivasan Venkatramanan",
+      "Bryan Lewis",
+      "Madhav Marathe"
+    ],
+    "conference-papers|27": [
+      "Aniruddha Adiga",
+      "Gursharn Kaur",
+      "Benjamin Hurt",
+      "Lijing Wang",
+      "Przemyslaw Porebski",
+      "Srinivasan Venkatramanan",
+      "Bryan Lewis",
+      "Madhav Marathe"
+    ],
+    "conference-papers|26": [
       "Jiangzhuo Chen",
       "Stefan Hoops",
       "Achla Marathe",
@@ -1775,7 +1787,7 @@
       "Christopher L. Barrett",
       "Madhav Marathe"
     ],
-    "conference-papers|26": [
+    "conference-papers|24": [
       "Lijing Wang",
       "Aniruddha Adiga",
       "Jiangzhuo Chen",
@@ -1783,7 +1795,7 @@
       "Srinivasan Venkatramanan",
       "Madhav Marathe"
     ],
-    "conference-papers|25": [
+    "conference-papers|23": [
       "Parantapa Bhattacharya",
       "Dustin Machi",
       "Jiangzhuo Chen",
@@ -1803,7 +1815,7 @@
       "Christopher L. Barrett",
       "Madhav Marathe"
     ],
-    "conference-papers|24": [
+    "conference-papers|22": [
       "Stefan Hoops",
       "Jiangzhuo Chen",
       "Abhijin Adiga",
@@ -1825,7 +1837,7 @@
       "Madhav Marathe",
       "Carter C. Price"
     ],
-    "conference-papers|23": [
+    "conference-papers|21": [
       "Aniruddha Adiga",
       "Lijing Wang",
       "Benjamin Hurt",
@@ -1835,7 +1847,7 @@
       "Bryan Lewis",
       "Madhav Marathe"
     ],
-    "conference-papers|22": [
+    "conference-papers|20": [
       "Alok Talekar",
       "Sharad Shriram",
       "Nidhin Koshy Vaidhiyan",
@@ -1850,7 +1862,7 @@
       "Rajesh Sundaresan",
       "Milind Tambe"
     ],
-    "conference-papers|21": [
+    "conference-papers|19": [
       "Dustin Machi",
       "Parantapa Bhattacharya",
       "Stefan Hoops",
@@ -1864,7 +1876,7 @@
       "Christopher L. Barrett",
       "Madhav Marathe"
     ],
-    "conference-papers|20": [
+    "conference-papers|18": [
       "Lijing Wang",
       "Xue Ben",
       "Aniruddha Adiga",
@@ -1881,7 +1893,7 @@
       "Milind Tambe",
       "Madhav Marathe"
     ],
-    "conference-papers|19": [
+    "conference-papers|17": [
       "Lijing Wang",
       "Aniruddha Adiga",
       "Srinivasan Venkatramanan",
@@ -1889,7 +1901,7 @@
       "Bryan Lewis",
       "Madhav Marathe"
     ],
-    "conference-papers|18": [
+    "conference-papers|16": [
       "Akhil Sai Peddireddy",
       "Dawen Xie",
       "Pramod Patil",
@@ -1903,14 +1915,14 @@
       "Erin Raymond",
       "Madhav Marathe"
     ],
-    "conference-papers|16": [
+    "conference-papers|15": [
       "Prathyush Sambaturu",
       "Bijaya Adhikari",
       "B. Aditya Prakash",
       "Srinivasan Venkatramanan",
       "Anil Vullikanti"
     ],
-    "conference-papers|14": [
+    "conference-papers|13": [
       "Madhurima Nath",
       "Srinivasan Venkatramanan",
       "Bryan Kaperick",
@@ -1919,13 +1931,13 @@
       "Achla Marathe",
       "Abhijin Adiga"
     ],
-    "conference-papers|13": [
+    "conference-papers|12": [
       "Qiu Fang Ying",
       "Dah Ming Chiu",
       "Srinivasan Venkatramanan",
       "Xiaopeng Zhang"
     ],
-    "conference-papers|12": [
+    "conference-papers|11": [
       "Srinivasan Venkatramanan",
       "Sichao Wu",
       "Bowen Shi",
@@ -1942,7 +1954,7 @@
       "George W. Norton",
       "Abhijin Adiga"
     ],
-    "conference-papers|11": [
+    "conference-papers|10": [
       "Farzaneh Sadat Tabataba",
       "Bryan Lewis",
       "Milad Hosseinipour",
@@ -1952,7 +1964,7 @@
       "Dave Higdon",
       "Madhav Marathe"
     ],
-    "conference-papers|10": [
+    "conference-papers|9": [
       "Srinivasan Venkatramanan",
       "Jiangzhuo Chen",
       "Sandeep Gupta",
@@ -1998,6 +2010,17 @@
     "conference-papers|1": [
       "Srinivasan Venkatramanan",
       "Anurag Kumar"
+    ],
+    "tech-reports|15": [
+      "Rituparna Datta",
+      "Srini Venkatramanan",
+      "Bryan L. Lewis",
+      "Y W Su",
+      "Harry Hochheiser",
+      "Lucie Contamin",
+      "Parantapa Bhattacharya",
+      "Naren Ramakrishnan",
+      "Anil Vullikanti"
     ],
     "tech-reports|14": [
       "Aniruddha Adiga",

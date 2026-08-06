@@ -1,9 +1,9 @@
 {
   "_readme": "Single source of truth for the publication abstracts shown on publications.html. The page fetches this file once at load time (js/abstracts.js, shared with js/pub-search.js via window.abstractsPromise): abstracts.js renders an 'Abstract' toggle for every entry whose 'abstract' field is non-null, and pub-search.js indexes the same text so the search box matches on abstracts as well as citations. Keys are '<section-id>|<entry-number>' and match the <section id> and <li value> in publications.html — edit an abstract here and the page picks it up, no HTML changes. Abstract text is the authors' own, retrieved verbatim from the publisher record for each DOI/arXiv/medRxiv ID; none is paraphrased or generated. Blank lines (\\n\\n) separate paragraphs and **bold** marks structured-abstract section labels. author_count and consortium_paper are auto-maintained by tools/build_authors.py: author_count is the full OpenAlex author count (null when the paper isn't in OpenAlex), and consortium_paper is true when author_count > 30 (large forecasting/scenario-hub efforts). A separate 'talks' block holds abstracts for entries on talks.html, keyed the same way ('<section-id>|<entry-number>') against that page's sections. It is kept apart from 'entries' because everything downstream of this file (tools/build_wordcloud.py, build_authors.py, build_bibtex.py, js/pub-search.js) treats 'entries' as the publication list and would otherwise index conference talks as papers. js/abstracts.js renders both blocks and simply skips any key whose section is not on the current page.",
   "counts": {
-    "entries": 104,
-    "with_abstract": 91,
-    "without_abstract": 13,
+    "entries": 102,
+    "with_abstract": 93,
+    "without_abstract": 9,
     "consortium_papers": 11
   },
   "abstract_sources": {
@@ -629,10 +629,10 @@
       "author_count": 2,
       "consortium_paper": false
     },
-    "conference-papers|42": {
+    "conference-papers|40": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 42,
+      "number": 40,
       "year": "2026",
       "title": "Optimizing Wastewater Surveillance Sites for COVID-19 Hospitalization Forecasting Across U.S. States",
       "citation": "G. Kaur, J. Chen, ..., SV, A. Warren, A. Vullikanti, \"Optimizing Wastewater Surveillance Sites for COVID-19 Hospitalization Forecasting Across U.S. States\", accepted at Winter Simulation Conference, 2026 (medRxiv:2026.07.20.26358167)",
@@ -640,13 +640,13 @@
       "abstract": null,
       "abstract_source": null,
       "abstract_unavailable_reason": "accepted for WSC 2026; not yet published",
-      "author_count": null,
+      "author_count": 10,
       "consortium_paper": false
     },
-    "conference-papers|41": {
+    "conference-papers|39": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 41,
+      "number": 39,
       "year": "2026",
       "title": "Agentic Framework for Epidemiological Modeling",
       "citation": "R. Datta, Z. Guan, ..., SV, N. Ramakrishnan, and A. Vullikanti, \"Agentic Framework for Epidemiological Modeling\", International Conference on Machine Learning (ICML), 2026 (arXiv:2602.00299)",
@@ -656,10 +656,10 @@
       "author_count": 8,
       "consortium_paper": false
     },
-    "conference-papers|40": {
+    "conference-papers|38": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 40,
+      "number": 38,
       "year": "2025",
       "title": "Causal Analysis of Graph Signals for Brain Effectome Inference",
       "citation": "S. Mutnuri, A. Adiga, SV, M. Marathe, \"Causal Analysis of Graph Signals for Brain Effectome Inference\", Asilomar Conference on Signals, Systems, and Computers (ASILOMAR), 2025",
@@ -669,10 +669,10 @@
       "author_count": 4,
       "consortium_paper": false
     },
-    "conference-papers|39": {
+    "conference-papers|37": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 39,
+      "number": 37,
       "year": "2025",
       "title": "Agent-based social simulation of spatiotemporal process-triggered graph dynamical systems",
       "citation": "Z. Mehrab, S. S. Ravi, H. Mortveit, SV, S. Swarup, B. Lewis, D. Leblang, and M. Marathe, \"Agent-based social simulation of spatiotemporal process-triggered graph dynamical systems\", Winter Simulation Conference (WSC), 2025",
@@ -682,10 +682,10 @@
       "author_count": 8,
       "consortium_paper": false
     },
-    "conference-papers|38": {
+    "conference-papers|36": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 38,
+      "number": 36,
       "year": "2025",
       "title": "Hazard Function Guided Agent-Based Models: A Case Study of Return Migration from Poland to Ukraine",
       "citation": "Z. Mehrab, S.S. Ravi, L. Stundal, S. Swarup, SV, B. Lewis, H. Mortveit, D. Leblang, M. Marathe, \"Hazard Function Guided Agent-Based Models: A Case Study of Return Migration from Poland to Ukraine\", The 34th International Joint Conference on Artificial Intelligence (IJCAI-25) – AI and Social Good Track",
@@ -695,10 +695,10 @@
       "author_count": 9,
       "consortium_paper": false
     },
-    "conference-papers|37": {
+    "conference-papers|35": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 37,
+      "number": 35,
       "year": "2025",
       "title": "Causal Analysis of Graph Signals for Brain Effectome Inference",
       "citation": "S. Mutnuri, A. Adiga, SV, M. Marathe, \"Causal Analysis of Graph Signals for Brain Effectome Inference\", oral presentation at Graph Signal Processing Workshop (GSP), 2025",
@@ -708,10 +708,10 @@
       "author_count": 4,
       "consortium_paper": false
     },
-    "conference-papers|36": {
+    "conference-papers|34": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 36,
+      "number": 34,
       "year": "2024",
       "title": "Agent-Based Simulation Framework for Multi-Variant Surveillance",
       "citation": "S. A. Moon, J. Chen, ..., SV, A. Vullikanti, A. Warren, \"Agent-Based Simulation Framework for Multi-Variant Surveillance\", Winter Simulation Conference (WSC), 2024",
@@ -721,10 +721,10 @@
       "author_count": 9,
       "consortium_paper": false
     },
-    "conference-papers|35": {
+    "conference-papers|33": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 35,
+      "number": 33,
       "year": "2024",
       "title": "VISHN: Viral Load and Immunity Simulation on a Host Network",
       "citation": "J. Nachison, SV, \"VISHN: Viral Load and Immunity Simulation on a Host Network\", Annual Modeling and Simulation Conference (ANNSIM), 2024",
@@ -735,10 +735,10 @@
       "author_count": null,
       "consortium_paper": false
     },
-    "conference-papers|34": {
+    "conference-papers|32": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 34,
+      "number": 32,
       "year": "2024",
       "title": "Network Agency: An Agent-based Model of Forced Migration from Ukraine",
       "citation": "Z. Mehrab, L. Stundal, S. Swarup, SV, ..., D. A. Leblang, R. Colwell, and M. Marathe, \"Network Agency: An Agent-based Model of Forced Migration from Ukraine\", The 23rd International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS), 2024",
@@ -748,10 +748,10 @@
       "author_count": 14,
       "consortium_paper": false
     },
-    "conference-papers|32": {
+    "conference-papers|30": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 32,
+      "number": 30,
       "year": "2024",
       "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
       "citation": "Z. Mehrab, L. Stundal, SV, ..., D. Leblang, R. Colwell, and M. Marathe, \"A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration\", The Thirty-Sixth Annual Conference on Innovative Applications of Artificial Intelligence (IAAI-24)",
@@ -761,10 +761,10 @@
       "author_count": 15,
       "consortium_paper": false
     },
-    "conference-papers|33": {
+    "conference-papers|31": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 33,
+      "number": 31,
       "year": "2023",
       "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
       "citation": "A. Adiga, S. Athreya, ..., R. Sundaresan, SV, and S. Yasodharan, \"A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India\", Winter Simulation Conference (WSC), 2023",
@@ -774,24 +774,23 @@
       "author_count": 17,
       "consortium_paper": false
     },
-    "conference-papers|31": {
+    "conference-papers|29": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 31,
+      "number": 29,
       "year": "2023",
       "title": "A Robust Deep Learning Framework Reveals the Spread of Multiple Invasive Plants in a Biodiversity Hotspot using Satellite Imagery",
       "citation": "A. Adiga, S. Singh, ..., SV, M. Marathe, and A. Adiga, \"A Robust Deep Learning Framework Reveals the Spread of Multiple Invasive Plants in a Biodiversity Hotspot using Satellite Imagery\", Workshop on Artificial Intelligence for Social Good, co-held with AAAI, 2023",
-      "url": "https://scholar.google.com/scholar?q=A%20Robust%20Deep%20Learning%20Framework%20Reveals%20the%20Spread%20of%20Multiple%20Invasive%20Plants%20in%20a%20Biodiversity%20Hotspot%20using%20Satellite%20Imagery",
-      "abstract": null,
-      "abstract_source": null,
-      "abstract_unavailable_reason": "AAAI workshop paper; no indexed abstract",
+      "url": "papers/adiga23deep-learning.pdf",
+      "abstract": "Invading alien plants cause significant damage to biodiversity, agriculture, and the economy. Remote sensing coupled with deep learning is a promising approach to map their presence. However, seasonal variations in plant biology, field survey limitations, and the need to use expensive high-resolution imagery due to sparse coverage conditions severely limit the amount of training data that can be collected. We develop a patch-based framework using convolutional neural networks (CNNs) to predict the distribution of invasive plants from four-band high-resolution satellite imagery. The framework is applied to map three major invasive plants in a biodiversity hotspot. To cope with data challenges, we employ a robust training and evaluation framework using a multiplehold-out method and Bayesian-optimization-based parameter tuning for model selection and transfer learning. Distribution maps obtained from ensemble predictions indicate that the three invasive plants are widespread in the landscape, even at higher elevation levels in the midhills of Nepal that are considered to be unsuitable for establishment. We evaluate several CNNs with various patch sizes, band subsets, initial CNN weights, and image acquisition periods.",
+      "abstract_source": "Author manuscript (PDF in papers/)",
       "author_count": null,
       "consortium_paper": false
     },
-    "conference-papers|30": {
+    "conference-papers|28": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 30,
+      "number": 28,
       "year": "2023",
       "title": "Phase-Informed Bayesian Ensemble Models Improve Performance of COVID-19 Forecasts",
       "citation": "A. Adiga, G. Kaur, L. Wang, B. Hurt, P. Porebski, SV, B. Lewis, and M. Marathe, \"Phase-Informed Bayesian Ensemble Models Improve Performance of COVID-19 Forecasts\", The Thirty-Fifth Annual Conference on Innovative Applications of Artificial Intelligence (IAAI-23)",
@@ -801,10 +800,10 @@
       "author_count": 8,
       "consortium_paper": false
     },
-    "conference-papers|29": {
+    "conference-papers|27": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 29,
+      "number": 27,
       "year": "2022",
       "title": "Enhancing COVID-19 Ensemble Forecasting Model Performance Using Auxiliary Data Sources",
       "citation": "A. Adiga, G. Kaur, L. Wang, B. Hurt, P. Porebski, SV, B. Lewis, and M. Marathe, \"Enhancing COVID-19 Ensemble Forecasting Model Performance Using Auxiliary Data Sources\", IEEE International Conference on Big Data (IEEE BigData), 2022 [Best Paper Award]",
@@ -814,10 +813,10 @@
       "author_count": 8,
       "consortium_paper": false
     },
-    "conference-papers|28": {
+    "conference-papers|26": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 28,
+      "number": 26,
       "year": "2022",
       "title": "Effective Social Network-Based Allocation of COVID-19 Vaccines",
       "citation": "J. Chen, S. Hoops, A. Marathe, H. Mortveit, B. Lewis, SV, ..., C. Barrett, and M. Marathe, \"Effective Social Network-Based Allocation of COVID-19 Vaccines\", Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, 4675–4683, 2022",
@@ -827,10 +826,10 @@
       "author_count": 17,
       "consortium_paper": false
     },
-    "conference-papers|27": {
+    "conference-papers|25": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 27,
+      "number": 25,
       "year": "2022",
       "title": "Impact of Seeding and Spatial Heterogeneity on Metapopulation Disease Dynamics",
       "citation": "R. Rajuladevi, M. Marathe, P. Porebski, SV, \"Impact of Seeding and Spatial Heterogeneity on Metapopulation Disease Dynamics\", epiDAMIK 5.0: The 5th International Workshop on Epidemiology meets Data Mining and Knowledge Discovery, co-held with KDD, 2022",
@@ -841,10 +840,10 @@
       "author_count": null,
       "consortium_paper": false
     },
-    "conference-papers|26": {
+    "conference-papers|24": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 26,
+      "number": 24,
       "year": "2022",
       "title": "CausalGNN: Causal-Based Graph Neural Networks for Spatio-Temporal Epidemic Forecasting",
       "citation": "L. Wang, A. Adiga, J. Chen, A. Sadilek, SV, M. Marathe, \"CausalGNN: Causal-Based Graph Neural Networks for Spatio-Temporal Epidemic Forecasting\", Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI-22), 2022",
@@ -854,10 +853,10 @@
       "author_count": 6,
       "consortium_paper": false
     },
-    "conference-papers|25": {
+    "conference-papers|23": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 25,
+      "number": 23,
       "year": "2021",
       "title": "AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US",
       "citation": "P. Bhattacharya, D. Machi, J. Chen, S. Hoops, B. Lewis, H. Mortveit, SV, ..., C. Barrett, and M. Marathe, \"AI-Driven Agent-Based Models to Study the Role of Vaccine Acceptance in Controlling COVID-19 Spread in the US\", IEEE International Conference on Big Data (IEEE BigData), 2021",
@@ -867,10 +866,10 @@
       "author_count": 18,
       "consortium_paper": false
     },
-    "conference-papers|24": {
+    "conference-papers|22": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 24,
+      "number": 22,
       "year": "2021",
       "title": "High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols",
       "citation": "S. Hoops, J. Chen, A. Adiga, B. Lewis, H. Mortveit, ..., SV, ..., C. Barrett, M. Marathe, and C. Price, \"High Performance Agent-Based Modeling to Study Realistic Contact Tracing Protocols\", Winter Simulation Conference (WSC), 2021",
@@ -880,10 +879,10 @@
       "author_count": 20,
       "consortium_paper": false
     },
-    "conference-papers|23": {
+    "conference-papers|21": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 23,
+      "number": 21,
       "year": "2021",
       "title": "All Models Are Useful: Bayesian Ensembling for Robust High Resolution COVID-19 Forecasting",
       "citation": "A. Adiga, L. Wang, B. Hurt, A. S. Peddireddy, P. Porebski, SV, B. Lewis, and M. Marathe, \"All Models Are Useful: Bayesian Ensembling for Robust High Resolution COVID-19 Forecasting\", ACM SIGKDD Conference on Knowledge Discovery & Data Mining, 2021",
@@ -893,10 +892,10 @@
       "author_count": 8,
       "consortium_paper": false
     },
-    "conference-papers|22": {
+    "conference-papers|20": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 22,
+      "number": 20,
       "year": "2021",
       "title": "Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway",
       "citation": "A. Talekar, N. Vaidhiyan, S. Shriram, G. Aggarwal, J. Chen, SV, L. Wang, A. Adiga, A. Sadilek, A. Tendulkar, M. Marathe, R. Sundaresan and M. Tambe, \"Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway\", extended abstract at International Conference on Autonomous Agents and Multiagent Systems (AAMAS), 2021",
@@ -906,10 +905,10 @@
       "author_count": 13,
       "consortium_paper": false
     },
-    "conference-papers|21": {
+    "conference-papers|19": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 21,
+      "number": 19,
       "year": "2021",
       "title": "Scalable Epidemiological Workflows to Support COVID-19 Planning and Response",
       "citation": "D. Machi, P. Bhattacharya, S. Hoops, J. Chen, H. Mortveit, SV, B. Lewis, M. Wilson, A. Fadikar, T. Maiden, C. L. Barrett, M. V. Marathe, \"Scalable Epidemiological Workflows to Support COVID-19 Planning and Response\", IEEE International Parallel & Distributed Processing Symposium (IPDPS), 2021",
@@ -919,10 +918,10 @@
       "author_count": 12,
       "consortium_paper": false
     },
-    "conference-papers|20": {
+    "conference-papers|18": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 20,
+      "number": 18,
       "year": "2020",
       "title": "Using Mobility Data to Understand and Forecast COVID19 Dynamics",
       "citation": "L. Wang, A. Adiga, A. Sadilek, A. Tendulkar, SV, A. Vullikanti, G. Aggarwal, A. Talekar, J. Chen, B. Lewis, S. Swarup, A. Kapoor, M. Tambe, and M. Marathe, \"Using Mobility Data to Understand and Forecast COVID19 Dynamics\", AI for Social Good Workshop, International Joint Conference on Artificial Intelligence (IJCAI), 2020",
@@ -932,10 +931,10 @@
       "author_count": 15,
       "consortium_paper": false
     },
-    "conference-papers|19": {
+    "conference-papers|17": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 19,
+      "number": 17,
       "year": "2020",
       "title": "Examining Deep Learning Models with Multiple Data Sources for COVID-19 Forecasting",
       "citation": "L. Wang, A. Adiga, SV, J. Chen, B. Lewis, and M. Marathe, \"Examining Deep Learning Models with Multiple Data Sources for COVID-19 Forecasting\", IEEE BigData Workshop on Data Science in Medicine and Healthcare (DSMH), 2020",
@@ -945,10 +944,10 @@
       "author_count": 6,
       "consortium_paper": false
     },
-    "conference-papers|18": {
+    "conference-papers|16": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 18,
+      "number": 16,
       "year": "2020",
       "title": "From 5Vs to 6Cs: Operationalizing Epidemic Data Management with COVID-19 Surveillance",
       "citation": "A. S. Peddireddy, D. Xie, P. Patil, M. Wilson, D. Machi, SV, B. Klahn, P. Porebski, P. Bhattacharya, S. Dumbre, E. Raymond, and M. Marathe, \"From 5Vs to 6Cs: Operationalizing Epidemic Data Management with COVID-19 Surveillance\", IEEE International Conference on Big Data (IEEE BigData), 2020",
@@ -958,24 +957,10 @@
       "author_count": 12,
       "consortium_paper": false
     },
-    "conference-papers|17": {
+    "conference-papers|15": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 17,
-      "year": "2020",
-      "title": "A Deep Learning Framework for Invasive Species Mapping using High-Resolution Satellite Imagery",
-      "citation": "A. Adiga, S. Singh, E. Choo, SV, M. Marathe, P. Jha, S. Dhakal, K. Poudel, B. B. Shreshta, R. Muniappan, S. Mahajan, A. Devkota, A. Adiga, \"A Deep Learning Framework for Invasive Species Mapping using High-Resolution Satellite Imagery\", ASPRS Annual Conference, 2020",
-      "url": "https://scholar.google.com/scholar?q=A%20Deep%20Learning%20Framework%20for%20Invasive%20Species%20Mapping%20using%20High-Resolution%20Satellite%20Imagery",
-      "abstract": null,
-      "abstract_source": null,
-      "abstract_unavailable_reason": "ASPRS conference paper; no indexed abstract",
-      "author_count": null,
-      "consortium_paper": false
-    },
-    "conference-papers|16": {
-      "section": "conference-papers",
-      "section_label": "Conference and Workshop Papers",
-      "number": 16,
+      "number": 15,
       "year": "2020",
       "title": "Designing Near-Optimal Temporal Interventions to Contain Epidemics",
       "citation": "P. Sambaturu, B. Adhikari, B. A. Prakash, SV, and A. Vullikanti, \"Designing Near-Optimal Temporal Interventions to Contain Epidemics\", International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS), 2020",
@@ -985,24 +970,23 @@
       "author_count": 5,
       "consortium_paper": false
     },
-    "conference-papers|15": {
-      "section": "conference-papers",
-      "section_label": "Conference and Workshop Papers",
-      "number": 15,
-      "year": "2019",
-      "title": "Understanding the Role of Seasonal Food Trade Networks in Invasive Species Spread",
-      "citation": "A. Adiga, SV, S. Wu, M. Marathe, S. Eubank, L. P. Sah, A. P. Giri, L. Colavito, R. Muniappan, \"Understanding the Role of Seasonal Food Trade Networks in Invasive Species Spread\", SIAM Workshop of Network Science, 2019",
-      "url": "https://scholar.google.com/scholar?q=Understanding%20the%20Role%20of%20Seasonal%20Food%20Trade%20Networks%20in%20Invasive%20Species%20Spread",
-      "abstract": null,
-      "abstract_source": null,
-      "abstract_unavailable_reason": "SIAM workshop paper; no indexed abstract",
-      "author_count": null,
-      "consortium_paper": false
-    },
     "conference-papers|14": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
       "number": 14,
+      "year": "2019",
+      "title": "Understanding the Role of Seasonal Food Trade Networks in Invasive Species Spread",
+      "citation": "A. Adiga, SV, S. Wu, M. Marathe, S. Eubank, L. P. Sah, A. P. Giri, L. Colavito, R. Muniappan, \"Understanding the Role of Seasonal Food Trade Networks in Invasive Species Spread\", SIAM Workshop of Network Science, 2019",
+      "url": "papers/adiga19understanding.pdf",
+      "abstract": "Trade and transport of goods is widely accepted as a primary pathway for the dispersal of invasive species. A temporal network-based approach is used to model marketto-market seasonal flow of agricultural produce and examine its role in pest spread. Through dynamical analysis of the network, we apply it to study the role of trade in the spread of a major pest of tomato, Tuta absoluta. Network analysis reveals that the roles of nodes as sources or hubs of spread changes with season, and hence makes the network more vulnerable to attacks. We apply a novel ranking-based inference approach to show that tomato trade is a driving factor in the rapid spread of this pest.",
+      "abstract_source": "Author manuscript (PDF in papers/)",
+      "author_count": null,
+      "consortium_paper": false
+    },
+    "conference-papers|13": {
+      "section": "conference-papers",
+      "section_label": "Conference and Workshop Papers",
+      "number": 13,
       "year": "2018",
       "title": "Using Network Reliability to Understand International Food Trade Dynamics",
       "citation": "M. Nath, SV, B. Kaperick, S. Eubank, M. Marathe, A. Marathe, and A. Adiga, \"Using Network Reliability to Understand International Food Trade Dynamics\", Complex Networks, 2018",
@@ -1013,10 +997,10 @@
       "author_count": 7,
       "consortium_paper": false
     },
-    "conference-papers|13": {
+    "conference-papers|12": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 13,
+      "number": 12,
       "year": "2018",
       "title": "Profiling OSN Users Based on Temporal Posting Patterns",
       "citation": "Q. F. Ying, D. M. Chiu, SV, and X. Zhang, \"Profiling OSN Users Based on Temporal Posting Patterns\", WWW '18 Companion Proceedings of The Web Conference, 2018",
@@ -1026,10 +1010,10 @@
       "author_count": 4,
       "consortium_paper": false
     },
-    "conference-papers|12": {
+    "conference-papers|11": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 12,
+      "number": 11,
       "year": "2017",
       "title": "Towards Robust Models of Food Flows and Their Role in Invasive Species Spread",
       "citation": "SV, S. Wu, B. Shi, A. Marathe, M. Marathe, S. Eubank, L. P. Sah, A. P. Giri, L. Colavito, Nitin S, Sridhar V, Asokan R, R. Muniappan, G. Norton, and A. Adiga, \"Towards Robust Models of Food Flows and Their Role in Invasive Species Spread\", IEEE International Conference on Big Data (IEEE BigData), 2017",
@@ -1039,10 +1023,10 @@
       "author_count": 15,
       "consortium_paper": false
     },
-    "conference-papers|11": {
+    "conference-papers|10": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 11,
+      "number": 10,
       "year": "2017",
       "title": "Epidemic Forecasting by Combining Agent-Based Models and Smart Beam-Particle Filtering Framework",
       "citation": "F. S. Tabataba, M. Hosseinipour, B. Lewis, F. S. Tabataba, SV, D. Higdon, J. Chen, and M. Marathe, \"Epidemic Forecasting by Combining Agent-Based Models and Smart Beam-Particle Filtering Framework\", IEEE International Conference on Data Mining (ICDM), 2017",
@@ -1052,10 +1036,10 @@
       "author_count": 8,
       "consortium_paper": false
     },
-    "conference-papers|10": {
+    "conference-papers|9": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 10,
+      "number": 9,
       "year": "2017",
       "title": "Spatio-temporal optimization of seasonal vaccination using a metapopulation model of influenza",
       "citation": "SV, J. Chen, S. Gupta, B. Lewis, M. Marathe, H. Mortveit, and A. Vullikanti, \"Spatio-temporal optimization of seasonal vaccination using a metapopulation model of influenza\", IEEE International Conference on Healthcare Informatics (ICHI), 2017",
@@ -1063,20 +1047,6 @@
       "abstract": "Prophylactic interventions such as vaccine allocation are one of the most effective public health policy planning tools. The supply of vaccines is limited, and an importantproblem is when and how to allocate the available vaccination supply, referred to as the Vaccine Allocation Problem. The spread of epidemics is modeled by the SEIR process, which has a very complex dynamics, and depends on human contacts and mobility. This makes the design of efficient solutions tovaccine allocation problem to minimize the number of infections a very challenging problem. In particular, this requires good models for human mobility, and optimization tools for vaccine allocation.In this paper, we study the vaccine allocation problem in the context of seasonal Influenza spread inthe United States. We develop a novel national scale flu model that integrate both short andlong distance travel, which are known to be important determinants of the spread of Influenza. We also design a greedy algorithm for allocating the vaccine supply at a county level. Our results show significant improvement over the current baseline, whichinvolves allocating vaccines based on the state population.",
       "abstract_source": "OpenAlex",
       "author_count": 7,
-      "consortium_paper": false
-    },
-    "conference-papers|9": {
-      "section": "conference-papers",
-      "section_label": "Conference and Workshop Papers",
-      "number": 9,
-      "year": "2017",
-      "title": "Hybrid models for ecological and anthropogenic drivers of pest invasion: Case study of Tuta absoluta in Nepal",
-      "citation": "SV, A. Marathe, S. Eubank, M. Marathe, A. Adiga, \"Hybrid models for ecological and anthropogenic drivers of pest invasion: Case study of Tuta absoluta in Nepal\", International Conference on Biodiversity, Climate Change Assessment and Impacts on Livelihood (ICBCL), 2017",
-      "url": "https://scholar.google.com/scholar?q=Hybrid%20models%20for%20ecological%20and%20anthropogenic%20drivers%20of%20pest%20invasion%3A%20Case%20study%20of%20Tuta%20absoluta%20in%20Nepal",
-      "abstract": null,
-      "abstract_source": null,
-      "abstract_unavailable_reason": "ICBCL conference paper; no indexed abstract",
-      "author_count": null,
       "consortium_paper": false
     },
     "conference-papers|8": {
@@ -1382,18 +1352,28 @@
     }
   },
   "talks_counts": {
-    "entries": 8,
-    "with_abstract": 8
+    "entries": 9,
+    "with_abstract": 9
   },
   "talks": {
+    "invited-talks|37": {
+      "section": "invited-talks",
+      "section_label": "Invited Talks",
+      "number": 37,
+      "year": "2024",
+      "title": "Optim-WISE: An Ensemble Approach for Probabilistic Forecasts Optimized via Weighted Interval Score",
+      "citation": "N. C. Mandal, G. Kaur, A. Adiga, SV, B. Lewis, and M. Marathe, \"Optim-WISE: An Ensemble Approach for Probabilistic Forecasts Optimized via Weighted Interval Score\", MIDAS Annual Meeting, November 2024",
+      "abstract": "Ensemble forecasting has been an effective endeavor in epidemic disease forecasting. However, the performance of ensemble forecasts depends on the underlying individual model forecasts and the weights assigned to each model. The typical weighting technique, such as uniform weights, often shows a significant drop in performance during the emergence of new variants due to the under-prediction of individual model forecasts. Therefore, a trained ensemble model where weights are learned from past observations is gaining popularity and is an active research area for epidemic forecasting. Further, most of the ensemble techniques focus on minimizing absolute error without considering the inherent uncertainty present in the forecasts. Therefore, in this work, we propose a trained ensemble model called Optim-WISE, considering the uncertainty present in the forecast. We propose a weight optimization technique that optimizes the weighted interval score (WIS) of the ensemble model. Our model approximates optimal weights from training and follows weighted quantile averaging to combine forecasts from different models. To evaluate our model, we did rigorous experimentation focusing on COVID-19 weekly case forecasting in the United States. We further compare our model with the existing state-of-the-art model for COVID-19 weekly case forecasting. From our experimentation, we find our model achieves better performance (in terms of WIS, MAPE, and coverage) than the existing ensemble models. In terms of WIS-based ranking, our model ranks top 39% (highest) times for 1-week ahead forecasting. Moreover, our model exhibits a lower MAPE score among the existing ensemble models during the emergence of Delta Waves. Consistent performance during the emergence of new variants denotes the robustness of our ensemble model in epidemic forecasting.",
+      "abstract_source": "Author-supplied (MIDAS 2024 submission)"
+    },
     "invited-talks|36": {
       "section": "invited-talks",
       "section_label": "Invited Talks",
       "number": 36,
       "year": "2024",
-      "title": "Optim-WISE: An Ensemble Approach for Probabilistic Forecasts Optimized via Weighted Interval Score",
-      "citation": "N. C. Mandal, G. Kaur, A. Adiga, SV, B. Lewis, and M. Marathe, \"Optim-WISE: An Ensemble Approach for Probabilistic Forecasts Optimized via Weighted Interval Score\", MIDAS Annual Meeting, November 2024",
-      "abstract": "Ensemble forecasting has been an effective endeavor in epidemic disease forecasting. However, the performance of ensemble forecasts depends on the underlying individual model forecasts and the weights assigned to each model. The typical weighting technique, such as uniform weights, often shows a significant drop in performance during the emergence of new variants due to the under-prediction of individual model forecasts. Therefore, a trained ensemble model where weights are learned from past observations is gaining popularity and is an active research area for epidemic forecasting. Further, most of the ensemble techniques focus on minimizing absolute error without considering the inherent uncertainty present in the forecasts. Therefore, in this work, we propose a trained ensemble model called Optim-WISE, considering the uncertainty present in the forecast. We propose a weight optimization technique that optimizes the weighted interval score (WIS) of the ensemble model. Our model approximates optimal weights from training and follows weighted quantile averaging to combine forecasts from different models. To evaluate our model, we did rigorous experimentation focusing on COVID-19 weekly case forecasting in the United States. We further compare our model with the existing state-of-the-art model for COVID-19 weekly case forecasting. From our experimentation, we find our model achieves better performance (in terms of WIS, MAPE, and coverage) than the existing ensemble models. In terms of WIS-based ranking, our model ranks top 39% (highest) times for 1-week ahead forecasting. Moreover, our model exhibits a lower MAPE score among the existing ensemble models during the emergence of Delta Waves. Consistent performance during the emergence of new variants denotes the robustness of our ensemble model in epidemic forecasting.",
+      "title": "Causality-Encoded Spatiotemporal Graph Convolution Network for Real-time Disease Forecasting",
+      "citation": "J. Chou, A. Adiga, G. Kaur, SV, B. Lewis, and M. Marathe, \"Causality-Encoded Spatiotemporal Graph Convolution Network for Real-time Disease Forecasting\", MIDAS Annual Meeting, November 2024 Slides",
+      "abstract": "Spatiotemporal spread patterns of infectious disease have been studied extensively. However, the spread patterns vary across time, and incorporating them into the spatiotemporal models for short-term real-time forecasting is challenging. Recently, deep-learning-based spatiotemporal (ST) forecasting models, specifically, Graph Neural Networks (GNN) have been explored in several applications. GNNs provide a natural framework to model ST data but require a large amount of data to train and spatial dependencies for constructing the graph. Traditional GNN-based forecasting methods employ static information (like geographic adjacency or correlation) to obtain spatial relationships. However, the geographic adjacency of locations or the static similarity metric cannot adequately model the time-varying ST patterns of disease spread. More importantly, the traditional framework cannot address the causal (lead/lag) relationships between geographical locations. To account for the time-varying causal relationships between locations, we propose a novel framework, Causality-Encoded Spatiotemporal Graph Convolution Network (CESGCN). Our method, purely data driven, leverages multivariate transfer entropy (MTE) to estimate the causality-encoded spatiotemporal graphs in real-time and adaptively updates/learns the graph as part of the training. MTE is an information-theoretic measure of causal relationship between multiple time series and its use considerably reduces the amount of data required to learn the graph.\n\nWe evaluate the proposed model’s performance on influenza and COVID-19 datasets across different time periods using standard metrics for probabilistic forecasts. Experimental results demonstrate that our model outperforms the state-of-the-art baselines, such as the FluSight ensemble and the COVID-19 Forecast Hub ensemble models. Importantly, CESGCN outperforms the FluSight ensemble in the surge phase with greater accuracy and less uncertainty. We also performed standard model ablation studies to understand the utility of various components of the CESGCN model. We observed that the MTE module coupled with adaptive learning has the highest influence on performance.",
       "abstract_source": "Author-supplied (MIDAS 2024 submission)"
     },
     "invited-talks|35": {
@@ -1401,9 +1381,9 @@
       "section_label": "Invited Talks",
       "number": 35,
       "year": "2024",
-      "title": "Causality-Encoded Spatiotemporal Graph Convolution Network for Real-time Disease Forecasting",
-      "citation": "J. Chou, A. Adiga, G. Kaur, SV, B. Lewis, and M. Marathe, \"Causality-Encoded Spatiotemporal Graph Convolution Network for Real-time Disease Forecasting\", MIDAS Annual Meeting, November 2024 Slides",
-      "abstract": "Spatiotemporal spread patterns of infectious disease have been studied extensively. However, the spread patterns vary across time, and incorporating them into the spatiotemporal models for short-term real-time forecasting is challenging. Recently, deep-learning-based spatiotemporal (ST) forecasting models, specifically, Graph Neural Networks (GNN) have been explored in several applications. GNNs provide a natural framework to model ST data but require a large amount of data to train and spatial dependencies for constructing the graph. Traditional GNN-based forecasting methods employ static information (like geographic adjacency or correlation) to obtain spatial relationships. However, the geographic adjacency of locations or the static similarity metric cannot adequately model the time-varying ST patterns of disease spread. More importantly, the traditional framework cannot address the causal (lead/lag) relationships between geographical locations. To account for the time-varying causal relationships between locations, we propose a novel framework, Causality-Encoded Spatiotemporal Graph Convolution Network (CESGCN). Our method, purely data driven, leverages multivariate transfer entropy (MTE) to estimate the causality-encoded spatiotemporal graphs in real-time and adaptively updates/learns the graph as part of the training. MTE is an information-theoretic measure of causal relationship between multiple time series and its use considerably reduces the amount of data required to learn the graph.\n\nWe evaluate the proposed model’s performance on influenza and COVID-19 datasets across different time periods using standard metrics for probabilistic forecasts. Experimental results demonstrate that our model outperforms the state-of-the-art baselines, such as the FluSight ensemble and the COVID-19 Forecast Hub ensemble models. Importantly, CESGCN outperforms the FluSight ensemble in the surge phase with greater accuracy and less uncertainty. We also performed standard model ablation studies to understand the utility of various components of the CESGCN model. We observed that the MTE module coupled with adaptive learning has the highest influence on performance.",
+      "title": "ESCAPE: An easier and faster method for creating high-performance agent-based epidemic simulators",
+      "citation": "P. Bhattacharya, SV, B. Lewis, J. Chen, S. Hoops, H. Mortveit, and M. Marathe, \"ESCAPE: An easier and faster method for creating high-performance agent-based epidemic simulators\", MIDAS Annual Meeting, November 2024 Slides",
+      "abstract": "Agent-based mechanistic simulators provide high fidelity and ease of modeling when creating realistic epidemic simulations involving complex agent behavior. These simulators, however, are very compute intensive, requiring optimized high-performance implementations, which often makes them more challenging to develop and operate. Existing high-performance agent-based epidemic simulators, thus, typically optimize for a limited set of agent behavior and allow them to be configured in restricted ways.\n\nHere we present the “Epidemic Simulator Compiler and Programming Environment” or (ESCAPE) --- a novel framework for developing high-performance agent-based epidemic simulators. ESCAPE defines a domain specific language (DSL) for describing the epidemic disease models and couples them with a detailed agent-based simulation. The Python language inspired DSL improves productivity by making correct model specification easier. The DSL includes features for describing disease models and includes general purpose serial and parallel programming constructs for implementing interventions --- including agent behavior and public-health policies. ESCAPE provides a compiler to convert the simulator described using the DSL into parallel C++ code. Simulators created using ESCAPE have been shown to be an order of magnitude faster than existing state-of-the-art systems. This is made possible by generating code optimized for the simulation in question and by using data structures aware of the hierarchical nature of memory in modern computers.\n\nTo ease in the development of simulators using ESCAPE, it provides editor support --- syntax highlighting, code-completion, live error checking, etc. --- by providing a language server. This language server can be used with editors and integrated development environments (IDE) that support the Language Server Protocol, including VSCode, VIM, Emacs, and Jupyter.\n\nESCAPE was recently used to respond to the Flu Scenario Modeling Hub Round 1 of 2024—2025. Here we present how its DSL helped in specification of the scenario and present performance comparisons with another high-performance epidemic simulator, EpiHiper.",
       "abstract_source": "Author-supplied (MIDAS 2024 submission)"
     },
     "invited-talks|34": {
@@ -1411,9 +1391,9 @@
       "section_label": "Invited Talks",
       "number": 34,
       "year": "2024",
-      "title": "ESCAPE: An easier and faster method for creating high-performance agent-based epidemic simulators",
-      "citation": "P. Bhattacharya, SV, B. Lewis, J. Chen, S. Hoops, H. Mortveit, and M. Marathe, \"ESCAPE: An easier and faster method for creating high-performance agent-based epidemic simulators\", MIDAS Annual Meeting, November 2024 Slides",
-      "abstract": "Agent-based mechanistic simulators provide high fidelity and ease of modeling when creating realistic epidemic simulations involving complex agent behavior. These simulators, however, are very compute intensive, requiring optimized high-performance implementations, which often makes them more challenging to develop and operate. Existing high-performance agent-based epidemic simulators, thus, typically optimize for a limited set of agent behavior and allow them to be configured in restricted ways.\n\nHere we present the “Epidemic Simulator Compiler and Programming Environment” or (ESCAPE) --- a novel framework for developing high-performance agent-based epidemic simulators. ESCAPE defines a domain specific language (DSL) for describing the epidemic disease models and couples them with a detailed agent-based simulation. The Python language inspired DSL improves productivity by making correct model specification easier. The DSL includes features for describing disease models and includes general purpose serial and parallel programming constructs for implementing interventions --- including agent behavior and public-health policies. ESCAPE provides a compiler to convert the simulator described using the DSL into parallel C++ code. Simulators created using ESCAPE have been shown to be an order of magnitude faster than existing state-of-the-art systems. This is made possible by generating code optimized for the simulation in question and by using data structures aware of the hierarchical nature of memory in modern computers.\n\nTo ease in the development of simulators using ESCAPE, it provides editor support --- syntax highlighting, code-completion, live error checking, etc. --- by providing a language server. This language server can be used with editors and integrated development environments (IDE) that support the Language Server Protocol, including VSCode, VIM, Emacs, and Jupyter.\n\nESCAPE was recently used to respond to the Flu Scenario Modeling Hub Round 1 of 2024—2025. Here we present how its DSL helped in specification of the scenario and present performance comparisons with another high-performance epidemic simulator, EpiHiper.",
+      "title": "On the Predictability of Spatiotemporal Epidemics",
+      "citation": "J. Nachison and SV, \"On the Predictability of Spatiotemporal Epidemics\", MIDAS Annual Meeting, November 2024 Slides Poster",
+      "abstract": "With the need to create increasingly accurate infectious disease forecasts, there has been a push to identify fundamental limits on the predictability of epidemics. Recently, many efforts have evaluated the inclusion of spatiotemporal and graph information to improve forecasts from statistical and mechanistic models and have had mixed success. However, current information theoretic approaches used to describe predictability do not account for spatial synchrony typically seen during outbreaks and seasonal epidemics. We present spatiotemporal epidemic permutation entropy (STEpPE) as a model agnostic metric of epidemic predictability that is capable of incorporating both geographic and temporal information on the target multivariate timeseries. Our metric expands on current methods by measuring the complexity of a signal on through time and space rather than at a single moment, allowing for a measurement which considers how spatiotemporal relationships impact disease dynamics. While similar measures have recently been explored in other domains like neuroscience, they have not been customized or evaluated for epidemiological use cases.\n\nFirstly, we compare STEpPE obtained from COVID-19 and Influenza hospitalization ground truth datasets at the state level to quantify predictability across surveillance streams and increasing timeseries length. We analyze how the amount of spatial information captured by STEpPE impacts predictability for each disease and compare to purely temporal measures of complexity. Using the known seasonal spatiotemporal patterns of each disease, we validate the capability of STEpPE to measure spatiotemporal complexity. Secondly, using synthetic trajectories generated from metapopulation dynamics on realistic mobility networks, we evaluate the sensitivity of STEpPE to importation patterns, disease parameters, and surveillance noise and contrast with trajectories obtained on spatially uncorrelated and random networks. We believe STEpPE provides a unique framework to evaluate and enhance the use of spatiotemporal information in infectious disease forecasting.",
       "abstract_source": "Author-supplied (MIDAS 2024 submission)"
     },
     "invited-talks|33": {
@@ -1421,19 +1401,19 @@
       "section_label": "Invited Talks",
       "number": 33,
       "year": "2024",
-      "title": "On the Predictability of Spatiotemporal Epidemics",
-      "citation": "J. Nachison and SV, \"On the Predictability of Spatiotemporal Epidemics\", MIDAS Annual Meeting, November 2024 Slides Poster",
-      "abstract": "With the need to create increasingly accurate infectious disease forecasts, there has been a push to identify fundamental limits on the predictability of epidemics. Recently, many efforts have evaluated the inclusion of spatiotemporal and graph information to improve forecasts from statistical and mechanistic models and have had mixed success. However, current information theoretic approaches used to describe predictability do not account for spatial synchrony typically seen during outbreaks and seasonal epidemics. We present spatiotemporal epidemic permutation entropy (STEpPE) as a model agnostic metric of epidemic predictability that is capable of incorporating both geographic and temporal information on the target multivariate timeseries. Our metric expands on current methods by measuring the complexity of a signal on through time and space rather than at a single moment, allowing for a measurement which considers how spatiotemporal relationships impact disease dynamics. While similar measures have recently been explored in other domains like neuroscience, they have not been customized or evaluated for epidemiological use cases.\n\nFirstly, we compare STEpPE obtained from COVID-19 and Influenza hospitalization ground truth datasets at the state level to quantify predictability across surveillance streams and increasing timeseries length. We analyze how the amount of spatial information captured by STEpPE impacts predictability for each disease and compare to purely temporal measures of complexity. Using the known seasonal spatiotemporal patterns of each disease, we validate the capability of STEpPE to measure spatiotemporal complexity. Secondly, using synthetic trajectories generated from metapopulation dynamics on realistic mobility networks, we evaluate the sensitivity of STEpPE to importation patterns, disease parameters, and surveillance noise and contrast with trajectories obtained on spatially uncorrelated and random networks. We believe STEpPE provides a unique framework to evaluate and enhance the use of spatiotemporal information in infectious disease forecasting.",
-      "abstract_source": "Author-supplied (MIDAS 2024 submission)"
+      "title": "Forecasting the COVID-19 Pandemic in Virginia: After Action Report",
+      "citation": "J. Crow, C. Price, M. Marathe, B. Lewis, SV, and A. Telionis, \"Forecasting the COVID-19 Pandemic in Virginia: After Action Report\", 2024 CSTE Annual Conference, Pittsburgh, June 2024",
+      "abstract": "**BACKGROUND:** The University of Virginia Biocomplexity Institute (UVA-BI) provided forecasting and modeling support to Virginia’s COVID-19 response from April 2020 to the expiration of the public health emergency declaration in May 2023. During the pandemic UVA-BI provided weekly, then bi-weekly scenario forecasts, which the Virginia Department of Health (VDH) used internally and shared publicly. Virginia contracted with a third party (Carter Price) to conduct an After-Action Review (AAR) of forecast and model performance, use cases, communications, and opportunities for improvement.\n\n**METHODS:** The AAR included a review of data and forecasts, a literature survey, and semi-structured interviews with stakeholders. The data and forecast review included a comparison of published forecasts to the seven-day moving average of COVID-19 cases reported by VDH. The literature survey included three parts: a search for studies of pandemic modeling for decision support, snowball sampling from key studies, and a review of articles published by UVA-BI during this partnership. Finally, key stakeholders identified by staff at UVA-BI and VDH were interviewed.\n\n**RESULTS:** The review identified several major successes of the partnership. Early in the pandemic, UVABI forecasts were instrumental in the decision to pause construction of field hospitals. In later waves, UVA-BI forecasts helped VDH and partners prepare for the impacts of the Delta and Omicron variants. The models and related communications products provided a consistent picture for all stakeholders across Virginia. Statewide performed better than out-of-state models. Local-area forecasts were less accurate, as were forecasts following the Omicron wave. Large hospital systems could produce more accurate forecasts of hospitalizations using internal, patient-level data; however, UVA-BI forecasts provided an important benchmark and were useful to systems lacking modeling capability. However, models lacked information on economic or social impacts, limiting their use post-peak for policy decisions. Model communication results were mixed. UVA-BI products were cited in over 360 media reports, providing an important auxiliary to VDH communications. Nevertheless, model results were sometimes misinterpreted by members of the public and, at times, became the focus of debate. These factors may have impacted trust among key target populations, the unvaccinated, in particular.\n\n**CONCLUSIONS:** UVA-BI models were more useful than external models for decision support, including by policy-makers, programs, and health systems. They could be improved by using patient-level data, and by including economic and social impacts. Although public forecasts can be useful, care should be taken in communicating model results to the public.",
+      "abstract_source": "Author-supplied (2024 CSTE Annual Conference submission)"
     },
     "invited-talks|32": {
       "section": "invited-talks",
       "section_label": "Invited Talks",
       "number": 32,
       "year": "2024",
-      "title": "Forecasting the COVID-19 Pandemic in Virginia: After Action Report",
-      "citation": "J. Crow, C. Price, M. Marathe, B. Lewis, SV, and A. Telionis, \"Forecasting the COVID-19 Pandemic in Virginia: After Action Report\", 2024 CSTE Annual Conference, Pittsburgh, June 2024",
-      "abstract": "**BACKGROUND:** The University of Virginia Biocomplexity Institute (UVA-BI) provided forecasting and modeling support to Virginia’s COVID-19 response from April 2020 to the expiration of the public health emergency declaration in May 2023. During the pandemic UVA-BI provided weekly, then bi-weekly scenario forecasts, which the Virginia Department of Health (VDH) used internally and shared publicly. Virginia contracted with a third party (Carter Price) to conduct an After-Action Review (AAR) of forecast and model performance, use cases, communications, and opportunities for improvement.\n\n**METHODS:** The AAR included a review of data and forecasts, a literature survey, and semi-structured interviews with stakeholders. The data and forecast review included a comparison of published forecasts to the seven-day moving average of COVID-19 cases reported by VDH. The literature survey included three parts: a search for studies of pandemic modeling for decision support, snowball sampling from key studies, and a review of articles published by UVA-BI during this partnership. Finally, key stakeholders identified by staff at UVA-BI and VDH were interviewed.\n\n**RESULTS:** The review identified several major successes of the partnership. Early in the pandemic, UVABI forecasts were instrumental in the decision to pause construction of field hospitals. In later waves, UVA-BI forecasts helped VDH and partners prepare for the impacts of the Delta and Omicron variants. The models and related communications products provided a consistent picture for all stakeholders across Virginia. Statewide performed better than out-of-state models. Local-area forecasts were less accurate, as were forecasts following the Omicron wave. Large hospital systems could produce more accurate forecasts of hospitalizations using internal, patient-level data; however, UVA-BI forecasts provided an important benchmark and were useful to systems lacking modeling capability. However, models lacked information on economic or social impacts, limiting their use post-peak for policy decisions. Model communication results were mixed. UVA-BI products were cited in over 360 media reports, providing an important auxiliary to VDH communications. Nevertheless, model results were sometimes misinterpreted by members of the public and, at times, became the focus of debate. These factors may have impacted trust among key target populations, the unvaccinated, in particular.\n\n**CONCLUSIONS:** UVA-BI models were more useful than external models for decision support, including by policy-makers, programs, and health systems. They could be improved by using patient-level data, and by including economic and social impacts. Although public forecasts can be useful, care should be taken in communicating model results to the public.",
+      "title": "Right Sizing Variant Prevalence Analysis Frames",
+      "citation": "A. Warren, P. Bhattacharya, M. Orr, SV, B. Lewis, M. Marathe, J. Crain, J. Crow, A. Telionis, L. Fink, and A. Lorentz, \"Right Sizing Variant Prevalence Analysis Frames\", 2024 CSTE Annual Conference, Pittsburgh, June 2024",
+      "abstract": "**BACKGROUND:** Genomic surveillance of pathogens has become an important tool for characterizing respiratory disease. Prevalence estimation of different variants and/or genomic features among infections allows for improved situational awareness and provides evidence for shifting disease dynamics, which benefits public health action. An important aspect of prevalence estimation is the selection of specific variants included in the analysis, i.e. the variant analysis frame. Typically the analysis frame is determined by a genomic epidemiologist based on expert opinion. Since different analysis frames applied to the same genomic surveillance may provide widely differing interpretations and conclusions, this problem of selection is very relevant to this new discipline. This work seeks to provide a configurable tool that will assist genomic epidemiologists to generate variant analysis frames in a reproducible and semi-automated manner.\n\n**METHODS:** We have created a variant framing tool VISSTA, Viral Sublineage Selection for Temporal Analysis, which uses multi-objective optimization to select those variants that best represent variant dynamics during the time frame of interest. Genomic Epidemiologists can apply this tool to a set of genomic surveillance data and associated metadata and configure the objective of the analysis. Given the number of dimensions and size of the parameter space this optimization is difficult to solve numerically. To address this challenge, we use a bayesian combinatorial optimization algorithm based on the marginal contribution of a pangolin lineage to the objective function. The initial demonstration includes control for the tradeoff between support in terms of number of samples representing the lineage, the time since the variant was first created, and the specificity of the variant in the pangolin hierarchy.\n\n**RESULTS:** We show that our approach reproduces expert selection of analysis variants throughout the pandemic and adapts to a variety of geographic and temporal sampling frames. We also demonstrate how the method can be extended to further consider phenotypic characteristics such as edit distance for amino acid sequences and immune escape potential given a background of previous and cocirculating variants.\n\n**CONCLUSIONS:** Genomic Epidemiology at scale is relatively new, with many factors to be considered when framing variant analysis. Tools that standardize and provide customized and replicable analysis frames for prevalence estimation has a wide range of applications, from simplifying situational awareness tracking to augmenting the power of predictive models. This initial demonstration tool can be useful to genomic epidemiologists by providing some consistency to this challenging task.",
       "abstract_source": "Author-supplied (2024 CSTE Annual Conference submission)"
     },
     "invited-talks|31": {
@@ -1441,9 +1421,9 @@
       "section_label": "Invited Talks",
       "number": 31,
       "year": "2024",
-      "title": "Right Sizing Variant Prevalence Analysis Frames",
-      "citation": "A. Warren, P. Bhattacharya, M. Orr, SV, B. Lewis, M. Marathe, J. Crain, J. Crow, A. Telionis, L. Fink, and A. Lorentz, \"Right Sizing Variant Prevalence Analysis Frames\", 2024 CSTE Annual Conference, Pittsburgh, June 2024",
-      "abstract": "**BACKGROUND:** Genomic surveillance of pathogens has become an important tool for characterizing respiratory disease. Prevalence estimation of different variants and/or genomic features among infections allows for improved situational awareness and provides evidence for shifting disease dynamics, which benefits public health action. An important aspect of prevalence estimation is the selection of specific variants included in the analysis, i.e. the variant analysis frame. Typically the analysis frame is determined by a genomic epidemiologist based on expert opinion. Since different analysis frames applied to the same genomic surveillance may provide widely differing interpretations and conclusions, this problem of selection is very relevant to this new discipline. This work seeks to provide a configurable tool that will assist genomic epidemiologists to generate variant analysis frames in a reproducible and semi-automated manner.\n\n**METHODS:** We have created a variant framing tool VISSTA, Viral Sublineage Selection for Temporal Analysis, which uses multi-objective optimization to select those variants that best represent variant dynamics during the time frame of interest. Genomic Epidemiologists can apply this tool to a set of genomic surveillance data and associated metadata and configure the objective of the analysis. Given the number of dimensions and size of the parameter space this optimization is difficult to solve numerically. To address this challenge, we use a bayesian combinatorial optimization algorithm based on the marginal contribution of a pangolin lineage to the objective function. The initial demonstration includes control for the tradeoff between support in terms of number of samples representing the lineage, the time since the variant was first created, and the specificity of the variant in the pangolin hierarchy.\n\n**RESULTS:** We show that our approach reproduces expert selection of analysis variants throughout the pandemic and adapts to a variety of geographic and temporal sampling frames. We also demonstrate how the method can be extended to further consider phenotypic characteristics such as edit distance for amino acid sequences and immune escape potential given a background of previous and cocirculating variants.\n\n**CONCLUSIONS:** Genomic Epidemiology at scale is relatively new, with many factors to be considered when framing variant analysis. Tools that standardize and provide customized and replicable analysis frames for prevalence estimation has a wide range of applications, from simplifying situational awareness tracking to augmenting the power of predictive models. This initial demonstration tool can be useful to genomic epidemiologists by providing some consistency to this challenging task.",
+      "title": "Analyzing the Relationship between Wastewater and COVID-19 Signals in Virginia: A Forecasting Perspective",
+      "citation": "G. Kaur, A. Adiga, B. Hurt, B. Klahn, J. Crow, A. Telionis, R. Singh, M. Yancey, A. Warren, SV, B. Lewis, and M. Marathe, \"Analyzing the Relationship between Wastewater and COVID-19 Signals in Virginia: A Forecasting Perspective\", 2024 CSTE Annual Conference, Pittsburgh, June 2024",
+      "abstract": "**BACKGROUND:** Wastewater surveillance captures the presence of SARS-CoV-2 shed by people with and without symptoms and is reported as viral load. Regular sampling of SARS-CoV-2 levels in wastewater over time can provide trends (increasing, decreasing, or stable) in a sewershed. It has been observed to be an early indicator of COVID-19 activity. Wastewater surveillance, unlike other types of COVID-19 surveillance signals, is relatively unaffected by issues that have become pronounced post pandemic such as lack of testing, co-circulating respiratory illness, and healthcare-seeking biases. In this work, we present our findings on the relationship of viral load signals with the standard disease surveillance signals such as reported cases, hospitalizations, emergency department (ED) visits, and COVID-like illness (CLI) in the state of Virginia. We show the utility of the viral load signal in enhancing forecasts of these standard surveillance signals.\n\n**METHODS:** We analyze the correlation between COVID-19 cases and shifted wastewater indicators (viral load available at the sewershed level) and build models based on wastewater indicators to predict various signals such as cases, hospitalization, CLI, and ED visits at the district, region, and state levels. We use statistical methods such as Pearson correlation coefficient and Chi-square tests to test the association of viral load with other signals. Further, the analysis is performed on a rolling-window basis to account for the changes in the correlation between signals across time. The forecasting framework involves employing simple statistical methods such as logistic regression models for predicting quintile categories and linear regression type models (e.g. Autoregressive model) and for forecasting cases and hospitalization.\n\n**RESULTS:** Our analysis shows that viral load emerges as a crucial leading indicator for anticipating surge in cases and hospitalizations with up to 1-2 weeks of lead time. Also, we observe that the number of sites that show statistically significant correlation increases during surge periods. Further, we developed forecast models for both overall counts and categories for cases and hospitalizations, at district and state levels and our results demonstrate enhanced forecasting accuracy (in terms of MAE and Brier scores) when wastewater is incorporated as an exogenous variable in the models.\n\n**CONCLUSIONS:** The incorporation of wastewater into the model significantly enhances forecast accuracy for both overall raw counts and category predictions for cases and hospitalizations. The integrated system also allows us to better understand the disease burden and provide early warning for local health districts.",
       "abstract_source": "Author-supplied (2024 CSTE Annual Conference submission)"
     },
     "invited-talks|30": {
@@ -1451,20 +1431,20 @@
       "section_label": "Invited Talks",
       "number": 30,
       "year": "2024",
-      "title": "Analyzing the Relationship between Wastewater and COVID-19 Signals in Virginia: A Forecasting Perspective",
-      "citation": "G. Kaur, A. Adiga, B. Hurt, B. Klahn, J. Crow, A. Telionis, R. Singh, M. Yancey, A. Warren, SV, B. Lewis, and M. Marathe, \"Analyzing the Relationship between Wastewater and COVID-19 Signals in Virginia: A Forecasting Perspective\", 2024 CSTE Annual Conference, Pittsburgh, June 2024",
-      "abstract": "**BACKGROUND:** Wastewater surveillance captures the presence of SARS-CoV-2 shed by people with and without symptoms and is reported as viral load. Regular sampling of SARS-CoV-2 levels in wastewater over time can provide trends (increasing, decreasing, or stable) in a sewershed. It has been observed to be an early indicator of COVID-19 activity. Wastewater surveillance, unlike other types of COVID-19 surveillance signals, is relatively unaffected by issues that have become pronounced post pandemic such as lack of testing, co-circulating respiratory illness, and healthcare-seeking biases. In this work, we present our findings on the relationship of viral load signals with the standard disease surveillance signals such as reported cases, hospitalizations, emergency department (ED) visits, and COVID-like illness (CLI) in the state of Virginia. We show the utility of the viral load signal in enhancing forecasts of these standard surveillance signals.\n\n**METHODS:** We analyze the correlation between COVID-19 cases and shifted wastewater indicators (viral load available at the sewershed level) and build models based on wastewater indicators to predict various signals such as cases, hospitalization, CLI, and ED visits at the district, region, and state levels. We use statistical methods such as Pearson correlation coefficient and Chi-square tests to test the association of viral load with other signals. Further, the analysis is performed on a rolling-window basis to account for the changes in the correlation between signals across time. The forecasting framework involves employing simple statistical methods such as logistic regression models for predicting quintile categories and linear regression type models (e.g. Autoregressive model) and for forecasting cases and hospitalization.\n\n**RESULTS:** Our analysis shows that viral load emerges as a crucial leading indicator for anticipating surge in cases and hospitalizations with up to 1-2 weeks of lead time. Also, we observe that the number of sites that show statistically significant correlation increases during surge periods. Further, we developed forecast models for both overall counts and categories for cases and hospitalizations, at district and state levels and our results demonstrate enhanced forecasting accuracy (in terms of MAE and Brier scores) when wastewater is incorporated as an exogenous variable in the models.\n\n**CONCLUSIONS:** The incorporation of wastewater into the model significantly enhances forecast accuracy for both overall raw counts and category predictions for cases and hospitalizations. The integrated system also allows us to better understand the disease burden and provide early warning for local health districts.",
-      "abstract_source": "Author-supplied (2024 CSTE Annual Conference submission)"
-    },
-    "invited-talks|29": {
-      "section": "invited-talks",
-      "section_label": "Invited Talks",
-      "number": 29,
-      "year": "2024",
       "title": "Categorically Speaking: Lessons Learned from Communicating Epidemic Activity Levels and Trends in Virginia",
       "citation": "L. Critchley, B. Hurt, G. Kaur, A. Adiga, B. Klahn, A. Sanjeevan, J. Crow, A. Telionis, SV, B. Lewis, and M. Marathe, \"Categorically Speaking: Lessons Learned from Communicating Epidemic Activity Levels and Trends in Virginia\", 2024 CSTE Annual Conference, Pittsburgh, June 2024",
       "abstract": "**BACKGROUND:** Categorical indicators of infectious disease activity derived from real-time surveillance serve as useful summaries to aid communication to policymakers and general audience. Multiple methods exist for deriving and reconciling such indicators from varying surveillance streams across spatial resolutions. There is a need for refining methods of effectively communicating current and future risk of respiratory disease spread through these indicators.\n\n**METHODS:** We have developed an integrated suite of analytical methods and visualizations to summarize disease activity levels and trends in the state of Virginia. These include techniques for trajectory and phase classification integrated with other metrics based on real-time effective reproduction number (Rt) estimation, and are capable of handling multiple noisy epidemiological signals at various spatial scales and temporal cadences.\n\n**RESULTS:** Visual and analytical summaries from these tools were presented to stakeholders from Virginia Department of Health throughout the COVID-19 response, including novel spatiotemporal visualizations for district level disease activity combining multiple indicators. They were also used to reconcile different indicators of COVID-19 activity such as wastewater surveillance, emergency department visits, and hospital admissions, and continue to be used for interpreting the co-circulation of respiratory pathogens during the 2023-24 season. We have also developed an open-source web platform to aid public health practitioners develop and customize such indicators for relevant time series.\n\n**CONCLUSIONS:** The outlined approach serves as a paradigm for transforming surveillance data into actionable insights and for effectively overcoming challenges in interpretation. We find that equipping decision-makers with tools to quickly and robustly interpret multiple epidemiological signals is crucial for understanding disease dynamics and making evidence-based decisions. We believe this integrated suite of tools will aid in effective monitoring, forecasting, and risk communication for infectious disease outbreaks.",
       "abstract_source": "Author-supplied (2024 CSTE Annual Conference submission)"
+    },
+    "invited-talks|9": {
+      "section": "invited-talks",
+      "section_label": "Invited Talks",
+      "number": 9,
+      "year": "2017",
+      "title": "Hybrid models for ecological and anthropogenic drivers of pest invasion: Case study of Tuta absoluta in Nepal",
+      "citation": "SV, A. Adiga, S. Eubank, B. Kaperick, A. Marathe, M. Marathe, B. Shi, and S. Wu, \"Hybrid models for ecological and anthropogenic drivers of pest invasion: Case study of Tuta absoluta in Nepal\", International Conference on Biodiversity, Climate Change Assessment and Impacts on Livelihood (ICBCL), Kathmandu, January 2017 Slides",
+      "abstract": "Recent times have seen an increase in the diversity and intensity of alien species invasions on a global scale. Human activities have been majorly responsible for this trend, both explicitly through international travel, trade and logistics, and perhaps implicitly through climate change, habitat destruction, etc. Particularly in the case of agricultural pests, there is a strong interplay among the bio-climatic, ecological and anthropogenic factors. The impact of such pest invasions and the ensuing crop loss tend to have wide-ranging economic and social consequences. Thus there is a growing need for a holistic approach that brings together data, models and expertise from various disciplines. In this work, we take a step in that direction, and describe an integrated modeling framework for studying the dynamics of pest invasions. We use the recent invasion of South American tomato leafminer, Tuta absoluta Meyrick (Lepidoptera: Gelechiidae), in Nepal as a case study, and demonstrate how data on climate, insect biology and host presence can be integrated with data on human activities such as consumption, travel, trade, market logistics to provide a comprehensive situation assessment. We also show how such model predictions can be used to provide economic impact estimates of the pest invasion under various intervention scenarios.",
+      "abstract_source": "Author-supplied (ICBCL 2017 submission)"
     }
   }
 }
