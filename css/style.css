@@ -256,36 +256,6 @@ main section:last-child { border-bottom: none; }
   white-space: nowrap;
 }
 
-/* Tag list (research interests) */
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1em;
-}
-
-.tag-list li {
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 5px 14px;
-  font-size: 0.9rem;
-  color: var(--navy);
-}
-
-.tag-group-label {
-  font-weight: 600;
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin: 1em 0 0.5em;
-}
-
-.tag-group-label:first-child { margin-top: 0; }
-
 /* News (home page). Two columns once there is room, so the dates line up into a
    scannable rail; stacked below 560px, where a fixed date column would squeeze
    the text. Dates are muted and non-wrapping: they orient, the item is the
@@ -986,7 +956,7 @@ svg.wc {
   opacity: 0.1;
 }
 
-/* Legend — reuses the tag-list vocabulary. */
+/* Legend: a row of small chips, one per theme. */
 .wc-legend {
   display: flex;
   flex-wrap: wrap;
