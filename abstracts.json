@@ -747,30 +747,30 @@
       "author_count": 14,
       "consortium_paper": false
     },
-    "conference-papers|30": {
+    "conference-papers|31": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 30,
+      "number": 31,
       "year": "2024",
       "title": "A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration",
       "citation": "Z. Mehrab, L. Stundal, SV, ..., D. Leblang, R. Colwell, and M. Marathe, \"A Generalizable Theory-driven Agent-based Framework to Study Conflict-induced Forced Migration\", The Thirty-Sixth Annual Conference on Innovative Applications of Artificial Intelligence (IAAI-24)",
       "url": "https://doi.org/10.1609/aaai.v38i21.30345",
       "abstract": "Large-scale population displacements arising from conflict-induced forced migration generate uncertainty and introduce several policy challenges. Addressing these concerns requires an interdisciplinary approach that integrates knowledge from both computational modeling and social sciences. We propose a generalized computational agent-based modeling framework grounded by Theory of Planned Behavior to model conflict-induced migration outflows within Ukraine during the start of that conflict in 2022. Existing migration modeling frameworks that attempt to address policy implications primarily focus on destination while leaving absent a generalized computational framework grounded by social theory focused on the conflict-induced region. We propose an agent-based framework utilizing a spatiotemporal gravity model and a Bi-threshold model over a Graph Dynamical System to update migration status of agents in conflict-induced regions at fine temporal and spatial granularity. This approach significantly outperforms previous work when examining the case of Russian invasion in Ukraine. Policy implications of the proposed framework are demonstrated by modeling the migration behavior of Ukrainian civilians attempting to flee from regions encircled by Russian forces. We also showcase the generalizability of the model by simulating a past conflict in Burundi, an alternative conflict setting. Results demonstrate the utility of the framework for assessing conflict-induced migration in varied settings as well as identifying vulnerable civilian populations.",
       "abstract_source": "Crossref",
-      "author_count": 15,
+      "author_count": 17,
       "consortium_paper": false
     },
-    "conference-papers|31": {
+    "conference-papers|30": {
       "section": "conference-papers",
       "section_label": "Conference and Workshop Papers",
-      "number": 31,
+      "number": 30,
       "year": "2023",
       "title": "A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India",
       "citation": "A. Adiga, S. Athreya, ..., R. Sundaresan, SV, and S. Yasodharan, \"A Multi-Team Multi-Model Collaborative COVID-19 Forecasting Hub for India\", Winter Simulation Conference (WSC), 2023",
       "url": "https://doi.org/10.1109/wsc60868.2023.10407748",
       "abstract": "During the COVID-19 pandemic, India has seen some of the highest number of cases and deaths. Quality of data, continuously changing policy, and public health response made forecasting extremely difficult. Given the challenges in real-time forecasting, several countries had started a multi-team collaborative effort. Inspired by these works, academic partners from India and the United States setup a repository for aggregating India-specific forecasts from multiple teams. In this paper, we describe the effort and the challenges in setting up the repository. We discuss the development of simulations of compartmental models to model specific waves of the pandemic and show that the simulation model designed specifically for the Omicron wave was able to predict the onset and peak sizes accurately. We employed a median-based ensemble model to aggregate the individual forecasts. We observed that median-based ensemble was relatively stable compared to the constituent models and was one of better performing models.",
       "abstract_source": "OpenAlex",
-      "author_count": 17,
+      "author_count": 15,
       "consortium_paper": false
     },
     "conference-papers|29": {
