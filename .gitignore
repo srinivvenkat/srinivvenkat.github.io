@@ -31,3 +31,6 @@ tools/.bibtex_cache.json
 
 # CV LaTeX sources (separate repo: github.com/srinivvenkat/SV_CV)
 SV_CV/
+
+# Scratch inputs (abstracts pasted in before encoding into abstracts.json)
+temp/

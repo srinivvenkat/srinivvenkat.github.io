@@ -92,7 +92,12 @@
 
   window.abstractsPromise
     .then(function (data) {
+      // Two blocks, one page each: "entries" keys the publications list,
+      // "talks" keys talks.html. render() looks each key's section up by id and
+      // skips what is not on the current page, so both can be handed over here
+      // and the wrong-page half costs nothing.
       render((data && data.entries) || {});
+      render((data && data.talks) || {});
     })
     .catch(function (err) {
       // Non-fatal: the publication list itself is already complete without this.
