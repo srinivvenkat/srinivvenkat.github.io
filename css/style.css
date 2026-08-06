@@ -1391,6 +1391,51 @@ svg.cn {
 
 .press-asset p { margin: 0; }
 
+/* ------------------------------------------------------------------ */
+/* Back to top (built by js/back-to-top.js)                             */
+/* ------------------------------------------------------------------ */
+/* Deliberately quiet: a small outlined disc in the corner that firms up on
+   hover, rather than a filled badge competing with the page. Bottom-right and
+   fixed, clear of the footer links. [hidden] stays authoritative (see the rule
+   near the word-cloud section), so the control is absent until scrolled to. */
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--navy);
+  font-size: 1.1rem;
+  line-height: 1;
+  box-shadow: var(--shadow);
+  transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+
+.to-top:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+  text-decoration: none;
+}
+
+.to-top:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+/* On a phone the disc would sit over the content it is meant to help you leave,
+   so it tucks in tighter and shrinks. */
+@media (max-width: 560px) {
+  .to-top { right: 12px; bottom: 12px; width: 36px; height: 36px; }
+}
+
 /* Skip link: the first focusable thing on every page. Off-screen until focused,
    so it costs sighted users nothing but lets a keyboard user jump the header
    nav (7 links) and land straight on <main>. */

@@ -1,10 +1,12 @@
 /*
- * Turns each condensing ellipsis ("...") in a citation on publications.html into
+ * Turns each condensing ellipsis ("...") in a citation into
  * a hoverable button that reveals the paper's full, ordered author list.
  *
  * paper-authors.json is the source of truth: keys are "<section-id>|<entry-number>"
  * and map onto the <section id> / <li value> in the page (same scheme as
- * abstracts.json). Only the citation's leading author text — the direct text-node
+ * abstracts.json). The home page's Selected Publications have no numbering of
+ * their own, so each <li> there carries the key as data-key instead; both forms
+ * are enhanced by the same pass. Only the citation's leading author text — the direct text-node
  * children of each <li>, before the title <a> — is scanned, so titles, journal
  * names, and the appended Abstract disclosure are never touched. A single popover
  * element is shared across all buttons; long lists scroll inside it.
@@ -171,20 +173,30 @@
       var names = entries[key];
       if (!names || !names.length) return;
 
+      // Two ways an entry is addressed. publications.html and talks.html carry
+      // the key structurally, as <section id>/<li value>; the home page's
+      // Selected Publications are a hand-picked subset with no numbering of
+      // their own, so each <li> names its key outright with data-key.
+      var items = [];
       var parts = key.split("|");
       var section = document.getElementById(parts[0]);
-      if (!section) return;
-
-      var li = section.querySelector('li[value="' + parts[1] + '"]');
-      if (!li) return;
+      if (section) {
+        var li = section.querySelector('li[value="' + parts[1] + '"]');
+        if (li) items.push(li);
+      }
+      var tagged = document.querySelectorAll('li[data-key="' + key + '"]');
+      for (var t = 0; t < tagged.length; t++) items.push(tagged[t]);
+      if (!items.length) return;
 
       // Only the citation's leading author text — direct text-node children of the
       // <li>. Snapshot first, since enhanceTextNode mutates the child list.
-      var textNodes = [];
-      for (var n = li.firstChild; n; n = n.nextSibling) {
-        if (n.nodeType === 3 && n.nodeValue.indexOf(ELLIPSIS) !== -1) textNodes.push(n);
-      }
-      textNodes.forEach(function (node) { enhanceTextNode(node, names); });
+      items.forEach(function (li) {
+        var textNodes = [];
+        for (var n = li.firstChild; n; n = n.nextSibling) {
+          if (n.nodeType === 3 && n.nodeValue.indexOf(ELLIPSIS) !== -1) textNodes.push(n);
+        }
+        textNodes.forEach(function (node) { enhanceTextNode(node, names); });
+      });
     });
   }
 
