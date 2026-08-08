@@ -60,6 +60,11 @@
   var ABS_MATCH = "is-abs-match";
   var DEBOUNCE = 120;
 
+  // The early years are sparse, so 2014 and earlier collapse into one range
+  // option in the year select rather than a run of single-paper years.
+  var YEAR_RANGE_MAX = 2014;
+  var YEAR_RANGE_VALUE = "-2014"; // the select value for that combined option
+
   var rows = [];      // { li, ol, heading, section, year, key, text, abstract }
   var toolbar = null;
   var qInput = null, typeSel = null, yearSel = null, countEl = null;
@@ -195,7 +200,15 @@
       if (r.year && years.indexOf(r.year) === -1) years.push(r.year);
     });
     years.sort(function (a, b) { return b.localeCompare(a); });
-    years.forEach(function (y) { yearSel.appendChild(option(y, y)); });
+    var early = years.filter(function (y) { return Number(y) <= YEAR_RANGE_MAX; });
+    years.forEach(function (y) {
+      if (Number(y) <= YEAR_RANGE_MAX) return;
+      yearSel.appendChild(option(y, y));
+    });
+    if (early.length) {
+      var lo = early[early.length - 1]; // oldest year present, e.g. "2010"
+      yearSel.appendChild(option(YEAR_RANGE_VALUE, lo + "–" + String(YEAR_RANGE_MAX).slice(-2)));
+    }
     form.appendChild(control("Year", "pub-year", yearSel));
 
     var clear = document.createElement("button");
@@ -237,7 +250,13 @@
       var hit = true;
       var absOnly = false;
       if (type && row.section.id !== type) hit = false;
-      if (hit && year && row.year !== year) hit = false;
+      if (hit && year) {
+        if (year === YEAR_RANGE_VALUE) {
+          if (Number(row.year) > YEAR_RANGE_MAX) hit = false;
+        } else if (row.year !== year) {
+          hit = false;
+        }
+      }
       if (hit && tokens.length) {
         // Every token must appear somewhere, in the citation or in the abstract,
         // but a row is only "abstract-only" when at least one token is missing
