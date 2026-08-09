@@ -137,6 +137,18 @@
    "ref": "index.html#experience"
   },
   {
+   "city": "Washington",
+   "region": "DC",
+   "country": "United States",
+   "lat": 38.91, "lon": -77.04,
+   "start": "2015-09", "end": null,
+   "kind": "talk",
+   "purpose": "International Symposium for Next Generation Infrastructure (ISNGI): \"Calibration and Forecasting Framework for Infectious Diseases\"",
+   "mode": "in-person",
+   "confirmed": true,
+   "ref": "talks.html"
+  },
+  {
    "city": "Bangalore",
    "country": "India",
    "lat": 12.97, "lon": 77.59,
@@ -180,6 +192,19 @@
    "mode": "in-person",
    "confirmed": true,
    "ref": "talks.html"
+  },
+  {
+   "city": "Park City",
+   "region": "UT",
+   "country": "United States",
+   "lat": 40.65, "lon": -111.50,
+   "start": "2017-08", "end": null,
+   "kind": "conference",
+   "purpose": "IEEE International Conference on Healthcare Informatics (ICHI): \"Spatio-temporal optimization of seasonal vaccination using a metapopulation model of influenza\"",
+   "mode": "in-person",
+   "confirmed": true,
+   "note": "Month is inferred from when IEEE ICHI 2017 ran; publications.html gives the paper a year only.",
+   "ref": "publications.html"
   },
   {
    "city": "Boston",
@@ -300,6 +325,19 @@
    "mode": "in-person",
    "confirmed": true,
    "ref": "talks.html"
+  },
+  {
+   "city": "Washington",
+   "region": "DC",
+   "country": "United States",
+   "lat": 38.91, "lon": -77.04,
+   "start": "2022-08", "end": null,
+   "kind": "conference",
+   "purpose": "epiDAMIK 5.0 at ACM SIGKDD: \"Impact of Seeding and Spatial Heterogeneity on Metapopulation Disease Dynamics\", and panelist on bridging CS/ML work and public health practice",
+   "mode": "in-person",
+   "confirmed": true,
+   "note": "One trip covering both the epiDAMIK paper (publications.html) and the panel (service.html). Month is inferred from when SIGKDD 2022 ran; neither page gives more than a year.",
+   "ref": "publications.html"
   },
   {
    "city": "Atlanta",
