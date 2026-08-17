@@ -33,6 +33,12 @@ the handle system (doi.org, Crossref, OpenAlex and Semantic Scholar all return
 not-found) even though the ACM page it links to is live, so there is nothing to
 fetch and the record is transcribed from the CV citation.
 
+Because those keys are entry numbers, renumbering a section silently re-points
+every override in it at whatever paper now holds that number -- which is how the
+ANNSIM and epiDAMIK records ended up attached to two unrelated papers. Each
+override's title is therefore checked against the entry it lands on, and a
+mismatch is reported as MISAIMED and exits non-zero rather than being applied.
+
 The cache (.bibtex_cache.json, gitignored) is keyed by identifier, so a re-run
 after adding one paper makes exactly one network call.
 """
@@ -44,6 +50,7 @@ import subprocess
 import sys
 import time
 import xml.etree.ElementTree as ET
+from html import unescape
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HTML = os.path.join(ROOT, "publications.html")
@@ -89,15 +96,36 @@ def identifier(href):
 
 
 def entries_from_html():
-    """[(key, href)] for every <li value=N> under a <section id=...>."""
+    """[(key, href, text)] for every <li value=N> under a <section id=...>.
+
+    text is the citation with markup stripped, kept only so an override can be
+    checked against the entry it claims to describe (see match_check)."""
     html = open(HTML, encoding="utf-8").read()
     out = []
     for sec in re.finditer(r'<section id="([^"]+)">(.*?)</section>', html, re.S):
         sid, body = sec.group(1), sec.group(2)
         for li in re.finditer(r'<li value="(\d+)">(.*?)</li>', body, re.S):
             href = re.search(r'href="([^"]+)"', li.group(2))
-            out.append((f"{sid}|{li.group(1)}", href.group(1) if href else ""))
+            text = re.sub(r"<[^>]+>", "", li.group(2))
+            out.append((f"{sid}|{li.group(1)}", href.group(1) if href else "", text))
     return out
+
+
+def norm(s):
+    """Comparison form: letters and digits only, lowercased. Absorbs the
+    &ndash;/-- and quoting differences between a BibTeX field and the page."""
+    return re.sub(r"[^a-z0-9]", "", unescape(s).lower())
+
+
+def match_check(bib, text):
+    """True if this record's title appears in the entry text it is keyed to.
+
+    Override keys are entry numbers, and numbers move when a section is
+    renumbered. A stale key does not miss harmlessly -- it lands on whichever
+    paper now holds that number and attaches the wrong citation to it, which
+    nothing else here would notice. Comparing titles turns that into an error."""
+    title = field(bib, "title")
+    return bool(title) and norm(title) in norm(text)
 
 
 def field(bib, name):
@@ -213,7 +241,7 @@ def main():
         overrides = json.load(open(OVERRIDES, encoding="utf-8")).get("entries", {})
 
     items = entries_from_html()
-    skipped = [(k, h) for k, h in items
+    skipped = [(k, h) for k, h, _ in items
                if identifier(h)[0] is None and k not in overrides]
 
     if args.report:
@@ -224,11 +252,16 @@ def main():
         return
 
     out, used, fetched, failed, overridden = {}, set(), 0, [], 0
-    for key, href in items:
+    misaimed = [k for k in overrides if k not in {i[0] for i in items}]
+    for key, href, text in items:
         # A hand-written record wins: it exists precisely because the network
-        # cannot supply one, or supplied a wrong one.
+        # cannot supply one, or supplied a wrong one. It only wins where it
+        # belongs, though -- an override on the wrong entry is worse than none.
         if key in overrides:
             bib = overrides[key]
+            if not match_check(bib, text):
+                misaimed.append(key)
+                continue
             out[key] = tidy(rekey(bib, make_key(bib, used)))
             overridden += 1
             continue
@@ -268,7 +301,10 @@ def main():
           f"(run --report to list them)")
     for key, ident, err in failed:
         print(f"  FAILED {key} [{ident}]: {err}", file=sys.stderr)
-    if failed:
+    for key in misaimed:
+        print(f"  MISAIMED OVERRIDE {key}: title does not match the entry at that "
+              f"number in publications.html -- rekey it", file=sys.stderr)
+    if failed or misaimed:
         sys.exit(1)
 
 

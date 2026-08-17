@@ -5,13 +5,19 @@
     "an override always wins over the network, so this is also the place to correct a",
     "publisher record that is wrong. The cite key here is ignored and regenerated.",
     "",
-    "conference-papers|35 (ANNSIM 2024): DOI 10.22360/ANNSIM.2024.HM.193 was never",
+    "Keys are entry NUMBERS, which move when a section is renumbered: these two were",
+    "written when VISHN was |35 and epiDAMIK was |27, and silently landed on unrelated",
+    "papers once conference-papers lost two entries. build_bibtex.py now checks each",
+    "override's title against the entry it lands on and refuses a mismatch, so a",
+    "renumber fails loudly. Re-run it after moving entries around.",
+    "",
+    "conference-papers|33 (ANNSIM 2024): DOI 10.22360/ANNSIM.2024.HM.193 was never",
     "deposited with the handle system, so doi.org, Crossref, OpenAlex and Semantic",
     "Scholar all return not-found, even though the ACM page it links to is live. Fields",
     "transcribed from the CV citation; co-author's full first name from mentoring.html.",
     "Delete this entry if SCS/ACM ever registers the DOI.",
     "",
-    "conference-papers|27 (epiDAMIK 5.0 @ KDD 2022): workshop papers get no DOI, and",
+    "conference-papers|25 (epiDAMIK 5.0 @ KDD 2022): workshop papers get no DOI, and",
     "OpenReview's API is behind a bot challenge. Authors and venue taken from the",
     "workshop programme at epidamik.github.io/2022/program.html, which spells the site",
     "owner 'Venkataramanan'; corrected here to the spelling he uses himself.",
@@ -23,9 +29,9 @@
     "only working source."
   ],
   "entries": {
-    "conference-papers|35": "@inproceedings{placeholder, title={VISHN: Viral Load and Immunity Simulation on a Host Network}, author={Nachison, Jeremy and Venkatramanan, Srinivasan}, booktitle={Annual Modeling and Simulation Conference (ANNSIM)}, year={2024}, doi={10.22360/ANNSIM.2024.HM.193}, url={https://dl.acm.org/doi/10.22360/ANNSIM.2024.HM.193}}",
+    "conference-papers|33": "@inproceedings{placeholder, title={VISHN: Viral Load and Immunity Simulation on a Host Network}, author={Nachison, Jeremy and Venkatramanan, Srinivasan}, booktitle={Annual Modeling and Simulation Conference (ANNSIM)}, year={2024}, doi={10.22360/ANNSIM.2024.HM.193}, url={https://dl.acm.org/doi/10.22360/ANNSIM.2024.HM.193}}",
 
-    "conference-papers|27": "@inproceedings{placeholder, title={Impact of Seeding and Spatial Heterogeneity on Metapopulation Disease Dynamics}, author={Rajuladevi, Rohit Srinivas and Marathe, Madhav and Porebski, Przemyslaw and Venkatramanan, Srinivasan}, booktitle={epiDAMIK 5.0: The 5th International Workshop on Epidemiology meets Data Mining and Knowledge Discovery, co-held with ACM SIGKDD}, year={2022}, url={https://openreview.net/forum?id=uYuafV_Kz0}}",
+    "conference-papers|25": "@inproceedings{placeholder, title={Impact of Seeding and Spatial Heterogeneity on Metapopulation Disease Dynamics}, author={Rajuladevi, Rohit Srinivas and Marathe, Madhav and Porebski, Przemyslaw and Venkatramanan, Srinivasan}, booktitle={epiDAMIK 5.0: The 5th International Workshop on Epidemiology meets Data Mining and Knowledge Discovery, co-held with ACM SIGKDD}, year={2022}, url={https://openreview.net/forum?id=uYuafV_Kz0}}",
 
     "tech-reports|3": "@techreport{placeholder, title={Pest Risk Assessment of the Fall Armyworm, Spodoptera frugiperda in Egypt}, author={Heinrichs, E. A. and Sidhu, Jaspreet and Muniappan, R. and Fayad, Amer and Adiga, Abhijin and Marathe, Achla and Mcnitt, Joseph and Venkatramanan, Srinivasan}, institution={Feed the Future Innovation Lab for Integrated Pest Management, Virginia Tech}, year={2017}, note={USAID award AID-OAA-L-15-00001}, url={https://web.archive.org/web/20210525151428/https://ipmil.cired.vt.edu/wp-content/uploads/2018/03/Egypt-FAW-Risk-Assessment-12-14-17.pdf}}"
   }
