@@ -1,8 +1,8 @@
 {
   "_readme": "Single source of truth for the publication abstracts shown on publications.html. The page fetches this file once at load time (js/abstracts.js, shared with js/pub-search.js via window.abstractsPromise): abstracts.js renders an 'Abstract' toggle for every entry whose 'abstract' field is non-null, and pub-search.js indexes the same text so the search box matches on abstracts as well as citations. Keys are '<section-id>|<entry-number>' and match the <section id> and <li value> in publications.html — edit an abstract here and the page picks it up, no HTML changes. Abstract text is the authors' own, retrieved verbatim from the publisher record for each DOI/arXiv/medRxiv ID; none is paraphrased or generated. Blank lines (\\n\\n) separate paragraphs and **bold** marks structured-abstract section labels. author_count and consortium_paper are auto-maintained by tools/build_authors.py: author_count is the full OpenAlex author count (null when the paper isn't in OpenAlex), and consortium_paper is true when author_count > 30 (large forecasting/scenario-hub efforts). A separate 'talks' block holds abstracts for entries on talks.html, keyed the same way ('<section-id>|<entry-number>') against that page's sections. It is kept apart from 'entries' because everything downstream of this file (tools/build_wordcloud.py, build_authors.py, build_bibtex.py, js/pub-search.js) treats 'entries' as the publication list and would otherwise index conference talks as papers. js/abstracts.js renders both blocks and simply skips any key whose section is not on the current page.",
   "counts": {
-    "entries": 102,
-    "with_abstract": 99,
+    "entries": 103,
+    "with_abstract": 100,
     "without_abstract": 3,
     "consortium_papers": 11
   },
@@ -11,7 +11,7 @@
     "Crossref": 29,
     "medRxiv": 13,
     "Semantic Scholar": 8,
-    "arXiv": 5,
+    "arXiv": 6,
     "Author-supplied": 4,
     "Author manuscript (PDF in papers/)": 3,
     "OpenAlex (title match)": 1
@@ -301,7 +301,7 @@
       "url": "https://doi.org/10.1016/j.lana.2022.100398",
       "abstract": "**Background** SARS-CoV-2 vaccination of persons aged 12 years and older has reduced disease burden in the United States. The COVID-19 Scenario Modeling Hub convened multiple modeling teams in September 2021 to project the impact of expanding vaccine administration to children 5-11 years old on anticipated COVID-19 burden and resilience against variant strains.\n\n**Methods** Nine modeling teams contributed state- and national-level projections for weekly counts of cases, hospitalizations, and deaths in the United States for the period September 12, 2021 to March 12, 2022. Four scenarios covered all combinations of: 1) presence vs. absence of vaccination of children ages 5-11 years starting on November 1, 2021; and 2) continued dominance of the Delta variant vs. emergence of a hypothetical more transmissible variant on November 15, 2021. Individual team projections were combined using linear pooling. The effect of childhood vaccination on overall and age-specific outcomes was estimated by meta-analysis approaches.\n\n**Findings** Absent a new variant, COVID-19 cases, hospitalizations, and deaths among all ages were projected to decrease nationally through mid-March 2022. Under a set of specific assumptions, models projected that vaccination of children 5-11 years old was associated with reductions in all-age cumulative cases (7.2%, mean incidence ratio [IR] 0.928, 95% confidence interval [CI] 0.880-0.977), hospitalizations (8.7%, mean IR 0.913, 95% CI 0.834-0.992), and deaths (9.2%, mean IR 0.908, 95% CI 0.797-1.020) compared with scenarios where children were not vaccinated. This projected effect of vaccinating children 5-11 years old increased in the presence of a more transmissible variant, assuming no change in vaccine effectiveness by variant. Larger relative reductions in cumulative cases, hospitalizations, and deaths were observed for children than for the entire U.S. population. Substantial state-level variation was projected in epidemic trajectories, vaccine benefits, and variant impacts.\n\n**Conclusions** Results from this multi-model aggregation study suggest that, under a specific set of scenario assumptions, expanding vaccination to children 5-11 years old would provide measurable direct benefits to this age group and indirect benefits to the all-age U.S. population, including resilience to more transmissible variants.",
       "abstract_source": "medRxiv",
-      "author_count": 62,
+      "author_count": 63,
       "consortium_paper": true
     },
     "journal-articles|25": {
@@ -757,7 +757,7 @@
       "url": "https://doi.org/10.1609/aaai.v38i21.30345",
       "abstract": "Large-scale population displacements arising from conflict-induced forced migration generate uncertainty and introduce several policy challenges. Addressing these concerns requires an interdisciplinary approach that integrates knowledge from both computational modeling and social sciences. We propose a generalized computational agent-based modeling framework grounded by Theory of Planned Behavior to model conflict-induced migration outflows within Ukraine during the start of that conflict in 2022. Existing migration modeling frameworks that attempt to address policy implications primarily focus on destination while leaving absent a generalized computational framework grounded by social theory focused on the conflict-induced region. We propose an agent-based framework utilizing a spatiotemporal gravity model and a Bi-threshold model over a Graph Dynamical System to update migration status of agents in conflict-induced regions at fine temporal and spatial granularity. This approach significantly outperforms previous work when examining the case of Russian invasion in Ukraine. Policy implications of the proposed framework are demonstrated by modeling the migration behavior of Ukrainian civilians attempting to flee from regions encircled by Russian forces. We also showcase the generalizability of the model by simulating a past conflict in Burundi, an alternative conflict setting. Results demonstrate the utility of the framework for assessing conflict-induced migration in varied settings as well as identifying vulnerable civilian populations.",
       "abstract_source": "Crossref",
-      "author_count": 17,
+      "author_count": 15,
       "consortium_paper": false
     },
     "conference-papers|30": {
@@ -770,7 +770,7 @@
       "url": "https://doi.org/10.1109/wsc60868.2023.10407748",
       "abstract": "During the COVID-19 pandemic, India has seen some of the highest number of cases and deaths. Quality of data, continuously changing policy, and public health response made forecasting extremely difficult. Given the challenges in real-time forecasting, several countries had started a multi-team collaborative effort. Inspired by these works, academic partners from India and the United States setup a repository for aggregating India-specific forecasts from multiple teams. In this paper, we describe the effort and the challenges in setting up the repository. We discuss the development of simulations of compartmental models to model specific waves of the pandemic and show that the simulation model designed specifically for the Omicron wave was able to predict the onset and peak sizes accurately. We employed a median-based ensemble model to aggregate the individual forecasts. We observed that median-based ensemble was relatively stable compared to the constituent models and was one of better performing models.",
       "abstract_source": "OpenAlex",
-      "author_count": 15,
+      "author_count": 17,
       "consortium_paper": false
     },
     "conference-papers|29": {
@@ -1148,6 +1148,20 @@
       "abstract": "We provide new analytical results concerning the spread of information or influence under the linear threshold social network model introduced by Kempe et al. in [1], in the information dissemination context. The seeder starts by providing the message to a set of initial nodes and is interested in maximizing the number of nodes that will receive the message ultimately. A node's decision to forward the message depends on the set of nodes from which it has received the message. Under the linear threshold model, the decision to forward the information depends on the comparison of the total influence of the nodes from which a node has received the packet with its own threshold of influence. We derive analytical expressions for the expected number of nodes that receive the message ultimately, as a function of the initial set of nodes, for a generic network. We show that the problem can be recast in the framework of Markov chains. We then use the analytical expression to gain insights into information dissemination in some simple network topologies such as the star, ring, mesh and on acyclic graphs. We also derive the optimal initial set in the above networks, and also hint at general heuristics for picking a good initial set.",
       "abstract_source": "OpenAlex",
       "author_count": 2,
+      "consortium_paper": false
+    },
+    "tech-reports|16": {
+      "section": "tech-reports",
+      "section_label": "Technical Reports and Preprints",
+      "number": 16,
+      "year": "2026",
+      "title": "EpiFlow: A framework for improving the utility of wastewater signals for disease forecasting",
+      "citation": "A. Adiga, J. Chou, G. Kaur, A. Warren, SV, B. Espinoza, B. Lewis, J. Crow, A. Lorentz, R. Singh, and M. Marathe, \"EpiFlow: A framework for improving the utility of wastewater signals for disease forecasting\", arXiv:2608.06671",
+      "url": "https://arxiv.org/abs/2608.06671",
+      "abstract": "Wastewater-based surveillance is an effective tool for disease monitoring and can provide early warning of outbreaks. Although wastewater viral loads (WVL) correlate with disease burden, their utility for improving real-time forecasting remains under investigation. During the early phases of an epidemic, many indicators can effectively monitor disease spread, but their reliability may decline because of reporting fatigue and low prevalence. Hospital burden can vary substantially even during low-prevalence periods, making accurate forecasting of burden indicators essential for minimizing disease impacts. In this paper, we present principled approaches for processing wastewater data, characterizing its relationship with burden indicators, and generating real-time forecasts. We assess the predictability of WVL using entropy measures. We analyze the relationship between WVL and burden indicators using causality tests that capture temporal dynamics and the leading-indicator behavior of WVL. We incorporate these insights into a time-varying forecasting model that accounts for the evolving relationship between the signals. We also evaluate the effects of delays in WVL reporting through simulations. We test the utility of our methods by forecasting COVID-19 hospital admissions across Virginia and its health regions during periods of varying disease prevalence. Incorporating WVL improves forecast accuracy relative to baseline models, particularly during critical epidemic phases, and results in a 20 percentage point improvement in forecast coverage. Our results demonstrate that WVL signals can improve infectious disease forecasting even under conditions of low prevalence or delayed reporting.",
+      "abstract_source": "arXiv",
+      "abstract_unavailable_reason": null,
+      "author_count": 11,
       "consortium_paper": false
     },
     "tech-reports|15": {
