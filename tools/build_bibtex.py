@@ -8,6 +8,11 @@ JSON file keyed "<section-id>|<entry-number>", the same scheme abstracts.json an
 paper-authors.json use, so js/pub-bibtex.js can attach each record to its <li>
 without re-parsing anything.
 
+Alongside the JSON it writes ../SV_publications.bib: the same records concatenated
+into one file, in page order under a comment header per section, which
+publications.html offers as a single download for anyone who wants the whole list
+rather than one citation at a time.
+
     python3 tools/build_bibtex.py            # use cache where present
     python3 tools/build_bibtex.py --refresh  # ignore cache, refetch everything
     python3 tools/build_bibtex.py --report   # list what has no identifier
@@ -55,6 +60,7 @@ from html import unescape
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HTML = os.path.join(ROOT, "publications.html")
 OUT = os.path.join(ROOT, "bibtex.json")
+BIB = os.path.join(ROOT, "SV_publications.bib")
 CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".bibtex_cache.json")
 OVERRIDES = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bibtex-overrides.json")
 
@@ -109,6 +115,47 @@ def entries_from_html():
             text = re.sub(r"<[^>]+>", "", li.group(2))
             out.append((f"{sid}|{li.group(1)}", href.group(1) if href else "", text))
     return out
+
+
+def section_titles():
+    """{section-id: heading} for the four category sections, for the .bib headers."""
+    html = open(HTML, encoding="utf-8").read()
+    out = {}
+    for m in re.finditer(r'<section id="([^"]+)">\s*<h2>(.*?)</h2>', html, re.S):
+        out[m.group(1)] = unescape(re.sub(r"<[^>]+>", "", m.group(2))).strip()
+    return out
+
+
+def write_bib(records, items):
+    """Write ../SV_publications.bib: every record concatenated, in page order.
+
+    Same records as the JSON, just in a form BibTeX itself can read, so the page
+    can offer the whole list as one download instead of 100 copy buttons. Order
+    follows publications.html -- section by section, newest first within each --
+    with a comment header per section, since a reader opening the file wants the
+    same shape they saw on the page."""
+    titles = section_titles()
+    lines = [
+        "% Publications of Srinivasan (Srini) Venkatramanan",
+        "% https://srinivvenkat.github.io/publications.html",
+        "%",
+        f"% {len(records)} entries, generated {time.strftime('%Y-%m-%d')} by "
+        "tools/build_bibtex.py.",
+        "% Records come from doi.org and arXiv; cite keys are regenerated as",
+        "% <surname><year><first-title-word>. Entries with no resolvable DOI or",
+        "% arXiv id are absent.",
+    ]
+    section = None
+    for key, _, _ in items:
+        if key not in records:
+            continue
+        sid = key.split("|")[0]
+        if sid != section:
+            section = sid
+            heading = titles.get(sid, sid)
+            lines += ["", "% " + "-" * 68, f"% {heading}", "% " + "-" * 68]
+        lines += ["", records[key]]
+    open(BIB, "w", encoding="utf-8").write("\n".join(lines) + "\n")
 
 
 def norm(s):
@@ -293,8 +340,10 @@ def main():
     json.dump(cache, open(CACHE, "w", encoding="utf-8"), indent=1)
     json.dump({"entries": out}, open(OUT, "w", encoding="utf-8"),
               indent=1, ensure_ascii=False)
+    write_bib(out, items)
 
     print(f"{len(out)} records written to {os.path.relpath(OUT, ROOT)} "
+          f"and {os.path.relpath(BIB, ROOT)} "
           f"({fetched} fetched, {len(out) - fetched - overridden} from cache, "
           f"{overridden} hand-written)")
     print(f"{len(skipped)} entries have no identifier "

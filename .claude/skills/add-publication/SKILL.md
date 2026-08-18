@@ -158,7 +158,7 @@ python3 tools/build_authors.py --refresh   # needs network; also writes author_c
 python3 tools/build_wordcloud.py           # reads abstracts.json
 python3 tools/build_copub.py               # reads authors.json; needs network
 python3 tools/build_coauthors.py           # reads authors.json + copub.json — must run last
-python3 tools/build_bibtex.py              # reads publications.html (Step 3), so run it after that
+python3 tools/build_bibtex.py              # reads publications.html (Step 3), so run it after that; writes bibtex.json + SV_publications.bib
 ```
 
 `build_copub.py` is the slow one (per-author OpenAlex works fetch, cached in
@@ -198,7 +198,8 @@ They are separate repos; `SV_CV/` is gitignored by the site repo.
 ```bash
 git -C SV_CV add -A && git -C SV_CV commit -m "add <short paper handle>"
 git add SV_CV.pdf abstracts.json authors.json wordcloud-data.json copub.json \
-        coauthors-data.json bibtex.json tools/bibtex-overrides.json *.html
+        coauthors-data.json bibtex.json SV_publications.bib \
+        tools/bibtex-overrides.json *.html
 git commit -m "add <short paper handle>"
 ```
 

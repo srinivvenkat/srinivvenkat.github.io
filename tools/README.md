@@ -19,7 +19,7 @@ the pages, in this order:
    to count pairwise co-publications — needs network, cached so reruns are fast).
 5. **`coauthors-data.json`** — regenerate: `python3 tools/build_coauthors.py`
    (reads `authors.json` **and** `copub.json`, so it must run **after** steps 2 and 4).
-6. **`bibtex.json`** — regenerate: `python3 tools/build_bibtex.py`
+6. **`bibtex.json`** + **`SV_publications.bib`** — regenerate: `python3 tools/build_bibtex.py`
    (reads the DOI/arXiv link out of the new entry in `publications.html`, so it must
    run **after** the entry exists there; cached, so this costs one network call).
 7. **Footer date** — refresh: `python3 tools/stamp_updated.py` (see below).
@@ -34,7 +34,9 @@ home-page word cloud, and the collaboration network stale relative to the CV.
 
 Writes `../bibtex.json`: one BibTeX record per publication, keyed
 `"<section-id>|<entry-number>"`, which `js/pub-bibtex.js` turns into the copy
-buttons on the publications page.
+buttons on the publications page. It also writes `../SV_publications.bib` — the same
+records concatenated in page order, one comment header per section — which
+`publications.html` links at the top as a single download for the whole list.
 
 ```
 python3 tools/build_bibtex.py            # use cache where present
@@ -63,8 +65,8 @@ network, so it doubles as the place to correct a wrong publisher record. It
 currently holds one: the ANNSIM 2024 paper, whose DOI was never deposited with the
 handle system even though its ACM page is live.
 
-Currently **97 of 104** entries have a record: 96 fetched, 1 hand-written. The
-remaining 7 link to a Google Scholar search or an OpenReview forum and would each
+Currently **101 of 103** entries have a record: 98 fetched, 3 hand-written. The
+remaining 2 link to a Google Scholar search or an OpenReview forum and would each
 need an override to gain a button.
 
 Like the OpenAlex tools, this needs only Python 3 stdlib plus `curl` on PATH.
