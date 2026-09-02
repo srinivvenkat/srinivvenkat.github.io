@@ -1,15 +1,15 @@
 {
   "_readme": "Single source of truth for the publication abstracts shown on publications.html. The page fetches this file once at load time (js/abstracts.js, shared with js/pub-search.js via window.abstractsPromise): abstracts.js renders an 'Abstract' toggle for every entry whose 'abstract' field is non-null, and pub-search.js indexes the same text so the search box matches on abstracts as well as citations. Keys are '<section-id>|<entry-number>' and match the <section id> and <li value> in publications.html — edit an abstract here and the page picks it up, no HTML changes. Abstract text is the authors' own, retrieved verbatim from the publisher record for each DOI/arXiv/medRxiv ID; none is paraphrased or generated. Blank lines (\\n\\n) separate paragraphs and **bold** marks structured-abstract section labels. author_count and consortium_paper are auto-maintained by tools/build_authors.py: author_count is the full OpenAlex author count (null when the paper isn't in OpenAlex), and consortium_paper is true when author_count > 30 (large forecasting/scenario-hub efforts). A separate 'talks' block holds abstracts for entries on talks.html, keyed the same way ('<section-id>|<entry-number>') against that page's sections ('invited-talks' and 'posters-abstracts'). It is kept apart from 'entries' because everything downstream of this file (tools/build_wordcloud.py, build_authors.py, build_bibtex.py, js/pub-search.js) treats 'entries' as the publication list and would otherwise index conference talks as papers. js/abstracts.js renders both blocks and simply skips any key whose section is not on the current page.",
   "counts": {
-    "entries": 103,
-    "with_abstract": 100,
+    "entries": 104,
+    "with_abstract": 101,
     "without_abstract": 3,
     "consortium_papers": 11
   },
   "abstract_sources": {
     "OpenAlex": 36,
     "Crossref": 29,
-    "medRxiv": 13,
+    "medRxiv": 14,
     "Semantic Scholar": 8,
     "arXiv": 6,
     "Author-supplied": 4,
@@ -1148,6 +1148,20 @@
       "abstract": "We provide new analytical results concerning the spread of information or influence under the linear threshold social network model introduced by Kempe et al. in [1], in the information dissemination context. The seeder starts by providing the message to a set of initial nodes and is interested in maximizing the number of nodes that will receive the message ultimately. A node's decision to forward the message depends on the set of nodes from which it has received the message. Under the linear threshold model, the decision to forward the information depends on the comparison of the total influence of the nodes from which a node has received the packet with its own threshold of influence. We derive analytical expressions for the expected number of nodes that receive the message ultimately, as a function of the initial set of nodes, for a generic network. We show that the problem can be recast in the framework of Markov chains. We then use the analytical expression to gain insights into information dissemination in some simple network topologies such as the star, ring, mesh and on acyclic graphs. We also derive the optimal initial set in the above networks, and also hint at general heuristics for picking a good initial set.",
       "abstract_source": "OpenAlex",
       "author_count": 2,
+      "consortium_paper": false
+    },
+    "tech-reports|17": {
+      "section": "tech-reports",
+      "section_label": "Technical Reports and Preprints",
+      "number": 17,
+      "year": "2026",
+      "title": "Multi-season evaluation and analysis of categorical trend forecasts of influenza hospital admissions in the United States",
+      "citation": "J. T. Davis, G. Kaur, A. Hines, M. Ben-Nun, SV, ..., M. Johansson, M. Biggerstaff, and R. K. Borchering, \"Multi-season evaluation and analysis of categorical trend forecasts of influenza hospital admissions in the United States\", medRxiv, 2026.08.31.26361843",
+      "url": "https://doi.org/10.64898/2026.08.31.26361843",
+      "abstract": "Forecasting influenza hospitalizations informs public health preparedness, yet questions remain about which types of forecasts best guide action. We evaluate categorical trend forecasts, which communicate probabilities of upcoming increases or decreases in epidemic trajectories, submitted to CDC's FluSight Forecasting Challenge between Fall-2024 and Spring-2026. Teams submitted probability distributions over five categories describing direction and magnitude of week-over-week changes in laboratory-confirmed influenza hospital admissions. We assessed performance using Ranked Probability Skill Score, Brier Skill Score, and measures of forecast-observation agreement. Most models outperformed an equal-probability baseline; the FluSight ensemble ranked among the top three in the 2024-25 and 2025-26 seasons. Forecasts were most accurate during stable periods and least during periods of rapid change, with most models underestimating observed trends. Conclusions were robust to choice of scoring metric and reference model. These results support categorical trend ensembles as an approach to communicating infectious disease forecasts that may inform public health decision-making.",
+      "abstract_source": "medRxiv",
+      "abstract_unavailable_reason": null,
+      "author_count": null,
       "consortium_paper": false
     },
     "tech-reports|16": {

@@ -4,7 +4,7 @@
     "authors": 816,
     "consortium_only_authors": 576,
     "papers_resolved": 98,
-    "papers_total": 103,
+    "papers_total": 104,
     "consortium_papers": 11
   },
   "source": "OpenAlex (https://openalex.org)",
@@ -31,6 +31,12 @@
       "key": "conference-papers|14",
       "title": "Understanding the Role of Seasonal Food Trade Networks in Invasive Species Spread",
       "url": "papers/adiga19understanding.pdf",
+      "reason": "not indexed in OpenAlex; no full author names/affiliations available"
+    },
+    {
+      "key": "tech-reports|17",
+      "title": "Multi-season evaluation and analysis of categorical trend forecasts of influenza hospital admissions in the United States",
+      "url": "https://doi.org/10.64898/2026.08.31.26361843",
       "reason": "not indexed in OpenAlex; no full author names/affiliations available"
     },
     {
