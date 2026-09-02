@@ -5,7 +5,7 @@ description: Add a new publication to the LaTeX CV (SV_CV/srini_resume.tex), reb
 
 # Add a publication and resync the site
 
-One new paper touches **nine** files across **two** git repos. Do the steps in order,
+One new paper touches **ten** files across **two** git repos. Do the steps in order,
 never skip the regeneration, and commit each repo separately.
 
 ## Inputs
@@ -157,7 +157,8 @@ The `value` must equal the `number` in `abstracts.json` — that pairing is what
 python3 tools/build_authors.py --refresh   # needs network; also writes author_count/consortium_paper back into abstracts.json
 python3 tools/build_wordcloud.py           # reads abstracts.json
 python3 tools/build_copub.py               # reads authors.json; needs network
-python3 tools/build_coauthors.py           # reads authors.json + copub.json — must run last
+python3 tools/build_coauthors.py           # reads authors.json + copub.json — must run last of the OpenAlex chain
+python3 tools/build_paper_authors.py       # reads tools/.openalex_cache.json (filled by build_authors.py above)
 python3 tools/build_bibtex.py              # reads publications.html (Step 3), so run it after that; writes bibtex.json + SV_publications.bib
 ```
 
@@ -166,6 +167,20 @@ python3 tools/build_bibtex.py              # reads publications.html (Step 3), s
 minute. Eyeball each script's printed summary — `build_authors.py` lists
 `unresolved_papers`, and a brand-new DOI often isn't in OpenAlex yet, which is expected
 (the entry still renders; just note it to the user).
+
+`build_paper_authors.py` writes `paper-authors.json`, which is what turns each `...` in a
+citation into the hoverable "All N authors" button (`js/pub-authors.js`). **Run it every
+time, even when the new paper's own citation has no ellipsis.** It rebuilds the whole file
+from scratch off entry numbers, so skipping it does two kinds of damage: papers added
+since the last run have a dead ellipsis, and any entry whose number moved in a renumber
+keeps showing **another paper's author list** until the next run. It is cheap and needs no
+network.
+
+Papers OpenAlex has not indexed get no list. To fill one in, add the verbatim ordered
+names to `tools/paper-authors-overrides.json`; the script uses an override only when
+OpenAlex has nothing for that key, so it retires itself and prints
+`OVERRIDE NO LONGER NEEDED` once the real record lands. See [[recheck-handwritten-bibtex]]
+— the same "provisional, recheck later" rule applies here.
 
 `build_bibtex.py` only depends on `publications.html`, not on the OpenAlex chain, so its
 position in the list is about Step 3, not about the other four. It prints a `FAILED` line
@@ -218,8 +233,8 @@ They are separate repos; `SV_CV/` is gitignored by the site repo.
 ```bash
 git -C SV_CV add -A && git -C SV_CV commit -m "add <short paper handle>"
 git add SV_CV.pdf abstracts.json authors.json wordcloud-data.json copub.json \
-        coauthors-data.json bibtex.json SV_publications.bib \
-        tools/bibtex-overrides.json *.html
+        coauthors-data.json paper-authors.json bibtex.json SV_publications.bib \
+        tools/bibtex-overrides.json tools/paper-authors-overrides.json *.html
 git commit -m "add <short paper handle>"
 ```
 
@@ -232,8 +247,9 @@ when the user says so — "C&P" is standing authorization to commit and push.
 - [ ] `pdflatex` run twice, log clean, `SV_CV.pdf` copied to repo root
 - [ ] `abstracts.json` entry added, `counts` and `abstract_sources` updated
 - [ ] `publications.html` TOC count bumped and `<li value=N>` added under the right year
-- [ ] all five `tools/build_*.py` re-run **in order**
+- [ ] all six `tools/build_*.py` re-run **in order**, `build_paper_authors.py` included
 - [ ] new paper got a BibTeX record, or an override added if its identifier will not resolve
+- [ ] every `...` in the new citation expands on the live page, or an entry added to `tools/paper-authors-overrides.json`
 - [ ] news `<li>` added at the top of `index.html`, oldest dropped, list still at five
 - [ ] `tools/stamp_updated.py` run, `--check` clean
 - [ ] both repos committed, `git add` covered `*.html` (the footer date touches all of them)
