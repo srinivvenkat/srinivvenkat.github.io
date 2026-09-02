@@ -1036,8 +1036,13 @@ svg.cn {
   width: 100%;
   height: auto;
   max-height: 460px;
-  overflow: visible;
+  /* Zoomed-in content is larger than the viewBox, so clip it to the panel; also
+     keeps a touch pan/zoom from scrolling the page instead. */
+  overflow: hidden;
+  touch-action: none;
 }
+/* While dragging empty space to pan (see setupZoomPan). */
+svg.cn.cn-panning { cursor: grabbing; }
 
 /* Edges: faint at rest so the bubbles lead; a hovered node's ties light up. */
 .cn-edge {
@@ -1070,11 +1075,6 @@ svg.cn {
 .cn-label {
   font-family: var(--font-heading);
   fill: #fff;
-  /* White halo so the label stays legible over any bubble color. */
-  paint-order: stroke;
-  stroke: rgba(35, 45, 75, 0.55);
-  stroke-width: 2.5px;
-  stroke-linejoin: round;
   pointer-events: none;
   cursor: pointer;
 }
@@ -1083,8 +1083,10 @@ svg.cn {
    flip to dark ink with a white halo instead. */
 .cn-label-below {
   fill: var(--navy);
+  paint-order: stroke;
   stroke: #fff;
   stroke-width: 2.5px;
+  stroke-linejoin: round;
 }
 
 /* Labels too small to fit inside their bubble are hidden at rest and only

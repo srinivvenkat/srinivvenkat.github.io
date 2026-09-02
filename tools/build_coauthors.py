@@ -18,8 +18,8 @@ his collaboration circle:
 
   * nodes   = the owner's most frequent co-authors (>= MIN_PAPERS shared papers,
               capped at TOP_N), SIZED by how many papers they share with him.
-  * color   = LENGTH OF COLLABORATION: a single-hue sequential ramp shading each
-              node from light (a short-lived collaboration) to dark (a years-long
+  * color   = LENGTH OF COLLABORATION: a UVA blue -> UVA orange ramp shading each
+              node from blue (a short-lived collaboration) to orange (a years-long
               one), by the span from our first shared paper to our latest. Tenure
               is a magnitude, so it takes a ramp, not categorical hues -- and
               unlike institution (which splits the graph into one big UVA cluster
@@ -208,20 +208,26 @@ TARGET_ASPECT = 2.15  # width:height for the node centres; lands the final viewB
 
 # --- tenure ramp (sequential) ----------------------------------------------
 # Nodes are shaded by LENGTH OF COLLABORATION -- the span in years from our first
-# shared paper to our latest. That is a magnitude, so it takes a single-hue
-# sequential ramp (light = short, dark = long), never categorical hues. Institution
-# coloring is inherently lopsided here (half the graph is one UVA cluster), whereas
-# tenure varies within both the core and the rim, so the gradient reads across the
-# whole graph. There is no legend by design -- shade reads as ambient depth-of-tie.
+# shared paper to our latest. That is a magnitude, so it takes a sequential ramp
+# (here blue = short, orange = long), never categorical hues. Institution coloring
+# is inherently lopsided here (half the graph is one UVA cluster), whereas tenure
+# varies within both the core and the rim, so the gradient reads across the whole
+# graph. There is no legend by design -- hue reads as ambient depth-of-tie.
 #
-# The ramp is the site blue, floored at a mid-light step: anything paler vanishes
-# against the white page and can't back a label. It deepens toward navy for the
-# longest ties. Labels sit INSIDE the bubbles, so the lighter half of the ramp
-# can't carry white text -- each node emits `pale` when its fill is too light, and
-# the renderer flips that label to dark ink (see coauthors.js / .cn-label-dark).
-RAMP = [  # site blue, light -> dark (validated sequential steps, monotone lightness)
-    "#86b6ef", "#6da7ec", "#5598e7", "#3987e5", "#2a78d6",
-    "#256abf", "#1c5cab", "#184f95", "#104281", "#0d366b",
+# The ramp runs UVA Jefferson Blue (#232D4B) to UVA Cavalier Orange (#E57200) by
+# straight RGB interpolation with a smoothstep ease, so the steps cluster in the
+# blue and orange ends and pass quickly through the muddy brown middle. Every step
+# stays dark enough to back a white label (min white contrast ~3.1), so labels sit
+# INSIDE the bubbles in white throughout and none flip to dark ink. The `pale`
+# emission below still guards that invariant -- if a future ramp lightens past it,
+# those labels flip (see coauthors.js / .cn-label-dark).
+RAMP = [  # UVA blue -> UVA orange: short ties Jefferson Blue (#232D4B), long ties
+          # Cavalier Orange (#E57200). Straight RGB interpolation with a smoothstep
+          # ease, so the steps cluster in the blue and orange ends and pass quickly
+          # through the muddy brown middle. Stays dark enough for white labels on
+          # every step (min white contrast ~3.1); none flip to dark ink.
+    "#232d4b", "#2a2f48", "#3b3642", "#553f38", "#744a2c",
+    "#94551f", "#b36013", "#cd6909", "#de7003", "#e57200",
 ]
 SPAN_MIN = 2       # spans clamp to [SPAN_MIN, SPAN_MAX] before mapping onto the ramp
 SPAN_MAX = 10      # (the observed range; keeps the common 3-5 band spread over steps)
@@ -1103,7 +1109,7 @@ def main():
             "hand -- rerun the script after authors.json changes. An ego network with "
             "the site owner removed: nodes are his most frequent co-authors, sized by "
             "shared-paper count ('papers'), shaded by length of collaboration -- the "
-            "'span' in years from first to latest shared paper -- on a light->dark ramp "
+            "'span' in years from first to latest shared paper -- on a UVA blue->orange ramp "
             "('color'); 'pale' marks a fill light enough that its label flips to dark ink. "
             "edges weight how many papers two co-authors have published together across "
             "all their work (copub.json; consortium-scale papers excluded). 'x','y','r' "
