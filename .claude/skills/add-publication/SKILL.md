@@ -5,7 +5,7 @@ description: Add a new publication to the LaTeX CV (SV_CV/srini_resume.tex), reb
 
 # Add a publication and resync the site
 
-One new paper touches **eight** files across **two** git repos. Do the steps in order,
+One new paper touches **nine** files across **two** git repos. Do the steps in order,
 never skip the regeneration, and commit each repo separately.
 
 ## Inputs
@@ -175,7 +175,27 @@ hand-written record to `tools/bibtex-overrides.json` — see that file's `_comme
 for the format and the provenance convention. `--report` lists everything currently
 lacking both an identifier and an override.
 
-## Step 5 — restamp the footer date
+## Step 5 — news item on `index.html`
+
+A new paper is news. Add an `<li>` at the **top** of `<ul class="news-list">` in
+`index.html`, and delete the oldest one so the list stays at **five** entries (see
+`news-items-single-line` and the `cap news at five entries` commit).
+
+```html
+<li>
+  <span class="news-date"><time datetime="2026-09">Sep 2026</time></span>
+  <span>New preprint: <a href="https://..." target="_blank" rel="noopener noreferrer">short handle</a>, one clause on what it does.</span>
+</li>
+```
+
+One short line each, conference names abbreviated, no em-dashes. The link text is a
+short handle (the tool name, or a phrase like "multi-season evaluation"), never the
+full title. `datetime` is `YYYY-MM`, matching the month the thing actually happened.
+
+Skip this only when the paper is not newsworthy on its own, e.g. a version bump of a
+preprint already announced. Ask if unsure.
+
+## Step 6 — restamp the footer date
 
 ```bash
 python3 tools/stamp_updated.py             # writes today's date into all 8 pages
@@ -191,7 +211,7 @@ included, which is why the `git add` below has to cover `*.html` and not just
 A stale date here is worse than no date: it is the only signal on the site telling a
 reviewer or a prospective student whether they are looking at current work.
 
-## Step 6 — commit both repos
+## Step 7 — commit both repos
 
 They are separate repos; `SV_CV/` is gitignored by the site repo.
 
@@ -214,5 +234,6 @@ when the user says so — "C&P" is standing authorization to commit and push.
 - [ ] `publications.html` TOC count bumped and `<li value=N>` added under the right year
 - [ ] all five `tools/build_*.py` re-run **in order**
 - [ ] new paper got a BibTeX record, or an override added if its identifier will not resolve
+- [ ] news `<li>` added at the top of `index.html`, oldest dropped, list still at five
 - [ ] `tools/stamp_updated.py` run, `--check` clean
 - [ ] both repos committed, `git add` covered `*.html` (the footer date touches all of them)
