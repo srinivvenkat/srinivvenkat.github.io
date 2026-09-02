@@ -309,8 +309,8 @@
     // a plain lie.
     var narrowed = shown !== rows.length;
 
-    // The category table of contents carries counts that no longer hold.
-    setHidden(document.querySelector("nav.pub-toc"), narrowed);
+    // The at-a-glance grid carries counts that no longer hold.
+    setHidden(document.querySelector("section.pub-heatmap"), narrowed);
 
     var text = !narrowed
       ? "Showing all " + rows.length + " publications"
@@ -355,8 +355,10 @@
     if (!rows.length) return;
 
     toolbar = buildToolbar();
-    var toc = document.querySelector("nav.pub-toc");
-    var anchor = toc && toc.nextElementSibling ? toc.nextElementSibling : toc;
+    // Sits under the at-a-glance grid and the BibTeX line, which is where the
+    // grid's own script has already placed itself (pub-heatmap.js loads first).
+    var grid = document.querySelector("section.pub-heatmap");
+    var anchor = grid && grid.nextElementSibling ? grid.nextElementSibling : grid;
     if (anchor && anchor.parentNode) {
       anchor.parentNode.insertBefore(toolbar, anchor.nextSibling);
     } else {

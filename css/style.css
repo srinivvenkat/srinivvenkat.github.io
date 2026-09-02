@@ -695,23 +695,6 @@ ol.pub-list li::marker {
 }
 
 /* Publications page category nav */
-.pub-toc {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 0.5em;
-}
-
-.pub-toc a {
-  padding: 6px 12px;
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  font-size: 0.85rem;
-}
-
-.pub-toc a:hover { text-decoration: none; background: var(--navy); color: #fff; }
-
 /* Plain grouped lists (funding, awards, mentoring, outreach) */
 .entry-list {
   list-style: none;
@@ -1483,6 +1466,149 @@ main:focus {
 }
 
 /* ------------------------------------------------------------------ */
+/* Publication heatmap (js/pub-heatmap.js)                             */
+/* ------------------------------------------------------------------ */
+
+/* Rows are categories, columns are years, shade is count. The ramp is a single
+   hue (UVA navy) light to dark, so the ordering reads as magnitude rather than
+   as four unrelated colors; each step is paired with the ink that clears WCAG AA
+   on it (navy on the two light steps, white on the two dark ones). Every cell
+   also prints its count, so nothing here depends on color alone. */
+.pub-heatmap {
+  margin: 0 0 1.25em;
+  padding: 16px 18px 12px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.pub-heatmap-heading {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+/* The grid is wider than a phone; it scrolls on its own rather than pushing the
+   page sideways. The region is focusable so the scroll is reachable by keyboard. */
+.pub-heatmap-scroll {
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.pub-heatmap-scroll:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+.pub-heatmap-table {
+  border-collapse: separate;
+  border-spacing: 3px;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.pub-heatmap-corner {
+  padding: 0;
+  font-size: 0;
+}
+
+.pub-heatmap-year {
+  padding: 0 0 4px;
+  font-weight: 500;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pub-heatmap-total-head {
+  padding: 0 0 4px 8px;
+  font-weight: 600;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.pub-heatmap-row-head {
+  padding: 0 10px 0 0;
+  font-weight: 500;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.pub-heatmap-row-head a {
+  color: var(--text);
+}
+
+.pub-heatmap-row-head a:hover,
+.pub-heatmap-row-head a:focus {
+  color: var(--orange-text);
+}
+
+.pub-heatmap-cell {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  text-align: center;
+  background: #eef0f3;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.pub-heatmap-cell a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  border-radius: 3px;
+}
+
+.pub-heatmap-cell a:hover {
+  text-decoration: none;
+}
+
+.pub-heatmap-cell a:hover,
+.pub-heatmap-cell a:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 1px;
+}
+
+.pub-heatmap-cell.lvl-1 { background: #d6dbe6; border-color: #c7cddc; }
+.pub-heatmap-cell.lvl-2 { background: #a3adc6; border-color: #96a1bd; }
+.pub-heatmap-cell.lvl-3 { background: #41507d; border-color: #394770; }
+.pub-heatmap-cell.lvl-4 { background: var(--navy); border-color: #1c2540; }
+
+.pub-heatmap-cell.lvl-1 a,
+.pub-heatmap-cell.lvl-2 a { color: var(--navy); }
+.pub-heatmap-cell.lvl-3 a,
+.pub-heatmap-cell.lvl-4 a { color: #fff; }
+
+.pub-heatmap-total {
+  padding-left: 8px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  color: var(--text-muted);
+}
+
+/* Marks where a cell landed you, since a year heading looks much like the one
+   above it. Suppressed under reduced motion (the script skips it too). */
+.pub-flash {
+  animation: pub-flash 1.6s ease-out 1;
+}
+
+@keyframes pub-flash {
+  0%, 40% { background: rgba(229, 114, 0, 0.16); }
+  100% { background: transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pub-flash { animation: none; }
+}
+
+/* ------------------------------------------------------------------ */
 /* Responsive                                                          */
 /* ------------------------------------------------------------------ */
 @media (max-width: 640px) {
@@ -1497,4 +1623,9 @@ main:focus {
      reading as two stacked headings. */
   .viz-tab { font-size: 1.2rem; padding-bottom: 4px; }
   .viz-tabs { gap: 2px 16px; }
+  /* Tighter cells so the full year range needs less sideways scrolling. */
+  .pub-heatmap { padding: 14px 12px 12px; }
+  .pub-heatmap-cell { width: 26px; height: 26px; }
+  .pub-heatmap-table { font-size: 0.72rem; }
+  .pub-heatmap-year { font-size: 0.6rem; }
 }

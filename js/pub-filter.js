@@ -142,8 +142,8 @@
       if (!hasVisible) hide(section);
     });
 
-    // 4. Hide the category table-of-contents (its counts no longer match).
-    hide(document.querySelector("nav.pub-toc"));
+    // 4. Hide the at-a-glance grid (its counts no longer match).
+    hide(document.querySelector("section.pub-heatmap"));
 
     // 5. Banner with a restore action.
     var main = document.querySelector("main .container") || document.querySelector("main");
