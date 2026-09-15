@@ -32,9 +32,16 @@
     "2026-09-02 under the new openRxiv prefix 10.64898; doi.org still returns 404, so",
     "no service can resolve it yet. Title, authors and date transcribed from the",
     "medRxiv API record and the paper's own author list. Delete this entry once the",
-    "DOI registers and build_bibtex.py can fetch it."
+    "DOI registers and build_bibtex.py can fetch it.",
+    "",
+    "conference-papers|39 (ICML 2026): the entry now links to the ICML virtual poster",
+    "page, which carries no DOI and no metadata service can resolve, so the record is",
+    "transcribed from the arXiv preprint (2602.00299) with the venue corrected to the",
+    "proceedings. Replace it with the fetched record once PMLR publishes the volume and",
+    "the paper has a real DOI."
   ],
   "entries": {
+    "conference-papers|39": "@inproceedings{placeholder, title={Agentic Framework for Epidemiological Modeling}, author={Datta, Rituparna and Guan, Zihan and Espinoza, Baltazar and Su, Yiqi and Pitre, Priya and Venkatramanan, Srinivasan and Ramakrishnan, Naren and Vullikanti, Anil}, booktitle={International Conference on Machine Learning (ICML)}, year={2026}, eprint={2602.00299}, archivePrefix={arXiv}, url={https://icml.cc/virtual/2026/poster/60990}}",
     "conference-papers|33": "@inproceedings{placeholder, title={VISHN: Viral Load and Immunity Simulation on a Host Network}, author={Nachison, Jeremy and Venkatramanan, Srinivasan}, booktitle={Annual Modeling and Simulation Conference (ANNSIM)}, year={2024}, doi={10.22360/ANNSIM.2024.HM.193}, url={https://dl.acm.org/doi/10.22360/ANNSIM.2024.HM.193}}",
     "conference-papers|25": "@inproceedings{placeholder, title={Impact of Seeding and Spatial Heterogeneity on Metapopulation Disease Dynamics}, author={Rajuladevi, Rohit Srinivas and Marathe, Madhav and Porebski, Przemyslaw and Venkatramanan, Srinivasan}, booktitle={epiDAMIK 5.0: The 5th International Workshop on Epidemiology meets Data Mining and Knowledge Discovery, co-held with ACM SIGKDD}, year={2022}, url={https://openreview.net/forum?id=uYuafV_Kz0}}",
     "tech-reports|3": "@techreport{placeholder, title={Pest Risk Assessment of the Fall Armyworm, Spodoptera frugiperda in Egypt}, author={Heinrichs, E. A. and Sidhu, Jaspreet and Muniappan, R. and Fayad, Amer and Adiga, Abhijin and Marathe, Achla and Mcnitt, Joseph and Venkatramanan, Srinivasan}, institution={Feed the Future Innovation Lab for Integrated Pest Management, Virginia Tech}, year={2017}, note={USAID award AID-OAA-L-15-00001}, url={https://web.archive.org/web/20210525151428/https://ipmil.cired.vt.edu/wp-content/uploads/2018/03/Egypt-FAW-Risk-Assessment-12-14-17.pdf}}",
