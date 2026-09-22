@@ -29,6 +29,9 @@ tools/.openalex_cache.json
 tools/.openalex_works_cache.json
 tools/.bibtex_cache.json
 
+# Link-check output (CI keeps its copy as a build artifact)
+link-report.json
+
 # CV LaTeX sources (separate repo: github.com/srinivvenkat/SV_CV)
 SV_CV/
 

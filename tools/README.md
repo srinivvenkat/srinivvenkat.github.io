@@ -22,7 +22,8 @@ the pages, in this order:
 6. **`bibtex.json`** + **`SV_publications.bib`** — regenerate: `python3 tools/build_bibtex.py`
    (reads the DOI/arXiv link out of the new entry in `publications.html`, so it must
    run **after** the entry exists there; cached, so this costs one network call).
-7. **Footer date** — refresh: `python3 tools/stamp_updated.py` (see below).
+7. **Footer date and sitemap** — refresh both: `python3 tools/stamp_updated.py`
+   (see below). The pre-commit hook in `git-hooks/` does this for you if enabled.
 8. Commit the regenerated files together, then re-render / redeploy the pages.
 
 Order matters: `build_authors.py` and `build_wordcloud.py` both read `abstracts.json`
@@ -74,28 +75,84 @@ Like the OpenAlex tools, this needs only Python 3 stdlib plus `curl` on PATH.
 ## stamp_updated.py
 
 Rewrites the `Last updated <time>` element in the footer of every `*.html` page
-(all seven site pages plus `404.html`), setting the `datetime` attribute and the
-human-readable text together so they cannot drift apart.
+(all eight site pages plus `404.html`), setting the `datetime` attribute and the
+human-readable text together so they cannot drift apart — and the matching
+`<lastmod>` dates in `../sitemap.xml`, so the date crawlers read agrees with the
+date visitors read.
 
 ```
 python3 tools/stamp_updated.py                # today  <- the normal case
-python3 tools/stamp_updated.py --from-git     # date of the last commit
+python3 tools/stamp_updated.py --from-git     # date of the last content commit
 python3 tools/stamp_updated.py --date 2026-08-04
 python3 tools/stamp_updated.py --check        # verify only, exits 1 on drift
 ```
 
 Run it **immediately before committing** a content change. The default of today is
 right for that case, since the commit you are about to make carries today's date;
-`--from-git` is for re-stamping a repo whose content has not changed since it was
-last committed.
+`--from-git` is for re-stamping a repo whose pages have not changed since they
+were last committed. `--from-git` reads the last commit that touched site content
+(`*.html`, `css/`, `js/`, `*.json`, `SV_CV.pdf`) and ignores commits that only
+touch `tools/`, CI config or docs, since those change nothing a visitor sees and
+must not drag the published date forward.
+
+In the sitemap, the HTML entries follow the same target date as the footers. A
+non-HTML entry — currently just `SV_CV.pdf` — keeps the date of the commit that
+last changed that file, so editing prose does not go on record as a revision of
+the PDF. The script also reports a sitemap entry pointing at a file no longer in
+the repo, and a page that exists but was never added to the sitemap (`404.html`
+excepted, which is deliberately unlisted).
 
 `--check` writes nothing and exits non-zero if any page is stale or has lost its
-stamp, so it works as a pre-commit hook or CI step.
+stamp, or the sitemap has drifted, so it works as a pre-commit hook or CI step.
+`.github/workflows/site-checks.yml` runs exactly that on every push.
 
 Why it exists: that footer date is the only signal on the site telling a reviewer
 or a prospective student whether they are looking at current work. Maintained by
 hand it rots silently, and a stale date is worse than no date because it actively
-misinforms.
+misinforms. `sitemap.xml` rots the same way but unseen — a `<lastmod>` older than
+the page is a standing instruction to crawlers not to bother re-reading it.
+
+## check_links.py
+
+Checks every link on the site: internal targets and fragments offline, outbound
+URLs over the network.
+
+```
+python3 tools/check_links.py              # internal only  <- fast, no network
+python3 tools/check_links.py --external   # outbound URLs
+python3 tools/check_links.py --all        # both
+python3 tools/check_links.py --all --json report.json
+```
+
+The two halves are separate on purpose. **Internal** — every relative `href` and
+`src` resolves to a file in the repo, and every `page.html#thing` lands on an id
+that page actually has — needs no network, never flakes, and a failure is always a
+real bug, so it runs on every push. Query strings are ignored (`?v=24` is cache
+busting, `?topic=epi` is read by `js/pub-filter.js`); neither is part of a path.
+
+**External** probes each unique URL once with `curl`: HEAD first, then a ranged
+GET for servers that dislike HEAD. Results land in three buckets:
+
+| bucket | meaning |
+| --- | --- |
+| `DEAD` | 404, 410, or a host that no longer resolves. Fix these. |
+| `UNVERIFIED` | 403, 429, timeout, TLS trouble. Reported, never failed. |
+| `REDIRECTED` | reached, but the final URL differs by more than a trailing slash or scheme. Worth updating eventually. |
+
+Only `DEAD` (and any internal breakage) exits non-zero, so a scheduled run stays
+quiet until something is genuinely broken. Publishers block datacentre traffic
+routinely — `doi.org` opens fine in a browser and refuses HEAD from a CI runner —
+so treating every refusal as a dead link would make the check worthless within a
+month. Hosts in `TOUCHY_HOSTS` (LinkedIn, Scholar, Spotify, the big publisher
+platforms) are held to `UNVERIFIED` even on a hard status for the same reason.
+
+`.github/workflows/site-checks.yml` runs the internal half on every push and the
+external half weekly, keeping the JSON report as a build artifact.
+
+Why it exists: nearly every claim on this site is carried by a link — a DOI, a
+funder, a news story, a repository. A 404 behind "best paper award" is worse than
+no link at all, because a reader takes it as the evidence and finds nothing. The
+dead links cleared out of this repo so far were each spotted by hand.
 
 ## build_authors.py
 

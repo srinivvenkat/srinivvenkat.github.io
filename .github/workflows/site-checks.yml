@@ -1,0 +1,61 @@
+# Checks that keep the published site honest between hand edits.
+#
+# Neither job builds or deploys anything: GitHub Pages serves this repo straight
+# from the default branch, and that is unchanged. These only read the files.
+#
+#   dates  every push and pull request. Catches a page or a sitemap entry whose
+#          date no longer matches what shipped, which is what happens whenever a
+#          commit lands without the tools/git-hooks/pre-commit hook enabled.
+#   links  internal links and anchors on every push and pull request, since a
+#          broken one is always a real bug and needs no network. Outbound URLs
+#          weekly instead, because link rot arrives on its own schedule and a
+#          publisher having a bad morning should never fail a push.
+name: Site checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Mondays, 07:23 UTC. Off the hour, where the runner queue is shorter.
+    - cron: "23 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dates:
+    name: Footer and sitemap dates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # --from-git looks for the last commit that touched site content, which
+          # may be many commits back. A shallow clone would hide it.
+          fetch-depth: 0
+      - name: Check the published dates against the last content commit
+        run: python3 tools/stamp_updated.py --check --from-git
+
+  links:
+    name: Links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Internal links and anchors
+        run: python3 tools/check_links.py
+
+      - name: Outbound URLs
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: python3 tools/check_links.py --external --json link-report.json
+
+      # Kept whether or not the step above failed: the useful part of a link run
+      # is the report, including the redirects and blocks that are not failures.
+      - name: Keep the report
+        if: always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-report
+          path: link-report.json
+          if-no-files-found: ignore

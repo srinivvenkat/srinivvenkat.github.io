@@ -1,9 +1,10 @@
 #!/bin/sh
 #
-# Keeps the footer "Last updated" date in step with what is actually shipping.
-# Silent and automatic: on a commit that touches site content, it restamps every
-# page to today and stages the result. Nothing to remember, nothing printed
-# unless it declines to act.
+# Keeps the footer "Last updated" date -- and the matching sitemap.xml <lastmod>
+# dates -- in step with what is actually shipping. Silent and automatic: on a
+# commit that touches site content, it restamps every page to today, restamps the
+# sitemap alongside them, and stages the result. Nothing to remember, nothing
+# printed unless it declines to act.
 #
 # Enable once per clone (core.hooksPath is local config, not committed):
 #
@@ -28,8 +29,8 @@ fi
 #    mean `git add`-ing those files wholesale, which would sweep work-in-progress
 #    into a commit the author never intended it to be in. Losing the date stamp
 #    is recoverable; silently committing someone's half-finished edit is not.
-if ! git diff --quiet -- '*.html'; then
-    echo "pre-commit: unstaged HTML changes present, skipping footer restamp" >&2
+if ! git diff --quiet -- '*.html' sitemap.xml; then
+    echo "pre-commit: unstaged HTML or sitemap changes present, skipping restamp" >&2
     echo "            stage them (or run tools/stamp_updated.py yourself) to include it" >&2
     exit 0
 fi
@@ -45,7 +46,7 @@ python3 tools/stamp_updated.py >/dev/null 2>&1 || {
     exit 0
 }
 
-changed=$(git diff --name-only -- '*.html')
+changed=$(git diff --name-only -- '*.html' sitemap.xml)
 if [ -n "$changed" ]; then
     printf '%s\n' "$changed" | xargs git add --
 fi
