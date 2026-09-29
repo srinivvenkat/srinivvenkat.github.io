@@ -4,7 +4,7 @@
     "entries": 104,
     "with_abstract": 101,
     "without_abstract": 3,
-    "consortium_papers": 11
+    "consortium_papers": 12
   },
   "abstract_sources": {
     "OpenAlex": 36,
@@ -1161,8 +1161,8 @@
       "abstract": "Forecasting influenza hospitalizations informs public health preparedness, yet questions remain about which types of forecasts best guide action. We evaluate categorical trend forecasts, which communicate probabilities of upcoming increases or decreases in epidemic trajectories, submitted to CDC's FluSight Forecasting Challenge between Fall-2024 and Spring-2026. Teams submitted probability distributions over five categories describing direction and magnitude of week-over-week changes in laboratory-confirmed influenza hospital admissions. We assessed performance using Ranked Probability Skill Score, Brier Skill Score, and measures of forecast-observation agreement. Most models outperformed an equal-probability baseline; the FluSight ensemble ranked among the top three in the 2024-25 and 2025-26 seasons. Forecasts were most accurate during stable periods and least during periods of rapid change, with most models underestimating observed trends. Conclusions were robust to choice of scoring metric and reference model. These results support categorical trend ensembles as an approach to communicating infectious disease forecasts that may inform public health decision-making.",
       "abstract_source": "medRxiv",
       "abstract_unavailable_reason": null,
-      "author_count": null,
-      "consortium_paper": false
+      "author_count": 97,
+      "consortium_paper": true
     },
     "tech-reports|16": {
       "section": "tech-reports",
@@ -1387,7 +1387,7 @@
       "number": 24,
       "year": "2026",
       "title": "Towards a synthetic model for cortical spreading depolarization",
-      "citation": "SV, S. Mutnuri, M. Marathe, A. Adiga, and A. Carlson, \"Towards a synthetic model for cortical spreading depolarization\", International Conference on Spreading Depolarization (iCSD 2026), Charlottesville, September 2026",
+      "citation": "SV, A. Adiga, S. Mutnuri, M. Marathe, and A. Carlson, \"Towards a synthetic model for cortical spreading depolarization\", International Conference on Spreading Depolarization (iCSD 2026), Charlottesville, September 2026",
       "abstract": "Computational models for spreading depolarization (SD) have been limited to biophysical models of ion dynamics or detection algorithms trained on scarce, expert-annotated ECoG recordings. Motivated by the recent success of the virtual-patient paradigm in epilepsy, we propose a generative model to simulate macroscopic spread on cortical anatomy and convert it to synthetic ECoG and scalp EEG (DC-coupled) recordings. Propagation dynamics will be modeled as two-variable reaction-diffusion system on excitable media with an explicit inhibitor. Cortical geometry will be reconstructed from structural MRI, with tangential differential operators on the mesh preserving geodesic spread across sulci. The observation model will include a normal-oriented current dipole layer and subject-specific volume conductor for arbitrary ECoG and scalp EEG electrode positions. The final recording chain will comprise amplifier high pass response, electrode drift, amplitude saturation, and low-frequency noise. The pipeline will be designed to create two coupled signatures: the near-DC slow potential and the depression of spontaneous activity. Calibration will use propagation speed, DC-shift duration, depression duration, and other relevant characteristics derived from existing ECoG recordings of SD events and literature. Through early experiments we will discuss the impact of parameter uncertainty, seed locations, lesion geometry, and patient variability. The resulting synthetic corpus will benchmark detection algorithms and support non-invasive SD detection. In clinical settings, such a digital twin could help improve electrode array design and serve as a substrate for ECoG/EEG signal fusion.",
       "abstract_source": "Author-supplied (iCSD 2026 submission)"
     },
@@ -1396,8 +1396,8 @@
       "section_label": "Posters & Abstracts",
       "number": 23,
       "year": "2026",
-      "title": "Machine learning methods for detecting SD events in spatially linked scalp recordings",
-      "citation": "S. Mutnuri, A. Adiga, SV, M. Marathe, L. Fedor, B. Shuttleworth, and A. Carlson, \"Machine learning methods for detecting SD events in spatially linked scalp recordings\", International Conference on Spreading Depolarization (iCSD 2026), Charlottesville, September 2026",
+      "title": "ECoG-Guided Evaluation of Scalp EEG Signatures of Spreading Depolarization",
+      "citation": "S. Mutnuri, A. Adiga, SV, M. Marathe, L. Fedor, B. Shuttleworth, and A. Carlson, \"ECoG-Guided Evaluation of Scalp EEG Signatures of Spreading Depolarization\", International Conference on Spreading Depolarization (iCSD 2026), Charlottesville, September 2026",
       "abstract": "Recent automated approaches have reported promising spreading depolarization (SD) detection from ECoG and scalp EEG, including propagation-based algorithms and deep-learning models using temporal power and spectrogram features. However, studies have used specialized recordings, decompressive craniectomy patients, or invasive signals, leaving scalp generalization uncertain. We evaluated supervised and unsupervised methods for detecting ECoG-annotated SD from linked scalp EEG. The dataset included five patients recorded with full-spectrum DC scalp EEG and ECoG, with no post hoc timing adjustment. The ECoG strip was placed in a standardized location bridging the central sulcus, corresponding to a consistent scalp EEG landmark near Cz and C3/C4. Guided by prior studies, spectral, temporal, and autoencoder features were extracted from nearby scalp electrodes. These features trained supervised classifiers; unsupervised methods tested clustering and anomaly detection. Class imbalance was addressed using undersampling, weighting, and threshold tuning. Generalization used leave-one-patient-out validation. SD versus non-SD discrimination remained limited and varied by held-out patient. Imbalance-aware models increased sensitivity but produced more false positives. Unsupervised models did not produce distinct SD clusters, and anomaly detection often labeled non-SD activity as anomalous. Performance was likely limited by scalp signal attenuation, inter-patient variability, artifacts, sparse ECoG labels, and features that do not capture propagation. These findings suggest that EEG-based SD detection needs synthetic training data from computational SD models and realistic EEG simulations.",
       "abstract_source": "Author-supplied (iCSD 2026 submission)"
     },
