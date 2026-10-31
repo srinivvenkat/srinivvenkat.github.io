@@ -1,18 +1,18 @@
 {
   "_readme": "Single source of truth for the publication abstracts shown on publications.html. The page fetches this file once at load time (js/abstracts.js, shared with js/pub-search.js via window.abstractsPromise): abstracts.js renders an 'Abstract' toggle for every entry whose 'abstract' field is non-null, and pub-search.js indexes the same text so the search box matches on abstracts as well as citations. Keys are '<section-id>|<entry-number>' and match the <section id> and <li value> in publications.html — edit an abstract here and the page picks it up, no HTML changes. Abstract text is the authors' own, retrieved verbatim from the publisher record for each DOI/arXiv/medRxiv ID; none is paraphrased or generated. Blank lines (\\n\\n) separate paragraphs and **bold** marks structured-abstract section labels. author_count and consortium_paper are auto-maintained by tools/build_authors.py: author_count is the full OpenAlex author count (null when the paper isn't in OpenAlex), and consortium_paper is true when author_count > 30 (large forecasting/scenario-hub efforts). A separate 'talks' block holds abstracts for entries on talks.html, keyed the same way ('<section-id>|<entry-number>') against that page's sections ('invited-talks' and 'posters-abstracts'). It is kept apart from 'entries' because everything downstream of this file (tools/build_wordcloud.py, build_authors.py, build_bibtex.py, js/pub-search.js) treats 'entries' as the publication list and would otherwise index conference talks as papers. js/abstracts.js renders both blocks and simply skips any key whose section is not on the current page.",
   "counts": {
-    "entries": 104,
-    "with_abstract": 101,
+    "entries": 106,
+    "with_abstract": 103,
     "without_abstract": 3,
-    "consortium_papers": 12
+    "consortium_papers": 13
   },
   "abstract_sources": {
     "OpenAlex": 36,
     "Crossref": 29,
-    "medRxiv": 14,
+    "medRxiv": 15,
     "Semantic Scholar": 8,
     "arXiv": 6,
-    "Author-supplied": 4,
+    "Author-supplied": 5,
     "Author manuscript (PDF in papers/)": 3,
     "OpenAlex (title match)": 1
   },
@@ -54,6 +54,20 @@
       "abstract": "We describe an AI-driven approach for supporting real-time epidemic science. The basic approach comprises of combining real-time data with techniques in AI, Machine learning and graphical dynamical systems to address complex problems arising during the course of planning and response to an ongoing epidemic.\n\nWe illustrate our approach via three large scale efforts: (i) supporting state and local public health departments on a weekly basis; (ii) weekly forecasting to support the CDC and European CDC Forecasting Hub; and (iii) supporting the CDC Scenario modeling hub. Each effort comprises a different type of model, time-scale or function in the decision making process. We outline how data-driven AI methods can be used in an operational setting to support real-time policy analysis.",
       "abstract_source": "Author-supplied",
       "author_count": 10,
+      "consortium_paper": false
+    },
+    "journal-articles|45": {
+      "section": "journal-articles",
+      "section_label": "Journal Articles",
+      "number": 45,
+      "year": "2026",
+      "title": "Multi-Model Insights into Racial and Ethnic Heterogeneities in Early COVID-19 Transmission and Severity in the U.S.",
+      "citation": "S. Bents, S. L. Larsen, S. Jung, ..., SV, ..., K. Shea, T. M. León, S. Truelove, \"Multi-Model Insights into Racial and Ethnic Heterogeneities in Early COVID-19 Transmission and Severity in the U.S.\", American Journal of Epidemiology (accepted, 2026)",
+      "url": null,
+      "abstract": "The COVID-19 pandemic was marked by unequal disease burden across racial and ethnic groups in the US. Using a multi-model ensemble framework, we retrospectively assessed the impact of racial and ethnic heterogeneities in COVID-19 transmission and disease severity on mortality during the winter 2020–2021 surge in California and North Carolina. Models incorporating race and ethnicity projected mortality more accurately than null models, while the ensemble outperformed all individual models by weighted interval scores. Eliminating transmission heterogeneities produced larger mortality reductions than eliminating severity differences alone, particularly for Latino populations in California (56% reduction) and Black populations in North Carolina (29% reduction). Reducing severity heterogeneity also lowered mortality, with the greatest benefit among Black populations in both states (22% and 16% reductions in California and North Carolina, respectively). Eliminating both transmission and severity heterogeneity yielded the largest reductions overall, predicting 49–71% lower mortality across racial and ethnic groups in California and 23–40% in North Carolina. Mitigating transmission inequities also produced indirect benefits for non-targeted populations, highlighting the broad impact of reducing disparities in exposure risk and access to protective resources.",
+      "abstract_source": "Author-supplied",
+      "abstract_unavailable_reason": null,
+      "author_count": null,
       "consortium_paper": false
     },
     "journal-articles|44": {
@@ -1150,10 +1164,10 @@
       "author_count": 2,
       "consortium_paper": false
     },
-    "tech-reports|17": {
+    "tech-reports|18": {
       "section": "tech-reports",
       "section_label": "Technical Reports and Preprints",
-      "number": 17,
+      "number": 18,
       "year": "2026",
       "title": "Multi-season evaluation and analysis of categorical trend forecasts of influenza hospital admissions in the United States",
       "citation": "J. T. Davis, G. Kaur, A. Hines, M. Ben-Nun, SV, ..., M. Johansson, M. Biggerstaff, and R. K. Borchering, \"Multi-season evaluation and analysis of categorical trend forecasts of influenza hospital admissions in the United States\", medRxiv, 2026.08.31.26361843",
@@ -1164,10 +1178,10 @@
       "author_count": 97,
       "consortium_paper": true
     },
-    "tech-reports|16": {
+    "tech-reports|17": {
       "section": "tech-reports",
       "section_label": "Technical Reports and Preprints",
-      "number": 16,
+      "number": 17,
       "year": "2026",
       "title": "EpiFlow: A framework for improving the utility of wastewater signals for disease forecasting",
       "citation": "A. Adiga, J. Chou, G. Kaur, A. Warren, SV, B. Espinoza, B. Lewis, J. Crow, A. Lorentz, R. Singh, and M. Marathe, \"EpiFlow: A framework for improving the utility of wastewater signals for disease forecasting\", arXiv:2608.06671",
@@ -1178,10 +1192,10 @@
       "author_count": 11,
       "consortium_paper": false
     },
-    "tech-reports|15": {
+    "tech-reports|16": {
       "section": "tech-reports",
       "section_label": "Technical Reports and Preprints",
-      "number": 15,
+      "number": 16,
       "year": "2026",
       "title": "EpiNarrate: Agentic Generation of Grounded Narratives from Epidemiological Scenario Projections",
       "citation": "R. Datta, SV, B. L. Lewis, Y. Su, H. Hochheiser, L. Contamin, P. Bhattacharya, N. Ramakrishnan, and A. Vullikanti, \"EpiNarrate: Agentic Generation of Grounded Narratives from Epidemiological Scenario Projections\", arXiv:2607.15544",
@@ -1191,6 +1205,20 @@
       "abstract_unavailable_reason": null,
       "author_count": 9,
       "consortium_paper": false
+    },
+    "tech-reports|15": {
+      "section": "tech-reports",
+      "section_label": "Technical Reports and Preprints",
+      "number": 15,
+      "year": "2026",
+      "title": "Adaptive multi-model ensembles for improved epidemic projections and decision support",
+      "citation": "S. Fiandrino, D. Paolotti, C. Bay, M. Chinazzi, ..., SV, ..., M. Biggerstaff, N. Gozzi, and A. Vespignani, \"Adaptive multi-model ensembles for improved epidemic projections and decision support\", medRxiv (2026)",
+      "url": "https://doi.org/10.64898/2026.06.26.26356648",
+      "abstract": "In recent years, the use of multi-model ensemble projections in infectious disease modeling has become an established methodological approach to account for and integrate across uncertainties and structural differences present in individual models. However, the creation of long-term ensemble projections through these coordinated efforts is resource-intensive, demanding the input of multiple research teams and substantial computational power. This typically limits the ability to refine projections, update the selection of plausible epidemic trajectories, or expand the number of scenarios that can be assessed, even as new empirical data become available. To address this challenge, we define an adaptive ensemble approach that, analogously to a multi-model particle filtering method, dynamically selects individual model trajectories based on observed data throughout the epidemic projection period. We demonstrate the effectiveness of this methodology using the U.S. Flu Scenario Modeling Hub (SMH) projections for influenza hospitalizations in the United States during the 2023-2024 and 2024-2025 winter seasons. Our findings show that the adaptive ensemble yields improved predictive accuracy with respect to the original SMH ensemble projections across several scoring rules and geographical resolutions. Furthermore, the adaptive ensemble approach offers two additional applications: i) the dynamic assignment of posterior probabilities to epidemic scenarios, identifying the most plausible scenario, and representing how reality is captured by a combination of scenarios, and ii) the potential use for short-term forecasting. The adaptive ensemble approach is able to identify the most likely scenarios for the 2023-2024 and 2024-2025 U.S. influenza seasons, even in the early stages of the epidemic. It outperforms, retrospectively, a baseline model in short-term forecasting of influenza hospitalizations in the United States during the two seasons across various horizons and scoring rules, showing potential to contribute to real-time collaborative forecasting challenges such as CDCs FluSight. The proposed approach offers an efficient or low-resource strategy to increase the impact of multi-model epidemic projections by providing real-time support to modeling teams, public health authorities, and decision-makers.",
+      "abstract_source": "medRxiv",
+      "abstract_unavailable_reason": null,
+      "author_count": 45,
+      "consortium_paper": true
     },
     "tech-reports|14": {
       "section": "tech-reports",
